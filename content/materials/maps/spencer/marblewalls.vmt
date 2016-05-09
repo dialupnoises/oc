@@ -1,0 +1,13 @@
+"LightmappedGeneric"
+{
+	"$basetexture" "maps\spencer\marblewalls"
+	"$surfaceprop" "tile"
+	"$envmap" "env_cubemap"
+	"$basealphaenvmapmask" 1
+	"$envmapcontrast" 1
+	"$envmapsaturation" 1
+	"$envmaptint" "[.7 .7 .7]"
+
+	//"$normalmapalphaenvmapmask" 1
+	//"$bumpmap" "maps\spencer\marblewalls_normal"
+}

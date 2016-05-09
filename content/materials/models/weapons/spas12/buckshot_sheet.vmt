@@ -1,0 +1,10 @@
+"VertexLitGeneric"
+{
+	"$baseTexture" "Models/Weapons/spas12/buckshot_sheet"
+//	"$envmap" "env_cubemap"
+//	"$basealphaenvmapmask" 1
+//	"$envmapsaturation" .5
+//	"$model" 1
+//	"$envmapcontrast" 0.5
+//	"$envmaptint" "[ 0.75 0.7 0.25 ]"
+}

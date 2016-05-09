@@ -1,0 +1,9 @@
+"vertexlitgeneric"
+{
+	// original shader: basetimeslightmapalphablend
+	"$alphatest" 1
+	"$basetexture" "metal/metaltruss023a"
+	"$surfaceprop" "metal"
+	"%compilepassbullets" 1
+	"%keywords" "c17industrial,wasteland"
+}

@@ -1,0 +1,10 @@
+"oc_manor"
+{
+	SpawnItems
+	{
+		"weapon_crowbar" "1"
+		"weapon_healer" "1"
+		"custom_cz52" "1"
+		"item_ammo_pistol" "8"
+	}
+}

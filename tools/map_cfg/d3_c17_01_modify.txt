@@ -1,0 +1,98 @@
+d3_c17_01
+{
+    Remove
+    {
+        ClassName
+        {
+            "trigger_once" {}
+            "info_player_start" {}
+        }
+    }
+    Add
+    {
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "targetname" "c17_01_spawn1"
+            "origin" "-7104 -1501 1"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "c17_01_spawn1"
+            "origin" "-7259 -1512 105"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270.5 0"
+            "targetname" "c17_01_spawn1"
+            "origin" "-7189 -1175 11"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 62 0"
+            "targetname" "c17_01_spawn1"
+            "origin" "-7283 -1496 1"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "c17_01_spawn1"
+            "origin" "-7282 -1240 1"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 246.5 0"
+            "targetname" "c17_01_spawn1"
+            "origin" "-7098 -1185 1"
+        }
+        "point_trigger"
+        {
+            "spawnflags" "1"
+            "StartDisabled" "1"
+            "targetname" "trigger_leave_dog_door"
+            "TriggerOnce" "1"
+            "TriggerRadius" "336"
+            "OnStartTouch" "global_friendly_encounter,TurnOff,,1,-1"
+            "OnStartTouch" "spark_elevator_shaft_light,StartSpark,,0,-1"
+            "OnStartTouch" "timer_nag_leave_1,Kill,,0,-1"
+            "OnStartTouch" "logic_nag_leave_1,Kill,,0,-1"
+            "origin" "-6480 -624 121"
+        }
+    }
+    Modify
+    {
+        ClassName
+        {
+            "worldspawn"
+            {
+                "disableareaportals" "1"
+            }
+        }
+        Origin
+        {
+            "-6696 -832 -56"
+            {
+                "nosmooth" "1"
+                "spawnflags" "0"
+                "spawngroup" "c17_02_spawn1"
+            }
+        }
+    }
+SpawnItems
+{
+    "weapon_smg1" "1"
+    "weapon_ar2" "1"
+    "weapon_shotgun" "1"
+    "weapon_crowbar" "1"
+    "weapon_physcannon" "1"
+    "weapon_357" "1"
+    "weapon_frag" "1"
+    "weapon_pistol" "1"
+    "item_box_buckshot" "2"
+    "item_ammo_smg1" "3"
+    "item_battery" "3"
+    "weapon_healer" "1"
+    "weapon_crossbow" "1"
+}
+}

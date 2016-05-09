@@ -1,0 +1,16 @@
+SoundCache
+{
+	"precache_file"		"scripts/npc_sounds_alyx_episodic.txt"
+	"precache_file"		"scripts/npc_sounds_strider_episodic.txt"
+	"precache_file"		"scripts/npc_sounds_turret_episodic.txt"
+	"precache_file"		"scripts/npc_sounds_soldier_episodic.txt"
+	"precache_file"		"scripts/npc_sounds_ministrider_episodic.txt"
+	"precache_file"		"scripts/npc_sounds_roller_episodic.txt"
+	"precache_file"		"scripts/npc_sounds_combine_ball_episodic.txt"
+	"precache_file"		"scripts/npc_sounds_citizen_episodic.txt"
+	"precache_file"		"scripts/npc_sounds_citizen_ep1.txt"
+	"precache_file"		"scripts/npc_sounds_dog_episodic.txt"
+	"precache_file"		"scripts/npc_sounds_antlion_episodic.txt"
+	"precache_file"		"scripts/npc_sounds_antlionguard_episodic.txt"
+	"precache_file"		"scripts/npc_sounds_advisor.txt"
+}

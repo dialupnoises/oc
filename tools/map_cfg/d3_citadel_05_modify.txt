@@ -1,0 +1,158 @@
+d3_citadel_05
+{
+    Remove
+    {
+        ClassName
+        {
+            "info_player_start" {}
+            "trigger_changelevel" {}
+        }
+        TargetName
+        {
+            "playerpod1_trigger" {}
+            "playerpod2_trigger" {}
+            "playerpod3_trigger" {}
+            "playerpod4_trigger" {}
+            "playerpod5_trigger" {}
+            "playerpod6_trigger" {}
+            "playerpod7_trigger" {}
+        }
+        Origin
+        {
+            "-1024 672 -3064" {}
+            "-1152 848 -2832" {}
+            "-995.693 695.87 -3044" {}
+        }
+    }
+    Add
+    {
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "origin" "-1063 1021.38 -3066"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "origin" "-1063 910.702 -3066"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "origin" "-1063 818.977 -3066"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "origin" "-1063 708.935 -3066"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "origin" "-1063 598.6 -3066"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "origin" "-1063 477 -3066"
+        }
+        "point_viewcontrol"
+        {
+            "acceleration" "500"
+            "angles" "0 0 0"
+            "deceleration" "500"
+            "spawnflags" "140"
+            "speed" "0"
+            "targetname" "playerpod_camera"
+            "wait" "10"
+            "origin" "-92.7783 115 -2907.88"
+        }
+        "logic_timer"
+        {
+            "RefireTime" "1"
+            "spawnflags" "0"
+            "StartDisabled" "1"
+            "targetname" "timer_camera_enable"
+            "OnTimer" "playerpod_camera,Enable,,0,-1"
+            "origin" "-243 21 -2903"
+        }
+        "point_servercommand"
+        {
+            "targetname" "mapchange"
+            "origin" "14455 -9912.75 10277.7"
+        }
+    }
+    Modify
+    {
+        ClassName
+        {
+            "worldspawn"
+            {
+                "disableareaportals" "1"
+            }
+        }
+        TargetName
+        {
+            "pod_player47"
+            {
+                "OnPass" "mapchange,Command,changelevel d3_breen_01,2,-1"
+                "OnPass" "timer_camera_enable,Kill,,0,-1"
+                "OnPass" "playerpod_camera,Disable,,1.5,-1"
+            }
+            "playerpod1_vehicle"
+            {
+                "PlayerOn" "timer_camera_enable,Enable,,1,-1"
+                "PlayerOn" "playerpod_camera,Enable,,1,-1"
+                "PlayerOn" "playerpod_camera,SetParentAttachment,vehicle_driver_eyes,0.5,-1"
+                "PlayerOn" "playerpod_camera,SetParent,playerpod1_vehicle,0,-1"
+            }
+            "playerpod2_vehicle"
+            {
+                "PlayerOn" "playerpod_camera,Enable,,1,-1"
+                "PlayerOn" "timer_camera_enable,Enable,,1,-1"
+                "PlayerOn" "playerpod_camera,SetParentAttachment,vehicle_driver_eyes,0.5,-1"
+                "PlayerOn" "playerpod_camera,SetParent,playerpod2_vehicle,0,-1"
+            }
+            "playerpod3_vehicle"
+            {
+                "PlayerOn" "playerpod_camera,Enable,,1,-1"
+                "PlayerOn" "timer_camera_enable,Enable,,1,-1"
+                "PlayerOn" "playerpod_camera,SetParentAttachment,vehicle_driver_eyes,0.5,-1"
+                "PlayerOn" "playerpod_camera,SetParent,playerpod3_vehicle,0,-1"
+            }
+            "playerpod4_vehicle"
+            {
+                "PlayerOn" "playerpod_camera,Enable,,1,-1"
+                "PlayerOn" "timer_camera_enable,Enable,,1,-1"
+                "PlayerOn" "playerpod_camera,SetParentAttachment,vehicle_driver_eyes,0.5,-1"
+                "PlayerOn" "playerpod_camera,SetParent,playerpod4_vehicle,0,-1"
+            }
+            "playerpod5_vehicle"
+            {
+                "PlayerOn" "playerpod_camera,Enable,,1,-1"
+                "PlayerOn" "timer_camera_enable,Enable,,1,-1"
+                "PlayerOn" "playerpod_camera,SetParentAttachment,vehicle_driver_eyes,0.5,-1"
+                "PlayerOn" "playerpod_camera,SetParent,playerpod5_vehicle,0,-1"
+            }
+            "playerpod6_vehicle"
+            {
+                "PlayerOn" "playerpod_camera,Enable,,1,-1"
+                "PlayerOn" "timer_camera_enable,Enable,,1,-1"
+                "PlayerOn" "playerpod_camera,SetParentAttachment,vehicle_driver_eyes,0.5,-1"
+                "PlayerOn" "playerpod_camera,SetParent,playerpod6_vehicle,0,-1"
+            }
+            "playerpod7_vehicle"
+            {
+                "PlayerOn" "playerpod_camera,Enable,,1,-1"
+                "PlayerOn" "timer_camera_enable,Enable,,1,-1"
+                "PlayerOn" "playerpod_camera,SetParentAttachment,vehicle_driver_eyes,0.5,-1"
+                "PlayerOn" "playerpod_camera,SetParent,playerpod7_vehicle,0,-1"
+            }
+        }
+    }
+SpawnItems
+{
+    "weapon_physcannon" "1"
+    "weapon_healer" "1"
+}
+}

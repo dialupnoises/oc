@@ -1,0 +1,17 @@
+"tysn_merchant_harvest_1"
+{
+	"Name"	"Pawnshop"
+
+	"Weapons"
+	{
+		"weapon_crossbow" "50"
+		"weapon_357" "100"
+		"weapon_sniperrifle" "150"
+	}
+	"Items"
+	{	
+		"item_ammo_crossbow" "1"
+		"item_ammo_357" "3"
+		"item_box_sniper_rounds" "5"
+	}
+}

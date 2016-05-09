@@ -1,0 +1,7 @@
+LightmappedGeneric
+{
+	$basetexture "Tysn/Tysn_OrangePulp_1"
+	$surfaceprop "watermelon"
+	$envmap "env_cubemap"
+	$envmaptint "[.5 .5 .5]"
+}

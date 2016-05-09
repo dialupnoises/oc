@@ -1,0 +1,114 @@
+c3a2d
+{
+    Remove
+    {
+        ClassName
+        {
+            "info_player_start" {}
+        }
+    }
+    Add
+    {
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "c3a2d_starts"
+            "origin" "-50.4994 -1014.5 -767"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "c3a2d_starts"
+            "origin" "-50.9984 -1089 -767"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "c3a2d_starts"
+            "origin" "-118.998 -1090 -767"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "c3a2d_starts"
+            "origin" "-117.998 -1020 -767"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "c3a2d_starts"
+            "origin" "93 -1014.5 -767"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "c3a2d_starts"
+            "origin" "92.501 -1089 -767"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "c3a2d_starts"
+            "origin" "165 -1014.5 -767"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "c3a2d_starts"
+            "origin" "164.501 -1089 -767"
+        }
+        "filter_activator_name"
+        {
+            "filtername" "NULL"
+            "Negated" "0"
+            "targetname" "sci_dmgfilter"
+            "origin" "1239 -644.341 -184.734"
+        }
+    }
+    Modify
+    {
+        ClassName
+        {
+            "worldspawn"
+            {
+                "mapversion" "8"
+            }
+        }
+        TargetName
+        {
+            "thesci"
+            {
+                "damagefilter" "sci_dmgfilter"
+            }
+            "theb"
+            {
+                "damagefilter" "sci_dmgfilter"
+            }
+            "c3a2_portsci"
+            {
+                "damagefilter" "sci_dmgfilter"
+            }
+            "change"
+            {
+                "transitionradius" "88"
+            }
+        }
+        Origin
+        {
+            "0 -696 -708"
+            {
+                "spawngroup" "c3a2c_starts2"
+                "transitionradius" "190"
+            }
+        }
+    }
+SpawnItems
+{
+    "weapon_crowbar" "1"
+    "weapon_smg1" "1"
+    "weapon_uzi" "2"
+    "item_battery" "1"
+    "item_ammo_smg1" "3"
+    "weapon_healer" "1"
+}
+}

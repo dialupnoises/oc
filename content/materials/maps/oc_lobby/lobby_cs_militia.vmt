@@ -1,0 +1,6 @@
+"LightmappedGeneric"
+{
+	"$basetexture" "maps/oc_lobby/lobby_cs_militia"
+	"$decal" "1"
+	"$decalscale" ".25"
+}

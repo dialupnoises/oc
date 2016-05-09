@@ -1,0 +1,21 @@
+Obsidian Conflict
+
+Map: oc_lobby
+Author: Tysn
+Email: tysonbt@gmail.com
+
+Description:
+
+This is a map selection level. To select a map, break down the map's door with your crowbar and enter the resulting hallway.
+
+
+For server admins, refer to oc_lobby_modify.txt in your SourceMods/obsidian/maps/cfg directory for information on how to add and remove maps for your server.
+
+
+
+
+Special Thanks To:
+
+Zteer - original map selection concept
+W0rf0x - information on map selection system
+Skidz - entity assistance

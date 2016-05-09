@@ -1,0 +1,245 @@
+ep1_citadel_02b
+{
+    Remove
+    {
+        ClassName
+        {
+            "info_player_start" {}
+        }
+        TargetName
+        {
+            "player_clip_1" {}
+            "entry_transition_door" {}
+        }
+        Origin
+        {
+            "1024 4776 2560" {}
+            "1965 4297 2508" {}
+            "3008 4392 -8796" {}
+            "2678.07 4673.42 2505" {}
+            "5545.25 4642.47 -6606" {}
+        }
+    }
+    Add
+    {
+        "logic_auto"
+        {
+            "spawnflags" "1"
+            "OnMapSpawn" "logic_ballgenerator1_enabled,Trigger,,0.5,-1"
+            "origin" "1965 4297 2508"
+        }
+        "logic_auto"
+        {
+            "spawnflags" "1"
+            "OnMapSpawn" "spawn_alyx,ForceSpawn,,0.5,-1"
+            "OnMapSpawn" "alyx,EnableAlwaysTransition,,0.8,-1"
+            "OnMapSpawn" "alyx,AddContext,al_hint_citPreCore:1,0.8,-1"
+            "OnMapSpawn" "alyx,Kill,,0.1,-1"
+            "OnMapSpawn" "mapchange,Command,mp_falldamage 0,1,-1"
+            "origin" "2678.07 4673.42 2505"
+        }
+        "point_servercommand"
+        {
+            "targetname" "mapchange"
+            "origin" "5418.55 4823 -6612.11"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "spawn1"
+            "origin" "665 4931 2497"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "targetname" "spawn1"
+            "origin" "1063 4977 2497"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "spawn1"
+            "origin" "921 4837 2497"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "spawn1"
+            "origin" "987 4289 2498"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "targetname" "spawn1"
+            "origin" "1126 4427 2497"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "spawn1"
+            "origin" "1863 4320 2497"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "StartDisabled" "1"
+            "targetname" "spawn2"
+            "origin" "3264 4512 2636"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 27 0"
+            "StartDisabled" "1"
+            "targetname" "spawn2"
+            "origin" "3150 4583 2636"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 322 0"
+            "StartDisabled" "1"
+            "targetname" "spawn2"
+            "origin" "3151 4713 2636"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "StartDisabled" "1"
+            "targetname" "spawn2"
+            "origin" "3298 4761 2636"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "StartDisabled" "1"
+            "targetname" "spawn2"
+            "origin" "3407 4661 2636"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 139.5 0"
+            "StartDisabled" "1"
+            "targetname" "spawn2"
+            "origin" "3343 4562 2636"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "StartDisabled" "1"
+            "targetname" "spawn3"
+            "origin" "3927 4507 -6717"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "StartDisabled" "1"
+            "targetname" "spawn3"
+            "origin" "3808 4507 -6717"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "StartDisabled" "1"
+            "targetname" "spawn3"
+            "origin" "3866 4507 -6717"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "StartDisabled" "1"
+            "targetname" "spawn3"
+            "origin" "3805 4778 -6717"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "StartDisabled" "1"
+            "targetname" "spawn3"
+            "origin" "3866 4778 -6717"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "StartDisabled" "1"
+            "targetname" "spawn3"
+            "origin" "3924 4778 -6717"
+        }
+        "point_trigger"
+        {
+            "spawnflags" "1"
+            "TriggerOnce" "1"
+            "TriggerRadius" "263"
+            "OnStartTouch" "airlock_exit_counter_1,Add,1,0,-1"
+            "origin" "5489 4651 -6647"
+        }
+        "point_trigger"
+        {
+            "spawnflags" "1"
+            "targetname" "killfallingplayers"
+            "TriggerRadius" "128"
+            "OnStartTouch" "!activator,SetHealth,0,0,-1"
+            "origin" "3569 4645 -6711"
+        }
+        "point_trigger"
+        {
+            "spawnflags" "1"
+            "targetname" "killfallingplayers"
+            "TriggerRadius" "305"
+            "OnStartTouch" "!activator,SetHealth,0,0,-1"
+            "origin" "3911 4659 -6711"
+        }
+        "point_trigger"
+        {
+            "spawnflags" "1"
+            "TriggerRadius" "1075"
+            "OnStartTouch" "!activator,SetHealth,0,0,-1"
+            "origin" "3253 4659 -8170"
+        }
+    }
+    Modify
+    {
+        ClassName
+        {
+            "worldspawn"
+            {
+                "disableareaportals" "1"
+            }
+        }
+        TargetName
+        {
+            "path_elevator_guard_end"
+            {
+                "OnPass" "killfallingplayers,Kill,,0,-1"
+            }
+            "path_elevator_guard_end0"
+            {
+                "OnPass" "spawn2,Disable,,0,-1"
+                "OnPass" "spawn3,Enable,,0,-1"
+            }
+            "train_initial_start_counter"
+            {
+                "OnHitMax" "spawn2,Enable,,0,-1"
+                "OnHitMax" "spawn1,Disable,,0,-1"
+            }
+            "impact_trigger"
+            {
+                "OnTrigger" "mapchange,Command,changelevel ep1_citadel_02b,5,-1"
+            }
+            "changelevel"
+            {
+                "nosmooth" "1"
+            }
+        }
+        Origin
+        {
+            "3308 4716 -7000"
+            {
+                "OnTrigger" "mapchange,Command,changelevel ep1_citadel_02b,0,-1"
+            }
+        }
+    }
+SpawnItems
+{
+    "weapon_physcannon" "1"
+    "weapon_healer" "1"
+}
+}

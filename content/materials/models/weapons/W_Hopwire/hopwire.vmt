@@ -1,0 +1,7 @@
+"VertexLitGeneric"
+{
+	// Original shader: VertexLitTexture
+	"$basetexture" "models/Weapons/w_hopwire/hopwire"
+	"$bumpmap" "models/Weapons/w_hopwire/hopwire_normal"
+	"$normalalphaenvmapmask" "1"
+}

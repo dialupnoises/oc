@@ -1,0 +1,140 @@
+"NPC_Hydra.HeartbeatIdle"
+{
+	"channel"		"CHAN_ITEM"
+	"volume"		"VOL_NORM"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_70dB"
+
+	"wave"			"npc/hydra/hydra_heartloop1.wav"
+}
+
+"NPC_Hydra.HeartbeatFast"
+{
+	"channel"		"CHAN_ITEM"
+	"volume"		"VOL_NORM"
+	"pitch"			"130.000"
+
+	"soundlevel"	"SNDLVL_70dB"
+
+	"wave"			"npc/hydra/hydra_heartloop2.wav"
+}
+
+"NPC_Hydra.BreatheIdle"
+{
+	"channel"		"CHAN_BODY"
+	"volume"		"VOL_NORM"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_70dB"
+
+	"wave"			"npc/hydra/hydra_3lungbreathe_loop1.wav"
+}
+
+"NPC_Hydra.BreatheFast"
+{
+	"channel"		"CHAN_BODY"
+	"volume"		"VOL_NORM"
+	"pitch"			"150.000"
+
+	"soundlevel"	"SNDLVL_70dB"
+
+	"wave"			"npc/hydra/hydra_3lungbreathe_loop2.wav"
+}
+
+"NPC_Hydra.Alert"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"VOL_NORM"
+	"pitch"			"95, 105"
+
+	"soundlevel"	"SNDLVL_90dB"
+
+	"rndwave"
+	{
+		"wave"	"npc/hydra/hydra_alert1.wav"
+		"wave"	"npc/hydra/hydra_alert2.wav"
+		"wave"	"npc/hydra/hydra_alert3.wav"
+	}
+}
+
+"NPC_Hydra.Pain"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"VOL_NORM"
+	"pitch"			"95, 105"
+
+	"soundlevel"	"SNDLVL_100dB"
+
+	"rndwave"
+	{
+		"wave"	"npc/hydra/hydra_pain1.wav"
+		"wave"	"npc/hydra/hydra_pain2.wav"
+		"wave"	"npc/hydra/hydra_pain3.wav"
+	}
+}
+
+"NPC_Hydra.Search"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"VOL_NORM"
+	"pitch"			"95, 105"
+
+	"soundlevel"	"SNDLVL_80dB"
+
+	"rndwave"
+	{
+		"wave"	"npc/hydra/hydra_search5.wav"
+		"wave"	"npc/hydra/hydra_search6.wav"
+		"wave"	"npc/hydra/hydra_search7.wav"
+		"wave"	"npc/hydra/hydra_search8.wav"
+	}
+}
+
+"NPC_Hydra.ExtendTentacle"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"VOL_NORM"
+	"pitch"			"95, 105"
+
+	"soundlevel"	"SNDLVL_80dB"
+
+	"rndwave"
+	{
+		"wave"	"npc/hydra/hydra_sendtentacle1.wav"
+		"wave"	"npc/hydra/hydra_sendtentacle2.wav"
+		"wave"	"npc/hydra/hydra_sendtentacle3.wav"
+	}
+}
+
+"NPC_Hydra.Attack"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"VOL_NORM"
+	"pitch"			"95, 105"
+
+	"soundlevel"	"SNDLVL_100dB"
+
+	"rndwave"
+	{
+		"wave"	"npc/hydra/hydra_strike1.wav"
+		"wave"	"npc/hydra/hydra_strike2.wav"
+		"wave"	"npc/hydra/hydra_strike3.wav"
+	}
+}
+
+"NPC_Hydra.Bump"
+{
+	"channel"		"CHAN_BODY"
+	"volume"		"VOL_NORM"
+	"pitch"			"95, 105"
+
+	"soundlevel"	"SNDLVL_120dB"
+
+	"rndwave"
+	{
+		"wave"	"npc/hydra/hydra_bump1.wav"
+		"wave"	"npc/hydra/hydra_bump2.wav"
+		"wave"	"npc/hydra/hydra_bump3.wav"
+	}
+}

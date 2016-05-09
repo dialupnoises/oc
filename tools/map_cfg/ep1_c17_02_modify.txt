@@ -1,0 +1,183 @@
+ep1_c17_02
+{
+    Remove
+    {
+        ClassName
+        {
+            "info_player_start" {}
+        }
+		"Targetname"
+		{
+			"timer_give_guard_health" {}
+		}
+        Origin
+        {
+            "1789 -337 56" {}
+            "1916 -329 80" {}
+        }
+    }
+    Add
+    {
+        "logic_auto"
+        {
+            "spawnflags" "1"
+            "OnMapSpawn" "looktargets_inside,EnableHint,,0,-1"
+            "origin" "1789 -337 56"
+        }
+        "logic_auto"
+        {
+            "spawnflags" "1"
+            "OnMapSpawn" "global_newgame_spawner_suit,Kill,,0.8,-1"
+            "OnMapSpawn" "global_newgame_spawner_physcannon,Kill,,0.8,-1"
+            "OnMapSpawn" "global_newgame_spawner_shotgun,Kill,,0.8,-1"
+            "OnMapSpawn" "global_newgame_spawner_smg,Kill,,0.8,-1"
+            "OnMapSpawn" "global_newgame_template_base_items,ForceSpawn,,0.5,-1"
+            "OnMapSpawn" "alyx,Kill,,0.1,-1"
+            "OnMapSpawn" "previous_level_items,Kill,,0.1,-1"
+            "origin" "1772 -287.059 79.807"
+        }
+        "filter_multi"
+        {
+            "targetname" "filter_NoDamage"
+            "Negated" "1"
+            "origin" "1667 10 102"
+        }
+        "logic_auto"
+        {
+            "spawnflags" "1"
+            "OnMapSpawn" "alyx,SetDamageFilter,filter_NoDamage,1,-1"
+            "origin" "1651 10 102"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "spawn1"
+            "origin" "1585 160 25"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "targetname" "spawn1"
+            "origin" "1972 -209 17"
+        }
+        "prop_dynamic_override"
+        {
+            "angles" "0 270 0"
+            "solid" "6"
+            "MinAnimTime" "5"
+            "MaxAnimTime" "10"
+            "fademindist" "-1"
+            "fadescale" "1"
+            "model" "models/props_combine/combineinnerwall001c.mdl"
+            "skin" "0"
+            "origin" "1975 -146 25"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "spawn1"
+            "origin" "1979 -329 17"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "targetname" "spawn1"
+            "origin" "1782 -341 17"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "targetname" "spawn1"
+            "origin" "1788 -160 17"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "spawn1"
+            "origin" "1583 -79 17"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "targetname" "spawn2"
+            "StartDisabled" "1"
+            "origin" "-1392 2362 39"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "targetname" "spawn2"
+            "StartDisabled" "1"
+            "origin" "-1238.51 2362 39"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "spawn2"
+            "StartDisabled" "1"
+            "origin" "-581 2105 5"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "spawn2"
+            "StartDisabled" "1"
+            "origin" "-1406 1921 1"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 179.5 0"
+            "targetname" "spawn2"
+            "StartDisabled" "1"
+            "origin" "-576 1835 1"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "spawn2"
+            "StartDisabled" "1"
+            "origin" "-606 1983 1"
+        }
+    }
+    Modify
+    {
+        ClassName
+        {
+            "worldspawn"
+            {
+                "disableareaportals" "1"
+            }
+        }
+		Targetname
+		{
+			"alyx_briefingroom_exitdoor"
+			{
+				"OnFullyOpen" "!self,kill,,5,-1"
+			}
+        }
+        Origin
+        {
+            "-1028 1656 102.5"
+            {
+                "OnTrigger" "spawn2,Enable,,0,-1"
+                "OnTrigger" "spawn1,Disable,,0,-1"
+            }
+            "1629.11 -321.48 80"
+            {
+                "OnTrigger" "follow_alyx,Activate,,0.5,-1"
+                "OnTrigger" "follow_alyx,Deactivate,,0,-1"
+            }
+        }
+    }
+SpawnItems
+{
+    "weapon_physcannon" "1"
+    "weapon_healer" "1"
+    "weapon_pistol" "1"
+    "weapon_shotgun" "1"
+    "item_ammo_pistol_large" "1"
+    "item_box_buckshot" "2"
+    "weapon_smg1" "1"
+    "item_ammo_smg1_large" "1"
+}
+}

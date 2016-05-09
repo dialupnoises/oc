@@ -1,0 +1,237 @@
+ep2_outland_11b
+{
+    Remove
+    {
+        ClassName
+        {
+	    "trigger_playermovement" {}
+            "info_player_start" {}
+        }
+        TargetName
+        {
+            "magnusson_ragdoll_door_playerout_trigger" {}
+            "door_silo_lab_3_counter" {}
+            "door_silo_lab_3_counter_playertrigger" {}
+            "door_silo_lab_3_brush" {}
+            "magnusson_ragdoll_door_brush" {}
+            "magnusson_courtyard_exitdoor_brush" {}
+            "magnusson_ragdoll_door_counter" {}
+            "trigger_kl_opendoor" {}
+            "trigger_player_closedoor_1" {}
+            "brush_pclip_door_silo_lab_1" {}
+            "relay_begin_mag_training" {}
+            "counter_mag_transition_01" {}
+            "changelevel_to_11a" {}
+        }
+        Origin
+        {
+            "352.994 -8521 -105.371" {}
+            "440.339 -9459.9 -288.501" {}
+        }
+    }
+    Add
+    {
+        "filter_multi"
+        {
+            "Negated" "1"
+            "targetname" "filter_NoDamage"
+            "origin" "-12777 -12651 456"
+        }
+        "logic_timer"
+        {
+            "RefireTime" "2"
+            "OnTimer" "alyx,SetDamageFilter,filter_NoDamage,0,-1"
+            "origin" "-12851.4 -12588.1 567.059"
+        }
+        "logic_auto"
+        {
+            "hammerid" "2799823"
+            "spawnflags" "1"
+            "OnMapSpawn" "lcs_silo_entry_04,Start,,1,1"
+            "OnMapSpawn" "door_silo_lab_1,Open,,2.5,1"
+            "OnMapSpawn" "prop_door_silo_lab_1,SetAnimation,unlock,2,1"
+            "OnMapSpawn" "template_npcs_1,ForceSpawn,,0,1"
+            "OnMapSpawn" "matmod_silodisplay,StartAnimSequence,0 0 1 0,0.1,-1"
+            "origin" "352.994 -8521 -105.371"
+        }
+        "math_counter"
+        {
+            "hammerid" "1393699"
+            "max" "2"
+            "min" "0"
+            "startvalue" "0"
+            "targetname" "door_silo_lab_3_counter"
+            "OnHitMax" "door_silo_lab_3_counter_playertrigger,Kill,,0,-1"
+            "OnHitMax" "colorcorrection,SetFadeInDuration,4,0,-1"
+            "OnHitMax" "colorcorrection,Enable,,0.1,-1"
+            "OnHitMax" "mag_training_lcs1_resume_branch_door,SetValue,1,0,-1"
+            "OnHitMax" "magnusson_training_lcs1_resume_listerner,Test,,0.5,-1"
+            "origin" "235 -9113.91 -295.078"
+        }
+        "math_counter"
+        {
+            "hammerid" "1883731"
+            "max" "2"
+            "min" "0"
+            "StartDisabled" "0"
+            "startvalue" "0"
+            "targetname" "magnusson_ragdoll_door_counter"
+            "OnHitMax" "magnusson_ragdoll_door_playerout_trigger,Kill,,0,-1"
+            "OnHitMax" "magnusson_training_lcs2_resume_listerner,Test,,0.5,-1"
+            "OnHitMax" "mag_training_lcs2_resume_branch_door,SetValue,1,0,-1"
+            "origin" "-80 -9088 -304"
+        }
+        "math_counter"
+        {
+            "hammerid" "2799201"
+            "max" "2"
+            "min" "0"
+            "startvalue" "0"
+            "targetname" "counter_mag_transition_01"
+            "OnHitMax" "relay_begin_mag_training,Trigger,,2,1"
+            "origin" "328 -8984 -199.593"
+        }
+        "logic_auto"
+        {
+            "hammerid" "2799825"
+            "spawnflags" "1"
+            "OnMapSpawn" "template_alyx,ForceSpawn,,0.5,-1"
+            "OnMapSpawn" "global_friendly_encounter,TurnOn,,0,-1"
+            "OnMapSpawn" "alyx,Kill,,0.1,-1"
+            "origin" "440.339 -9459.9 -288.501"
+        }
+        "point_trigger"
+        {
+            "spawnflags" "1"
+            "StartDisabled" "1"
+            "targetname" "trigger_player_closedoor_1"
+            "TriggerOnce" "1"
+            "TriggerRadius" "272"
+            "OnStartTouch" "counter_resume_04,Add,1,0,-1"
+            "origin" "328 -8464 -310"
+        }
+        "point_trigger"
+        {
+            "spawnflags" "1"
+            "targetname" "door_silo_lab_3_counter_playertrigger"
+            "TriggerRadius" "128"
+            "OnStartTouch" "tonemap,SetAutoExposureMax,2,0,-1"
+            "OnStartTouch" "door_silo_lab_3_counter,Add,1,0,-1"
+            "OnEndTouchAll" "door_silo_lab_3_counter,Subtract,1,0,-1"
+            "origin" "129.313 -9090.24 -311"
+        }
+        "point_trigger"
+        {
+            "spawnflags" "1"
+            "targetname" "magnusson_ragdoll_door_playerout_trigger"
+            "TriggerRadius" "207"
+            "OnStartTouch" "magnusson_ragdoll_door_counter,Add,1,0,-1"
+            "OnEndTouchAll" "magnusson_ragdoll_door_counter,Subtract,1,0,-1"
+            "origin" "-298 -9080 -332.861"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "targetname" "outland_11b_spawn1"
+            "origin" "456 -9558 -319"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "targetname" "outland_11b_spawn1"
+            "origin" "360 -9558 -319"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "outland_11b_spawn1"
+            "origin" "359 -9456 -319"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "outland_11b_spawn1"
+            "origin" "358 -9365 -319"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "outland_11b_spawn1"
+            "origin" "466 -9433 -319"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "outland_11b_spawn1"
+            "origin" "365 -9274 -319"
+        }
+        "point_trigger"
+        {
+            "filtername" "mag_filter"
+            "spawnflags" "2"
+            "TriggerRadius" "42"
+            "OnStartTouch" "relay_begin_mag_training,Trigger,,2,-1"
+            "origin" "347 -9158 -295"
+        }
+        "filter_activator_name"
+        {
+            "filtername" "magnusson"
+            "Negated" "Allow entities that match criteria"
+            "targetname" "mag_filter"
+            "origin" "329 -9022.8 -250.013"
+        }
+        "logic_relay"
+        {
+            "hammerid" "2799191"
+            "spawnflags" "3"
+            "StartDisabled" "1"
+            "targetname" "relay_begin_mag_training"
+            "OnTrigger" "magnusson_training_lcs1,Start,,0,1"
+            "origin" "329 -8942.3 -213.678"
+        }
+    }
+    Modify
+    {
+        ClassName
+        {
+            "worldspawn"
+            {
+                "disableareaportals" "1"
+            }
+            "logic_choreographed_scene"
+            {
+                "onplayerdeath" "0"
+            }
+        }
+        TargetName
+        {
+            "magnusson_courtyard_exitdoor"
+            {
+                "OnClose" "changelevel_to_12,ChangeLevel,,5,-1"
+            }
+            "changelevel_to_12"
+            {
+                "nosmooth" "1"
+                "spawngroup" "outland_12_spawn1"
+            }
+        }
+    }
+SpawnItems
+{
+    "weapon_physcannon" "1"
+    "weapon_crowbar" "1"
+    "weapon_healer" "1"
+    "weapon_357" "1"
+    "weapon_shotgun" "1"
+    "weapon_pistol" "1"
+    "weapon_smg1" "2"
+    "item_box_buckshot" "3"
+    "weapon_frag" "1"
+    "item_ammo_smg1" "2"
+    "item_ammo_pistol" "1"
+    "weapon_ar2" "1"
+    "item_ammo_ar2" "2"
+    "weapon_crossbow" "1"
+    "item_ammo_357" "1"
+}
+}

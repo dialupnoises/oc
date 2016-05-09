@@ -1,0 +1,8 @@
+"Sprite"
+{
+	"$basetexture" "Tysn/TysnDocuments1"
+	"$spriteorigin" "[ 0.50 0.50 ]"
+//	"$vertexcolors" "1"
+	"$translucent" "1"
+//	"$additive" "1"
+}

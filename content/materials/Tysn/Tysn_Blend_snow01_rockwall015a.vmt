@@ -1,0 +1,10 @@
+"WorldVertexTransition"
+{
+	"$basetexture" "ground/snow01"
+	"$basetexture2" "nature/rockwall015a"
+        	"$basetexturetransform" "center .5 .5 scale 1 1 rotate 0  translate 0 0"
+        	"$basetexturetransform2" "center .5 .5 scale 1 1 rotate 0 translate 0 0"
+	"$bumpmap" "Nature/rockwall015a_normal"
+	"$surfaceprop" "rock"
+	"%keywords" "Tysn"
+}

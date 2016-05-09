@@ -1,0 +1,7 @@
+"vertexlitGeneric"
+{
+	"$basetexture" "Tysn/Tysn_Jerky_1"
+	"$surfaceprop" "flesh"
+	"$envmap" "env_cubemap"
+	"$envmaptint" "[.15 .15 .15]"
+}

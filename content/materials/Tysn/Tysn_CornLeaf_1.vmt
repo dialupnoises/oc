@@ -1,0 +1,9 @@
+"vertexlitGeneric"
+{
+	// Original shader: BaseTextureAlphaBlend
+	"$alphatest" 1
+	"$basetexture" "Tysn/Tysn_CornLeaf_1"
+	"$nocull" 1
+	"$nodecal" 1
+}
+

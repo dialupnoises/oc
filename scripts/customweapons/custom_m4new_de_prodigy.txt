@@ -1,0 +1,136 @@
+"WeaponData"
+{
+	// Weapon data is loaded by both the Game and Client DLLs.
+	"printname"			"M4A1"
+	"viewmodel"			"models/weapons/v_rif_m4a1.mdl"
+	"playermodel"			"models/weapons/w_rif_m4a1.mdl"
+	"anim_prefix"			"ar2"
+	"bucket"			"2"
+	"bucket_position"		"16"
+
+	"clip_size"			"30"
+	"clip2_size"			"0"
+
+	"default_clip"			"30"
+	"default_clip2"			"0"
+
+	"primary_ammo"			"ar2"
+	"secondary_ammo"		"None"
+
+	"weight"			"5"
+	"item_flags"			"0"
+
+	"BuiltRightHanded" 		"0"
+	"AllowFlipping" 		"1"
+
+	"csviewmodel"			"1"
+
+	"ironsightoffset"
+	{
+		"x"   "-4"
+		"y"   "5.95"
+		"z"   "1.20"
+		"xori"	"-2.7"
+		"yori"	"1.5"
+		"zori"	"3.5"
+   	}
+
+
+	// Sounds for the weapon. There is a max of 16 sounds per category (i.e. max 16 "single_shot" sounds)
+	"SoundData"
+	{
+		"reload_npc"		"Weapon_AR2.NPC_Reload"
+		"empty"			"Default.ClipEmpty_Rifle"
+		"single_shot"		"Weapon_M4A1.Single"
+		"single_shot_npc"	"Weapon_M4A1.Single"
+	}
+
+	// Weapon Sprite data is loaded by the Client DLL.
+	"TextureData"
+	{
+		"weapon"
+		{
+				"font"		"CSWeaponIcons"
+				"character"	"w"
+		}
+		"weapon_s"
+		{	
+				"font"		"CSWeaponIconsSelected"
+				"character"	"w"
+		}
+		"ammo"
+		{
+				"font"		"WeaponIcons"
+				"character"	"u"
+		}
+		"crosshair"
+		{
+				"font"		"Crosshairs"
+				"character"	"Q"
+		}
+		"autoaim"
+		{
+				"file"		"sprites/crosshairs"
+				"x"			"0"
+				"y"			"48"
+				"width"		"24"
+				"height"	"24"
+		}
+	}
+	"Advanced" // only for Weapon_Scripted
+	{
+
+	// **Primary Attack**
+
+		// 0 = none, 1 = Basic Bullet, 2 = Burst, 3 = shotgun, 4 = autoshotgun, 5 = laser, 6 = warp
+		"FireType1"	"1"
+
+
+		// Rate of Weapons Fire ( Not for laser or warp )
+		"FireRate1"	"0.09"
+
+		// Allow a refire as fast as the player can click, Basic Bullet Only.
+		"FastFire1"	"1"
+
+		// Allow Fire Underwater?
+		"FireUnderWater1"	"0"
+
+		// For Bullet accuracy
+		"FireCone1"		"1" // Starting Value ( 0-20 )
+		"FireConeLerp1"		"1" // Bool
+		"FireConeLerpto1"	"4" // Value to lerp accuracy too ( 0-20 )
+
+	// **Secondary Attack**
+
+		// 0 = none, 1 = Basic Bullet, 2 = Burst, 3 = shotgun, 4 = autoshotgun, 5 = laser, 6 = warp, 8 = scope
+		"FireType2"	"0"
+
+	// **Global Weapon Settings**
+
+		// Number of Recoil Animations, weapon models with ACT_VM_RECOIL animations.
+		// ( Only if a weapon has recoil animations, Not for laser or warp )
+		"NumberOfRecoilAnims"	"0"
+
+		// Shots fired till next recoil animation. ( Only if a weapon has recoil animations )
+		"RecoilIncrementSpeed"	"1"
+
+		// 1 = Pistol, 2 = AR2, 3 = crossbow, 4 = physgun, 5 = shotgun, 6 = smg1
+		// This is the player animation set that will be used on all players you view ingame.
+		"PlayerAnimationSet"	"2"
+
+	// **NPC Weapon Settings**
+
+		// NPCs use a ShotRegulator in code, these settings corrispond with it.
+		"NPCRateofFire"		"0.09"
+		"NPCMinBursts"		"4"
+		"NPCMaxBursts"		"7"
+		"NPCMinRest"		"0.1"
+		"NPCMaxRest"		"0.3"
+
+		// Range the NPC can fire this weapon at, if the player is less than min, the npc cant fire and will try to get a better vantage point.
+		"NPCMinRange1"		"24"
+		"NPCMaxRange1"		"1500"
+		"NPCMinRange2"		"24"
+		"NPCMaxRange2"		"200"
+	}
+}

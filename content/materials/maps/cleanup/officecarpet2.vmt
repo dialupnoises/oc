@@ -1,0 +1,7 @@
+LightmappedGeneric
+{
+	"$basetexture"	"maps\cleanup\officecarpet2"
+	"$surfaceprop" "carpet"
+	"$detail" "detail/dt_carpet1"
+	"$detailscale" "12"
+}

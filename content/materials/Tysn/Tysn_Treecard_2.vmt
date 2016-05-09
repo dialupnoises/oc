@@ -1,0 +1,7 @@
+"unlitGeneric"
+{
+	"$basetexture" "Tysn/Tysn_Treecard_2"
+	//"$translucent" "1"
+	"$alphatest" "1"
+	"$nocull" "1"
+}

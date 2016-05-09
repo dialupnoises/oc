@@ -1,0 +1,12 @@
+"oc_starlight"
+{
+	"SpawnItems"
+	{
+		"weapon_healer" "1"
+		"weapon_crowbar" "1"
+		"weapon_pistol" "1"
+    		"item_ammo_pistol_large" "1"
+		"weapon_shotgun" "1"
+		"item_box_buckshot" "3"
+	}
+}

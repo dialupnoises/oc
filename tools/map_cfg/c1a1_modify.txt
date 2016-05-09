@@ -1,0 +1,112 @@
+// File was created for use in Obsidian Conflict ONLY!
+c1a1
+{
+	SpawnItems {}
+
+	Remove
+	{
+		Targetname
+		{
+			"b1"
+			{
+				"model" "models/barnya.mdl"
+			}
+
+			"b2"
+			{
+				"model" "models/barnya.mdl"
+			}
+		}
+	}
+
+	Add
+	{
+		"info_player_deathmatch"
+		{
+			"angles" "0 90 0"
+			"StartDisabled" "0"
+			"origin" "872 584 -143"
+		}
+		
+		"info_player_deathmatch"
+		{
+			"angles" "0 90 0"
+			"StartDisabled" "0"
+			"origin" "912 584 -143"
+		}
+		
+		"info_player_deathmatch"
+		{
+			"angles" "0 270 0"
+			"StartDisabled" "0"
+			"origin" "952 584 -143"
+		}
+		
+		"info_player_deathmatch"
+		{
+			"angles" "0 270 0"
+			"StartDisabled" "0"
+			"origin" "952 640 -143"
+		}
+		
+		"info_player_deathmatch"
+		{
+			"angles" "0 270 0"
+			"StartDisabled" "0"
+			"origin" "912 640 -143"
+		}
+		
+		"info_player_deathmatch"
+		{
+			"angles" "0 90 0"
+			"StartDisabled" "0"
+			"origin" "872 640 -143"
+		}
+
+		"monster_generic"
+		{
+			"origin" "1696 1730 -144"
+			"physdamagescale" "1.0"
+			"renderamt" "255"
+			"angles" "0 0 0"
+			"model" "models/barnya.mdl"
+			"rendercolor" "255 255 255"
+			"targetname" "b1"
+			"spawnflags" "148"
+		}
+
+		"monster_generic"
+		{
+			"origin" "1730 1730 -144"
+			"physdamagescale" "1.0"
+			"body" "0"
+			"renderamt" "0"
+			"angles" "0 0 0"
+			"model" "models/barnya.mdl"
+			"rendercolor" "255 255 255"
+			"targetname" "b2"
+			"spawnflags" "148"
+		}
+
+	}
+	
+	Modify
+	{
+
+		Classname
+		{
+			"trigger_changelevel"
+			{
+				"transitionradius" "450"
+			}
+		}
+
+		Origin
+		{
+			"1123 616 -64"
+			{
+				"spawnflags" "2"
+			}
+		}
+	}
+}

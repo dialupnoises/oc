@@ -1,0 +1,8 @@
+SoundCache
+{
+	"precache_file"		"scripts/level_sounds_music_episodic.txt"
+	"precache_file"		"scripts/game_sounds_weapons_episodic.txt"
+	"precache_file"		"scripts/level_voices_episode_01.txt"
+	"precache_file"		"scripts/level_sounds_aftermath_episodic.txt"
+	"precache_file"		"scripts/level_sounds_outland_episodic.txt"
+}

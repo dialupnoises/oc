@@ -1,0 +1,106 @@
+ep1_citadel_02
+{
+    Remove
+    {
+        ClassName
+        {
+            "info_player_start" {}
+        }
+        TargetName
+        {
+            "trigger_fall" {}
+            "trigger_player_door_2" {}
+        }
+        Origin
+        {
+            "-7552.28 1088 924" {}
+            "-4864 896 192" {}
+            "-4864 896 444" {}
+            "-320 -992 720" {}
+            "480 304 720" {}
+            "1472 1072 720" {}
+            "-4864 896 400" {}
+	    "-8672 1536 864" {}
+        }
+    }
+    Add
+    {
+        "logic_auto"
+        {
+            "spawnflags" "1"
+            "OnMapSpawn" "global_newgame_template_base_items,ForceSpawn,,0.5,1"
+            "OnMapSpawn" "Maker_balltrap_corridor_1,ForceSpawn,,0,-1"
+            "OnMapSpawn" "relay_broken_field_01,Trigger,,0,-1"
+            "OnMapSpawn" "initial_ball_setup,Enable,,0,-1"
+            "OnMapSpawn" "initial_ball_setup,Disable,,0.5,-1"
+            "OnMapSpawn" "ball_trap_11_alt*,Disable,,1,-1"
+            "OnMapSpawn" "Alyx,SetDamageFilter,filter_NoDamage,1,-1"
+            "OnMapSpawn" "global_newgame_spawner_physcannon,Kill,,0.8,-1"
+            "OnMapSpawn" "global_newgame_spawner_suit,Kill,,0.8,-1"
+            "OnMapSpawn" "Alyx,Kill,,0.1,-1"
+            "OnMapSpawn" "Alyx,AddContext,al_hint_citPreCore:1,0.9,-1"
+            "OnMapSpawn" "Alyx,ClearContext,,0.8,-1"
+            "origin" "-7552.28 1088 924"
+        }
+        "filter_multi"
+        {
+            "targetname" "filter_NoDamage"
+            "Negated" "1"
+            "origin" "-8443 1024 899"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "origin" "-9239 1730 802"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "origin" "-8776 1627 801.06"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "origin" "-8633 1766 801.06"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "origin" "-8712 917 801.06"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "origin" "-8578 1053 801.06"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "origin" "-8671 1127 946"
+        }
+        "point_trigger"
+        {
+            "spawnflags" "1"
+            "targetname" "trigger_player_door_2"
+            "TriggerOnce" "1"
+            "TriggerRadius" "191"
+            "OnStartTouch" "counter_door_2,Add,1,0,-1"
+            "origin" "1289 591 841"
+        }
+    }
+    Modify
+    {
+        ClassName
+        {
+            "worldspawn"
+            {
+                "disableareaportals" "1"
+            }
+        }
+    }
+SpawnItems
+{
+    "weapon_physcannon" "1"
+    "weapon_healer" "1"
+}
+}

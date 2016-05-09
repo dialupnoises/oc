@@ -1,0 +1,134 @@
+c1a2a
+{
+    Remove
+    {
+        ClassName
+        {
+            "info_player_start" {}
+        }
+    }
+    Add
+    {
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "targetname" "c1a2a_spawns"
+            "origin" "-419 -200 -575"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "targetname" "c1a2a_spawns"
+            "origin" "-476 -202 -575"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "targetname" "c1a2a_spawns"
+            "origin" "-524 -205 -575"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "targetname" "c1a2a_spawns"
+            "origin" "-536 -152 -575"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "targetname" "c1a2a_spawns"
+            "origin" "-455 -139 -575"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "targetname" "c1a2a_spawns"
+            "origin" "-490 -100 -575"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "targetname" "c1a2a_spawns"
+            "origin" "-535 -89 -575"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "c1a2a_spawns2"
+            "origin" "1275.37 340.694 65"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "c1a2a_spawns2"
+            "origin" "1278 416 65"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "c1a2a_spawns2"
+            "origin" "1358 416 65"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "c1a2a_spawns2"
+            "origin" "1347 334 65"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "c1a2a_spawns2"
+            "origin" "1422 334 65"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "c1a2a_spawns2"
+            "origin" "1426 417 65"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "c1a2a_spawns2"
+            "origin" "1492 417 65"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "c1a2a_spawns2"
+            "origin" "1497 327 65"
+        }
+    }
+    Modify
+    {
+        ClassName
+        {
+            "worldspawn"
+            {
+                "mapversion" "5"
+            }
+        }
+        Origin
+        {
+            "1128 400 192"
+            {
+                "spawngroup" "c1a2b_spawns"
+                "transitionradius" "435"
+            }
+            "-590 -112 -444"
+            {
+                "spawnflags" "0"
+                "spawngroup" "c1a2_starts2"
+            }
+        }
+    }
+SpawnItems
+{
+    "weapon_crowbar" "1"
+    "weapon_smg1" "1"
+    "item_battery" "1"
+    "item_ammo_smg1" "3"
+    "weapon_healer" "1"
+}
+}

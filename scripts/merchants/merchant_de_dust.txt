@@ -1,0 +1,20 @@
+"merchant_de_dust"
+{
+	"Name"	"Rebel Odessa"
+
+	"Weapons"
+	{
+		"weapon_frag" "10"
+	}
+	"Items"
+	{
+		"item_ammo_pistol" "0"
+		"item_box_buckshot" "0"
+		"item_box_sniper_rounds" "0"
+		"item_ammo_357" "0"
+		"item_healthkit" "3"
+		"item_battery" "3"
+		"item_shield" "30"
+		"item_cloak" "40"
+	}
+}

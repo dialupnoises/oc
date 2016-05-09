@@ -1,0 +1,140 @@
+"WeaponData"
+{
+	// Weapon data is loaded by both the Game and Client DLLs.
+	"printname"			"Remington 870"
+	"viewmodel"			"models/weapons/v_remi870.mdl"
+	"playermodel"			"models/weapons/w_remi870.mdl"
+	"anim_prefix"			"shotgun"
+	"bucket"			"3"
+	"bucket_position"		"11"
+
+	"clip_size"			"8"
+	"primary_ammo"			"Buckshot"
+	"secondary_ammo"		"None"
+
+	"weight"			"5"
+	"item_flags"			"0"
+
+	"BuiltRightHanded" 		"1"
+	"AllowFlipping" 		"0"
+
+	"csviewmodel"			"0"
+
+   	"ironsightoffset"
+	{
+		"x"   "-6"
+		"y"   "-5.50"
+		"z"   "3.30"
+   	}
+
+
+	// Sounds for the weapon. There is a max of 16 sounds per category (i.e. max 16 "single_shot" sounds)
+	"SoundData"
+	{
+		"empty"				"weapon_Shotgun.Empty"
+		"reload"			"weapon_Shotgun.Reload"
+		"special1"			"weapon_remi870.Special1"
+		"single_shot"		"weapon_remi870.Single"
+		"reload_npc"		"weapon_Shotgun.NPC_Reload"
+		"single_shot_npc"	"weapon_spas12.NPC_Single" 
+	}
+
+	// Weapon Sprite data is loaded by the Client DLL.
+	"TextureData"
+	{
+		"weapon"
+		{
+				"font"		"WeaponIcons"
+				"character"	"b"
+		}
+		"weapon_s"
+		{	
+				"font"		"WeaponIconsSelected"
+				"character"	"b"
+		}
+		"ammo"
+		{
+				"font"		"WeaponIcons"
+				"character"	"s"
+		}
+		"crosshair"
+		{
+				"font"		"Crosshairs"
+				"character"	"Q"
+		}
+		"autoaim"
+		{
+				"file"		"sprites/crosshairs"
+				"x"			"0"
+				"y"			"48"
+				"width"		"24"
+				"height"	"24"
+		}
+	}
+	"Advanced" // only for Weapon_Scripted
+	{
+
+	// **Primary Attack**
+
+		// 0 = none, 1 = Basic Bullet, 2 = Burst, 3 = shotgun, 4 = autoshotgun, 5 = laser, 6 = warp
+		"FireType1"	"3"
+
+
+		// Rate of Weapons Fire ( Not for laser or warp )
+		"FireRate1"	"0.4"
+
+		// Allow a refire as fast as the player can click, Basic Bullet Only.
+		"FastFire1"	"0"
+
+		// Allow Fire Underwater?
+		"FireUnderWater1"	"0"
+
+		// How many bullets in a burst. ( For Burst Weapon Only! )
+		"BurstAmount1"	"0"
+		"BetweenBurstTime1"	"0.05"
+
+		// For Bullet accuracy
+		"FireCone1"		"3.5" // Starting Value ( 0-20 )
+		"FireConeLerp1"		"0" // Bool
+		"FireConeLerpto1"	"0" // Value to lerp accuracy too ( 0-20 )
+
+	// **Secondary Attack**
+
+		// 0 = none, 1 = Basic Bullet, 2 = Burst, 3 = shotgun, 4 = autoshotgun, 5 = laser, 6 = warp, 8 = scope
+		"FireType2"	"0"
+
+		// Rate of Weapons Fire ( Not for laser or warp )
+		"FireRate2"	"0.4"
+
+		// Allow a refire as fast as the player can click, Basic Bullet Only.
+		"FastFire2"	"0"
+
+		// Allow Fire Underwater?
+		"FireUnderWater2"	"0"
+
+		// How many bullets in a burst. ( For Burst Weapon Only! )
+		"BurstAmount2"	"4"
+		"BetweenBurstTime2"	"0.05"
+
+		// Secondary Fire uses Secondary Ammo Type. If 0, will use primary ammo.
+		"SecondaryAmmoUsed"	"0"
+
+		// For Bullet accuracy
+		"FireCone2"		"2" // Starting Value ( 0-20 )
+		"FireConeLerp2"		"1" // Bool
+		"FireConeLerpto2"	"6" // Value to lerp accuracy too ( 0-20 )
+
+	// **Global Weapon Settings**
+
+		// Number of Recoil Animations, weapon models with ACT_VM_RECOIL animations.
+		// ( Only if a weapon has recoil animations, Not for laser or warp )
+		"NumberOfRecoilAnims"	"0"
+
+		// Shots fired till next recoil animation. ( Only if a weapon has recoil animations )
+		"RecoilIncrementSpeed"	"1"
+
+		// 1 = Pistol, 2 = AR2, 3 = crossbow, 4 = physgun, 5 = shotgun, 6 = smg1
+		// This is the player animation set that will be used on all players you view ingame.
+		"PlayerAnimationSet"	"2"
+	}
+}

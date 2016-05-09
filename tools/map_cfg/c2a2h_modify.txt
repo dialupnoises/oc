@@ -1,0 +1,80 @@
+c2a2h
+{
+    Add
+    {
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "c2a2h_starts"
+            "origin" "151 -503 -767"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "c2a2h_starts"
+            "origin" "148 -450 -767"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "c2a2h_starts"
+            "origin" "147 -403 -767"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "c2a2h_starts"
+            "origin" "147 -351 -767"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "c2a2h_starts"
+            "origin" "97 -351 -767"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "c2a2h_starts"
+            "origin" "99 -401 -767"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "c2a2h_starts"
+            "origin" "99 -456 -767"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "c2a2h_starts"
+            "origin" "99 -502 -767"
+        }
+    }
+    Modify
+    {
+        ClassName
+        {
+            "worldspawn"
+            {
+                "mapversion" "5"
+            }
+        }
+        TargetName
+        {
+            "c2a2gc2a2htrans"
+            {
+                "spawngroup" "c2a2g_starts2"
+                "transitionradius" "315"
+            }
+        }
+    }
+SpawnItems
+{
+    "weapon_healer" "1"
+    "weapon_crowbar" "1"
+    "weapon_pistol" "1"
+    "weapon_smg1" "1"
+    "weapon_shotgun" "1"
+}
+}

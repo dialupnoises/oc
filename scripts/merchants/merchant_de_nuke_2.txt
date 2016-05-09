@@ -1,0 +1,30 @@
+"merchant_de_nuke_2"
+{
+	"Name"	"Scientist Kleiner"
+
+	"Weapons"
+	{
+		"weapon_ar2" "35"
+		"weapon_alyxgun" "15"
+		"weapon_manhack" "5"
+		"weapon_stunstick" "5"
+		"weapon_rpg" "40"
+		"weapon_sniperrifle" "35"
+	}
+	"Items"
+	{
+		"item_ammo_pistol" "1"
+		"item_ammo_ar2" "3"
+		"item_ammo_357" "2"
+		"item_box_buckshot" "3"
+		"item_ammo_smg1_grenade" "4"
+		"item_rpg_round" "6"
+		"item_ammo_crossbow" "3"
+		"item_box_alyxrounds" "2"
+		"item_healthkit" "3"
+		"item_battery" "3"
+		"item_shield" "20"
+		"item_cloak" "30"
+		"item_box_sniper_rounds" "7"
+	}
+}

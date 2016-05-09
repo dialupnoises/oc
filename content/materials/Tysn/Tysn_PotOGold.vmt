@@ -1,0 +1,10 @@
+"vertexlitGeneric"
+{
+	"$basetexture" "Tysn/Tysn_PotOGold"
+	"$surfaceprop" "metal"
+	"$nodecal" 1
+	"$envmapmask" "Tysn/Tysn_PotOGold_envmask"
+	"$envmap" "env_cubemap"
+	"$envmaptint" "[.9 .9 .9]"
+
+}

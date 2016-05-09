@@ -1,0 +1,11 @@
+Obsidian Conflict
+
+Map: oc_starship_troopers
+Author: Tysn
+
+Description:
+
+Stranded in outpost 87, your team and the lieutenant must fight off the arachnid hordes until help can arrive.
+
+
+(There is a 40-second delay before the map begins to allow players time to load the map)

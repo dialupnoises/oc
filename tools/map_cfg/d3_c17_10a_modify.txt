@@ -1,0 +1,190 @@
+d3_c17_10a
+{
+    Remove
+    {
+        ClassName
+        {
+            "player_loadsaved" {}
+            "info_player_start" {}
+        }
+        TargetName
+        {
+            "barney_dead_text" {}
+            "bldg1_door2_close_timer" {}
+            "bldg1_door1_close_timer" {}
+            "bldg2_door2_close_timer" {}
+            "soldierscare_door_close_timer" {}
+        }
+        Origin
+        {
+            "-3929.55 6823.91 20.876" {}
+            "-4192 6780 96" {}
+        }
+    }
+    Add
+    {
+        "logic_auto"
+        {
+            "spawnflags" "1"
+            "OnMapSpawn" "player_spawn_items_maker,ForceSpawn,,1,-1"
+            "OnMapSpawn" "barney,Kill,,0,-1"
+            "OnMapSpawn" "yumyumyum,Eat,,1.01,-1"
+            "origin" "-3929.55 6823.91 20.876"
+        }
+        "point_weapon_eater"
+        {
+            "EatRadius" "76"
+            "targetname" "yumyumyum"
+            "origin" "-3933 6794 63"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "c17_10a_spawn1"
+            "origin" "-4333 6754 1"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "targetname" "c17_10a_spawn1"
+            "origin" "-4243 6759 3"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "targetname" "c17_10a_spawn1"
+            "origin" "-4144 6759 3"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "targetname" "c17_10a_spawn1"
+            "origin" "-3987 6759 3"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "c17_10a_spawn1"
+            "origin" "-3976 6810 1"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270.5 0"
+            "targetname" "c17_10a_spawn1"
+            "origin" "-4142 6813 1"
+        }
+        "prop_dynamic_override"
+        {
+            "angles" "0 270 0"
+            "disableshadows" "1"
+            "fademindist" "-1"
+            "fadescale" "1"
+            "MaxAnimTime" "10"
+            "MinAnimTime" "5"
+            "model" "models/props_debris/barricade_tall02a.mdl"
+            "renderamt" "255"
+            "rendercolor" "255 255 255"
+            "skin" "0"
+            "solid" "6"
+            "origin" "-4311 6853 56"
+        }
+        "logic_auto"
+        {
+            "spawnflags" "1"
+            "OnMapSpawn" "barney,SetDamageFilter,filter_NoDamage,2,-1"
+            "origin" "-4135 6784 156"
+        }
+        "filter_multi"
+        {
+            "Negated" "1"
+            "targetname" "filter_NoDamage"
+            "origin" "-4119 6784 156"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "StartDisabled" "1"
+            "targetname" "c17_10a_spawn2"
+            "origin" "-2238.16 8423.72 125"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "StartDisabled" "1"
+            "targetname" "c17_10a_spawn2"
+            "origin" "-2156.76 8422.96 125"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "StartDisabled" "1"
+            "targetname" "c17_10a_spawn2"
+            "origin" "-2076.35 8425.25 125"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "StartDisabled" "1"
+            "targetname" "c17_10a_spawn2"
+            "origin" "-1989.8 8424.93 125"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "StartDisabled" "1"
+            "targetname" "c17_10a_spawn2"
+            "origin" "-1897.6 8423.81 129"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "StartDisabled" "1"
+            "targetname" "c17_10a_spawn2"
+            "origin" "-1821 8426 129"
+        }
+    }
+    Modify
+    {
+        ClassName
+        {
+            "worldspawn"
+            {
+                "disableareaportals" "1"
+            }
+        }
+        Origin
+        {
+            "-2410 8384 192"
+            {
+                "OnTrigger" "c17_10a_spawn1,Disable,,0,-1"
+                "OnTrigger" "c17_10a_spawn2,Enable,,0,-1"
+            }
+            "504 4888 376"
+            {
+                "nosmooth" "1"
+                "spawngroup" "c17_10b_spawn1"
+            }
+            "-3876 6784 96"
+            {
+                "OnTrigger" "barney_follow_goal,Deactivate,,1,-1"
+                "OnTrigger" "barney_follow_goal,Activate,,1.5,-1"
+            }
+        }
+    }
+SpawnItems
+{
+    "weapon_smg1" "1"
+    "weapon_ar2" "1"
+    "weapon_shotgun" "1"
+    "weapon_crowbar" "1"
+    "weapon_physcannon" "1"
+    "weapon_357" "1"
+    "weapon_frag" "1"
+    "weapon_pistol" "1"
+    "item_box_buckshot" "2"
+    "item_ammo_smg1" "3"
+    "item_battery" "3"
+    "weapon_healer" "1"
+    "weapon_crossbow" "1"
+}
+}

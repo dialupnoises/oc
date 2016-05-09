@@ -1,0 +1,10 @@
+"vertexlitgeneric"
+{
+	"$basetexture" "stone/stonewall004a"
+	"$surfaceprop" "concrete"
+	"%keywords" "c17downtown"
+	"$bumpmap" "stone/stonewall004a_normal"
+	"$parallaxmap" "stone/stonewall004a_height"
+	"$parallaxmapscale" ".025"
+
+}

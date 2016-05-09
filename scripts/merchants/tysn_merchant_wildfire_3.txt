@@ -1,0 +1,27 @@
+"tysn_merchant_wildfire_3"
+{
+	"Name"	"Harbor Vendor"
+
+	"Weapons"
+	{
+		"weapon_rpg" "40"
+		"weapon_frag" "1"
+		"weapon_slam" "2"
+		"weapon_healer" "5"
+	}
+	"Items"
+	{
+		"item_ammo_pistol" "1"
+		"item_box_alyxrounds" "1"
+		"item_ammo_357" "2"
+		"item_ammo_smg1" "1"
+		"item_ammo_smg1_grenade" "3"
+		"item_box_buckshot" "2"
+		"item_ammo_ar2" "1"
+		"item_ammo_ar2_altfire" "3"
+		"item_box_sniper_rounds" "3"
+		"item_rpg_round" "1"
+		"item_healthkit" "1"
+		"item_battery" "2"
+	}
+}

@@ -1,0 +1,86 @@
+d1_canals_02
+{
+    Remove
+    {
+        ClassName
+        {
+            "info_player_start" {}
+        }
+        Origin
+        {
+            "3408 -2544 -456" {}
+        }
+    }
+    Add
+    {
+        "point_weapon_eater"
+        {
+            "EatRadius" "50"
+            "targetname" "yumyumyum"
+            "origin" "2896 -2272 -600"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "canals_02_spawn1"
+            "origin" "3314 -2365 -730"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "canals_02_spawn1"
+            "origin" "3314 -2447 -730"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "canals_02_spawn1"
+            "origin" "3314 -2527 -730"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "canals_02_spawn1"
+            "origin" "3314 -2626 -730"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "canals_02_spawn1"
+            "origin" "3314 -2713 -730"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "targetname" "canals_02_spawn1"
+            "origin" "3250 -2759 -730"
+        }
+    }
+    Modify
+    {
+        ClassName
+        {
+            "worldspawn"
+            {
+                "disableareaportals" "1"
+            }
+            "logic_auto"
+            {
+                "OnNewGame" "yumyumyum,Eat,,0.5,-1"
+            }
+        }
+        Origin
+        {
+            "-544 1520 -768"
+            {
+                "spawngroup" "canals_03_spawn1"
+            }
+        }
+    }
+SpawnItems
+{
+    "weapon_crowbar" "1"
+    "weapon_pistol" "1"
+    "weapon_healer" "1"
+}
+}

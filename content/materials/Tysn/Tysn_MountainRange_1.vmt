@@ -1,0 +1,6 @@
+"unlitGeneric"
+{
+	"$basetexture" "Tysn/Tysn_MountainRange_1"
+	//"$translucent" "1"
+	"$alphatest" "1"
+}

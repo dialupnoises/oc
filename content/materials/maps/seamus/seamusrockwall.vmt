@@ -1,0 +1,7 @@
+"lightmappedGeneric"
+{
+	"$baseTexture" "maps/seamus/seamusrockwall"
+	"$surfaceprop" "rock"
+	"$bumpmap" "maps/seamus/seamusrockwall_normal"
+	"%keywords" "seamus" 
+}

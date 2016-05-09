@@ -1,0 +1,110 @@
+"Nihilanth.PainLaugh"
+{
+	"channel"	"CHAN_VOICE"
+	"volume"	"VOL_NORM"
+	"soundlevel"	"SNDLVL_140dB"
+	"pitch"		"PITCH_NORM"
+	"rndwave"
+	{
+		"wave"		"X/x_laugh1.wav"
+		"wave"		"X/x_laugh2.wav"
+	}
+}
+
+"Nihilanth.Pain"
+{
+	"channel"	"CHAN_VOICE"
+	"volume"	"VOL_NORM"
+	"soundlevel"	"SNDLVL_140dB"
+	"pitch"		"PITCH_NORM"
+	"rndwave"
+	{
+		"wave"		"X/x_pain1.wav"
+		"wave"		"X/x_pain2.wav"
+	}
+}
+
+"Nihilanth.Die"
+{
+	"channel"	"CHAN_VOICE"
+	"volume"	"VOL_NORM"
+	"soundlevel"	"SNDLVL_150dB"
+	"pitch"		"PITCH_NORM"
+	"rndwave"
+	{
+		"wave"		"X/x_die1.wav"
+	}
+}
+
+"Nihilanth.FriendBeam"
+{
+	"channel"	"CHAN_WEAPON"
+	"volume"	"VOL_NORM"
+	"soundlevel"	"SNDLVL_110db"
+	"pitch"		"PITCH_NORM"
+	"wave"		"debris/beamstart7.wav"
+}
+
+"Nihilanth.Attack"
+{
+	"channel"	"CHAN_VOICE"
+	"volume"	"VOL_NORM"
+	"soundlevel"	"SNDLVL_140dB"
+	"pitch"		"PITCH_NORM"
+	"rndwave"
+	{
+		"wave"		"X/x_attack1.wav"
+		"wave"		"X/x_attack2.wav"
+		"wave"		"X/x_attack3.wav"
+	}
+}
+
+"Nihilanth.BallAttack"
+{
+	"channel"	"CHAN_WEAPON"
+	"volume"	"VOL_NORM"
+	"soundlevel"	"SNDLVL_140dB"
+	"pitch"		"PITCH_NORM"
+	"rndwave"
+	{
+		"wave"		"X/x_ballattack1.wav"
+	}
+}
+
+"Nihilanth.Recharge"
+{
+	"channel"	"CHAN_VOICE"
+	"volume"	"VOL_NORM"
+	"soundlevel"	"SNDLVL_140dB"
+	"pitch"		"PITCH_NORM"
+	"rndwave"
+	{
+		"wave"		"X/x_recharge1.wav"
+		"wave"		"X/x_recharge2.wav"
+		"wave"		"X/x_recharge3.wav"
+	}
+}
+
+"NihilanthHVR.Zap"
+{
+	"channel"	"CHAN_WEAPON"
+	"volume"	"VOL_NORM"
+	"soundlevel"	"SNDLVL_110db"
+	"pitch"		"PITCH_NORM"
+	"rndwave"
+	{
+		"wave"		"debris/zap4.wav"
+	}
+}
+
+"NihilanthHVR.TeleAttack"
+{
+	"channel"	"CHAN_WEAPON"
+	"volume"	"VOL_NORM"
+	"soundlevel"	"SNDLVL_140dB"
+	"pitch"		"PITCH_NORM"
+	"rndwave"
+	{
+		"wave"		"x/x_teleattack1.wav"
+	}
+}

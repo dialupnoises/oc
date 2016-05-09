@@ -1,0 +1,5 @@
+SoundCache
+{
+	"precache_file"		"scripts/level_sounds_lostcoast.txt"
+	"precache_file"		"scripts/level_voices_lostcoast.txt"
+}

@@ -1,0 +1,9 @@
+"UnlitGeneric"
+{
+	"$basetexture" "maps/oc_paysan/Waypoint_trashcan"
+	"$vertexcolors" "1"
+	"$translucent" "1"
+//	"$additive" "1"
+	"$ignorez" "1"
+	"$no_fullbright" "1"
+}

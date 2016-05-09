@@ -1,0 +1,98 @@
+d1_town_04
+{
+    Remove
+    {
+        ClassName
+        {
+            "info_player_start" {}
+        }
+        Origin
+        {
+            "1024 -940 -3564" {}
+            "570 -1165 -3590.79" {}
+        }
+    }
+    Add
+    {
+        "prop_door_rotating"
+        {
+            "ajarangles" "0 0 0"
+            "angles" "0 0 0"
+            "axis" "891 -871 -3594, 891 -871 -3594"
+            "distance" "90"
+            "hardware" "1"
+            "model" "models/props_c17/door01_left.mdl"
+            "returndelay" "-1"
+            "skin" "7"
+            "spawnflags" "10240"
+            "speed" "100"
+            "origin" "891 -871 -3594"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270.5 0"
+            "targetname" "town_04_spawn1"
+            "origin" "505.038 -943 -3638"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "targetname" "town_04_spawn1"
+            "origin" "624.663 -940.044 -3647"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "targetname" "town_04_spawn1"
+            "origin" "828.776 -1016.11 -3647"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "town_04_spawn1"
+            "origin" "841 -1142 -3647"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "town_04_spawn1"
+            "origin" "492.176 -1077 -3632"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "town_04_spawn1"
+            "origin" "481.69 -1201 -3633"
+        }
+    }
+    Modify
+    {
+        ClassName
+        {
+            "worldspawn"
+            {
+                "disableareaportals" "1"
+            }
+        }
+        Origin
+        {
+            "-2800 1152 -4736"
+            {
+                "spawngroup" "town_05_spawn1"
+                "transitionradius" "631"
+            }
+        }
+    }
+SpawnItems
+{
+    "weapon_physcannon" "1"
+    "item_ammo_smg1_large" "1"
+    "weapon_pistol" "1"
+    "weapon_smg1" "1"
+    "weapon_357" "1"
+    "item_ammo_pistol_large" "1"
+    "weapon_shotgun" "1"
+    "weapon_crowbar" "1"
+    "weapon_healer" "1"
+}
+}

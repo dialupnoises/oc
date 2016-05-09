@@ -1,0 +1,155 @@
+ep2_outland_10a
+{
+    Remove
+    {
+        ClassName
+        {
+	    "trigger_playermovement" {}
+            "info_player_start" {}
+        }
+        TargetName
+        {
+            "playertrapped_brush" {}
+            "base_transition_playertrigger" {}
+        }
+        Origin
+        {
+            "8656 -5824 -1408" {}
+            "5115.13 -5639.49 -1421.05" {}
+        }
+    }
+    Add
+    {
+        "filter_multi"
+        {
+            "Negated" "1"
+            "targetname" "filter_NoDamage"
+            "origin" "-12777 -12651 456"
+        }
+        "logic_timer"
+        {
+            "RefireTime" "2"
+            "OnTimer" "alyx,SetDamageFilter,filter_NoDamage,0,-1"
+            "origin" "-12851.4 -12588.1 567.059"
+        }
+        "point_weapon_eater"
+        {
+            "EatRadius" "107"
+            "targetname" "yumyumyum"
+            "origin" "5083 -5943 -1448"
+        }
+        "logic_auto"
+        {
+            "spawnflags" "1"
+            "OnMapSpawn" "jeep,Kill,,0.1,-1"
+            "OnMapSpawn" "alyx,Kill,,0.1,-1"
+            "OnMapSpawn" "spawnitems_template,ForceSpawn,,0.5,-1"
+            "OnMapSpawn" "yumyumyum,Eat,,0.8,-1"
+            "OnMapSpawn" "jeep,LockExit,,1,-1"
+            "origin" "5018.81 -5936.53 -1533"
+        }
+        "logic_timer"
+        {
+            "RefireTime" "5"
+            "OnTimer" "prop_vehicle_jeep_episodic,EnableRadar,,0,-1"
+            "origin" "4913.61 -5959.58 -1533"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "targetname" "outland_10a_spawn1"
+            "origin" "5258 -5988 -1535"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "targetname" "outland_10a_spawn1"
+            "origin" "5348 -5988 -1535"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "targetname" "outland_10a_spawn1"
+            "origin" "5442 -5988 -1535"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "targetname" "outland_10a_spawn1"
+            "origin" "5442 -5651 -1535"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "targetname" "outland_10a_spawn1"
+            "origin" "5348 -5651 -1535"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "targetname" "outland_10a_spawn1"
+            "origin" "5258 -5651 -1535"
+        }
+        "point_trigger"
+        {
+            "filtername" "filter_alyx"
+            "spawnflags" "2"
+            "targetname" "base_transition_playertrigger"
+            "TriggerRadius" "212"
+            "OnStartTouch" "base_transition_counter,Add,1,0,-1"
+            "OnEndTouch" "base_transition_counter,Subtract,1,0,-1"
+            "origin" "4928 11232 195.176"
+        }
+        "point_trigger"
+        {
+            "spawnflags" "1"
+            "targetname" "base_transition_playertrigger"
+            "TriggerRadius" "212"
+            "OnStartTouch" "base_transition_counter,Add,1,0,-1"
+            "OnEndTouchAll" "base_transition_counter,Subtract,1,0,-1"
+            "origin" "4928 11232 211"
+        }
+    }
+    Modify
+    {
+        ClassName
+        {
+            "worldspawn"
+            {
+                "disableareaportals" "1"
+                "canspawnjeep" "2"
+            }
+            "logic_choreographed_scene"
+            {
+                "onplayerdeath" "0"
+            }
+        }
+        TargetName
+        {
+            "changelevel_to_11_trigger"
+            {
+                "spawngroup" "outland_11_spawn1"
+                "nosmooth" "1"
+            }
+        }
+    }
+SpawnItems
+{
+    "weapon_physcannon" "1"
+    "weapon_crowbar" "1"
+    "weapon_healer" "1"
+    "weapon_357" "1"
+    "weapon_shotgun" "1"
+    "weapon_pistol" "1"
+    "weapon_smg1" "2"
+    "item_box_buckshot" "3"
+    "weapon_frag" "1"
+    "item_ammo_smg1" "2"
+    "item_ammo_pistol" "1"
+    "weapon_ar2" "1"
+    "item_ammo_ar2" "2"
+    "weapon_crossbow" "1"
+    "item_ammo_357" "1"
+    "weapon_rpg" "1"
+}
+}

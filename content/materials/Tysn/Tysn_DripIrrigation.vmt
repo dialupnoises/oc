@@ -1,0 +1,15 @@
+UnlitGeneric
+{
+	$basetexture "Tysn/Tysn_DripIrrigation"
+	$translucent "1"
+
+	Proxies
+	{
+		TextureScroll
+		{
+			texturescrollvar $baseTextureTransform
+			texturescrollrate 1.75
+			texturescrollangle 270.00
+		}
+	}
+}

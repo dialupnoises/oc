@@ -1,0 +1,20 @@
+"merchant_courier_1"
+{
+	"Name"	"Rebel Armory"
+
+	"Weapons"
+	{
+		"weapon_pistol" "5"
+		"weapon_smg1" "8"
+		"weapon_healer" "5"
+		"weapon_frag" "3"
+		"weapon_physcannon" "30"
+	}
+	"Items"
+	{
+		"item_ammo_pistol" "1"
+		"item_ammo_smg1" "1"
+		"item_healthkit" "3"
+		"item_battery" "3"
+	}
+}

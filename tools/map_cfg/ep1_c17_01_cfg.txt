@@ -1,0 +1,5 @@
+"ep1_c17_01"
+{
+	"mp_timelimit" "0"
+	"mp_falldamage" "1"
+}

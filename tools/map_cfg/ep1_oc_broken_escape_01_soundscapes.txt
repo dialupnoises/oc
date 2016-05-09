@@ -1,0 +1,73 @@
+// play in sewers with waterfall, low falloff for waterfalls, waterfalls at position 1
+
+"be1.sewers_waterfall_room"
+{
+	"dsp"	"1"
+	"dsp_volume" "1.0"
+
+	"playlooping"
+	{
+		"volume"	"1.00"
+		"pitch"		"100"
+		"position"	"1"
+		//"soundlevel"	"SNDLVL_140dB"
+		"attenuation"	"0.5" //Distance falloff
+		"wave"		"ambient/levels/canals/dam_water_loop2.wav"
+	}
+
+	"playsoundscape"
+	{
+		"name"	"ep1.hospital_water_room"
+		"volume"	"1.0"
+	}
+}
+
+// Play in underground generator room near to sewers entrance, high falloff for waterfalls, waterfalls at position 1
+
+"be1.underground_generator_room"
+{
+	"dsp"	"1"
+	"dsp_volume" "1.0"
+
+	"playlooping"
+	{
+		"volume"	"1.00"
+		"pitch"		"100"
+		"position"	"1"
+		//"soundlevel"	"SNDLVL_140dB"
+		"attenuation"	"1.00" //Distance falloff
+		"wave"		"oc_broken_escape/dam_water_loop2_low.wav"
+	}
+
+	"playsoundscape"
+	{
+		"name"	"ep1.hospital"
+		"volume"	"1.0"
+	}
+
+}
+
+// Play in sewers staircase next to waterfalls, high falloff for waterfalls, waterfalls at position 1
+
+"be1.waterfall_staircase"
+{
+	"dsp"	"1"
+	"dsp_volume" "1.0"
+
+	"playlooping"
+	{
+		"volume"	"1.00"
+		"pitch"		"100"
+		"position"	"1"
+		//"soundlevel"	"SNDLVL_140dB"
+		"attenuation"	"1.00" //Distance falloff
+		"wave"		"oc_broken_escape/dam_water_loop2_low.wav"
+	}
+
+	"playsoundscape"
+	{
+		"name"	"ep1.hospital_water_room"
+		"volume"	"1.0"
+	}
+
+}

@@ -1,0 +1,10 @@
+"WorldVertexTransition"
+{
+	"$basetexture" "nature/dirtfloor012a"
+	"$basetexture2" "Tysn/Tysn_Harvest_Grass_1"
+        	"$basetexturetransform" "center .5 .5 scale 1 1 rotate 0  translate 0 0"
+        	"$basetexturetransform2" "center .5 .5 scale 1 1 rotate 0 translate 0 0"
+	"%detailtype" "coastline_grass01"
+	"$surfaceprop" "dirt"
+	"%keywords" "coastline"
+}

@@ -1,0 +1,25 @@
+"merchant_de_chateau"
+{
+	"Name"	"Rebel Odessa"
+
+	"Weapons"
+	{
+		"weapon_crossbow" "30"
+		"weapon_pistol" "10"
+		"weapon_frag" "10"
+		"weapon_slam" "10"
+		"weapon_357" "20"
+	}
+	"Items"
+	{
+		"item_ammo_pistol" "1"
+		"item_ammo_smg1" "1"
+		"item_ammo_357" "1"
+		"item_box_buckshot" "1"
+		"item_ammo_ar2" "1"
+		"item_ammo_crossbow" "1"
+		"item_healthkit" "1"
+		"item_battery" "1"
+		"item_shield" "0"
+	}
+}

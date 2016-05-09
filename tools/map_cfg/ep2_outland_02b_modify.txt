@@ -1,0 +1,183 @@
+ep2_outland_02b
+{
+    Remove
+    {
+        ClassName
+        {
+	    "trigger_playermovement" {}
+            "player_speedmod" {}
+            "info_player_start" {}
+        }
+        TargetName
+        {
+            "exit_gate_door_close_rl" {}
+            "exit_gate_rolltop_door_playerblock" {}
+        }
+        Origin
+        {
+            "-2293.12 -8265.61 -462.834" {}
+            "-925 -10261 -428" {}
+            "-2531.78 -8257.43 -365.06" {}
+        }
+    }
+    Add
+    {
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "StartDisabled" "0"
+            "targetname" "outland_02_spawn2"
+            "origin" "-3246 -9348 -894"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "StartDisabled" "0"
+            "targetname" "outland_02_spawn2"
+            "origin" "-3246 -9428 -894"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "StartDisabled" "0"
+            "targetname" "outland_02_spawn2"
+            "origin" "-3246 -9519 -894"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "StartDisabled" "0"
+            "targetname" "outland_02_spawn2"
+            "origin" "-3246 -9597 -894"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "StartDisabled" "0"
+            "targetname" "outland_02_spawn2"
+            "origin" "-3169 -9695 -894"
+        }
+        "logic_auto"
+        {
+            "spawnflags" "1"
+            "OnMapSpawn" "outland_02_spawn2,Enable,,0,-1"
+            "OnMapSpawn" "outland_02_spawn1,Disable,,0,-1"
+            "origin" "-3207.5 -9445.48 -891"
+        }
+        "logic_auto"
+        {
+            "spawnflags" "1"
+            "OnMapSpawn" "coming_from_04_scene_setup,Trigger,,0.2,-1"
+            "OnMapSpawn" "the gman mood,Enable,,0,-1"
+            "OnMapSpawn" "gman scene,Enable,,0,-1"
+            "OnMapSpawn" "lightshaft,TurnOn,,0,-1"
+            "OnMapSpawn" "vort_follow,Deactivate,,0,-1"
+            "OnMapSpawn" "elevator_kill_trigger,Kill,,0,-1"
+            "OnMapSpawn" "elevator_autosave_trigger,Enable,,0,-1"
+            "OnMapSpawn" "turret_buddy_2,Kill,,1.5,-1"
+            "OnMapSpawn" "turret_buddy_1,Kill,,1.5,-1"
+            "OnMapSpawn" "start_the_elevator_rl,Trigger,,1,-1"
+            "OnMapSpawn" "gman_template,ForceSpawn,,0.1,-1"
+            "OnMapSpawn" "vort_ride_elevator_from_04,BeginSequence,,0,-1"
+            "origin" "-3144 -9503.43 -2951.17"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "StartDisabled" "1"
+            "targetname" "outland_02_spawn3"
+            "origin" "-3213 -9414 113"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "StartDisabled" "1"
+            "targetname" "outland_02_spawn3"
+            "origin" "-3272 -9414 113"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "StartDisabled" "1"
+            "targetname" "outland_02_spawn3"
+            "origin" "-3331 -9410 113"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "StartDisabled" "1"
+            "targetname" "outland_02_spawn3"
+            "origin" "-3387 -9408 113"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "StartDisabled" "1"
+            "targetname" "outland_02_spawn3"
+            "origin" "-3454 -9405 113"
+        }
+        "logic_auto"
+        {
+            "spawnflags" "1"
+            "OnMapSpawn" "exit_gate_door_proxybrush,Close,,0,-1"
+            "OnMapSpawn" "exit_gate_rolltop_door_model,SetAnimation,close,0,-1"
+            "OnMapSpawn" "exit_gate_rolltop_door_model,SetDefaultAnimation,idleclosed,0.1,-1"
+            "origin" "-541.815 -9488.54 -707"
+        }
+        "logic_timer"
+        {
+            "RefireTime" "2"
+            "OnTimer" "alyx,SetDamageFilter,filter_NoDamage,0,-1"
+            "OnTimer" "npc_vortigaunt,SetDamageFilter,filter_NoDamage,0,-1"
+            "origin" "-12851.4 -12588.1 567.059"
+        }
+        "filter_multi"
+        {
+            "Negated" "1"
+            "targetname" "filter_NoDamage"
+            "origin" "-567 -1040 -1560"
+        }
+    }
+    Modify
+    {
+        ClassName
+        {
+            "worldspawn"
+            {
+                "disableareaportals" "1"
+            }
+        }
+        TargetName
+        {
+            "pathTrack_elevator_exit_top"
+            {
+                "OnPass" "outland_02_spawn2,Disable,,0,-1"
+                "OnPass" "outland_02_spawn3,Enable,,0,-1"
+            }
+            "pvc0"
+            {
+                "spawnflags" "141"
+            }
+        }
+        Origin
+        {
+            "-4032 -9968 208"
+            {
+                "nosmooth" "1"
+                "spawngroup" "outland_05_spawn1"
+            }
+        }
+    }
+SpawnItems
+{
+    "weapon_physcannon" "1"
+    "weapon_crowbar" "1"
+    "weapon_healer" "1"
+    "weapon_357" "1"
+    "weapon_shotgun" "1"
+    "weapon_pistol" "1"
+    "weapon_smg1" "1"
+    "item_box_buckshot" "1"
+    "weapon_frag" "1"
+}
+}

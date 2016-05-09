@@ -1,0 +1,8 @@
+"OC_Cleanup"
+{
+	"mp_teamplay" "0"
+	"r_raindensity" "0.002"
+	"r_rainalpha" "0.5"
+	"r_rainlength" "0.04f"
+	"r_rainspeed" "300"
+}

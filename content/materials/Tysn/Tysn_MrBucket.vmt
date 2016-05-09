@@ -1,0 +1,9 @@
+"VertexLitGeneric" 
+{ 
+
+	"$basetexture" "Tysn/Tysn_MrBucket"
+	"$surfaceprop" "cardboard"
+	"$envmap" "env_cubemap"
+	"$envmaptint" "[.15 .15 .15]"
+ 
+}

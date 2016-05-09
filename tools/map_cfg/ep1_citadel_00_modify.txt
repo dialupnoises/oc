@@ -1,0 +1,205 @@
+ep1_citadel_00
+{
+    Remove
+    {
+		"Classname"
+		{
+            "info_player_start" {}
+		}
+        TargetName
+        {
+            "ss_dog_gunship_down" {}
+            "trigger_falldeath" {}
+        }
+    }
+    Add
+    {
+        "scripted_sequence"
+        {
+            "spawnflags" "224"
+            "m_iszPlay" "intro_gunship_drop"
+            "m_iszEntity" "Dog"
+            "maxdxlevel" "0"
+            "mindxlevel" "0"
+            "m_fMoveTo" "0"
+            "m_flRepeat" "0"
+            "m_flRadius" "0"
+            "m_bSynchPostIdles" "0"
+            "m_bLoopActionSequence" "0"
+            "angles" "0 270 0"
+            "targetname" "ss_dog_gunship_down"
+            "OnEndSequence" "ss_dogrunfromship,BeginSequence,,2,-1"
+            "OnBeginSequence" "ar2exp_dropship_drop,Explode,,0.4,-1"
+            "origin" "-7932.01 5663 32"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "targetname" "spawn1"
+            "origin" "-8955 5704 -53"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "targetname" "spawn1"
+            "origin" "-9009.87 5710 -53"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "targetname" "spawn1"
+            "origin" "-9064 5712 -53"
+        }
+        "point_viewcontrol"
+        {
+            "angles" "0 270 0"
+            "wait" "10"
+            "spawnflags" "44"
+            "acceleration" "500"
+            "deceleration" "500"
+            "targetname" "Vanride_camera"
+            "origin" "-6823 7150 210"
+        }
+        "logic_auto"
+        {
+            "spawnflags" "1"
+            "OnMapSpawn" "Vanride_camera,SetParent,Van,1,-1"
+            "OnMapSpawn" "Vanride_camera,SetParentAttachment,vehicle_driver_eyes,1.5,-1"
+            "origin" "-6967.7 7179.2 105"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "spawn2"
+            "StartDisabled" "1"
+            "origin" "4420 3878 -6339"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "targetname" "spawn2"
+            "StartDisabled" "1"
+            "origin" "4349 4349 -6323"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "targetname" "spawn2"
+            "StartDisabled" "1"
+            "origin" "4691 4298 -6335"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "spawn2"
+            "StartDisabled" "1"
+            "origin" "4301 3954 -6325"
+        }
+        "point_teleport"
+        {
+            "angles" "0 0 0"
+            "radius" "9999"
+            "spawnflags" "512"
+            "targetname" "spawn2_teleport"
+            "TeleportDestination" "teleport_target"
+            "origin" "-6573.75 5839.62 169"
+        }
+        "game_player_equip"
+        {
+            "spawnflags" "0"
+            "targetname" "give_players_gravgun"
+            "weapon_physcannon" "1"
+            "origin" "-9072.17 5818.57 -134.719"
+        }
+        "point_trigger"
+        {
+            "spawnflags" "1"
+            "StartDisabled" "1"
+            "targetname" "give_players_gravgun_trigger"
+            "TriggerRadius" "296"
+            "OnStartTouch" "give_players_gravgun,EquipAll,,0,-1"
+            "origin" "-8979 5782 -58"
+        }
+        "point_trigger"
+        {
+            "spawnflags" "1"
+            "StartDisabled" "1"
+            "targetname" "give_players_gravgun_trigger"
+            "TriggerRadius" "584"
+            "OnStartTouch" "give_players_gravgun,EquipAll,,0,-1"
+            "origin" "4510.72 4077.45 -6336"
+        }
+        "info_teleport_destination"
+        {
+            "angles" "0 0 0"
+            "targetname" "teleport_target"
+            "origin" "4420 3878 -6309"
+        }
+        "info_teleport_destination"
+        {
+            "angles" "0 270 0"
+            "targetname" "teleport_target"
+            "origin" "4349 4349 -6293"
+        }
+        "info_teleport_destination"
+        {
+            "angles" "0 270 0"
+            "targetname" "teleport_target"
+            "origin" "4691 4298 -6305"
+        }
+        "info_teleport_destination"
+        {
+            "angles" "0 0 0"
+            "targetname" "teleport_target"
+            "origin" "4301 3954 -6295"
+        }
+    }
+    Modify
+    {
+        ClassName
+        {
+			"worldspawn"
+			{
+				"disableareaportals" "1"
+			}
+			"logic_choreographed_scene"
+			{
+				"onplayerdeath" "0"
+			}
+        }
+        TargetName
+        {
+            "counter_alyx_van"
+            {
+                "OnHitMax" "Vanride_camera,Enable,,0,-1"
+            }
+            "path_VanRide_30"
+            {
+                "OnPass" "Vanride_camera,Disable,,5,1"
+                "OnPass" "spawn2_teleport,Enable,,5.5,1"
+                "OnPass" "spawn1,Disable,,5,1"
+                "OnPass" "spawn2,Enable,,5,1"
+            }
+            "trigger_givegravgun"
+            {
+                "OnTrigger" "give_players_gravgun,EquipAll,,2,-1"
+                "OnTrigger" "give_players_gravgun_trigger,Enable,,2,-1"
+            }
+            "pclip_van_end"
+            {
+                "spawnflags" "0"
+            }
+        }
+        Origin
+        {
+            "-7920 5663.16 32"
+            {
+                "OnEndSequence" "pclip_gunship_2,Kill,,2.7,-1"
+            }
+        }
+    }
+SpawnItems
+{
+		"weapon_healer" "1"
+}
+}

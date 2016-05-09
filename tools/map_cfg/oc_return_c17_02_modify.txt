@@ -1,0 +1,10 @@
+oc_return_c17_02
+{
+    Remove
+    {
+        ClassName
+        {
+            "game_end" {}
+        }
+    }
+}

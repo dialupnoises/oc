@@ -1,0 +1,35 @@
+"Roach.Walk"
+{
+	"channel"	"CHAN_BODY"
+	"volume"	"VOL_NORM"
+	"soundlevel"	"SNDLVL_NORM"
+	"pitch"		"80,119"
+	"rndwave"
+	{
+		"wave"		"npc/roach/rch_walk.wav"
+	}
+}
+
+"Roach.Die"
+{
+	"channel"	"CHAN_VOICE"
+	"volume"	"0.8"
+	"soundlevel"	"SNDLVL_NORM"
+	"pitch"		"80,119"
+	"rndwave"
+	{
+		"wave"		"npc/roach/rch_die.wav"
+	}
+}
+
+"Roach.Smash"
+{
+	"channel"	"CHAN_BODY"
+	"volume"	"0.7"
+	"soundlevel"	"SNDLVL_NORM"
+	"pitch"		"80,119"
+	"rndwave"
+	{
+		"wave"		"npc/roach/rch_smash.wav"
+	}
+}

@@ -1,0 +1,226 @@
+ep2_outland_04
+{
+    Remove
+    {
+        ClassName
+        {
+	    "trigger_playermovement" {}
+            "info_player_start" {}
+        }
+        TargetName
+        {
+            "grub_tunnel_1_playerblock" {}
+            "grub_tunnel_2_playerblock" {}
+            "guard_leap_3_playerblock" {}
+            "guard_exit_playerclip" {}
+            "maze_bridge_clip" {}
+            "guardcaveentry_block_player" {}
+        }
+        Origin
+        {
+            "4951.04 -1340.31 417" {}
+            "3308 -2416 333.5" {}
+        }
+    }
+    Add
+    {
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "targetname" "outland_04_spawn1"
+            "origin" "3876 -1605 395"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "targetname" "outland_04_spawn1"
+            "origin" "3967 -1605 395"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "targetname" "outland_04_spawn1"
+            "origin" "4078 -1605 395"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "targetname" "outland_04_spawn1"
+            "origin" "4189 -1605 395"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "targetname" "outland_04_spawn1"
+            "origin" "3770 -1785 395"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "targetname" "outland_04_spawn1"
+            "origin" "3663 -1785 395"
+        }
+        "point_weapon_eater"
+        {
+            "EatRadius" "38"
+            "targetname" "yumyumyum"
+            "origin" "4015 -1624 421"
+        }
+        "logic_auto"
+        {
+            "spawnflags" "1"
+            "OnMapSpawn" "vort,Kill,,0.1,-1"
+            "OnMapSpawn" "loaditems_template,ForceSpawn,,0.5,-1"
+            "OnMapSpawn" "yumyumyum,Eat,,0.8,-1"
+            "origin" "4234.4 -1577 492.244"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 82 0"
+            "StartDisabled" "1"
+            "targetname" "outland_04_spawn2"
+            "origin" "2088 -964 -1782"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 82 0"
+            "StartDisabled" "1"
+            "targetname" "outland_04_spawn2"
+            "origin" "1976 -919 -1782"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 82 0"
+            "StartDisabled" "1"
+            "targetname" "outland_04_spawn2"
+            "origin" "1867 -876 -1782"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 312 0"
+            "StartDisabled" "1"
+            "targetname" "outland_04_spawn2"
+            "origin" "1766 -792 -1782"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 260.5 0"
+            "StartDisabled" "1"
+            "targetname" "outland_04_spawn2"
+            "origin" "1925 -785 -1782"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 334 0"
+            "StartDisabled" "1"
+            "targetname" "outland_04_spawn2"
+            "origin" "2023 -766 -1782"
+        }
+        "point_trigger"
+        {
+            "spawnflags" "1"
+            "TriggerOnce" "1"
+            "TriggerRadius" "65"
+            "OnStartTouch" "outland_04_spawn1,Disable,,0,-1"
+            "OnStartTouch" "outland_04_spawn2,Enable,,0,-1"
+            "origin" "2284 -601 -1737"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "StartDisabled" "1"
+            "targetname" "outland_04_spawn3"
+            "origin" "5782.41 -1617 -2269"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "StartDisabled" "1"
+            "targetname" "outland_04_spawn3"
+            "origin" "5662 -1395 -2269"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "StartDisabled" "1"
+            "targetname" "outland_04_spawn3"
+            "origin" "5542 -1627 -2269"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "StartDisabled" "1"
+            "targetname" "outland_04_spawn3"
+            "origin" "5706 -2101 -2269"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "StartDisabled" "1"
+            "targetname" "outland_04_spawn3"
+            "origin" "5646 -2324 -2269"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "StartDisabled" "1"
+            "targetname" "outland_04_spawn3"
+            "origin" "5771 -1987 -2269"
+        }
+        "logic_timer"
+        {
+            "RefireTime" "2"
+            "OnTimer" "npc_vortigaunt,SetDamageFilter,filter_NoDamage,0,-1"
+            "origin" "-12851.4 -12588.1 567.059"
+        }
+        "filter_multi"
+        {
+            "Negated" "1"
+            "targetname" "filter_NoDamage"
+            "origin" "-567 -1040 -1560"
+        }
+    }
+    Modify
+    {
+        ClassName
+        {
+            "worldspawn"
+            {
+                "disableareaportals" "1"
+            }
+            "logic_choreographed_scene"
+            {
+                "onplayerdeath" "0"
+            }
+        }
+        TargetName
+        {
+            "trigger_transition_to_02a"
+            {
+                "mapmodifyfile" "ep2_outland_02b_modify"
+                "nosmooth" "1"
+                "spawngroup" "outland_02_spawn2"
+            }
+        }
+        Origin
+        {
+            "5344 -2744 -2248"
+            {
+                "OnTrigger" "outland_04_spawn2,Disable,,0,-1"
+                "OnTrigger" "outland_04_spawn3,Enable,,0,-1"
+            }
+        }
+    }
+SpawnItems
+{
+    "weapon_physcannon" "1"
+    "weapon_crowbar" "1"
+    "weapon_healer" "1"
+    "weapon_357" "1"
+    "weapon_shotgun" "1"
+    "weapon_pistol" "1"
+    "weapon_smg1" "1"
+    "item_box_buckshot" "1"
+    "weapon_frag" "1"
+}
+}

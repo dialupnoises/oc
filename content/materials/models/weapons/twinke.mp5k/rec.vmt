@@ -1,0 +1,6 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "models\Weapons\twinke.mp5k\rec"
+	"$envmap" "env_cubemap"
+	"$envmapmask" "models\Weapons\twinke.mp5k\rec_ref"
+}

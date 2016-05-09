@@ -1,0 +1,10 @@
+Obsidian Conflict
+
+Map: oc_castledefense
+Author: W0rf0x (w0rf0x@obsidianconflict.net)
+
+Description:
+Defend The "stones of the elements" against 3 attack waves!
+
+Hint:
+Sometimes you can use the radio in the spawn room to order weapon supplies.

@@ -1,0 +1,5 @@
+"dust2" 
+{ 
+mp_livesoverride "1" 
+mp_numlives "3" 
+}

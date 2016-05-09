@@ -1,0 +1,5 @@
+// File was created for use in Obsidian Conflict ONLY!
+"oc_cardwar"
+{
+	"mp_flashlight" "0"
+}

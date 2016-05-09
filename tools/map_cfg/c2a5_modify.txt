@@ -1,0 +1,209 @@
+c2a5
+{
+    Remove
+    {
+        ClassName
+        {
+            "info_player_start" {}
+            "monster_ichthyosaur" {}
+            "logic_auto" {}
+        }
+        TargetName
+        {
+            "player_spawn_template" {}
+        }
+    }
+    Add
+    {
+        "npc_ichthyosaur"
+        {
+            "angles" "0 0 0"
+            "model" "models/ichthyosaur.mdl"
+            "physdamagescale" "1.0"
+            "renderamt" "255"
+            "rendercolor" "255 255 255"
+            "spawnflags" "4"
+            "targetname" "ick"
+            "origin" "-415 661 -587"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "targetname" "c2a5_starts"
+            "origin" "1910.32 709.186 33"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "targetname" "c2a5_starts"
+            "origin" "1786 708 33"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "targetname" "c2a5_starts"
+            "origin" "1852 709 33"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "targetname" "c2a5_starts"
+            "origin" "1849.68 654 33"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "targetname" "c2a5_starts"
+            "origin" "1908 654.186 33"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "targetname" "c2a5_starts"
+            "origin" "1783.68 653 33"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "targetname" "c2a5_starts"
+            "origin" "1908 774.186 39"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "targetname" "c2a5_starts"
+            "origin" "1849.68 774 39"
+        }
+        "logic_auto"
+        {
+            "spawnflags" "1"
+            "OnNewGame" "c2a5_newgame,Enable,,0,-1"
+            "OnNewGame" "c2a5_starts,Disable,,0,-1"
+            "OnNewGame" "c2a5_starts2,Disable,,0,-1"
+            "origin" "1946 787 119.978"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "StartDisabled" "1"
+            "targetname" "c2a5_newgame"
+            "origin" "1907 837 39"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "StartDisabled" "1"
+            "targetname" "c2a5_newgame"
+            "origin" "1848 835 39"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "StartDisabled" "1"
+            "targetname" "c2a5_newgame"
+            "origin" "1846 890 39"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "StartDisabled" "1"
+            "targetname" "c2a5_newgame"
+            "origin" "1905 892 39"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "StartDisabled" "1"
+            "targetname" "c2a5_newgame"
+            "origin" "1844 938 39"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "StartDisabled" "1"
+            "targetname" "c2a5_newgame"
+            "origin" "1903 940 39"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "StartDisabled" "1"
+            "targetname" "c2a5_newgame"
+            "origin" "1844 983 39"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "StartDisabled" "1"
+            "targetname" "c2a5_newgame"
+            "origin" "1903 985 39"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "c2a5_starts2"
+            "origin" "1296 -3622 -1095"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "c2a5_starts2"
+            "origin" "1256 -3623 -1095"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "c2a5_starts2"
+            "origin" "1213 -3623 -1095"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "c2a5_starts2"
+            "origin" "1172 -3624 -1095"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "c2a5_starts2"
+            "origin" "1125 -3624 -1095"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "c2a5_starts2"
+            "origin" "1084 -3625 -1095"
+        }
+    }
+    Modify
+    {
+        ClassName
+        {
+            "worldspawn"
+            {
+                "mapversion" "4"
+            }
+        }
+        Origin
+        {
+            "1848 1048 136"
+            {
+                "spawngroup" "c2a4g_starts2"
+                "transitionradius" "503"
+            }
+            "1322 -3624 -1056"
+            {
+                "spawngroup" "c2a5w_starts"
+                "transitionradius" "301"
+            }
+        }
+    }
+SpawnItems
+{
+    "weapon_crowbar" "1"
+    "weapon_smg1" "1"
+    "item_battery" "1"
+    "item_ammo_smg1" "3"
+    "weapon_healer" "1"
+}
+}

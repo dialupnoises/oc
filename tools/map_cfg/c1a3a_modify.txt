@@ -1,0 +1,104 @@
+c1a3a
+{
+    Remove
+    {
+        ClassName
+        {
+            "info_player_start" {}
+        }
+    }
+    Add
+    {
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "targetname" "c1a3a_starts"
+            "origin" "892 -1043 -127"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "targetname" "c1a3a_starts"
+            "origin" "795 -1043 -127"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "targetname" "c1a3a_starts"
+            "origin" "842 -1040 -127"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "targetname" "c1a3a_starts"
+            "origin" "746 -1046 -127"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "targetname" "c1a3a_starts"
+            "origin" "842 -1089 -127"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "targetname" "c1a3a_starts"
+            "origin" "797 -1092 -127"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "targetname" "c1a3a_starts"
+            "origin" "890 -1092 -127"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "targetname" "c1a3a_starts"
+            "origin" "749 -1088 -127"
+        }
+    }
+    Modify
+    {
+        ClassName
+        {
+            "worldspawn"
+            {
+                "mapversion" "6"
+            }
+        }
+        TargetName
+        {
+            "c1a3a_changelevel"
+            {
+                "spawnflags" "0"
+                "StartDisabled" "1"
+            }
+            "c1a3a_changelevel2"
+            {
+                "nosmooth" "1"
+                "spawnflags" "0"
+                "spawngroup" "c1a3b_starts"
+            }
+        }
+        Origin
+        {
+            "-1672 -1968 56"
+            {
+                "origin" "-1672 -1968 64"
+            }
+            "-1672 -2088 56"
+            {
+                "origin" "-1672 -2088 64"
+            }
+        }
+    }
+SpawnItems
+{
+    "weapon_crowbar" "1"
+    "weapon_smg1" "1"
+    "item_battery" "1"
+    "item_ammo_smg1" "3"
+    "weapon_healer" "1"
+}
+}

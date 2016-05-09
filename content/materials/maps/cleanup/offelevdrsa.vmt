@@ -1,0 +1,8 @@
+LightmappedGeneric
+{
+	"$basetexture"	"maps\cleanup\offelevdrsa"
+	"$surfaceprop" "metal"
+	"$envmap" "env_cubemap"
+	"$envmapmask" "maps\cleanup\offelevdrsa_ref"
+	"$envmaptint" "[0.77 0.76 0.78]"
+}

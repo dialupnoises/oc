@@ -1,0 +1,267 @@
+ep2_outland_07
+{
+    Remove
+    {
+        ClassName
+        {
+	    "trigger_playermovement" {}
+            "info_player_start" {}
+            "player_loadsaved" {}
+            "player_speedmod" {}
+        }
+        TargetName
+        {
+            "lockdown_end" {}
+            "alyx_check_end_trigger" {}
+            "relay_powerup_sequence" {}
+            "barn_hole_playerclip" {}
+            "alyx_left_behind" {}
+        }
+        Origin
+        {
+            "-9202.07 -9746.98 155.402" {}
+            "-3680 11936 160" {}
+            "-2856 -12239 549.477" {}
+            "-3040 -12072 584" {}
+            "-640 -13696 1072" {}
+            "1728 -12608 1568" {}
+        }
+    }
+    Add
+    {
+        "filter_multi"
+        {
+            "Negated" "1"
+            "targetname" "filter_NoDamage"
+            "origin" "-12777 -12651 456"
+        }
+        "logic_timer"
+        {
+            "RefireTime" "2"
+            "OnTimer" "alyx,SetDamageFilter,filter_NoDamage,0,-1"
+            "origin" "-12851.4 -12588.1 567.059"
+        }
+        "logic_relay"
+        {
+            "hammerid" "168226"
+            "spawnflags" "0"
+            "targetname" "lockdown_end"
+            "OnTrigger" "barn_assault_trigger,Enable,,0,-1"
+            "OnTrigger" "gate_open_relay,Trigger,,0,-1"
+            "OnTrigger" "alyx_gogogo_relay,Enable,,0,-1"
+            "OnTrigger" "chopper_spawn_trigger,Enable,,0,-1"
+            "OnTrigger" "post_advisor_soundscape,Enable,,0,-1"
+            "OnTrigger" "Advisor_soundscape,Kill,,0,-1"
+            "OnTrigger" "post_advisor_health_template,ForceSpawn,,0,-1"
+            "OnTrigger" "farm_exit_trigger,Enable,,0,-1"
+            "OnTrigger" "trigger_kill_grenade_throwback,Enable,,0,-1"
+            "OnTrigger" "grenade_return_1,Enable,,0,-1"
+            "OnTrigger" "jeep,AddOutput,OnCompanionEnteredVehicle alyx_gogogo_relay:trigger::0:1,0.1,-1"
+            "OnTrigger" "jeep,LockExit,,0.1,-1"
+            "OnTrigger" "teleport_jeep,Teleport,,0,1"
+            "origin" "-10107.2 -9615.88 299"
+        }
+        "logic_relay"
+        {
+            "hammerid" "846730"
+            "spawnflags" "0"
+            "targetname" "relay_powerup_sequence"
+            "OnTrigger" "pod_moan,PlaySound,,0,-1"
+            "OnTrigger" "Advisor_Pod_door_*,Open,,3.5,-1"
+            "OnTrigger" "Advisor_Floodlight2,TurnOn,,2.2,-1"
+            "OnTrigger" "pod_model,SetAnimation,opening01,0.25,-1"
+            "OnTrigger" "pod_model,SetAnimation,opening02,2,-1"
+            "OnTrigger" "//Advisor_Pain,PlaySound,,7.5,-1"
+            "_OnTrigger" "trigger_advisor_push,Enable,,3,-1"
+            "OnTrigger" "template_barn_vclip,ForceSpawn,,0,-1"
+            "OnTrigger" "pod_reveal_sound,PlaySound,,2,-1"
+            "OnTrigger" "pod_open_sound,PlaySound,,0.25,-1"
+            "OnTrigger" "advisor,ELightOn,,0.75,-1"
+            "OnTrigger" "Advisor_Floodlight1,TurnOn,,0.25,-1"
+            "OnTrigger" "sound_advisor_pant,PlaySound,,0.25,-1"
+            "OnTrigger" "fx_advisor_pod_open,Start,,0.25,-1"
+            "OnTrigger" "light_advisor_effect,TurnOn,,2.2,-1"
+            "origin" "-9592 -9944 262"
+        }
+        "point_weapon_eater"
+        {
+            "EatRadius" "84"
+            "targetname" "yumyumyum"
+            "origin" "-3052 -12268 590"
+        }
+        "logic_auto"
+        {
+            "spawnflags" "1"
+            "OnMapSpawn" "jeep,Kill,,0.1,-1"
+            "OnMapSpawn" "alyx,Kill,,0.1,-1"
+            "OnMapSpawn" "global_newgame_template_base_items,ForceSpawn,,0.5,-1"
+            "OnMapSpawn" "jalopy_spawn_1,ForceSpawn,,0.5,-1"
+            "OnMapSpawn" "yumyumyum,Eat,,0.8,-1"
+            "OnMapSpawn" "alyx,EnterVehicle,jeep,2,-1"
+            "OnMapSpawn" "jeep,LockExit,,1,-1"
+            "origin" "-3096.34 -12339.9 559.952"
+        }
+        "point_teleport"
+        {
+            "angles" "0 188 0"
+            "radius" "128"
+            "spawnflags" "2048"
+            "target" "jeep"
+            "targetname" "teleport_jeep"
+            "origin" "-9704 -10672 250.385"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 241 0"
+            "targetname" "outland_07_spawn1"
+            "origin" "-3084 -11800 545"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 241 0"
+            "targetname" "outland_07_spawn1"
+            "origin" "-2992 -11861 545"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 241 0"
+            "targetname" "outland_07_spawn1"
+            "origin" "-2884 -11920 545"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 241 0"
+            "targetname" "outland_07_spawn1"
+            "origin" "-2781 -11968 545"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 243 0"
+            "targetname" "outland_07_spawn1"
+            "origin" "-2666 -12006 545"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 278.5 0"
+            "targetname" "outland_07_spawn1"
+            "origin" "-2552 -12007 545"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "StartDisabled" "1"
+            "targetname" "outland_07_spawn2"
+            "origin" "-9323 -9909 83"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "StartDisabled" "1"
+            "targetname" "outland_07_spawn2"
+            "origin" "-9405 -9909 83"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "StartDisabled" "1"
+            "targetname" "outland_07_spawn2"
+            "origin" "-9492 -9909 83"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "StartDisabled" "1"
+            "targetname" "outland_07_spawn2"
+            "origin" "-9653 -9909 83"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "StartDisabled" "1"
+            "targetname" "outland_07_spawn2"
+            "origin" "-9743 -9909 83"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "StartDisabled" "1"
+            "targetname" "outland_07_spawn2"
+            "origin" "-9829 -9909 83"
+        }
+        "point_trigger"
+        {
+            "spawnflags" "1"
+            "TriggerOnce" "1"
+            "TriggerRadius" "40"
+            "OnStartTouch" "outland_07_spawn1,Disable,,0,-1"
+            "OnStartTouch" "outland_07_spawn2,Enable,,0,-1"
+            "origin" "-9924 -9841 87"
+        }
+        "point_viewcontrol"
+        {
+            "acceleration" "500"
+            "angles" "0 0 0"
+            "deceleration" "500"
+            "spawnflags" "172"
+            "targetname" "advisor_cam"
+            "wait" "10"
+            "origin" "-9441.1 -9784 138.078"
+        }
+    }
+    Modify
+    {
+        ClassName
+        {
+            "worldspawn"
+            {
+                "disableareaportals" "1"
+                "canspawnjeep" "2"
+            }
+            "logic_choreographed_scene"
+            {
+                "onplayerdeath" "0"
+            }
+        }
+        TargetName
+        {
+            "relay_start_player_vehicle"
+            {
+                "OnTrigger" "advisor_cam,Enable,,0.2,1"
+                "OnTrigger" "advisor_cam,SetParent,cvehicle_barn1,0,1"
+                "OnTrigger" "advisor_cam,SetParentAttachment,vehicle_driver_eyes,0.1,1"
+            }
+            "areaportal_barn_shell"
+            {
+                "targetname" "disabledportal"
+            }
+        }
+        Origin
+        {
+            "-3680 12640 160"
+            {
+                "spawngroup" "outland_08_spawn1"
+            }
+            "-9488 -9776 63.1209"
+            {
+                "OnScriptEvent05" "advisor_cam,Disable,,0,-1"
+            }
+        }
+    }
+SpawnItems
+{
+    "weapon_physcannon" "1"
+    "weapon_crowbar" "1"
+    "weapon_healer" "1"
+    "weapon_357" "1"
+    "weapon_shotgun" "1"
+    "weapon_pistol" "1"
+    "weapon_smg1" "1"
+    "item_box_buckshot" "2"
+    "weapon_frag" "1"
+    "item_ammo_smg1" "2"
+    "item_ammo_pistol" "1"
+    "weapon_ar2" "1"
+    "item_ammo_ar2" "2"
+    "weapon_crossbow" "1"
+}
+}

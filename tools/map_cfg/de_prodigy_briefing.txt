@@ -1,0 +1,12 @@
+Obsidian Conflict
+
+Map: de_prodigy (mapadded mini mission)
+Mapadd Script by fug4life
+
+Description:
+
+Find the tau artifact and return it to Mossman.
+
+Caution:
+
+If the military sound the alert, the mission will be failed!

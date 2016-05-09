@@ -1,0 +1,169 @@
+c3a1b
+{
+    Remove
+    {
+        ClassName
+        {
+            "info_player_start" {}
+        }
+    }
+    Add
+    {
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "targetname" "c3a1b_starts"
+            "origin" "-731 1671 -263"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "targetname" "c3a1b_starts"
+            "origin" "-654 1672 -263"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "targetname" "c3a1b_starts"
+            "origin" "-577 1675 -263"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "targetname" "c3a1b_starts"
+            "origin" "-578 1615 -263"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "targetname" "c3a1b_starts"
+            "origin" "-655 1612 -263"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "targetname" "c3a1b_starts"
+            "origin" "-732 1611 -263"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "targetname" "c3a1b_starts"
+            "origin" "-578 1563 -263"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "targetname" "c3a1b_starts"
+            "origin" "-655 1560 -263"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "targetname" "c3a1b_starts"
+            "origin" "-732 1559 -263"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "targetname" "c3a1b_starts2"
+            "origin" "949.706 -838.605 -351"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "targetname" "c3a1b_starts2"
+            "origin" "885 -838 -351"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "targetname" "c3a1b_starts2"
+            "origin" "821 -839 -351"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "targetname" "c3a1b_starts2"
+            "origin" "761 -839 -351"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "targetname" "c3a1b_starts2"
+            "origin" "761.294 -881 -351"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "targetname" "c3a1b_starts2"
+            "origin" "821.294 -881 -351"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "targetname" "c3a1b_starts2"
+            "origin" "885.294 -880 -351"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "targetname" "c3a1b_starts2"
+            "origin" "950 -880.605 -351"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "targetname" "c3a1b_starts2"
+            "origin" "760.294 -925 -351"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "targetname" "c3a1b_starts2"
+            "origin" "820.294 -925 -351"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "targetname" "c3a1b_starts2"
+            "origin" "884.294 -924 -351"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "targetname" "c3a1b_starts2"
+            "origin" "949 -924.605 -351"
+        }
+    }
+    Modify
+    {
+        ClassName
+        {
+            "worldspawn"
+            {
+                "mapversion" "5"
+            }
+        }
+        TargetName
+        {
+            "changetoc1a2"
+            {
+                "transitionradius" "23"
+            }
+            "c3a1toc3a2"
+            {
+                "spawngroup" "c3a2e_starts"
+                "transitionradius" "304"
+            }
+        }
+    }
+SpawnItems
+{
+    "weapon_crowbar" "1"
+    "weapon_smg1" "1"
+    "item_battery" "1"
+    "item_ammo_smg1" "3"
+    "weapon_healer" "1"
+}
+}

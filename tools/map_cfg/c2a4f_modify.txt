@@ -1,0 +1,123 @@
+c2a4f
+{
+    Remove
+    {
+        ClassName
+        {
+            "info_player_start" {}
+            "weapon_gauss" {}
+        }
+    }
+    Add
+    {
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "c2a4f_starts"
+            "origin" "1016.5 398.58 129"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "c2a4f_starts"
+            "origin" "1017 319 129"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "c2a4f_starts"
+            "origin" "962 316 129"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "c2a4f_starts"
+            "origin" "960 387 129"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "c2a4f_starts"
+            "origin" "906 390 129"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "c2a4f_starts"
+            "origin" "907 321 129"
+        }
+        "weapon_gauss"
+        {
+            "angles" "0 0 0"
+            "fademindist" "-1"
+            "fadescale" "1"
+            "origin" "250.866 -911.129 468.628"
+        }
+        "weapon_gauss"
+        {
+            "angles" "0 0 0"
+            "fademindist" "-1"
+            "fadescale" "1"
+            "origin" "257.831 -942.218 468.628"
+        }
+        "weapon_gauss"
+        {
+            "angles" "0 0 0"
+            "fademindist" "-1"
+            "fadescale" "1"
+            "origin" "253.909 -973.271 468.628"
+        }
+        "weapon_gauss"
+        {
+            "angles" "0 0 0"
+            "fademindist" "-1"
+            "fadescale" "1"
+            "origin" "256.39 -1008.08 468.628"
+        }
+        "weapon_gauss"
+        {
+            "angles" "0 0 0"
+            "fademindist" "-1"
+            "fadescale" "1"
+            "origin" "259.111 -890.075 468.628"
+        }
+        "weapon_gauss"
+        {
+            "angles" "0 0 0"
+            "fademindist" "-1"
+            "fadescale" "1"
+            "origin" "258.514 -859.222 468.628"
+        }
+    }
+    Modify
+    {
+        ClassName
+        {
+            "worldspawn"
+            {
+                "mapversion" "3"
+            }
+        }
+        Origin
+        {
+            "960 200 176"
+            {
+                "spawngroup" "c2a4e_starts2"
+                "transitionradius" "284"
+            }
+            "8 576 136"
+            {
+                "spawngroup" "c2a4e_starts3"
+                "transitionradius" "472"
+            }
+        }
+    }
+SpawnItems
+{
+    "weapon_healer" "1"
+    "weapon_crowbar" "1"
+    "weapon_pistol" "1"
+    "weapon_smg1" "1"
+    "weapon_shotgun" "1"
+}
+}

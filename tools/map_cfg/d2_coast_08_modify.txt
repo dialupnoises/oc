@@ -1,0 +1,180 @@
+d2_coast_08
+{
+    Remove
+    {
+        ClassName
+        {
+            "info_player_start" {}
+            "player_loadsaved" {}
+        }
+        TargetName
+        {
+            "fog" {}
+            "jeep_fall_trigger" {}
+        }
+    }
+    Add
+    {
+        "prop_dynamic_override"
+        {
+            "angles" "0 0 0"
+            "disableshadows" "1"
+            "fademaxdist" "2500"
+            "fademindist" "2000"
+            "fadescale" "1"
+            "MaxAnimTime" "10"
+            "MinAnimTime" "5"
+            "model" "models/props_canal/canal_bars001.mdl"
+            "renderamt" "255"
+            "rendercolor" "255 255 255"
+            "rendermode" "10"
+            "skin" "0"
+            "solid" "6"
+            "targetname" "blocker_prop"
+            "origin" "3223 1766 1538"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "StartDisabled" "1"
+            "targetname" "coast08_spawn2"
+            "origin" "3039.47 -7296.31 1921"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "StartDisabled" "1"
+            "targetname" "coast08_spawn2"
+            "origin" "3038.63 -7202.6 1921"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "StartDisabled" "1"
+            "targetname" "coast08_spawn2"
+            "origin" "2934.52 -6947.56 1921"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "StartDisabled" "1"
+            "targetname" "coast08_spawn2"
+            "origin" "2919.35 -7407.44 1793"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "StartDisabled" "1"
+            "targetname" "coast08_spawn2"
+            "origin" "2910.89 -7028.34 1793"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "StartDisabled" "1"
+            "targetname" "coast08_spawn2"
+            "origin" "3036.55 -7191.19 1793"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "coast08_spawn1"
+            "origin" "3284.94 1490.98 1537"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "coast08_spawn1"
+            "origin" "3286.76 1372.32 1537"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "coast08_spawn1"
+            "origin" "3289.89 1244.8 1537"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "coast08_spawn1"
+            "origin" "3355 1252.82 1537"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "coast08_spawn1"
+            "origin" "3353.18 1371.48 1537"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "coast08_spawn1"
+            "origin" "3350.05 1499 1537"
+        }
+        "env_fog_controller"
+        {
+            "angles" "0 0 0"
+            "farz" "4800"
+            "fogblend" "0"
+            "fogcolor" "176 192 202"
+            "fogcolor2" "0 0 0"
+            "fogdir" "1 0 0"
+            "fogenable" "1"
+            "fogend" "4300"
+            "fogmaxdensity" "1"
+            "fogstart" "2048"
+            "maxdxlevel" "0"
+            "mindxlevel" "0"
+            "origin" "1097 2182 1706"
+        }
+        "weapon_rpg"
+        {
+            "angles" "0 0 0"
+            "fademindist" "-1"
+            "fadescale" "1"
+            "origin" "3213 -2555 1488.46"
+        }
+    }
+    Modify
+    {
+        ClassName
+        {
+            "worldspawn"
+            {
+                "disableareaportals" "1"
+            }
+            "trigger_changelevel"
+            {
+                "mapmodifyfile" "d2_coast_07b_modify"
+                "nosmooth" "1"
+                "spawngroup" "coast07_spawn2"
+            }
+        }
+        TargetName
+        {
+            "button_trigger"
+            {
+                "OnClose" "blocker_prop,Kill,,0,-1"
+                "OnClose" "coast08_spawn2,Enable,,0,-1"
+                "OnClose" "coast08_spawn1,Disable,,0,-1"
+            }
+        }
+    }
+SpawnItems
+{
+    "weapon_smg1" "1"
+    "weapon_ar2" "1"
+    "weapon_shotgun" "1"
+    "weapon_crowbar" "1"
+    "weapon_physcannon" "1"
+    "weapon_357" "1"
+    "weapon_frag" "1"
+    "weapon_pistol" "1"
+    "item_box_buckshot" "2"
+    "item_ammo_smg1" "3"
+    "item_battery" "3"
+    "weapon_healer" "1"
+    "weapon_crossbow" "1"
+    "weapon_rpg" "1"
+}
+}

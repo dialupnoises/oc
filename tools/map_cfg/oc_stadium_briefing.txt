@@ -1,0 +1,8 @@
+Obsidian Conflict
+
+Map: oc_stadium
+
+Description:
+
+Test your skills in the arena.
+Based off the popular coop map created by Sven.

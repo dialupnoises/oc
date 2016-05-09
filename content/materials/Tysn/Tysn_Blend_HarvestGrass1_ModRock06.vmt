@@ -1,0 +1,15 @@
+"WorldVertexTransition"
+{
+	"$basetexture" "Nature/cliffface001a"
+
+	"$basetexture2" 	"Tysn/Tysn_Harvest_Grass_1"
+
+        	"$basetexturetransform" "center .5 .5 scale 1 1 rotate 0 translate 0 0"
+        	"$basetexturetransform2" "center .5 .5 scale 1 1 rotate 0 translate 0 0"
+
+	"$surfaceprop" "dirt"
+	"%keywords" "tysn"
+	"$bumpmap" "Nature/cliffface001a_normal"
+}
+	//"%detailtype" "coastline_grass01"
+	//"$basetexture" 	"Tysn/Tysn_Modified_rockfloor006"

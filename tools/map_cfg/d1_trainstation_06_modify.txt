@@ -1,0 +1,128 @@
+d1_trainstation_06
+{
+    Remove
+    {
+        ClassName
+        {
+            "info_player_start" {}
+            "ai_script_conditions" {}
+        }
+        TargetName
+        {
+            "change_01_to_05" {}
+        }
+        Origin
+        {
+            "-9927.85 -3644.55 329" {}
+        }
+    }
+    Add
+    {
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "trainstation_06_spawn1"
+            "origin" "-9886 -3672 321"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "trainstation_06_spawn1"
+            "origin" "-9886 -3585 321"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "trainstation_06_spawn1"
+            "origin" "-9886 -3490 321"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "trainstation_06_spawn1"
+            "origin" "-10014 -3671 334"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "trainstation_06_spawn1"
+            "origin" "-10014 -3576 334"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "trainstation_06_spawn1"
+            "origin" "-10014 -3489 334"
+        }
+        "point_trigger"
+        {
+            "spawnflags" "1"
+            "StartDisabled" "1"
+            "targetname" "trigger_give_crowbar"
+            "TriggerRadius" "1311"
+            "OnStartTouch" "give_players_crowbar,EquipAll,,0,-1"
+            "origin" "-9774 -3304 329"
+        }
+        "game_player_equip"
+        {
+            "spawnflags" "0"
+            "targetname" "give_players_crowbar"
+            "weapon_crowbar" "1"
+            "origin" "-9758 -3304 329"
+        }
+        "logic_auto"
+        {
+            "spawnflags" "1"
+            "OnMapSpawn" "servercommand,Command,mp_playercollide 1,0,-1"
+            "origin" "-10001.4 -3959 377.907"
+        }
+        "point_servercommand"
+        {
+            "targetname" "servercommand"
+            "origin" "-10003.4 -3959 400.508"
+        }
+        "point_trigger"
+        {
+            "spawnflags" "1"
+            "StartDisabled" "1"
+            "targetname" "scriptCond_seeBarney"
+            "TriggerOnce" "1"
+            "TriggerRadius" "173"
+            "OnStartTouch" "lcs_ba_heyGordon,Kill,,3.5,-1"
+            "OnStartTouch" "citadel,SetAnimation,open,1.7,-1"
+            "OnStartTouch" "lcs_crowbar_intro,Resume,,0.5,-1"
+            "OnStartTouch" "timer_heyGordon,Kill,,0.1,-1"
+            "OnStartTouch" "logic_citadel_scanners_1,Trigger,,0,-1"
+            "OnStartTouch" "timer_heyGordon,Disable,,0,-1"
+            "origin" "-9746 -3326 346"
+        }
+    }
+    Modify
+    {
+        ClassName
+        {
+            "worldspawn"
+            {
+                "disableareaportals" "1"
+            }
+        }
+        TargetName
+        {
+            "lcs_crowbar_intro"
+            {
+                "OnTrigger2" "trigger_give_crowbar,Enable,,5,-1"
+            }
+        }
+        Origin
+        {
+            "-8836 -544 -420"
+            {
+                "spawngroup" "canals_01_spawn1"
+            }
+        }
+    }
+SpawnItems
+{
+    "weapon_healer" "1"
+}
+}

@@ -1,0 +1,30 @@
+"merchant_courier_3"
+{
+	"Name"	"Rebel Armory"
+
+	"Weapons"
+	{
+		"weapon_ar2" "25"
+		"weapon_gauss" "70"
+		"weapon_crossbow" "10"
+		"weapon_alyxgun" "15"
+		"weapon_manhack" "3"
+		"weapon_stunstick" "4"
+		"weapon_slam" "3"
+	}
+	"Items"
+	{
+		"item_ammo_pistol" "1"
+		"item_ammo_smg1" "1"
+		"item_ammo_357" "3"
+		"item_ammo_ar2" "3"
+		"item_ammo_tau" "10"
+		"item_ammo_smg1_grenade" "2"
+		"item_rpg_round" "2"
+		"item_ammo_crossbow" "1"
+		"item_box_alyxrounds" "2"
+		"item_healthkit" "3"
+		"item_battery" "3"
+
+	}
+}

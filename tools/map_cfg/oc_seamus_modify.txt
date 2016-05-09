@@ -1,0 +1,12 @@
+oc_seamus
+{
+	SpawnItems
+	{
+		"weapon_physcannon" "1"
+		"weapon_healer" "1"
+		"weapon_crowbar" "1"
+		"weapon_pistol" "1"
+		"weapon_smg1" "1"
+		"item_ammo_smg1" "1"
+	}
+}

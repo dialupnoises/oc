@@ -1,0 +1,135 @@
+// Scientist
+"NPC_Scientist.CatScream"
+{
+	"channel"	"CHAN_VOICE"
+	"volume"	"1.0"
+	"soundlevel"	"SNDLVL_80db"
+	"pitch"		"PITCH_NORM"
+	"wave"		"scientist/c1a0_sci_catscream.wav"
+}
+
+"NPC_Scientist.CheckTie"
+{
+	"channel"	"CHAN_VOICE"
+	"volume"	"1.0"
+	"soundlevel"	"SNDLVL_75db"
+	"pitch"		"PITCH_NORM"
+	"wave"		"scientist/weartie.wav"
+}
+
+"NPC_Scientist.Dangling"
+{
+	"channel"	"CHAN_VOICE"
+	"volume"	"1.0"
+	"soundlevel"	"SNDLVL_80db"
+	"pitch"		"PITCH_NORM"
+	"wave"		"scientist/c1a2_sci_dangling.wav"
+}
+
+"NPC_Scientist.DarkRoom"
+{
+	"channel"	"CHAN_VOICE"
+	"volume"	"1.0"
+	"soundlevel"	"SNDLVL_80db"
+	"pitch"		"PITCH_NORM"
+	"wave"		"scientist/c1a2_sci_darkroom.wav"
+}
+
+"NPC_Scientist.DragOff"
+{
+	"channel"	"CHAN_BODY"
+	"volume"	"1.0"
+	"soundlevel"	"SNDLVL_80db"
+	"pitch"		"PITCH_NORM"
+	"wave"		"scientist/sci_dragoff.wav"
+}
+
+"NPC_Scientist.Pain3"
+{
+	"channel"	"CHAN_VOICE"
+	"volume"	"1.0"
+	"soundlevel"	"SNDLVL_80db"
+	"pitch"		"PITCH_NORM"
+	"wave"		"scientist/sci_pain3.wav"
+}
+
+"NPC_Scientist.Pain4"
+{
+	"channel"	"CHAN_VOICE"
+	"volume"	"1.0"
+	"soundlevel"	"SNDLVL_80db"
+	"pitch"		"PITCH_NORM"
+	"wave"		"scientist/sci_pain4.wav"
+}
+
+"NPC_Scientist.Rocket"
+{
+	"channel"	"CHAN_VOICE"
+	"volume"	"1.0"
+	"soundlevel"	"SNDLVL_80db"
+	"pitch"		"PITCH_NORM"
+	"wave"		"scientist/c1a4_sci_rocket.wav"
+}
+
+"NPC_Scientist.Scream02"
+{
+	"channel"	"CHAN_VOICE"
+	"volume"	"1.0"
+	"soundlevel"	"SNDLVL_85db"
+	"pitch"		"PITCH_NORM"
+	"wave"		"scientist/scream02.wav"
+}
+
+"NPC_Scientist.Scream3"
+{
+	"channel"	"CHAN_VOICE"
+	"volume"	"1.0"
+	"soundlevel"	"SNDLVL_85dB"
+	"pitch"		"PITCH_NORM"
+	"wave"		"scientist/scream3.wav"
+}
+
+"NPC_Scientist.StayBack"
+{
+	"channel"	"CHAN_VOICE"
+	"volume"	"1.0"
+	"soundlevel"	"SNDLVL_90dB"
+	"pitch"		"PITCH_NORM"
+	"wave"		"scientist/c1a0_sci_stayback.wav"
+}
+
+"NPC_Scientist.Tentacle"
+{
+	"channel"	"CHAN_VOICE"
+	"volume"	"1.0"
+	"soundlevel"	"SNDLVL_90dB"
+	"pitch"		"PITCH_NORM"
+	"wave"		"scientist/c1a4_sci_tent.wav"
+}
+
+"NPC_Scientist.VentPull1"
+{
+	"channel"	"CHAN_BODY"
+	"volume"	"1.0"
+	"soundlevel"	"SNDLVL_85dB"
+	"pitch"		"PITCH_NORM"
+	"wave"		"player/pl_metal1.wav"
+}
+
+"NPC_Scientist.VentPull2"
+{
+	"channel"	"CHAN_BODY"
+	"volume"	"1.0"
+	"soundlevel"	"SNDLVL_85dB"
+	"pitch"		"PITCH_NORM"
+	"wave"		"player/pl_metal2.wav"
+}
+
+"NPC_Scientist.VentPull3"
+{
+	"channel"	"CHAN_BODY"
+	"volume"	"1.0"
+	"soundlevel"	"SNDLVL_85dB"
+	"pitch"		"PITCH_NORM"
+	"wave"		"player/pl_metal4.wav"
+}

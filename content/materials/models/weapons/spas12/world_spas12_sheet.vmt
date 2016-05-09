@@ -1,0 +1,15 @@
+"VertexLitGeneric"
+{
+	"$baseTexture" "Models/Weapons/spas12/world_spas12_sheet"
+	"$bumpmap" "models/Weapons/spas12/world_spas12_normal"
+//	"$envmap" "Environment Maps/specular"
+//	"$envmaptint" "[ .64 .64 .64 ]"
+//	"$envmap" "env_cubemap"
+//	"$normalmapalphaenvmapmask" 1
+	
+// -- From here down is new stuff which will only be applied if $phong is set to 1 --
+	"$phong" "1"
+	"$phongexponent" "20"
+	"$phongboost"	"2"
+	"$phongfresnelranges"	"[.4 0.8 1.5]"
+}

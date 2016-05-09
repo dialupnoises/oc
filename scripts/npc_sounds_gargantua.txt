@@ -1,0 +1,152 @@
+// Gargantua
+"NPC_Garg.Attack1"
+{
+	"channel"	"CHAN_VOICE"
+	"volume"	"1.0"
+	"soundlevel"	"SNDLVL_140dB"
+	"pitch"		"PITCH_NORM"
+	"wave"		"npc/garg/gar_attack1.wav"
+}
+
+"NPC_Garg.Attack3"
+{
+	"channel"	"CHAN_VOICE"
+	"volume"	"1.0"
+	"soundlevel"	"SNDLVL_140dB"
+	"pitch"		"PITCH_NORM"
+	"wave"		"npc/garg/gar_attack3.wav"
+}
+
+"NPC_Garg.Stomp"
+{
+	"channel"	"CHAN_VOICE"
+	"volume"	"1.0"
+	"soundlevel"	"SNDLVL_140db"
+	"pitch"		"PITCH_NORM"
+	"rndwave"
+	{
+		"wave"		"weapons/mine_charge.wav"
+	}
+}
+
+"NPC_Garg.AttackHit"
+{
+	"channel"	"CHAN_WEAPON"
+	"volume"	"1.0"
+	"soundlevel"	"SNDLVL_90db"
+	"pitch"		"50,65"
+	"rndwave"
+	{
+		"wave"		"npc/garg/gar_claw_strike1.wav"
+		"wave"		"npc/garg/gar_claw_strike2.wav"
+		"wave"		"npc/garg/gar_claw_strike3.wav"
+	}
+}
+
+"NPC_Garg.AttackMiss"
+{
+	"channel"	"CHAN_WEAPON"
+	"volume"	"1.0"
+	"soundlevel"	"SNDLVL_90db"
+	"pitch"		"50,65"
+	"rndwave"
+	{
+		"wave"		"npc/garg/gar_claw_miss1.wav"
+		"wave"		"npc/garg/gar_claw_miss2.wav"
+	}
+}
+
+"NPC_Garg.Footstep"
+{
+	"channel"	"CHAN_BODY"
+	"volume"	"1.0"
+	"soundlevel"	"SNDLVL_90db"
+	"pitch"		"90,110"
+	"rndwave"
+	{
+		"wave"		"npc/garg/gar_step1.wav"
+		"wave"		"npc/garg/gar_step2.wav"
+	}
+}
+
+"NPC_Garg.Breath"
+{
+	"channel"	"CHAN_VOICE"
+	"volume"	"1.0"
+	"soundlevel"	"SNDLVL_80db"
+	"pitch"		"90,110"
+	"rndwave"
+	{
+		"wave"		"npc/garg/gar_breathe1.wav"
+		"wave"		"npc/garg/gar_breathe2.wav"
+		"wave"		"npc/garg/gar_breathe3.wav"
+	}
+}
+
+
+"NPC_Garg.Attack"
+{
+	"channel"	"CHAN_BODY"
+	"volume"	"1.0"
+	"soundlevel"	"SNDLVL_90db"
+	"pitch"		"PITCH_NORM"
+	"rndwave"
+	{
+		"wave"		"npc/garg/gar_attack1.wav"
+		"wave"		"npc/garg/gar_attack2.wav"
+		"wave"		"npc/garg/gar_attack3.wav"
+	}
+}
+
+"NPC_Garg.BeamAttackOff"
+{
+	"channel"	"CHAN_WEAPON"
+	"volume"	"1.0"
+	"soundlevel"	"SNDLVL_140db"
+	"pitch"		"PITCH_NORM"
+	"wave"		"npc/garg/gar_flameoff1.wav"
+}
+
+"NPC_Garg.BeamAttackOn"
+{
+	"channel"	"CHAN_BODY"
+	"volume"	"1.0"
+	"soundlevel"	"SNDLVL_140db"
+	"pitch"		"PITCH_NORM"
+	"wave"		"npc/garg/gar_flameon1.wav"
+}
+
+"NPC_Garg.BeamAttackRun"
+{
+	"channel"	"CHAN_WEAPON"
+	"volume"	"1.0"
+	"soundlevel"	"SNDLVL_140db"
+	"pitch"		"PITCH_NORM"
+	"wave"		"npc/garg/gar_flamerun1.wav"
+}
+
+"NPC_Garg.StompSound"
+{
+	"channel"	"CHAN_VOICE"
+	"volume"	"1.0"
+	"soundlevel"	"SNDLVL_140db"
+	"pitch"		"90,110"
+	"rndwave"
+	{
+		"wave"		"npc/garg/gar_stomp1.wav"
+	}
+}
+
+"NPC_Garg.Pain"
+{
+	"channel"	"CHAN_VOICE"
+	"volume"	"1.0"
+	"soundlevel"	"SNDLVL_90db"
+	"pitch"		"PITCH_NORM"
+	"rndwave"
+	{
+		"wave"		"npc/garg/gar_pain1.wav"
+		"wave"		"npc/garg/gar_pain2.wav"
+		"wave"		"npc/garg/gar_pain3.wav"
+	}
+}

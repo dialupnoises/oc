@@ -1,0 +1,9 @@
+"WorldVertexTransition"
+{
+	"$basetexture" "nature/dirtfloor011a"
+	"$basetexture2" "nature/dirtfloor005b"
+        	"$basetexturetransform" "center .5 .5 scale 1 1 rotate 0  translate 0 0"
+        	"$basetexturetransform2" "center .5 .5 scale 1 1 rotate 0 translate 0 0"
+	"$surfaceprop" "dirt"
+	"%keywords" "Tysn"
+}

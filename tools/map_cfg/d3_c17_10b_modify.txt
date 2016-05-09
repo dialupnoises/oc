@@ -1,0 +1,260 @@
+d3_c17_10b
+{
+    Remove
+    {
+        ClassName
+        {
+            "player_loadsaved" {}
+            "info_player_start" {}
+        }
+        TargetName
+        {
+            "s_room_detected_relay" {}
+            "barney_dead_text" {}
+        }
+        Origin
+        {
+            "3192 -376 320" {}
+            "2669.26 -1891.6 265" {}
+            "2360 -1896 376" {}
+            "2768 1136 832" {}
+            "3575 -1881 599.305" {}
+        }
+    }
+    Add
+    {
+        "logic_auto"
+        {
+            "spawnflags" "0"
+            "OnMapSpawn" "player_spawn_items_maker,ForceSpawn,,1,-1"
+            "OnMapTransition" "barney_follow,Activate,,1,-1"
+            "OnMapSpawn" "barney,Kill,,0,-1"
+            "OnMapSpawn" "yumyumyum,Eat,,1.5,-1"
+            "origin" "2669.26 -1891.6 265"
+        }
+        "point_weapon_eater"
+        {
+            "EatRadius" "60"
+            "targetname" "yumyumyum"
+            "origin" "2684 -1863 277"
+        }
+        "prop_door_rotating"
+        {
+            "ajarangles" "0 0 0"
+            "angles" "0 180 0"
+            "axis" "2332 -1865 310, 2332 -1865 310"
+            "distance" "90"
+            "hardware" "1"
+            "model" "models/props_c17/door01_left.mdl"
+            "returndelay" "-1"
+            "skin" "13"
+            "spawnflags" "10240"
+            "speed" "100"
+            "origin" "2332 -1865 310"
+        }
+        "logic_timer"
+        {
+            "RefireTime" "1"
+            "spawnflags" "0"
+            "StartDisabled" "0"
+            "UseRandomTime" "0"
+            "OnTimer" "barney,SetDamageFilter,filter_NoDamage,1,-1"
+            "origin" "2770 -1938 264"
+        }
+        "filter_multi"
+        {
+            "Negated" "1"
+            "targetname" "filter_NoDamage"
+            "origin" "2786 -1938 264"
+        }
+        "point_trigger"
+        {
+            "spawnflags" "1"
+            "TriggerOnce" "1"
+            "TriggerRadius" "181"
+            "OnStartTouch" "mortar_fire_expl,Explode,,11,-1"
+            "OnStartTouch" "mortar_fire_wav2,PlaySound,,9.5,-1"
+            "OnStartTouch" "mortar_fire_wav,PlaySound,,8,-1"
+            "OnStartTouch" "mortar_fire_shake,StartShake,,8,-1"
+            "OnStartTouch" "turrets_squadstay_assault,Deactivate,,0.1,-1"
+            "OnStartTouch" "turrets_barneystay_assault,Deactivate,,0.1,-1"
+            "OnStartTouch" "turrets_squadstay_assault_trigger,Kill,,0,-1"
+            "OnStartTouch" "lobby_combinedoor_portal,Close,,0,-1"
+            "OnStartTouch" "lobby_combinedoor_portalbrush,Enable,,0,-1"
+            "OnStartTouch" "spookyroom_soldier_makers,Enable,,0,-1"
+            "origin" "3220 -516 283"
+        }
+        "logic_relay"
+        {
+            "spawnflags" "0"
+            "StartDisabled" "0"
+            "targetname" "s_room_detected_relay"
+            "OnTrigger" "s_laser27,TurnOff,,0,-1"
+            "OnTrigger" "s_laser26,TurnOff,,0,-1"
+            "OnTrigger" "s_laser23,TurnOff,,0,-1"
+            "OnTrigger" "s_laser24,TurnOff,,0,-1"
+            "OnTrigger" "s_laser25,TurnOff,,0,-1"
+            "OnTrigger" "s_room_turret_5,Enable,,0,-1"
+            "OnTrigger" "s_room_panelswitch,Lock,,0,-1"
+            "OnTrigger" "s_laser22,TurnOff,,0,-1"
+            "OnTrigger" "s_laser21,TurnOff,,0,-1"
+            "OnTrigger" "s_laser18,TurnOff,,0,-1"
+            "OnTrigger" "s_laser17,TurnOff,,0,-1"
+            "OnTrigger" "s_laser16,TurnOff,,0,-1"
+            "OnTrigger" "s_laser15,TurnOff,,0,-1"
+            "OnTrigger" "s_laser14,TurnOff,,0,-1"
+            "OnTrigger" "s_laser13,TurnOff,,0,-1"
+            "OnTrigger" "s_laser12,TurnOff,,0,-1"
+            "OnTrigger" "s_laser11,TurnOff,,0,-1"
+            "OnTrigger" "s_laser10,TurnOff,,0,-1"
+            "OnTrigger" "s_laser9,TurnOff,,0,-1"
+            "OnTrigger" "s_laser8,TurnOff,,0,-1"
+            "OnTrigger" "s_laser7,TurnOff,,0,-1"
+            "OnTrigger" "s_laser6,TurnOff,,0,-1"
+            "OnTrigger" "s_laser4,TurnOff,,0,-1"
+            "OnTrigger" "s_laser5,TurnOff,,0,-1"
+            "OnTrigger" "laserroom_detected_sound,PlaySound,,0,-1"
+            "OnTrigger" "laserroom_detected_sound,StopSound,,1.5,-1"
+            "OnTrigger" "s_room_turret_1,Enable,,0,-1"
+            "OnTrigger" "s_room_turret_2,Enable,,0,-1"
+            "OnTrigger" "s_room_turret_3,Enable,,0,-1"
+            "OnTrigger" "s_room_turret_4,Enable,,0,-1"
+            "OnTrigger" "s_laser3,TurnOff,,0,-1"
+            "OnTrigger" "s_laser2,TurnOff,,0,-1"
+            "OnTrigger" "s_laser1,TurnOff,,0,-1"
+            "OnTrigger" "laser_off_sound,PlaySound,,0,-1"
+            "OnTrigger" "s_room_nodelink_2,TurnOff,,0,-1"
+            "OnTrigger" "s_room_doors,Close,,0,-1"
+            "OnTrigger" "s_room_turret_6,Enable,,0,-1"
+            "OnTrigger" "s_room_turret_8,Enable,,0,-1"
+            "OnTrigger" "timer,SetTimerLabel,Room locked for:,0,-1"
+            "OnTrigger" "timer,StartTimer,30,0,-1"
+            "OnTrigger" "s_room_reset_relay,Trigger,,30,-1"
+            "origin" "3062.76 -2046.78 712"
+        }
+        "logic_relay"
+        {
+            "spawnflags" "0"
+            "StartDisabled" "0"
+            "targetname" "s_room_reset_relay"
+            "OnTrigger" "s_laser27,TurnOn,,0,-1"
+            "OnTrigger" "s_laser26,TurnOn,,0,-1"
+            "OnTrigger" "s_laser23,TurnOn,,0,-1"
+            "OnTrigger" "s_laser24,TurnOn,,0,-1"
+            "OnTrigger" "s_laser25,TurnOn,,0,-1"
+            "OnTrigger" "s_room_turret_5,Disable,,0,-1"
+            "OnTrigger" "s_room_panelswitch,Unlock,,0,-1"
+            "OnTrigger" "s_laser22,TurnOn,,0,-1"
+            "OnTrigger" "s_laser21,TurnOn,,0,-1"
+            "OnTrigger" "s_laser18,TurnOn,,0,-1"
+            "OnTrigger" "s_laser17,TurnOn,,0,-1"
+            "OnTrigger" "s_laser16,TurnOn,,0,-1"
+            "OnTrigger" "s_laser15,TurnOn,,0,-1"
+            "OnTrigger" "s_laser14,TurnOn,,0,-1"
+            "OnTrigger" "s_laser13,TurnOn,,0,-1"
+            "OnTrigger" "s_laser12,TurnOn,,0,-1"
+            "OnTrigger" "s_laser11,TurnOn,,0,-1"
+            "OnTrigger" "s_laser10,TurnOn,,0,-1"
+            "OnTrigger" "s_laser9,TurnOn,,0,-1"
+            "OnTrigger" "s_laser8,TurnOn,,0,-1"
+            "OnTrigger" "s_laser7,TurnOn,,0,-1"
+            "OnTrigger" "s_laser6,TurnOn,,0,-1"
+            "OnTrigger" "s_laser4,TurnOn,,0,-1"
+            "OnTrigger" "s_laser5,TurnOn,,0,-1"
+            "OnTrigger" "laserroom_detected_sound,PlaySound,,0,-1"
+            "OnTrigger" "laserroom_detected_sound,StopSound,,1.5,-1"
+            "OnTrigger" "s_room_turret_1,Disable,,0,-1"
+            "OnTrigger" "s_room_turret_2,Disable,,0,-1"
+            "OnTrigger" "s_room_turret_3,Disable,,0,-1"
+            "OnTrigger" "s_room_turret_4,Disable,,0,-1"
+            "OnTrigger" "s_laser3,TurnOn,,0,-1"
+            "OnTrigger" "s_laser2,TurnOn,,0,-1"
+            "OnTrigger" "s_laser1,TurnOn,,0,-1"
+            "OnTrigger" "laser_off_sound,PlaySound,,0,-1"
+            "OnTrigger" "s_room_nodelink_2,TurnOn,,0,-1"
+            "OnTrigger" "s_room_doors,Open,,0,-1"
+            "OnTrigger" "s_room_turret_6,Disable,,0,-1"
+            "OnTrigger" "s_room_turret_8,Disable,,0,-1"
+            "origin" "3062.76 -2062.78 712"
+        }
+        "game_countdown_timer"
+        {
+            "targetname" "timer"
+            "origin" "3075 -2063 747"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "c17_10b_spawn1"
+            "origin" "3059 -1885 257"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "targetname" "c17_10b_spawn1"
+            "origin" "2908 -1962 257"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "targetname" "c17_10b_spawn1"
+            "origin" "2888 -1830 257"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "c17_10b_spawn1"
+            "origin" "2361 -1889 257"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "targetname" "c17_10b_spawn1"
+            "origin" "2481 -1831 257"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "targetname" "c17_10b_spawn1"
+            "origin" "2481 -1957 257"
+        }
+    }
+    Modify
+    {
+        ClassName
+        {
+            "worldspawn"
+            {
+                "disableareaportals" "1"
+            }
+        }
+        Origin
+        {
+            "2768 1136 896"
+            {
+                "nosmooth" "1"
+                "spawngroup" "c17_11_spawn1"
+            }
+            "2556 872 376"
+            {
+                "spawnflags" "3"
+            }
+        }
+    }
+SpawnItems
+{
+    "weapon_smg1" "1"
+    "weapon_ar2" "1"
+    "weapon_shotgun" "1"
+    "weapon_crowbar" "1"
+    "weapon_physcannon" "1"
+    "weapon_357" "1"
+    "weapon_frag" "1"
+    "weapon_pistol" "1"
+    "item_box_buckshot" "2"
+    "item_ammo_smg1" "3"
+    "item_battery" "3"
+    "weapon_healer" "1"
+    "weapon_crossbow" "1"
+}
+}

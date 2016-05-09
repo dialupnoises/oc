@@ -1,0 +1,193 @@
+ep1_citadel_01
+{
+    Remove
+    {
+        ClassName
+        {
+            "info_player_start" {}
+            "func_rotating" {}
+        }
+        TargetName
+        {
+            "asc_looklightbridge" {}
+            "door_rollertraining" {}
+            "clip_rollerdoor" {}
+            "lcs_al_citadel_01_rollertraining_02" {}
+            "trigger_player_holdmine" {}
+            "math_bringroller" {}
+        }
+        Origin
+        {
+            "-6136 6400 2664" {}
+	    "-6304 6864 2656" {}
+        }
+    }
+    Add
+    {
+        "game_player_equip"
+        {
+            "spawnflags" "0"
+            "targetname" "fixweapontransition"
+            "weapon_healer" "1"
+            "weapon_physcannon" "1"
+            "origin" "-6301 7018 2657"
+        }
+        "point_trigger"
+        {
+            "spawnflags" "1"
+            "TriggerRadius" "805"
+            "OnStartTouch" "fixweapontransition,EquipActivator,,0,-1"
+            "origin" "-6301 7002 2657"
+        }
+        "info_particle_system"
+        {
+            "angles" "0 0 0"
+            "effect_name" "bridge_vortex"
+            "start_active" "0"
+            "targetname" "vortex"
+            "origin" "-5358 4494 2741"
+        }
+        "info_particle_system"
+        {
+            "angles" "0 0 0"
+            "effect_name" "bridge_vortex_b"
+            "start_active" "0"
+            "targetname" "vortex2"
+            "origin" "-5356 4494 2741"
+        }
+        "logic_auto"
+        {
+            "spawnflags" "1"
+            "OnMapSpawn" "template_alyx,ForceSpawn,,0.5,-1"
+            "OnMapSpawn" "relay_Mapstart,Trigger,,0.6,-1"
+            "OnMapSpawn" "alyx,Kill,,0.1,-1"
+            "origin" "-6136 6400 2664"
+        }
+        "logic_choreographed_scene"
+        {
+            "busyactor" "1"
+            "SceneFile" "scenes/episode_1/al_citadel_01_rollertraining_02.vcd"
+            "target1" "mark_roller_console_01"
+            "target2" "target_hackingconsole_01"
+            "targetname" "lcs_al_citadel_01_rollertraining_02"
+            "OnCompletion" "relay_al_scripting_start,Enable,,0.1,-1"
+            "OnCompletion" "relay_al_scripting_stop,Enable,,0.1,-1"
+            "OnCompletion" "relay_al_scripting_stop2,Trigger,,0.2,-1"
+            "OnStart" "alyx,StartScripting,,0,-1"
+            "origin" "-4616 7752 2600"
+        }
+        "math_counter"
+        {
+            "max" "2"
+            "min" "0"
+            "startvalue" "0"
+            "targetname" "math_bringroller"
+            "OnHitMax" "lcs_al_citadel_01_rollertraining_02,Start,,0,-1"
+            "OnHitMax" "trigger_roller_holdmine,Disable,,0,-1"
+            "OnHitMax" "trigger_player_holdmine,Disable,,0,-1"
+            "OnHitMax" "math_bringroller,SetValueNoFire,0,0,-1"
+            "OnHitMax" "nag_bringrollermine,Kill,,0.1,-1"
+            "OnHitMax" "trigger_nagbringroller,Kill,,0,-1"
+            "OnHitMax" "trigger_alyxrunback,Enable,,0,-1"
+            "OnHitMax" "alyx,AddContext,al_hint_citRollerMineTraining:0,0,-1"
+            "origin" "-4884.74 7709.65 2529"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "spawn1"
+            "origin" "-6631 7120 2649"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "spawn1"
+            "origin" "-6398 7002 2649"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "targetname" "spawn1"
+            "origin" "-6271 7142 2649"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "spawn1"
+            "origin" "-6319 6394 2650"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "targetname" "spawn1"
+            "origin" "-6212 6496 2650"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "targetname" "spawn1"
+            "origin" "-6298 6558 2791"
+        }
+        "point_trigger"
+        {
+            "spawnflags" "1"
+            "targetname" "trigger_player_holdmine"
+            "TriggerOnce" "1"
+            "TriggerRadius" "200"
+            "OnStartTouch" "math_bringroller,Add,1,0,-1"
+            "origin" "-4712 7735.77 2529"
+        }
+        "point_trigger"
+        {
+            "spawnflags" "1"
+            "StartDisabled" "1"
+            "targetname" "asc_looklightbridge"
+            "TriggerOnce" "1"
+            "TriggerRadius" "128"
+            "OnStartTouch" "soldier_assault1_relay,Trigger,,0,-1"
+            "origin" "-4566 5157 2601"
+        }
+        "prop_dynamic"
+        {
+            "angles" "0 0 0"
+            "DefaultAnim" "idle_open"
+            "fademindist" "-1"
+            "fadescale" "1"
+            "MaxAnimTime" "10"
+            "MinAnimTime" "5"
+            "model" "models/props_combine/combine_door01.mdl"
+            "renderamt" "255"
+            "rendercolor" "255 255 255"
+            "solid" "6"
+            "origin" "-4721 7446 2616"
+        }
+    }
+    Modify
+    {
+        ClassName
+        {
+            "worldspawn"
+            {
+                "disableareaportals" "1"
+            }
+        }
+        TargetName
+	{
+            "relay_spin_on"
+            {
+                "OnTrigger" "vortex,Start,,0.40,-1"
+                "OnTrigger" "vortex2,Start,,0.40,-1"
+            }
+            "relay_spin_off"
+            {
+                "OnTrigger" "vortex,Stop,,1,-1"
+                "OnTrigger" "vortex2,Stop,,1,-1"
+            }
+	}
+    }
+SpawnItems
+{
+    "weapon_physcannon" "1"
+    "weapon_healer" "1"
+}
+}

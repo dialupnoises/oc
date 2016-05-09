@@ -1,0 +1,154 @@
+d1_town_01
+{
+    Remove
+    {
+        ClassName
+        {
+            "info_player_start" {}
+        }
+        Origin
+        {
+            "4276 -2932 -3708" {}
+            "4488.19 -2784 -3730.79" {}
+        }
+    }
+    Add
+    {
+        "prop_dynamic_override"
+        {
+            "angles" "0 180 87.5"
+            "fademindist" "-1"
+            "fadescale" "1"
+            "MaxAnimTime" "10"
+            "MinAnimTime" "5"
+            "model" "models/props_debris/wood_board05a.mdl"
+            "renderamt" "255"
+            "rendercolor" "255 255 255"
+            "skin" "0"
+            "solid" "6"
+            "origin" "4383 -3021 -3680"
+        }
+        "prop_dynamic_override"
+        {
+            "angles" "0 180 91"
+            "fademindist" "-1"
+            "fadescale" "1"
+            "MaxAnimTime" "10"
+            "MinAnimTime" "5"
+            "model" "models/props_debris/wood_board05a.mdl"
+            "renderamt" "255"
+            "rendercolor" "255 255 255"
+            "skin" "0"
+            "solid" "6"
+            "origin" "4383 -3021 -3711"
+        }
+        "prop_dynamic_override"
+        {
+            "angles" "0 180 40.5"
+            "fademindist" "-1"
+            "fadescale" "1"
+            "MaxAnimTime" "10"
+            "MinAnimTime" "5"
+            "model" "models/props_debris/wood_board05a.mdl"
+            "renderamt" "255"
+            "rendercolor" "255 255 255"
+            "skin" "0"
+            "solid" "6"
+            "origin" "4384 -3020 -3712"
+        }
+        "prop_dynamic_override"
+        {
+            "angles" "0 0 40.5"
+            "fademindist" "-1"
+            "fadescale" "1"
+            "MaxAnimTime" "10"
+            "MinAnimTime" "5"
+            "model" "models/props_debris/wood_board05a.mdl"
+            "renderamt" "255"
+            "rendercolor" "255 255 255"
+            "skin" "0"
+            "solid" "6"
+            "origin" "4384 -3020 -3712"
+        }
+        "prop_dynamic_override"
+        {
+            "angles" "0 180 99"
+            "fademindist" "-1"
+            "fadescale" "1"
+            "MaxAnimTime" "10"
+            "MinAnimTime" "5"
+            "model" "models/props_debris/wood_board05a.mdl"
+            "renderamt" "255"
+            "rendercolor" "255 255 255"
+            "skin" "0"
+            "solid" "6"
+            "origin" "4383 -3021 -3745"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "targetname" "town_01_spawn1"
+            "origin" "4334 -3074 -3759"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "targetname" "town_01_spawn1"
+            "origin" "4227.9 -3074 -3759"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "town_01_spawn1"
+            "origin" "4351 -2903 -3759"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "town_01_spawn1"
+            "origin" "4356 -2986 -3759"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "town_01_spawn1"
+            "origin" "4237 -2967 -3759"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "town_01_spawn1"
+            "origin" "4239 -2789 -3759"
+        }
+    }
+    Modify
+    {
+        ClassName
+        {
+            "worldspawn"
+            {
+                "disableareaportals" "1"
+            }
+        }
+        Origin
+        {
+            "192 340 -3270"
+            {
+                "spawnflags" "0"
+                "spawngroup" "town_01a_spawn1"
+                "transitionradius" "153"
+            }
+        }
+    }
+SpawnItems
+{
+    "weapon_physcannon" "1"
+    "item_ammo_smg1_large" "1"
+    "weapon_pistol" "1"
+    "weapon_smg1" "1"
+    "weapon_357" "1"
+    "item_ammo_pistol_large" "1"
+    "weapon_crowbar" "1"
+    "weapon_healer" "1"
+}
+}

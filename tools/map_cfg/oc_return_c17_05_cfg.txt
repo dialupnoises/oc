@@ -1,0 +1,6 @@
+"oc_return_c17_05"
+{
+"sk_ally_regen_time" "0.01"
+"sk_barney_health" "100"
+"sk_citizen_health" "100"
+}	

@@ -1,0 +1,12 @@
+Obsidian Conflict
+
+Map: Lost Coast
+Created by: Valve Software ( www.valvesoftware.com )
+Mapadd by: Skidz ( www.obsidianconflict.com )
+
+
+Description:
+
+Originally planned as a section of the Highway 17 chapter of Half-Life 2, Lost Coast
+is a playable technology showcase that introduces High Dynamic Range lighting to the
+Source engine.

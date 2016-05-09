@@ -1,0 +1,181 @@
+d3_c17_09
+{
+    Remove
+    {
+        ClassName
+        {
+            "player_loadsaved" {}
+            "env_message" {}
+            "info_player_start" {}
+        }
+        Origin
+        {
+            "3782 4160 60" {}
+        }
+    }
+    Add
+    {
+        "point_weapon_eater"
+        {
+            "EatRadius" "89"
+            "targetname" "yumyumyum"
+            "origin" "4113 4160 35"
+        }
+        "logic_auto"
+        {
+            "spawnflags" "1"
+            "OnMapSpawn" "yumyumyum,Eat,,0.50,-1"
+            "origin" "4118.58 4215 90.9597"
+        }
+        "prop_door_rotating"
+        {
+            "ajarangles" "0 0 0"
+            "angles" "0 180 0"
+            "axis" "3708 4179 54, 3708 4179 54"
+            "distance" "90"
+            "hardware" "1"
+            "model" "models/props_c17/door01_left.mdl"
+            "returndelay" "-1"
+            "skin" "6"
+            "spawnflags" "10240"
+            "speed" "100"
+            "origin" "3708 4179 54"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "c17_09_spawn1"
+            "origin" "3743 4120 1"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "targetname" "c17_09_spawn1"
+            "origin" "3935 4202 1"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "targetname" "c17_09_spawn1"
+            "origin" "3934 4124.5 1"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "targetname" "c17_09_spawn1"
+            "origin" "4066 4124 1"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "targetname" "c17_09_spawn1"
+            "origin" "4067 4202 1"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "c17_09_spawn1"
+            "origin" "3743 4198 1"
+        }
+        "filter_multi"
+        {
+            "Negated" "1"
+            "targetname" "filter_NoDamage"
+            "origin" "7374 6442 410"
+        }
+        "logic_auto"
+        {
+            "spawnflags" "1"
+            "OnMapSpawn" "barney,SetDamageFilter,filter_NoDamage,1,-1"
+            "origin" "7358 6442 410"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "StartDisabled" "1"
+            "targetname" "c17_09_spawn2"
+            "origin" "7457.59 6303.1 1"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "StartDisabled" "1"
+            "targetname" "c17_09_spawn2"
+            "origin" "7457 6416 1"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "StartDisabled" "1"
+            "targetname" "c17_09_spawn2"
+            "origin" "7459 6546 1"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "StartDisabled" "1"
+            "targetname" "c17_09_spawn2"
+            "origin" "7450 6706 1"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "StartDisabled" "1"
+            "targetname" "c17_09_spawn2"
+            "origin" "7317 6720 1"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "StartDisabled" "1"
+            "targetname" "c17_09_spawn2"
+            "origin" "7351 6253 1"
+        }
+    }
+    Modify
+    {
+        ClassName
+        {
+            "worldspawn"
+            {
+                "disableareaportals" "1"
+            }
+        }
+        TargetName
+        {
+            "can_see_barney_aisc"
+            {
+                "spawnflags" "0"
+            }
+        }
+        Origin
+        {
+            "7116 6244 58"
+            {
+                "OnTrigger" "c17_09_spawn2,Enable,,0,-1"
+                "OnTrigger" "c17_09_spawn1,Disable,,0,-1"
+            }
+            "9232 7104 96"
+            {
+                "nosmooth" "1"
+                "spawngroup" "c17_10a_spawn1"
+            }
+        }
+    }
+SpawnItems
+{
+    "weapon_smg1" "1"
+    "weapon_ar2" "1"
+    "weapon_shotgun" "1"
+    "weapon_crowbar" "1"
+    "weapon_physcannon" "1"
+    "weapon_357" "1"
+    "weapon_frag" "1"
+    "weapon_pistol" "1"
+    "item_box_buckshot" "2"
+    "item_ammo_smg1" "3"
+    "item_battery" "3"
+    "weapon_healer" "1"
+    "weapon_crossbow" "1"
+}
+}

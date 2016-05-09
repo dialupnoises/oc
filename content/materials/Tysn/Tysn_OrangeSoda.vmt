@@ -1,0 +1,9 @@
+"VertexLitGeneric" 
+{ 
+
+	"$basetexture" "Tysn/Tysn_OrangeSoda"
+	"$surfaceprop" "plastic"
+	"$envmap" "env_cubemap"
+	"$envmaptint" "[.25 .25 .25]"
+ 
+}

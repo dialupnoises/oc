@@ -1,0 +1,8 @@
+LightmappedGeneric
+{
+	$basetexture "Tysn/Tysn_PlasticSheeting"
+	$surfaceprop "plastic"
+	$envmap "env_cubemap"
+	$envmaptint "[.4 .4 .4]"
+	$translucent "1"
+}

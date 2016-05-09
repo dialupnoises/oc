@@ -1,0 +1,16 @@
+Obsidian Conflict
+
+Map: de_dust2 (mapadded mini mission)
+Mapadd Script by fug4life
+
+Description:
+
+Guerilla warfare is your only chance against the might of the military.
+
+Primary Objective:
+
+Find the C4 and destroy the grunts ammo cache.
+
+
+
+

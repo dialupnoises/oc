@@ -1,0 +1,19 @@
+// envmaptint_fix
+"vertexlitgeneric"
+{
+	"$basetexture" "concrete\concretefloor028a"
+	"$surfaceprop" "concrete"
+	
+	"%keywords" "c17downtown"
+	"$envmap" "env_cubemap"
+	"$bumpmap" "concrete\concretefloor028a_normal"
+	"$normalmapalphaenvmapmask" 1
+	"$envmapsaturation" 1
+	"$envmapcontrast" 1
+	"$envmaptint" "[ .45 .45 .45 ]"
+
+	"vertexlitgeneric_dx8"
+	{
+		"$envmaptint" "[ .35 .35 .35 ]"
+	}
+}

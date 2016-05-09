@@ -1,0 +1,17 @@
+"tysn_merchant_troopers_2"
+{
+	"Name"	"Heavy Weapons"
+
+	"Weapons"
+	{
+		"weapon_frag" "4"	
+		"weapon_slam" "5"
+		"weapon_rpg" "75"
+		"weapon_gauss" 200"
+
+	}
+	"Items"
+	{
+		"item_rpg_round" "3"
+	}
+}

@@ -1,0 +1,259 @@
+ep2_outland_08
+{
+    Remove
+    {
+        ClassName
+        {
+	    "trigger_playermovement" {}
+            "info_player_start" {}
+            "player_loadsaved" {}
+        }
+        TargetName
+        {
+            "vc_noreturn_1" {}
+            "trigger_trans_player" {}
+            "pclip_dud_return" {}
+            "alyx_check_fail_relay" {}
+        }
+        Origin
+        {
+            "-12759.9 -12742.2 529" {}
+            "-12576 -13648 544" {}
+            "-12576 -12944 544" {}
+        }
+    }
+    Add
+    {
+        "logic_timer"
+        {
+            "RefireTime" "2"
+            "OnTimer" "alyx,SetDamageFilter,filter_NoDamage,0,-1"
+            "origin" "-12851.4 -12588.1 567.059"
+        }
+        "point_weapon_eater"
+        {
+            "EatRadius" "59"
+            "targetname" "yumyumyum"
+            "origin" "-12836 -12885 495"
+        }
+        "logic_auto"
+        {
+            "spawnflags" "1"
+            "OnMapSpawn" "jeep,Kill,,0.1,-1"
+            "OnMapSpawn" "alyx,Kill,,0.1,-1"
+            "OnMapSpawn" "new_game_items,ForceSpawn,,0.5,-1"
+            "OnMapSpawn" "yumyumyum,Eat,,0.8,-1"
+            "OnMapSpawn" "vclip_jump_extra,Disable,,0.2,-1"
+            "OnMapSpawn" "jeep,AddOutput,PlayerOff relay_enable_alyx_nag_getincar:Trigger::0.0:-1,1.5,-1"
+            "OnMapSpawn" "jeep,AddOutput,PlayerOn relay_disable_alyx_nag_getincar:Trigger::0.0:-1,1.5,-1"
+            "OnMapSpawn" "trigger_jeep_breakgate2,Enable,,0.2,-1"
+            "origin" "-12852.5 -12642.7 560.237"
+        }
+        "filter_multi"
+        {
+            "Negated" "1"
+            "targetname" "filter_NoDamage"
+            "origin" "-12777 -12651 456"
+        }
+        "logic_timer"
+        {
+            "RefireTime" "2"
+            "OnTimer" "alyx,SetDamageFilter,filter_NoDamage,0,-1"
+            "origin" "-12851.4 -12588.1 567.059"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "outland_08_spawn1"
+            "origin" "-12827 -13017.9 452"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "outland_08_spawn1"
+            "origin" "-12827 -13112 452"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "outland_08_spawn1"
+            "origin" "-12827 -13203 452"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "outland_08_spawn1"
+            "origin" "-12639 -13021.9 452"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "outland_08_spawn1"
+            "origin" "-12639 -13112.9 452"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "outland_08_spawn1"
+            "origin" "-12639 -13207 452"
+        }
+        "point_vehiclespawn"
+        {
+            "CanSpawnJeep" "2"
+            "spawnflags" "1"
+            "targetname" "enable_vehiclespawn"
+            "TriggerRadius" "9381"
+            "origin" "-12540 -6385 387.501"
+        }
+        "point_trigger"
+        {
+            "spawnflags" "1"
+            "targetname" "trigger_trans_player"
+            "TriggerRadius" "174"
+            "OnStartTouch" "counter_trans,Add,1,0,-1"
+            "OnEndTouchAll" "counter_trans,Subtract,1,0,-1"
+            "origin" "-3143 1943 123.791"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 265 0"
+            "StartDisabled" "1"
+            "targetname" "outland_08_spawn2"
+            "origin" "-1834 1911 77"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 215.5 0"
+            "StartDisabled" "1"
+            "targetname" "outland_08_spawn2"
+            "origin" "-1600 1842 77"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 248 0"
+            "StartDisabled" "1"
+            "targetname" "outland_08_spawn2"
+            "origin" "-1715 1875 77"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 347.5 0"
+            "StartDisabled" "1"
+            "targetname" "outland_08_spawn2"
+            "origin" "-1947 1802 77"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 104 0"
+            "StartDisabled" "1"
+            "targetname" "outland_08_spawn2"
+            "origin" "-1628 1424 77"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 104 0"
+            "StartDisabled" "1"
+            "targetname" "outland_08_spawn2"
+            "origin" "-1488 1356 77"
+        }
+        "point_trigger"
+        {
+            "spawnflags" "1"
+            "TriggerOnce" "1"
+            "TriggerRadius" "44"
+            "OnStartTouch" "outland_08_spawn1,Disable,,0,-1"
+            "OnStartTouch" "outland_08_spawn2,Enable,,0,-1"
+            "origin" "-1817 789 89"
+        }
+        "filter_activator_class"
+        {
+            "filterclass" "prop_vehicle_*"
+            "hammerid" "1715410"
+            "Negated" "Allow entities that match criteria"
+            "targetname" "filter_jeep2"
+            "origin" "-12569 -7122 117.418"
+        }
+        "point_teleport"
+        {
+            "angles" "0 0 0"
+            "radius" "128"
+            "spawnflags" "2048"
+            "target" "alyx"
+            "targetname" "alyx_failsafe_teleport"
+            "origin" "-941 1494 113"
+        }
+        "point_trigger"
+        {
+            "filtername" "filter_alyx"
+            "spawnflags" "2"
+            "StartDisabled" "1"
+            "targetname" "alyx_failsafe_check"
+            "TriggerRadius" "841"
+            "OnStartTouch" "alyx_failsafe_relay,Kill,,0,1"
+            "OnStartTouch" "alyx_failsafe_teleport,Kill,,0,1"
+            "OnStartTouch" "alyx_failsafe_check,Kill,,1,1"
+            "origin" "-811 1609 91"
+        }
+        "logic_relay"
+        {
+            "spawnflags" "0"
+            "targetname" "alyx_failsafe_relay"
+            "OnTrigger" "alyx_failsafe_teleport,Teleport,,0,-1"
+            "origin" "-826.788 1576.61 75.7924"
+        }
+    }
+    Modify
+    {
+        ClassName
+        {
+            "logic_choreographed_scene"
+            {
+                "onplayerdeath" "0"
+            }
+        }
+        TargetName
+        {
+            "world"
+            {
+                "disableareaportals" "1"
+            }
+            "trigger_transition_to_09"
+            {
+                "spawngroup" "outland_09_spawn1"
+                "nosmooth" "1"
+            }
+            "trigger_jeep_breakgate"
+            {
+                "filtername" "filter_jeep2"
+                "StartDisabled" "0"
+                "targetname" "trigger_jeep_breakgate2"
+            }
+            "ptemplarte_opengate"
+            {
+                "OnEntitySpawned" "npc_citizen_opengate,SetDamageFilter,filter_NoDamage,1,-1"
+            }
+            "relay_bust_engine"
+            {
+                "OnTrigger" "alyx_failsafe_check,Enable,,2.1,-1"
+                "OnTrigger" "alyx_failsafe_relay,Trigger,,6,-1"
+            }
+        }
+    }
+SpawnItems
+{
+    "weapon_physcannon" "1"
+    "weapon_crowbar" "1"
+    "weapon_healer" "1"
+    "weapon_357" "1"
+    "weapon_shotgun" "1"
+    "weapon_pistol" "1"
+    "weapon_smg1" "1"
+    "item_box_buckshot" "2"
+    "weapon_frag" "1"
+    "item_ammo_smg1" "2"
+    "item_ammo_pistol" "1"
+    "weapon_ar2" "1"
+    "item_ammo_ar2" "2"
+    "weapon_crossbow" "1"
+}
+}

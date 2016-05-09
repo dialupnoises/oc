@@ -1,0 +1,169 @@
+Kopie von ep1_citadel_04_d
+{
+    Remove
+    {
+        ClassName
+        {
+            "info_player_start" {}
+        }
+        TargetName
+        {
+            "door_rollertraining" {}
+            "loadsaved_alyx_died" {}
+            "text_alyx_died" {}
+            "brush_clip_rearsoldiers" {}
+            "door_airlock_comb_1_5" {}
+            "door_airlock_comb_1_4" {}
+            "door_airlock_comb_1_1" {}
+            "door_airlock_comb_1_2" {}
+            "door_airlock_comb_1_7" {}
+            "door_airlock_comb_1_3" {}
+            "door_airlock_comb_1_9" {}
+            "door_airlock_comb_1_6" {}
+            "clip_airlock_doors" {}
+        }
+    }
+    Add
+    {
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "targetname" "firstspawn"
+            "origin" "3328 13888 3680"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "targetname" "firstspawn"
+            "origin" "3424 13888 3680"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "targetname" "firstspawn"
+            "origin" "3520 13888 3680"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "targetname" "firstspawn"
+            "origin" "3520 13792 3680"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "targetname" "firstspawn"
+            "origin" "3424 13792 3680"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "targetname" "firstspawn"
+            "origin" "3328 13792 3680"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "targetname" "firstspawn"
+            "origin" "3328 13696 3680"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "targetname" "firstspawn"
+            "origin" "3424 13696 3680"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "targetname" "firstspawn"
+            "origin" "3520 13696 3680"
+        }
+        "point_servercommand"
+        {
+            "targetname" "servercommand"
+            "origin" "3411.84 14080.5 3607"
+        }
+        "point_viewcontrol"
+        {
+            "angles" "0 0 0"
+            "wait" "10"
+            "spawnflags" "8"
+            "acceleration" "500"
+            "deceleration" "500"
+            "targetname" "traincam"
+            "target" "alyx"
+            "origin" "3840 -160 3589"
+        }
+        "game_text"
+        {
+            "x" "-1"
+            "y" "-1"
+            "color" "100 100 100"
+            "color2" "240 110 0"
+            "fadein" "1.5"
+            "fadeout" "0.5"
+            "holdtime" "2"
+            "fxtime" "0.25"
+            "channel" "1"
+            "targetname" "pleasekill"
+            "message" "Kill yourself now if youre left behind at the Station"
+            "origin" "3926.71 7756.4 3345"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "secondspawn"
+            "StartDisabled" "1"
+            "origin" "3776 7984 3600"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "secondspawn"
+            "StartDisabled" "1"
+            "origin" "3824 7984 3584"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "secondspawn"
+            "StartDisabled" "1"
+            "origin" "3856 7968 3577"
+        }
+    }
+    Modify
+    {
+        TargetName
+        {
+            "teleport_stalkercar_1"
+            {
+                "OnStartTouch" "traincam,Enable,,1,1"
+            }
+            "alyx"
+            {
+                "npcname" "Alyx Vance"
+                "OnDeath" "servercommand,command,changelevel ep1_citadel_04,5,-1"
+            }
+            "relay_crash_1"
+            {
+                "OnTrigger" "traincam,Disable,,3.4,-1"
+                "OnTrigger" "secondspawn,Enable,,3.4,-1"
+                "OnTrigger" "firstspawn,Disable,,3.4,-1"
+                "OnTrigger" "pleasekill,Display,,3.4,-1"
+            }
+        }
+        Origin
+        {
+            "3498.21 14042.9 3606"
+            {
+                "OnMapSpawn" "servercommand,Command,physcannon_mega_enable 0,0,-1"
+            }
+        }
+    }
+"SpawnItems"
+{
+	"weapon_healer" "1"
+	"weapon_physcannon" "1"
+}
+}

@@ -1,0 +1,15 @@
+"LightmappedGeneric"
+{
+
+ "$basetexture" "Tysn/TysnWave"
+"Proxies" 
+       { 
+         "AnimatedTexture" 
+         { 
+            "animatedTextureVar" "$basetexture" 
+            "animatedTextureFrameNumVar" "$frame" 
+            "animatedTextureFrameRate" "10" 
+         }
+    } 
+
+} 

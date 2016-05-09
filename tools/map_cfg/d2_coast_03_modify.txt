@@ -1,0 +1,244 @@
+d2_coast_03
+{
+    Remove
+    {
+        ClassName
+        {
+            "player_loadsaved" {}
+            "info_player_start" {}
+        }
+        TargetName
+        {
+            "telescope_button" {}
+            "aisc_odessapostgunship" {}
+            "killed_critical_npc" {}
+        }
+        Origin
+        {
+            "-7001.57 -13847.5 1074.88" {}
+            "-6912 -14752 1160" {}
+            "992 -2176 -160" {}
+        }
+    }
+    Add
+    {
+        "infodecal"
+        {
+            "texture" "decals/jeepspawning"
+            "angles" "0 0 0"
+            "origin" "-6656 -13745 1128"
+        }
+        "infodecal"
+        {
+            "texture" "decals/jeepspawning"
+            "angles" "0 0 0"
+            "origin" "-7168 -13745 1128"
+        }
+        "infodecal"
+        {
+            "texture" "decals/jeepspawning"
+            "angles" "0 0 0"
+            "origin" "-6656 -12814 1134"
+        }
+        "infodecal"
+        {
+            "texture" "decals/jeepspawning"
+            "angles" "0 0 0"
+            "origin" "-7168 -12814 1134"
+        }
+        "filter_multi"
+        {
+            "Negated" "1"
+            "targetname" "filter_NoDamage"
+            "origin" "8168 4601 472"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "coast_03_spawn1"
+            "origin" "-7135 -13758.4 1026"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "coast_03_spawn1"
+            "origin" "-7135 -13559 1026"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "coast_03_spawn1"
+            "origin" "-7135 -13344.2 1026"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "coast_03_spawn1"
+            "origin" "-6692 -13345 1026"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "coast_03_spawn1"
+            "origin" "-6692 -13544.4 1026"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "coast_03_spawn1"
+            "origin" "-6692 -13759.3 1026"
+        }
+        "point_trigger"
+        {
+            "spawnflags" "1"
+            "StartDisabled" "1"
+            "targetname" "aisc_odessapostgunship"
+            "TriggerOnce" "1"
+            "TriggerRadius" "74"
+            "OnStartTouch" "aisc_odessapostgunship_relay,Trigger,,0,-1"
+            "origin" "8932 4201 291"
+        }
+        "point_trigger"
+        {
+            "spawnflags" "1"
+            "StartDisabled" "1"
+            "targetname" "aisc_odessapostgunship"
+            "TriggerOnce" "1"
+            "TriggerRadius" "55"
+            "OnStartTouch" "aisc_odessapostgunship_relay,Trigger,,0,-1"
+            "origin" "8824 4550 321"
+        }
+        "logic_relay"
+        {
+            "spawnflags" "0"
+            "targetname" "aisc_odessapostgunship_relay"
+            "OnTrigger" "post_gunship_jeep_relay,Kill,,0,1"
+            "OnTrigger" "ss_odessa_radio,CancelSequence,,0,1"
+            "OnTrigger" "rocketman_gunship1,Resume,,0,1"
+            "OnTrigger" "tm_gatekeeper,ForceSpawn,,0,1"
+            "OnTrigger" "aisc_odessapostgunshipignored,Enable,,0,1"
+            "origin" "8438 4446 275"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "StartDisabled" "1"
+            "targetname" "coast_03_spawn2"
+            "origin" "8536 4571 513"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "StartDisabled" "1"
+            "targetname" "coast_03_spawn2"
+            "origin" "8423 4536 513"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "StartDisabled" "1"
+            "targetname" "coast_03_spawn2"
+            "origin" "8989 4441 513"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "StartDisabled" "1"
+            "targetname" "coast_03_spawn2"
+            "origin" "8986.8 4278.24 513"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "StartDisabled" "1"
+            "targetname" "coast_03_spawn2"
+            "origin" "8795 4267 513"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "StartDisabled" "1"
+            "targetname" "coast_03_spawn2"
+            "origin" "8489 4264 513"
+        }
+        "weapon_rpg"
+        {
+            "angles" "0 0 0"
+            "fademindist" "-1"
+            "fadescale" "1"
+            "origin" "8802 4582 266"
+        }
+        "weapon_rpg"
+        {
+            "angles" "0 0 0"
+            "fademindist" "-1"
+            "fadescale" "1"
+            "origin" "8802 4555 266"
+        }
+        "weapon_rpg"
+        {
+            "angles" "0 0 0"
+            "fademindist" "-1"
+            "fadescale" "1"
+            "origin" "8346 4348 264.464"
+        }
+    }
+    Modify
+    {
+        TargetName
+        {
+            "worldspawn"
+            {
+                "disableareaportals" "1"
+                "canspawnjeep" "1"
+            }
+            "aisc_pre_ingreeterrange"
+            {
+                "spawnflags" "0"
+            }
+            "tm_gatekeeper"
+            {
+                "OnEntitySpawned" "gatekeeper,SetDamageFilter,filter_NoDamage,2,-1"
+            }
+            "aisc_odessapostgunshipignored"
+            {
+                "spawnflags" "0"
+            }
+            "lr_odessa_getyourcar"
+            {
+                "spawnflags" "0"
+            }
+            "citizen_greeter_template"
+            {
+                "OnEntitySpawned" "citizen_b_regular_original,SetDamageFilter,filter_NoDamage,2,-1"
+            }
+        }
+        Origin
+        {
+            "8192 2688 384"
+            {
+                "OnTrigger" "coast_03_spawn1,Disable,,0,-1"
+                "OnTrigger" "coast_03_spawn2,Enable,,0,-1"
+            }
+            "6660.49 13408.1 240"
+            {
+                "spawngroup" "coast_04_spawn1"
+            }
+        }
+    }
+SpawnItems
+{
+    "weapon_smg1" "1"
+    "weapon_ar2" "1"
+    "weapon_shotgun" "1"
+    "weapon_crowbar" "1"
+    "weapon_physcannon" "1"
+    "weapon_357" "1"
+    "weapon_frag" "1"
+    "weapon_pistol" "1"
+    "item_box_buckshot" "2"
+    "item_ammo_smg1" "3"
+    "item_battery" "3"
+    "weapon_healer" "1"
+}
+}

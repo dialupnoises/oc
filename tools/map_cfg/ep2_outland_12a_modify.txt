@@ -1,0 +1,411 @@
+ep2_outland_12a
+{
+    Remove
+    {
+        ClassName
+        {
+	    "trigger_playermovement" {}
+            "info_player_start" {}
+            "trigger_changelevel" {}
+            "player_speedmod" {}
+        }
+        TargetName
+        {
+            "trigger.eli.secret" {}
+            "brush_launchbunker_exit_a" {}
+            "credits" {}
+            "relay.cleanup.1" {}
+            "relay.cleanup.2" {}
+        }
+        Origin
+        {
+            "-634.192 -948.162 -1557.99" {}
+        }
+    }
+    Add
+    {
+        "logic_auto"
+        {
+            "hammerid" "1796820"
+            "spawnflags" "1"
+            "OnMapSpawn" "startitems_template,ForceSpawn,,0.5,-1"
+            "OnMapSpawn" "alyx,HolsterWeapon,,0.8,-1"
+            "OnMapSpawn" "alyx,Kill,,0.1,-1"
+            "OnMapSpawn" "yumyumyum,Eat,,0.8,-1"
+            "origin" "-634.192 -948.162 -1557.99"
+        }
+        "point_weapon_eater"
+        {
+            "EatRadius" "80"
+            "targetname" "yumyumyum"
+            "origin" "-575 -936 -1497"
+        }
+        "info_teleport_destination"
+        {
+            "angles" "0 90 0"
+            "targetname" "lab_teleport_destination"
+            "origin" "21 -2067 -1178"
+        }
+        "info_teleport_destination"
+        {
+            "angles" "0 90 0"
+            "targetname" "lab_teleport_destination"
+            "origin" "-57 -2052 -1178"
+        }
+        "info_teleport_destination"
+        {
+            "angles" "0 90 0"
+            "targetname" "lab_teleport_destination"
+            "origin" "-140 -2040 -1178"
+        }
+        "info_teleport_destination"
+        {
+            "angles" "0 90 0"
+            "targetname" "lab_teleport_destination"
+            "origin" "-228 -2033 -1178"
+        }
+        "info_teleport_destination"
+        {
+            "angles" "0 0 0"
+            "targetname" "lab_teleport_destination"
+            "origin" "-373 -1901 -1178"
+        }
+        "info_teleport_destination"
+        {
+            "angles" "0 0 0"
+            "targetname" "lab_teleport_destination"
+            "origin" "-386 -1980 -1178"
+        }
+        "point_teleport"
+        {
+            "angles" "0 0 0"
+            "radius" "195"
+            "spawnflags" "2048"
+            "targetname" "lab_teleport"
+            "TeleportDestination" "lab_teleport_destination"
+            "origin" "-364 -1945 -1552"
+        }
+        "point_teleport"
+        {
+            "angles" "0 0 0"
+            "radius" "195"
+            "spawnflags" "2048"
+            "targetname" "lab_teleport"
+            "TeleportDestination" "lab_teleport_destination"
+            "origin" "-366 -1617 -1559"
+        }
+        "point_teleport"
+        {
+            "angles" "0 0 0"
+            "radius" "195"
+            "spawnflags" "2048"
+            "targetname" "lab_teleport"
+            "TeleportDestination" "lab_teleport_destination"
+            "origin" "-373 -1312 -1559"
+        }
+        "point_teleport"
+        {
+            "angles" "0 0 0"
+            "radius" "195"
+            "spawnflags" "2048"
+            "targetname" "lab_teleport"
+            "TeleportDestination" "lab_teleport_destination"
+            "origin" "-646 -1420 -1559"
+        }
+        "point_teleport"
+        {
+            "angles" "0 0 0"
+            "radius" "347"
+            "spawnflags" "2048"
+            "targetname" "lab_teleport"
+            "TeleportDestination" "lab_teleport_destination"
+            "origin" "-596 -928 -1559"
+        }
+        "point_trigger"
+        {
+            "spawnflags" "1"
+            "StartDisabled" "1"
+            "targetname" "trigger.eli.secret"
+            "TriggerOnce" "1"
+            "TriggerRadius" "72"
+            "OnStartTouch" "fx_portal_*,Start,,0,-1"
+            "OnStartTouch" "lcs.launch.post,Resume,,0,-1"
+            "origin" "185 -1976 -1167"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "targetname" "outland_12a_spawn1"
+            "origin" "-638 -707 -1567"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "targetname" "outland_12a_spawn1"
+            "origin" "-561 -707 -1567"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "outland_12a_spawn1"
+            "origin" "-561 -826 -1567"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "outland_12a_spawn1"
+            "origin" "-653 -825 -1567"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "outland_12a_spawn1"
+            "origin" "-671 -922 -1567"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "outland_12a_spawn1"
+            "origin" "-561 -922 -1567"
+        }
+        "point_viewcontrol"
+        {
+            "acceleration" "500"
+            "angles" "0 0 0"
+            "deceleration" "500"
+            "spawnflags" "172"
+            "targetname" "end_cam"
+            "wait" "10"
+            "origin" "1925.19 -2414.21 -1299"
+        }
+        "logic_auto"
+        {
+            "spawnflags" "1"
+            "OnMapSpawn" "end_cam,SetParent,cvehicle.hangar,1,-1"
+            "OnMapSpawn" "end_cam,SetParentAttachment,vehicle_driver_eyes,1.1,-1"
+            "origin" "2009.3 -2370.4 -1295"
+        }
+        "game_text"
+        {
+            "channel" "1"
+            "color" "255 255 255"
+            "color2" "240 110 0"
+            "fadein" "1.5"
+            "fadeout" "0.5"
+            "fxtime" "0.25"
+            "holdtime" "5"
+            "message" "Half-Life 2: Episode 2 By Valve"
+            "spawnflags" "1"
+            "targetname" "end_credits1"
+            "x" "-1"
+            "y" "-1"
+            "origin" "272.027 -1964.12 -1007"
+        }
+        "game_text"
+        {
+            "channel" "2"
+            "color" "255 255 255"
+            "color2" "240 110 0"
+            "fadein" "1.5"
+            "fadeout" "0.5"
+            "fxtime" "0.25"
+            "holdtime" "5"
+            "message" "Coop Mapadd Scripts By W0rf0x"
+            "spawnflags" "1"
+            "targetname" "end_credits2"
+            "x" "-1"
+            "y" "0.6"
+            "origin" "272 -1948 -1007"
+        }
+        "game_end"
+        {
+            "targetname" "end"
+            "origin" "303.001 -1957.94 -1007"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "StartDisabled" "1"
+            "targetname" "outland_12a_spawn2"
+            "origin" "2308 -2349 -1240"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "StartDisabled" "1"
+            "targetname" "outland_12a_spawn2"
+            "origin" "2308 -2414 -1240"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "StartDisabled" "1"
+            "targetname" "outland_12a_spawn2"
+            "origin" "2308 -2490 -1240"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "StartDisabled" "1"
+            "targetname" "outland_12a_spawn2"
+            "origin" "2308 -2568 -1240"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "StartDisabled" "1"
+            "targetname" "outland_12a_spawn2"
+            "origin" "2308 -2655 -1240"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "StartDisabled" "1"
+            "targetname" "outland_12a_spawn2"
+            "origin" "2241 -2730 -1240"
+        }
+        "point_trigger"
+        {
+            "filtername" "filter_alyx"
+            "spawnflags" "2"
+            "StartDisabled" "1"
+            "targetname" "alyx_teleport_check"
+            "TriggerOnce" "1"
+            "TriggerRadius" "177"
+            "OnStartTouch" "alyx_teleport,Teleport,,0,-1"
+            "OnStartTouch" "alyx_teleport_check,Disable,,0.5,-1"
+            "origin" "-364 -1945 -1536"
+        }
+        "point_trigger"
+        {
+            "filtername" "filter_alyx"
+            "spawnflags" "2"
+            "StartDisabled" "1"
+            "targetname" "alyx_teleport_check"
+            "TriggerOnce" "1"
+            "TriggerRadius" "208"
+            "OnStartTouch" "alyx_teleport,Teleport,,0,-1"
+            "OnStartTouch" "alyx_teleport_check,Disable,,0.5,-1"
+            "origin" "-366 -1617 -1543"
+        }
+        "point_trigger"
+        {
+            "filtername" "filter_alyx"
+            "spawnflags" "2"
+            "StartDisabled" "1"
+            "targetname" "alyx_teleport_check"
+            "TriggerOnce" "1"
+            "TriggerRadius" "193"
+            "OnStartTouch" "alyx_teleport,Teleport,,0,-1"
+            "OnStartTouch" "alyx_teleport_check,Disable,,0.5,-1"
+            "origin" "-373 -1312 -1543"
+        }
+        "point_trigger"
+        {
+            "filtername" "filter_alyx"
+            "spawnflags" "2"
+            "StartDisabled" "1"
+            "targetname" "alyx_teleport_check"
+            "TriggerOnce" "1"
+            "TriggerRadius" "188"
+            "OnStartTouch" "alyx_teleport,Teleport,,0,-1"
+            "OnStartTouch" "alyx_teleport_check,Disable,,0.5,-1"
+            "origin" "-646 -1420 -1543"
+        }
+        "point_trigger"
+        {
+            "filtername" "filter_alyx"
+            "spawnflags" "2"
+            "StartDisabled" "1"
+            "targetname" "alyx_teleport_check"
+            "TriggerOnce" "1"
+            "TriggerRadius" "332"
+            "OnStartTouch" "alyx_teleport,Teleport,,0,-1"
+            "OnStartTouch" "alyx_teleport_check,Disable,,0.5,-1"
+            "origin" "-596 -928 -1543"
+        }
+        "point_teleport"
+        {
+            "angles" "0 0 0"
+            "radius" "128"
+            "spawnflags" "2048"
+            "target" "alyx"
+            "targetname" "alyx_teleport"
+            "origin" "-333 -2025 -1191"
+        }
+        "logic_timer"
+        {
+            "RefireTime" "2"
+            "OnTimer" "alyx,SetDamageFilter,filter_NoDamage,0,-1"
+            "OnTimer" "npc_eli,SetDamageFilter,filter_NoDamage,0,-1"
+            "OnTimer" "npc_kleiner,SetDamageFilter,filter_NoDamage,0,-1"
+            "origin" "-12851.4 -12588.1 567.059"
+        }
+        "filter_multi"
+        {
+            "Negated" "1"
+            "targetname" "filter_NoDamage"
+            "origin" "-567 -1040 -1560"
+        }
+    }
+    Modify
+    {
+        ClassName
+        {
+            "worldspawn"
+            {
+                "disableareaportals" "1"
+            }
+            "logic_choreographed_scene"
+            {
+                "onplayerdeath" "0"
+            }
+        }
+        TargetName
+        {
+            "door_silo_lab_3"
+            {
+                "OnClose" "door_silo_lab_3,Open,,0,-1"
+                "OnFullyOpen" "prop.door_silo_lab_3,SetParent,,0,-1"
+                "OnFullyOpen" "door_silo_lab_3,Kill,,1,-1"
+            }
+            "elevator_path_2a"
+            {
+                "OnPass" "lab_teleport,Enable,,1.5,-1"
+                "OnPass" "alyx_teleport_check,Enable,,1.5,-1"
+            }
+            "lcs_hangar"
+            {
+                "OnTrigger4" "end_cam,Enable,,0.1,-1"
+                "OnCompletion" "end_credits1,Display,,0,-1"
+                "OnCompletion" "end_credits2,Display,,1,-1"
+                "OnCompletion" "end,EndGame,,8,-1"
+                "OnCompletion" "end_cam,Disable,,7,-1"
+            }
+            "path_elevator_1a1"
+            {
+                "OnPass" "outland_12a_spawn1,Disable,,1,-1"
+                "OnPass" "outland_12a_spawn2,Enable,,1,-1"
+            }
+        }
+    }
+SpawnItems
+{
+    "weapon_physcannon" "1"
+    "weapon_crowbar" "1"
+    "weapon_healer" "1"
+    "weapon_357" "1"
+    "weapon_shotgun" "1"
+    "weapon_pistol" "1"
+    "weapon_smg1" "2"
+    "item_box_buckshot" "3"
+    "weapon_frag" "1"
+    "item_ammo_smg1" "2"
+    "item_ammo_pistol" "1"
+    "weapon_ar2" "1"
+    "item_ammo_ar2" "2"
+    "weapon_crossbow" "1"
+    "item_ammo_357" "1"
+    "weapon_rpg" "1"
+}
+}

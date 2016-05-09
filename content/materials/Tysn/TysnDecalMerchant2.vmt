@@ -1,0 +1,9 @@
+"LightmappedGeneric"
+{
+
+"$basetexture" "Tysn/TysnDecalMerchant2"
+
+	"$decal" "1"
+	"$decalscale" ".5"
+        "$translucent" "1"
+} 

@@ -1,0 +1,75 @@
+// Medpack
+
+WeaponData
+{
+	// Weapon data is loaded by both the Game and Client DLLs.
+	"printname"	"#HL2_Healer"
+	"viewmodel"			"models/weapons/v_healer.mdl"
+	"playermodel"		"models/weapons/w_healer.mdl"
+	"anim_prefix"		"healer"
+	"bucket"			"0"
+	"bucket_position"	"5"
+	"autoswitchfrom"		"0"
+	"autoswitchto"			"0"
+
+	"clip_size"			"-1" //100
+
+	"default_clip"			"100"
+
+	"primary_ammo"		"MedkitHeal"
+	"secondary_ammo"	"None"
+
+	"weight"			"0"
+	"item_flags"			"0"
+	"damage"			"8"
+
+	// Sounds for the weapon. There is a max of 16 sounds per category (i.e. max 16 "single_shot" sounds)
+	SoundData
+	{
+
+		"reload"		"Weapon_Pistol.Reload"
+		"reload_npc"	"Weapon_Pistol.NPC_Reload"
+		"empty"			"WallHealth.Deny"
+		"single_shot"	"Weapon_Pistol.Single"
+		"single_shot_npc"	"Weapon_Pistol.NPC_Single"
+		"special1"		"Weapon_Pistol.Special1"
+		"special2"		"Weapon_Pistol.Special2"
+		"burst"			"Weapon_Pistol.Burst"
+	}
+
+	// Weapon Sprite data is loaded by the Client DLL.
+	TextureData
+	{
+		"weapon"
+		{
+				"font"		"ObsidianWeaponIcons"
+				"character"	"A"
+		}
+		"weapon_s"
+		{	
+				"font"		"ObsidianWeaponIconsSelected"
+				"character"	"A"
+		}
+		"ammo"
+		{
+				"file"		"sprites/a_icons1"
+				"x"			"34"
+				"y"			"30"
+				"width"		"21"
+				"height"	"21"
+		}
+		"crosshair"
+		{
+				"font"		"Crosshairs"
+				"character"	"Q"
+		}
+		"autoaim"
+		{
+				"file"		"sprites/crosshairs"
+				"x"			"0"
+				"y"			"48"
+				"width"		"24"
+				"height"	"24"
+		}
+	}
+}

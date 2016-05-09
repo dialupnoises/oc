@@ -1,0 +1,98 @@
+// ********************************
+// Usage of NPC Merchant Rules.
+// ********************************
+// Useable List:
+// Weapons:
+//		weapon_357
+//		weapon_ar2
+//		weapon_crossbow
+//		weapon_crowbar
+//		weapon_frag
+//		weapon_gauss
+//		weapon_healer
+//		weapon_manhack
+//		weapon_physcannon
+//		weapon_pistol
+//		weapon_rpg
+//		weapon_shotgun
+//		weapon_slam
+//		weapon_smg1
+//		weapon_sniperrifle
+//		weapon_stunstick
+//		weapon_uzi
+//		weapon_alyxgun
+// Items:
+//		item_battery
+//		item_healthkit
+//		item_healthvial
+//		item_shield
+//		item_cloak
+//		item_ammo_pistol
+//		item_ammo_smg1
+//		item_ammo_smg1_large
+//		item_ammo_ar2
+//		item_ammo_ar2_large
+//		item_ammo_357
+//		item_ammo_357_large
+//		item_ammo_crossbow
+//		item_rpg_round
+//		item_ammo_smg1_grenade
+//		item_box_sniper_rounds
+//		item_box_buckshot
+//		item_ammo_ar2_altfire
+//		item_ammo_tau
+//		item_box_alyxrounds
+//
+// ********************************
+// Weapons your servers merchants can use. Mapper scripts determine which are actually purchasable.
+// Mapper scripts check this list to see if the weapon is usable before adding it to the merchant list. 
+// Setting a value other than "0" will force that price for all map merchants ignoring the mappers script.
+
+// THIS FILE DOES NOTHING FOR NOW, EXPECT IT TO FUNCTION IN A LATER VERSION
+
+"merchant_rules"
+{
+	"AllowedWeapons"
+	{
+		weapon_357 0
+		weapon_ar2 0
+		weapon_crossbow 0
+		weapon_crowbar 0
+		weapon_frag 0
+		weapon_gauss 0
+		weapon_healer 0
+		weapon_manhack 0
+		weapon_physcannon 0
+		weapon_pistol 0
+		weapon_rpg 0
+		weapon_shotgun 0
+		weapon_slam 0
+		weapon_smg1 0
+		weapon_sniperrifle 0
+		weapon_stunstick 0
+		weapon_uzi 0
+		weapon_alyxgun 0
+	}
+	"AllowedItems"
+	{
+		item_battery 0
+		item_healthkit 0
+		item_healthvial 0
+		item_shield 0
+		item_cloak 0
+		item_ammo_pistol 0
+		item_ammo_smg1 0
+		item_ammo_smg1_large 0
+		item_ammo_ar2 0
+		item_ammo_ar2_large 0
+		item_ammo_357 0
+		item_ammo_357_large 0
+		item_ammo_crossbow 0
+		item_rpg_round 0
+		item_ammo_smg1_grenade 0
+		item_box_sniper_rounds 0
+		item_box_buckshot 0
+		item_ammo_ar2_altfire 0
+		item_ammo_tau 0
+	}
+}

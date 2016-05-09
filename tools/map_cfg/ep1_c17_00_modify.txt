@@ -1,0 +1,204 @@
+ep1_c17_00
+{
+    Remove
+    {
+        ClassName
+        {
+            "info_player_start" {}
+        }
+        TargetName
+        {
+            "sc_alyx_zombineIntro" {}
+        }
+        Origin
+        {
+            "4900.18 -5875.32 -30" {}
+        }
+    }
+    Add
+    {
+        "logic_auto"
+        {
+            "spawnflags" "1"
+            "OnMapSpawn" "suit,Kill,,1,-1"
+            "OnMapSpawn" "physcannon,Kill,,1,-1"
+            "origin" "4685.63 -5671 -60.447"
+        }
+        "logic_auto"
+        {
+            "spawnflags" "1"
+            "OnMapSpawn" "alyx,SetDamageFilter,filter_NoDamage,1,-1"
+            "origin" "4912 -5716 -106"
+        }
+        "filter_multi"
+        {
+            "targetname" "filter_NoDamage"
+            "Negated" "1"
+            "origin" "4928 -5716 -106"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "spawn1"
+            "origin" "4608 -5762 -111"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "targetname" "spawn1"
+            "origin" "4676 -5691 -111"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "targetname" "spawn1"
+            "origin" "4783 -5700 -111"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "targetname" "spawn1"
+            "origin" "4885 -5698 -111"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "spawn1"
+            "origin" "4945 -5733 -115"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "targetname" "spawn1"
+            "origin" "4786 -5858 -111"
+        }
+        "weapon_pistol"
+        {
+            "angles" "0 0 -87.5"
+            "fademindist" "-1"
+            "fadescale" "1"
+            "spawnflags" "1"
+            "origin" "4304.22 -2457.54 -68"
+        }
+        "weapon_pistol"
+        {
+            "angles" "0 0 -87.5"
+            "fademindist" "-1"
+            "fadescale" "1"
+            "spawnflags" "1"
+            "origin" "4304.22 -2447.54 -68"
+        }
+        "weapon_pistol"
+        {
+            "angles" "0 0 -87.5"
+            "fademindist" "-1"
+            "fadescale" "1"
+            "spawnflags" "1"
+            "origin" "4304.22 -2436.54 -68"
+        }
+        "weapon_shotgun"
+        {
+            "angles" "-67.5 45.5 0"
+            "fademindist" "-1"
+            "fadescale" "1"
+            "spawnflags" "1"
+            "origin" "4581 -2207 -99"
+        }
+        "weapon_shotgun"
+        {
+            "angles" "-67.5 127 0"
+            "fademindist" "-1"
+            "fadescale" "1"
+            "spawnflags" "1"
+            "origin" "4562 -2209 -99"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "targetname" "spawn2"
+            "StartDisabled" "1"
+            "origin" "4522 -128 -66"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "targetname" "spawn2"
+            "StartDisabled" "1"
+            "origin" "4439 -128 -66"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "targetname" "spawn2"
+            "StartDisabled" "1"
+            "origin" "4340 -128 -66"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "targetname" "spawn2"
+            "StartDisabled" "1"
+            "origin" "4262 -128 -66"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "targetname" "spawn2"
+            "StartDisabled" "1"
+            "origin" "4199 -128 -66"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "spawn2"
+            "StartDisabled" "1"
+            "origin" "4567 -40 -66"
+        }
+        "point_trigger"
+        {
+            "spawnflags" "1"
+            "StartDisabled" "1"
+            "targetname" "sc_alyx_zombineIntro"
+            "TriggerOnce" "1"
+            "TriggerRadius" "105"
+            "OnStartTouch" "clip_drakness_zombie*,Enable,,0,-1"
+            "OnStartTouch" "ai_relat_alyx_zombine,ApplyRelationship,,0,-1"
+            "OnStartTouch" "lcs_ZombineIntro_01,Start,,0,-1"
+            "origin" "4234 -253 -97.5874"
+        }
+    }
+    Modify
+    {
+        ClassName
+        {
+            "worldspawn"
+            {
+                "disableareaportals" "1"
+            }
+        }
+        TargetName
+        {
+            "train_2_ambush_zombine"
+            {
+                "OnDamaged" "train_2_ambush_zombine,SetHealth,0,0,-1"
+            }
+        }
+        Origin
+        {
+            "4333 153.5 -62.5"
+            {
+                "OnTrigger" "spawn1,Disable,,0,-1"
+                "OnTrigger" "spawn2,Enable,,0,-1"
+            }
+            "1872 38 394"
+            {
+                "transitionradius" "352"
+            }
+        }
+    }
+SpawnItems
+{
+    "weapon_physcannon" "1"
+    "weapon_healer" "1"
+}
+}

@@ -1,0 +1,4 @@
+SoundCache
+{
+	"precache_file"		"scripts/game_sounds_cs_weapons.txt"
+}

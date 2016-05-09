@@ -1,0 +1,6 @@
+"lightmappedGeneric"
+{
+	"$baseTexture" "maps/spencer/re_trim1"
+	"$surfaceprop" "concrete"
+	"$bumpmap" "maps/spencer/re_trim1_normal"
+}

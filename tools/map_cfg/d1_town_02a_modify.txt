@@ -1,0 +1,105 @@
+d1_town_02a
+{
+    Remove
+    {
+        ClassName
+        {
+            "info_player_start" {}
+        }
+        Origin
+        {
+            "-5226.97 1866.97 -3231" {}
+            "-5064 840 -3168" {}
+        }
+    }
+    Add
+    {
+        "logic_auto"
+        {
+            "spawnflags" "1"
+            "OnMapSpawn" "monk,Kill,,0.1,-1"
+            "OnMapSpawn" "startobjects_template,ForceSpawn,,0.5,-1"
+            "OnMapSpawn" "yumyumyum,Eat,,0.8,-1"
+            "OnMapSpawn" "monk,SetDamageFilter,filter_NoDamage,2,-1"
+            "origin" "-5318.29 1865.17 -3222.64"
+        }
+        "point_weapon_eater"
+        {
+            "EatRadius" "64"
+            "targetname" "yumyumyum"
+            "origin" "-5257 1862 -3226.55"
+        }
+        "filter_multi"
+        {
+            "Negated" "1"
+            "targetname" "filter_NoDamage"
+            "origin" "-5214 1970 -3241"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 88.5 0"
+            "targetname" "town_02a_spawn1"
+            "origin" "-5514 1290 -3276.09"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 77.5 0"
+            "targetname" "town_02a_spawn1"
+            "origin" "-5384 1271 -3247.95"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 48.5 0"
+            "targetname" "town_02a_spawn1"
+            "origin" "-5680 1385.65 -3257"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "town_02a_spawn1"
+            "origin" "-5596 1557 -3214"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 105.5 0"
+            "targetname" "town_02a_spawn1"
+            "origin" "-5246.45 1309 -3238"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 130 0"
+            "targetname" "town_02a_spawn1"
+            "origin" "-5102.3 1403 -3252"
+        }
+    }
+    Modify
+    {
+        ClassName
+        {
+            "worldspawn"
+            {
+                "disableareaportals" "1"
+            }
+        }
+        Origin
+        {
+            "-6584 -716 -3180"
+            {
+                "spawngroup" "town_04_spawn1"
+                "transitionradius" "202"
+            }
+        }
+    }
+SpawnItems
+{
+    "weapon_physcannon" "1"
+    "item_ammo_smg1_large" "1"
+    "weapon_pistol" "1"
+    "weapon_smg1" "1"
+    "weapon_357" "1"
+    "item_ammo_pistol_large" "1"
+    "weapon_shotgun" "1"
+    "weapon_crowbar" "1"
+    "weapon_healer" "1"
+}
+}

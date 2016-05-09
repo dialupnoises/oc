@@ -1,0 +1,8 @@
+LightmappedGeneric
+{
+	"$basetexture"	"maps\stadium\turret_spawner"
+	"$translucent" "1"
+	"$decal" "1"
+	"$decalscale" "0.250"
+	"$surfaceprop" "paper"
+}

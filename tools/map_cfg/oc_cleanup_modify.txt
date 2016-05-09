@@ -1,0 +1,8 @@
+oc_cleanup
+{
+	SpawnItems
+	{
+		"weapon_healer" "1"
+		"weapon_pistol" "1"
+	}
+}

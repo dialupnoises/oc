@@ -1,0 +1,146 @@
+// Hornet Stuff
+
+"Agrunt.Hornetbuzz"
+{
+	"channel"		"CHAN_WEAPON"
+	"volume"		"1.0"
+	"soundlevel"		"SNDLVL_90db"
+
+	"rndwave"
+	{
+		"wave"			"npc/hornet/ag_buzz1.wav"
+		"wave"			"npc/hornet/ag_buzz2.wav"
+		"wave"			"npc/hornet/ag_buzz3.wav"
+	}
+}
+
+"Agrunt.Hornethit"
+{
+	"channel"		"CHAN_WEAPON"
+	"volume"		"1.0"
+	"soundlevel"		"SNDLVL_90db"
+
+	"rndwave"
+	{
+		"wave"			"npc/hornet/ag_hornethit1.wav"
+		"wave"			"npc/hornet/ag_hornethit2.wav"
+		"wave"			"npc/hornet/ag_hornethit3.wav"
+	}
+}
+
+
+// Alien Grunt
+
+"Agrunt.Fire"
+{
+	"channel"		"CHAN_WEAPON"
+	"volume"		"1.0"
+	"soundlevel"		"SNDLVL_90db"
+
+	"rndwave"
+	{
+		"wave"			"npc/agrunt/ag_fire1.wav"
+		"wave"			"npc/agrunt/ag_fire2.wav"
+		"wave"			"npc/agrunt/ag_fire3.wav"
+	}
+}
+
+"Agrunt.Footleft"
+{
+	"channel"		"CHAN_BODY"
+	"volume"		"1.0"
+	"soundlevel"		"SNDLVL_90db"
+
+	"rndwave"
+	{
+		"wave"			"npc/agrunt/ag_walk2.wav"
+		"wave"			"npc/agrunt/ag_walk4.wav"
+	}
+}
+
+"Agrunt.Footright"
+{
+	"channel"		"CHAN_BODY"
+	"volume"		"1.0"
+	"soundlevel"		"SNDLVL_90db"
+
+	"rndwave"
+	{
+		"wave"			"npc/agrunt/ag_walk1.wav"
+		"wave"			"npc/agrunt/ag_walk3.wav"
+	}
+}
+
+"Agrunt.Attack"
+{
+	"channel"		"CHAN_BODY"
+	"volume"		"1.0"
+	"soundlevel"		"SNDLVL_90db"
+
+	"rndwave"
+	{
+		"wave"			"npc/agrunt/ag_attack1.wav"
+		"wave"			"npc/agrunt/ag_attack2.wav"
+		"wave"			"npc/agrunt/ag_attack3.wav"
+	}
+}
+
+"Agrunt.Die"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"1.0"
+	"soundlevel"		"SNDLVL_NORM"
+
+	"rndwave"
+	{
+		"wave"			"npc/agrunt/ag_die1.wav"
+		"wave"			"npc/agrunt/ag_die4.wav"
+		"wave"			"npc/agrunt/ag_die5.wav"
+	}
+}
+
+"Agrunt.Pain"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"1.0"
+	"soundlevel"		"SNDLVL_NORM"
+
+	"rndwave"
+	{
+		"wave"			"npc/agrunt/ag_pain1.wav"
+		"wave"			"npc/agrunt/ag_pain2.wav"
+		"wave"			"npc/agrunt/ag_pain3.wav"
+		"wave"			"npc/agrunt/ag_pain4.wav"
+		"wave"			"npc/agrunt/ag_pain5.wav"
+	}
+}
+
+"Agrunt.Idle"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"1.0"
+	"soundlevel"		"SNDLVL_90db"
+
+	"rndwave"
+	{
+		"wave"			"npc/agrunt/ag_idle1.wav"
+		"wave"			"npc/agrunt/ag_idle2.wav"
+		"wave"			"npc/agrunt/ag_idle3.wav"
+		"wave"			"npc/agrunt/ag_idle4.wav"
+	}
+}
+
+"Agrunt.Alert"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"1.0"
+	"soundlevel"		"SNDLVL_NORM"
+
+	"rndwave"
+	{
+		"wave"			"npc/agrunt/ag_alert1.wav"
+		"wave"			"npc/agrunt/ag_alert3.wav"
+		"wave"			"npc/agrunt/ag_alert4.wav"
+		"wave"			"npc/agrunt/ag_alert5.wav"
+	}
+}

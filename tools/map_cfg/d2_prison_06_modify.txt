@@ -1,0 +1,234 @@
+d2_prison_06
+{
+    Remove
+    {
+        ClassName
+        {
+            "info_player_start" {}
+        }
+        TargetName
+        {
+            "logic_alyx_gauntlet_start_1" {}
+            "int_door_close_outside_1" {}
+            "int_door_close_inside_1" {}
+            "areaportal_coverup" {}
+        }
+        Origin
+        {
+            "288 -2544 -172" {}
+            "512 -992 36" {}
+            "1784 1736 -104" {}
+            "1947.1 1517.97 -404" {}
+        }
+    }
+    Add
+    {
+        "logic_relay"
+        {
+            "spawnflags" "0"
+            "StartDisabled" "0"
+            "targetname" "logic_alyx_gauntlet_start_1"
+            "OnTrigger" "speaker_IntRoomNags,Kill,,0.1,-1"
+            "OnTrigger" "speaker_IntRoomNags,TurnOff,,0,-1"
+            "OnTrigger" "sound_alyxmon_1,PlaySound,,14.7,-1"
+            "OnTrigger" "monitor_room0,Enable,,2,-1"
+            "OnTrigger" "logic_alyx_controlroom_1,Trigger,,0,-1"
+            "OnTrigger" "camera_alyxmon_1,SetOnAndTurnOthersOff,,0,-1"
+            "OnTrigger" "lcs_np_cell03a,Start,,0,-1"
+            "OnTrigger" "alyx_security_console_mic_1,Enable,,0,-1"
+            "origin" "272 -205 105"
+        }
+        "logic_auto"
+        {
+            "spawnflags" "1"
+            "OnMapSpawn" "logic_Train_effects_start_1,Trigger,,0,-1"
+            "OnMapSpawn" "logic_podtrains_L_start_1,Trigger,,0,-1"
+            "OnMapSpawn" "sound_Train_horn_start_1,PlaySound,,8,-1"
+            "origin" "1947.1 1517.97 -404"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "targetname" "prison_06_spawn1"
+            "origin" "1847 1555 -436"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "targetname" "prison_06_spawn1"
+            "origin" "2016 1555 -436"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "prison_06_spawn1"
+            "origin" "1841 1455 -436"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "targetname" "prison_06_spawn1"
+            "origin" "1836 1394 -566"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "prison_06_spawn1"
+            "origin" "1913 1731 -386"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "prison_06_spawn1"
+            "origin" "1841 1377 -436"
+        }
+        "logic_auto"
+        {
+            "spawnflags" "1"
+            "OnMapSpawn" "alyx,SetDamageFilter,filter_NoDamage,1,-1"
+            "origin" "2124 179 -568"
+        }
+        "filter_multi"
+        {
+            "Negated" "1"
+            "targetname" "filter_NoDamage"
+            "origin" "2140 179 -568"
+        }
+        "info_teleport_destination"
+        {
+            "angles" "0 270 0"
+            "targetname" "elevator_teleport_destination"
+            "origin" "1424 824 -187"
+        }
+        "info_teleport_destination"
+        {
+            "angles" "0 180 0"
+            "targetname" "elevator_teleport_destination"
+            "origin" "1409 588 -187"
+        }
+        "info_teleport_destination"
+        {
+            "angles" "0 270 0"
+            "targetname" "elevator_teleport_destination"
+            "origin" "1129 1211 -187"
+        }
+        "info_teleport_destination"
+        {
+            "angles" "0 270 0"
+            "targetname" "elevator_teleport_destination"
+            "origin" "1238 1211 -187"
+        }
+        "info_teleport_destination"
+        {
+            "angles" "0 90 0"
+            "targetname" "elevator_teleport_destination"
+            "origin" "1324 602 -187"
+        }
+        "info_teleport_destination"
+        {
+            "angles" "0 0 0"
+            "targetname" "elevator_teleport_destination"
+            "origin" "1130 1046 -187"
+        }
+        "point_teleport"
+        {
+            "angles" "0 0 0"
+            "radius" "385"
+            "spawnflags" "2048"
+            "targetname" "elevator_teleport"
+            "TeleportDestination" "elevator_teleport_destination"
+            "origin" "1148 696 -695"
+        }
+        "point_teleport"
+        {
+            "angles" "0 0 0"
+            "radius" "450"
+            "spawnflags" "2048"
+            "targetname" "elevator_teleport"
+            "TeleportDestination" "elevator_teleport_destination"
+            "origin" "1246 82 -695"
+        }
+        "point_teleport"
+        {
+            "angles" "0 0 0"
+            "radius" "450"
+            "spawnflags" "2048"
+            "targetname" "elevator_teleport"
+            "TeleportDestination" "elevator_teleport_destination"
+            "origin" "2003 95 -695"
+        }
+        "point_teleport"
+        {
+            "angles" "0 0 0"
+            "radius" "276"
+            "spawnflags" "2048"
+            "targetname" "elevator_teleport"
+            "TeleportDestination" "elevator_teleport_destination"
+            "origin" "1981 694 -543"
+        }
+        "point_teleport"
+        {
+            "angles" "0 0 0"
+            "radius" "538"
+            "spawnflags" "2048"
+            "targetname" "elevator_teleport"
+            "TeleportDestination" "elevator_teleport_destination"
+            "origin" "1994 1277 -521"
+        }
+        "point_trigger"
+        {
+            "spawnflags" "1"
+            "StartDisabled" "1"
+            "targetname" "int_door_close_inside_1"
+            "TriggerOnce" "1"
+            "TriggerRadius" "252"
+            "OnStartTouch" "logic_EIntRoomNags,Kill,,0.2,-1"
+            "OnStartTouch" "speaker_EIntRoomNags,Kill,,0.2,-1"
+            "OnStartTouch" "lcs_np_cell02,Start,,0.1,-1"
+            "OnStartTouch" "lcs_np_cell01b,Cancel,,0,-1"
+            "OnStartTouch" "logic_EIntRoomNags,CancelPending,,0,-1"
+            "OnStartTouch" "speaker_EIntRoomNags,TurnOff,,0,-1"
+            "origin" "726 125 9"
+        }
+    }
+    Modify
+    {
+        ClassName
+        {
+            "worldspawn"
+            {
+                "disableareaportals" "1"
+            }
+        }
+        TargetName
+        {
+            "elevator_path_3"
+            {
+                "OnPass" "elevator_teleport,Enable,,1,-1"
+            }
+        }
+        Origin
+        {
+            "48 -2544 -172"
+            {
+                "spawngroup" "prison_07_spawn1"
+            }
+        }
+    }
+SpawnItems
+{
+    "weapon_smg1" "1"
+    "weapon_ar2" "1"
+    "weapon_shotgun" "1"
+    "weapon_crowbar" "1"
+    "weapon_physcannon" "1"
+    "weapon_357" "1"
+    "weapon_frag" "1"
+    "weapon_pistol" "1"
+    "item_box_buckshot" "2"
+    "item_ammo_smg1" "3"
+    "item_battery" "3"
+    "weapon_healer" "1"
+    "weapon_crossbow" "1"
+}
+}

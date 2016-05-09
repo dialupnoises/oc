@@ -1,0 +1,207 @@
+d1_canals_01
+{
+    Remove
+    {
+        ClassName
+        {
+            "info_player_start" {}
+        }
+        TargetName
+        {
+            "barrelpush_conditions" {}
+            "traintrackcops_south_assault_relay" {}
+            "traintrackcops_south_makers_relay" {}
+            "LCS_boxcar_sirens" {}
+            "boxcar_door_close" {}
+        }
+        Origin
+        {
+            "1008 -8272 9" {}
+            "1340 -8288 188" {}
+            "395 -992 336" {}
+        }
+    }
+    Add
+    {
+        "ai_script_conditions"
+        {
+            "ActorInPVS" "2"
+            "ActorInVehicle" "2"
+            "ActorSeePlayer" "2"
+            "ActorSeeTarget" "2"
+            "ActorTargetProximity" "0"
+            "MaximumState" "3"
+            "MaxTimeout" "0"
+            "MinimumState" "1"
+            "MinTimeout" "0"
+            "PlayerActorFOV" "360"
+            "PlayerActorFOVTrueCone" "0"
+            "PlayerActorLOS" "2"
+            "PlayerActorProximity" "0"
+            "PlayerBlockingActor" "2"
+            "PlayerInVehicle" "2"
+            "PlayerTargetFOV" "60"
+            "PlayerTargetFOVTrueCone" "0"
+            "PlayerTargetLOS" "1"
+            "PlayerTargetProximity" "0"
+            "RequiredTime" "0"
+            "ScriptStatus" "0"
+            "StartDisabled" "1"
+            "target" "barrelpush_conditions"
+            "targetname" "barrelpush_conditions"
+            "OnConditionsSatisfied" "assault3cop_1,Kill,,0,-1"
+            "OnConditionsSatisfied" "assault3cop_2,Kill,,0,-1"
+            "OnConditionsSatisfied" "barrelpush_cop2_seq,BeginSequence,,0,-1"
+            "origin" "624 -3432 368"
+        }
+        "logic_choreographed_scene"
+        {
+            "busyactor" "1"
+            "SceneFile" "scenes/canals/boxcar_scene.vcd"
+            "targetname" "LCS_boxcar_sirens"
+            "OnCompletion" "logic_jolt,Trigger,,1,-1"
+            "OnTrigger1" "Sprite_labVort_Beam2,Kill,,0,-1"
+            "OnTrigger1" "Sprite_labVort_Beam1,Kill,,0,-1"
+            "OnTrigger2" "monitor_breen_screen,Disable,,0,-1"
+            "OnTrigger2" "Breen,Kill,,0.5,-1"
+            "OnTrigger1" "boxcar_vort_watchtv,BeginSequence,,0,-1"
+            "OnTrigger1" "beam_boxcartv,Kill,,0,-1"
+            "OnTrigger1" "sound_weld_electric_loop_1,StopSound,,0,-1"
+            "OnTrigger1" "sound_weld_electric_blast_1,PlaySound,,0,-1"
+            "OnCompletion" "LCS_becareful,Start,,3.5,-1"
+            "OnCompletion" "logic_jolt,Disable,,1,-1"
+            "origin" "687 2601.73 58.908"
+        }
+        "point_trigger"
+        {
+            "spawnflags" "1"
+            "TriggerOnce" "1"
+            "TriggerRadius" "42"
+            "OnStartTouch" "traintrackcops_north_makers_relay,Trigger,,0,-1"
+            "origin" "432 -994 316"
+        }
+        "prop_dynamic_override"
+        {
+            "angles" "0 90 -90"
+            "fademindist" "-1"
+            "fadescale" "1"
+            "MaxAnimTime" "10"
+            "MinAnimTime" "5"
+            "model" "models/props_c17/concrete_barrier001a.mdl"
+            "renderamt" "255"
+            "rendercolor" "255 255 255"
+            "skin" "0"
+            "solid" "6"
+            "origin" "1649 -8414 312"
+        }
+        "prop_dynamic_override"
+        {
+            "angles" "0 270 -90"
+            "fademindist" "-1"
+            "fadescale" "1"
+            "MaxAnimTime" "10"
+            "MinAnimTime" "5"
+            "model" "models/props_c17/concrete_barrier001a.mdl"
+            "renderamt" "255"
+            "rendercolor" "255 255 255"
+            "skin" "0"
+            "solid" "6"
+            "origin" "1553 -8414 312"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "canals_01_spawn1"
+            "origin" "603 -8294 -120"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "canals_01_spawn1"
+            "origin" "603 -8214 -120"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "canals_01_spawn1"
+            "origin" "603 -8130 -120"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "canals_01_spawn1"
+            "origin" "603 -8040 -120"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "canals_01_spawn1"
+            "origin" "603 -7945 -120"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "canals_01_spawn1"
+            "origin" "603 -7847 -120"
+        }
+        "point_trigger"
+        {
+            "spawnflags" "1"
+            "targetname" "boxcar_door_close"
+            "TriggerOnce" "1"
+            "TriggerRadius" "53"
+            "OnStartTouch" "speaker_boxcar_nag,TurnOff,,0,-1"
+            "OnStartTouch" "LCS_boxcar_nag04,Kill,,0,-1"
+            "OnStartTouch" "LCS_boxcar_nag03,Kill,,0,-1"
+            "OnStartTouch" "LCS_boxcar_nag02,Kill,,0,-1"
+            "OnStartTouch" "LCS_boxcar_nag01,Kill,,0,-1"
+            "OnStartTouch" "case_boxcar_nags,Kill,,0,-1"
+            "OnStartTouch" "relay_boxcar_nags,Kill,,0,-1"
+            "origin" "701 2923 -42"
+        }
+        "weapon_pistol"
+        {
+            "angles" "0 258.5 0"
+            "fademindist" "-1"
+            "fadescale" "1"
+            "origin" "779 -6215 522"
+        }
+        "weapon_pistol"
+        {
+            "angles" "0 192.5 0"
+            "fademindist" "-1"
+            "fadescale" "1"
+            "origin" "705 -6190 522"
+        }
+        "weapon_pistol"
+        {
+            "angles" "0 51 0"
+            "fademindist" "-1"
+            "fadescale" "1"
+            "origin" "717 -6202 522"
+        }
+    }
+    Modify
+    {
+        ClassName
+        {
+            "worldspawn"
+            {
+                "disableareaportals" "1"
+            }
+        }
+        Origin
+        {
+            "768 3024 0"
+            {
+                "nosmooth" "1"
+                "spawngroup" "canals_01a_spawn1"
+            }
+        }
+    }
+SpawnItems
+{
+    "weapon_crowbar" "1"
+    "weapon_healer" "1"
+}
+}

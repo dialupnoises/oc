@@ -1,0 +1,21 @@
+"oc_stitches_1"
+{
+	Modify
+    	{
+        	ClassName
+        	{
+        	    "trigger_changelevel"
+        	    {
+         	       "nosmooth" "1"
+        	    }
+        	}
+
+	}
+	SpawnItems
+	{
+		"weapon_crowbar" "1"
+		"weapon_healer" "1"
+		"custom_cz52" "1"
+		"item_ammo_pistol" "8"
+	}
+}

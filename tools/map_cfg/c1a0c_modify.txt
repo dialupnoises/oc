@@ -1,0 +1,145 @@
+// File was created for use in Obsidian Conflict ONLY!
+c1a0c
+{
+	SpawnItems {}
+
+	Remove
+	{
+		Targetname
+		{
+			"start_c1a0c" {}
+		}
+
+		Origin
+		{
+			"494.5 428.5 -296" {}
+		}
+	}
+	
+	Add
+	{
+		"info_player_deathmatch"
+		{
+			"angles" "0 90 0"
+			"StartDisabled" "0"
+			"origin" "1560 364 -383"
+		}
+		
+		"info_player_deathmatch"
+		{
+			"angles" "0 90 0"
+			"StartDisabled" "0"
+			"origin" "1560 404 -383"
+		}
+		
+		"info_player_deathmatch"
+		{
+			"angles" "0 270 0"
+			"StartDisabled" "0"
+			"origin" "1560 324 -383"
+		}
+		
+		"info_player_deathmatch"
+		{
+			"angles" "0 270 0"
+			"StartDisabled" "0"
+			"origin" "1600 404 -383"
+		}
+		
+		"info_player_deathmatch"
+		{
+			"angles" "0 270 0"
+			"StartDisabled" "0"
+			"origin" "1600 364 -383"
+		}
+		
+		"info_player_deathmatch"
+		{
+			"angles" "0 90 0"
+			"StartDisabled" "0"
+			"origin" "1600 324 -383"
+		}
+		
+		// Teleport spawngroup
+		"info_teleport_destination"
+		{
+			"targetname" "start_c1a0c"
+			"angles" "0 0 0"
+			"StartDisabled" "0"
+			"origin" "1720 364 -383"
+		}
+		
+		"info_teleport_destination"
+		{
+			"targetname" "start_c1a0c"
+			"angles" "0 0 0"
+			"StartDisabled" "0"
+			"origin" "1720 324 -383"
+		}
+		
+		"info_teleport_destination"
+		{
+			"targetname" "start_c1a0c"
+			"angles" "0 0 0"
+			"StartDisabled" "0"
+			"origin" "1720 404 -383"
+		}
+		
+		"info_teleport_destination"
+		{
+			"targetname" "start_c1a0c"
+			"angles" "0 0 0"
+			"StartDisabled" "0"
+			"origin" "1680 404 -383"
+		}
+		
+		"info_teleport_destination"
+		{
+			"targetname" "start_c1a0c"
+			"angles" "0 0 0"
+			"StartDisabled" "0"
+			"origin" "1680 364 -383"
+		}
+		
+		"info_teleport_destination"
+		{
+			"targetname" "start_c1a0c"
+			"angles" "0 0 0"
+			"StartDisabled" "0"
+			"origin" "1680 324 -383"
+		}
+
+		"func_button"
+		{
+			"model" "*71"
+			"targetname" "elebutton1"
+			"origin" "494.5 419.5 -296"
+			"renderamt" "255"
+			"movedir" "0 45 0"
+			"_minlight" ".05"
+			"wait" "5"
+			"sounds" "9"
+			"speed" "5"
+			"rendercolor" "255 255 255"
+			"spawnflags" "1025"
+			"OnIn" "ele_2mm,Trigger,,0,-1"
+			"OnOut" "elebuttontex,IncrementTextureIndex,,0,-1"
+			"OnIn" "elebuttontex,IncrementTextureIndex,,0,-1"
+			"OnIn" "lift_blocker,Enable,,0,-1"
+			"OnIn" "lift_blocker,Disable,,5,-1"
+		}
+
+	}
+	
+	Modify
+	{
+		Classname
+		{
+			"trigger_changelevel"
+			{
+				"transitionradius" "350"
+			}
+		}
+
+	}
+}

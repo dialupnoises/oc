@@ -1,0 +1,173 @@
+d2_coast_05
+{
+    Remove
+    {
+        ClassName
+        {
+            "info_player_start" {}
+            "player_loadsaved" {}
+            "env_message" {}
+        }
+        TargetName
+        {
+            "fall_trigger" {}
+        }
+        Origin
+        {
+            "7805.21 -12184 1840.88" {}
+            "10016 -12032 1888" {}
+        }
+    }
+    Add
+    {
+        "infodecal"
+        {
+            "texture" "decals/jeepspawning"
+            "angles" "0 0 0"
+            "origin" "7859 -12288 1874"
+        }
+        "infodecal"
+        {
+            "texture" "decals/jeepspawning"
+            "angles" "0 0 0"
+            "origin" "7859 -11776 1874"
+        }
+        "infodecal"
+        {
+            "texture" "decals/jeepspawning"
+            "angles" "0 0 0"
+            "origin" "6784 -11776 1874"
+        }
+        "infodecal"
+        {
+            "texture" "decals/jeepspawning"
+            "angles" "0 0 0"
+            "origin" "6784 -12288 1874"
+        }
+        "point_trigger"
+        {
+            "filtername" "apc_filter"
+            "spawnflags" "12"
+            "TriggerOnce" "1"
+            "TriggerRadius" "678"
+            "OnStartTouch" "logic_gate_shutdown,Trigger,,0,-1"
+            "origin" "-2124 -376 1046.21"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "targetname" "coast_05_spawn1"
+            "origin" "7870.91 -12227.1 1793"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "targetname" "coast_05_spawn1"
+            "origin" "8018.08 -12225.2 1793"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "targetname" "coast_05_spawn1"
+            "origin" "8178.01 -12229.2 1793"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "targetname" "coast_05_spawn1"
+            "origin" "7868.9 -11829.9 1793"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "targetname" "coast_05_spawn1"
+            "origin" "8028.83 -11834 1793"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "targetname" "coast_05_spawn1"
+            "origin" "8176 -11832.1 1793"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "StartDisabled" "1"
+            "targetname" "coast_05_spawn2"
+            "origin" "-6779.25 -11644.6 729.425"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "StartDisabled" "1"
+            "targetname" "coast_05_spawn2"
+            "origin" "-6789 -11741.7 731.533"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "StartDisabled" "1"
+            "targetname" "coast_05_spawn2"
+            "origin" "-6795.92 -11870.7 725.173"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "StartDisabled" "1"
+            "targetname" "coast_05_spawn2"
+            "origin" "-6773.85 -11965.8 726.763"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 59.5 0"
+            "StartDisabled" "1"
+            "targetname" "coast_05_spawn2"
+            "origin" "-6715.74 -12056.9 734"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 54 0"
+            "StartDisabled" "1"
+            "targetname" "coast_05_spawn2"
+            "origin" "-6633 -12169 727.727"
+        }
+    }
+    Modify
+    {
+        ClassName
+        {
+            "worldspawn"
+            {
+                "disableareaportals" "1"
+                "canspawnjeep" "1"
+            }
+        }
+        Origin
+        {
+            "2132.28 5600.84 1488"
+            {
+                "spawngroup" "coast07_spawn1"
+            }
+            "-4611.95 -11929.1 708"
+            {
+                "OnTrigger" "coast_05_spawn1,Disable,,0,-1"
+                "OnTrigger" "coast_05_spawn2,Enable,,0,-1"
+            }
+        }
+    }
+SpawnItems
+{
+    "weapon_smg1" "1"
+    "weapon_ar2" "1"
+    "weapon_shotgun" "1"
+    "weapon_crowbar" "1"
+    "weapon_physcannon" "1"
+    "weapon_357" "1"
+    "weapon_frag" "1"
+    "weapon_pistol" "1"
+    "item_box_buckshot" "2"
+    "item_ammo_smg1" "3"
+    "item_battery" "3"
+    "weapon_healer" "1"
+}
+}

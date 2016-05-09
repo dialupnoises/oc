@@ -1,0 +1,12 @@
+"ep1_oc_broken_escape_01"
+{
+		"mp_flashlight" "1"
+                "sk_strider_health" "700"
+                "sk_strider_num_missiles1" "5"
+                "sk_strider_num_missiles2" "7"
+                "sk_strider_num_missiles3" "10"
+		"mp_falldamage" "0"
+                "sk_ichthyosaur_health" "700"
+                "sk_ichthyosaur_melee_dmg" "50"
+		"sk_helicopter_blast_push" "0"
+}

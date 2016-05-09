@@ -1,0 +1,10 @@
+"VertexLitGeneric"
+{
+	"$baseTexture" "models\weapons\v_models\ak5\m203"
+	"$envmap" "env_cubemap"
+	"$bumpmap" "models\weapons\v_models\ak5\m203_DDN"
+	"$normalmapalphaenvmapmask" 1
+      "$envmapsaturation" .5
+	"$envmaptint" "[.5 .5 .5]"
+}
+

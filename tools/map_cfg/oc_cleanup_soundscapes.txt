@@ -1,0 +1,20 @@
+"cleanup.Crittervents"
+{
+	"dsp"	"1"
+
+	"playrandom"
+	{
+		"time"		"8,13"
+		"volume"	"0.8,0.9"
+		"pitch"		"100"
+		"position"	"random"
+		"soundlevel"	"SNDLVL_140db"
+		"rndwave"
+		{
+			"wave"	"ambient/materials/metal_stress2.wav"
+			"wave"	"ambient/materials/metal_stress4.wav"
+			"wave"	"ambient/materials/metal_rattle4.wav"
+		}
+		
+	}
+}

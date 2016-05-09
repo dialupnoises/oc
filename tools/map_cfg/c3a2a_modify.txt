@@ -1,0 +1,174 @@
+c3a2a
+{
+    Remove
+    {
+        ClassName
+        {
+            "info_player_start" {}
+        }
+    }
+    Add
+    {
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "c3a2a_starts"
+            "origin" "-1528 -448 1"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "c3a2a_starts"
+            "origin" "-1483 -446 1"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "c3a2a_starts"
+            "origin" "-1440 -446 1"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "c3a2a_starts"
+            "origin" "-1440 -408 1"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "c3a2a_starts"
+            "origin" "-1482 -407 1"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "c3a2a_starts"
+            "origin" "-1531 -406 1"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "c3a2a_starts"
+            "origin" "-1528 -362 1"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "c3a2a_starts"
+            "origin" "-1480 -361 1"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "c3a2a_starts"
+            "origin" "-1442 -361 1"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "c3a2a_starts"
+            "origin" "-1442 -319 1"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "c3a2a_starts"
+            "origin" "-1485 -319 1"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "c3a2a_starts"
+            "origin" "-1530 -321 1"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "c3a2a_starts2"
+            "origin" "-1268.05 2 -505"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "c3a2a_starts2"
+            "origin" "-1317 2 -505"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "c3a2a_starts2"
+            "origin" "-1360 2 -505"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "c3a2a_starts2"
+            "origin" "-1402 2 -505"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "c3a2a_starts2"
+            "origin" "-1444 2 -505"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "c3a2a_starts2"
+            "origin" "-1484 3 -505"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "c3a2a_starts2"
+            "origin" "-1527 3 -505"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "c3a2a_starts2"
+            "origin" "-1571 2 -505"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "c3a2a_starts2"
+            "origin" "-1612 2 -505"
+        }
+    }
+    Modify
+    {
+        ClassName
+        {
+            "worldspawn"
+            {
+                "mapversion" "7"
+            }
+        }
+        Origin
+        {
+            "-1583 -304 50"
+            {
+                "spawnflags" "2113"
+            }
+            "-1020 2 -464"
+            {
+                "spawngroup" "c3a2b_starts"
+                "transitionradius" "158"
+            }
+            "-1784 -384 1064"
+            {
+                "StartDisabled" "1"
+            }
+        }
+    }
+SpawnItems
+{
+    "weapon_crowbar" "1"
+    "weapon_smg1" "1"
+    "weapon_uzi" "2"
+    "item_battery" "1"
+    "item_ammo_smg1" "3"
+    "weapon_healer" "1"
+}
+}

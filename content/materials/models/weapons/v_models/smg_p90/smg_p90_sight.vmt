@@ -1,0 +1,10 @@
+VertexLitGeneric
+{
+	"$basetexture"	"models\weapons\v_models\smg_p90\smg_p90_sight"
+	"$selfillum" "0" //$selfillum disable $translucent
+	//"$selfillummask"	"models\weapons\v_models\smg_p90\smg_p90_sight_selfillummask"
+	"$envmap" "env_cubemap"
+	"$envmapmask" "models\weapons\v_models\smg_p90\smg_p90_sight_ref"
+	
+	"$translucent" "1"
+}

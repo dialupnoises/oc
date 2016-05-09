@@ -1,0 +1,130 @@
+"Tentacle.Flies"
+{
+	"channel"	"CHAN_BODY"
+	"volume"	"0.5"
+	"soundlevel"	"SNDLVL_NORM"
+	"rndwave"
+	{
+		"wave"		"ambience/flies.wav"
+	}
+}
+
+"Tentacle.Squirm"
+{
+	"channel"	"CHAN_BODY"
+	"volume"	"0.7"
+	"soundlevel"	"SNDLVL_90db"
+	"rndwave"
+	{
+		"wave"		"ambience/squirm2.wav"
+	}
+}
+
+
+"Tentacle.Sing"
+{
+	"channel"	"CHAN_VOICE"
+	"volume"	"0.7"
+	"soundlevel"	"SNDLVL_90db"
+	"rndwave"
+	{
+		"wave"		"npc/tentacle/te_sing1.wav"
+		"wave"		"npc/tentacle/te_sing2.wav"
+	}
+}
+
+"Tentacle.Alert"
+{
+	"channel"	"CHAN_VOICE"
+	"volume"	"0.7"
+	"soundlevel"	"SNDLVL_90db"
+	"rndwave"
+	{
+		"wave"		"npc/tentacle/te_alert1.wav"
+		"wave"		"npc/tentacle/te_alert2.wav"
+	}
+}
+
+
+"Tentacle.HitSilo"
+{
+	"channel"	"CHAN_WEAPON"
+	"volume"	"0.5,0.7"
+	"soundlevel"	"SNDLVL_80db"
+	"rndwave"
+	{
+		"wave"		"npc/tentacle/te_strike1.wav"
+		"wave"		"npc/tentacle/te_strike2.wav"
+	}
+}
+
+"Tentacle.HitDirt"
+{
+	"channel"	"CHAN_WEAPON"
+	"volume"	"0.4,0.5"
+	"soundlevel"	"SNDLVL_80db"
+	"rndwave"
+	{
+		"wave"		"player/pl_dirt1.wav"
+		"wave"		"player/pl_dirt2.wav"
+		"wave"		"player/pl_dirt3.wav"
+		"wave"		"player/pl_dirt4.wav"
+	}
+}
+
+"Tentacle.HitWater"
+{
+	"channel"	"CHAN_WEAPON"
+	"volume"	"0.4,0.5"
+	"soundlevel"	"SNDLVL_80db"
+	"rndwave"
+	{
+		"wave"		"player/pl_slosh1.wav"
+		"wave"		"player/pl_slosh2.wav"
+		"wave"		"player/pl_slosh3.wav"
+		"wave"		"player/pl_slosh4.wav"
+	}
+}
+
+"Tentacle.Roar"
+{
+	"volume"	"0.7"
+	"soundlevel"	"SNDLVL_90db"
+	"rndwave"
+	{
+		"wave"		"npc/tentacle/te_roar1.wav"
+		"wave"		"npc/tentacle/te_roar2.wav"
+	}
+}
+
+"Tentacle.Search"
+{
+	"volume"	"0.7"
+	"soundlevel"	"SNDLVL_90db"
+	"rndwave"
+	{
+		"wave"		"npc/tentacle/te_search1.wav"
+		"wave"		"npc/tentacle/te_search2.wav"
+	}
+}
+
+"Tentacle.Swing"
+{
+	"volume"	"0.88"
+	"soundlevel"	"SNDLVL_110db"
+	"rndwave"
+	{
+		"wave"		"npc/tentacle/te_move1.wav"
+		"wave"		"npc/tentacle/te_move2.wav"
+	}
+}
+
+"Tentacle.Death"
+{
+	"volume"	"0.98"
+	"soundlevel"	"SNDLVL_GUNFIRE"
+	"rndwave"
+	{
+		"wave"		"npc/tentacle/te_death2.wav"
+	}
+}

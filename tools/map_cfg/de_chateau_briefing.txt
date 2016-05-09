@@ -1,0 +1,24 @@
+Obsidian Conflict
+
+Map: de_chateau (mapadded mini mission)
+Mapadd Script by fug4life
+
+Description:
+
+You've arrived at a chateau situated around 65km from Black Mesa, Odessa will tell you more.
+
+Primary Objective:
+
+Destroy the hives!
+
+Music - Track:
+
+MC Handler - Abrasive and Antigen.
+machinae_supremacy - cryosleep, insectoid, dududub_dududum, kings_of_the_sea and kings_of_the_scene.
+
+Special Thanks:
+
+Blues - sound collision model
+Zteer - jukebox system.
+
+

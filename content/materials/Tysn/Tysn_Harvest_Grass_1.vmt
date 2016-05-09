@@ -1,0 +1,5 @@
+LightmappedGeneric
+{
+	$basetexture "Tysn/Tysn_Harvest_Grass_1"
+	$surfaceprop "grass"
+}

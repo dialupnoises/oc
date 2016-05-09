@@ -1,0 +1,111 @@
+d3_c17_06a
+{
+    Remove
+    {
+        ClassName
+        {
+            "logic_auto" {}
+            "info_player_start" {}
+        }
+    }
+    Add
+    {
+        "logic_auto"
+        {
+            "spawnflags" "1"
+            "OnMapSpawn" "citizen_reinforcement_manager_2,Replenish,,0,-1"
+            "origin" "3555.74 -6799 -110.223"
+        }
+        "prop_dynamic_override"
+        {
+            "angles" "0 0 0"
+            "disableshadows" "1"
+            "fademindist" "-1"
+            "fadescale" "1"
+            "MaxAnimTime" "10"
+            "MinAnimTime" "5"
+            "model" "models/props_c17/fence01a.mdl"
+            "renderamt" "255"
+            "rendercolor" "255 255 255"
+            "rendermode" "10"
+            "skin" "0"
+            "solid" "6"
+            "spawnflags" "0"
+            "origin" "3180 -6749 -74"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "targetname" "c17_06a_spawn1"
+            "origin" "3457 -6712 -127"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "targetname" "c17_06a_spawn1"
+            "origin" "3363 -6712 -127"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "targetname" "c17_06a_spawn1"
+            "origin" "3263 -6712 -127"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "targetname" "c17_06a_spawn1"
+            "origin" "3263 -6787 -127"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "targetname" "c17_06a_spawn1"
+            "origin" "3357 -6787 -127"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "targetname" "c17_06a_spawn1"
+            "origin" "3457 -6787 -127"
+        }
+    }
+    Modify
+    {
+        ClassName
+        {
+            "worldspawn"
+            {
+                "disableareaportals" "1"
+            }
+        }
+        Origin
+        {
+            "2144 3066 -8"
+            {
+                "nosmooth" "1"
+                "spawngroup" "c17_06b_spawn1"
+            }
+            "3152 -6748 -68"
+            {
+                "spawnflags" "2"
+            }
+        }
+    }
+SpawnItems
+{
+    "weapon_smg1" "1"
+    "weapon_ar2" "1"
+    "weapon_shotgun" "1"
+    "weapon_crowbar" "1"
+    "weapon_physcannon" "1"
+    "weapon_357" "1"
+    "weapon_frag" "1"
+    "weapon_pistol" "1"
+    "item_box_buckshot" "2"
+    "item_ammo_smg1" "3"
+    "item_battery" "3"
+    "weapon_healer" "1"
+    "weapon_crossbow" "1"
+}
+}

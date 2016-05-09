@@ -1,0 +1,26 @@
+"tysn_merchant_fireteam_5"
+{
+	"Name"	"Smuggler's Wares"
+
+	"Weapons"
+	{
+		"weapon_rpg" "20"
+		"weapon_frag" "3"
+		"weapon_slam" "3"
+		"weapon_shotgun" "15"
+		"weapon_healer" "25"
+	}
+	"Items"
+	{
+		"item_ammo_pistol" "1"
+		"item_box_alyxrounds" "1"
+		"item_ammo_smg1" "2"
+		"item_ammo_smg1_grenade" "3"
+		"item_box_buckshot" "3"
+		"item_ammo_crossbow" "2"
+		"item_rpg_round" "1"
+		"item_healthkit" "3"
+		"item_battery" "3"
+
+	}
+}

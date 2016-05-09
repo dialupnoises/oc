@@ -1,0 +1,37 @@
+"merchant_oc_diving_2"
+{
+	"Name"	"Seller of pointlessness"
+
+	"Weapons"
+	{
+		"weapon_357" "10"
+		"weapon_ar2" "20"
+		"weapon_crossbow" "15"
+		"weapon_frag" "2"
+		"weapon_pistol" "2"
+		"weapon_rpg" "30"
+		"weapon_shotgun" "20"
+		"weapon_slam" "4"
+		"weapon_smg1" "15"
+		"weapon_sniperrifle" "20"
+		"weapon_stunstick" "5"
+		"weapon_uzi" "15"
+	}
+	"Items"
+	{
+		"item_battery" "1"
+		"item_healthkit" "1"
+		"item_shield" "10"
+		"item_cloak" "10"
+		"item_ammo_pistol" "1"
+		"item_ammo_smg1" "1"
+		"item_ammo_ar2" "1"
+		"item_ammo_357" "1"
+		"item_ammo_crossbow" "1"
+		"item_rpg_round" "1"
+		"item_ammo_smg1_grenade" "2"
+		"item_box_sniper_rounds" "2"
+		"item_box_buckshot" "1"
+		"item_ammo_ar2_altfire" "3"
+	}
+}

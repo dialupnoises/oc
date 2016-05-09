@@ -1,0 +1,6 @@
+"LightmappedGeneric"
+{
+	"$basetexture" "maps/deadland/stonewall001"
+	"$bumpmap" "maps/deadland/stonewall001_normal"
+	"$surfaceprop" "concrete"
+}

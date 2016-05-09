@@ -1,0 +1,6 @@
+"chateau" 
+{ 
+mp_livesoverride "1" 
+mp_numlives "5" 
+mp_barnacle_swallow "1"
+}

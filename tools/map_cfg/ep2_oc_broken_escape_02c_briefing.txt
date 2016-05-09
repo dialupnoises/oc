@@ -1,0 +1,11 @@
+Obsidian Conflict
+
+Map: ep2_oc_broken_escape_02c
+Author: W0rf0x (w0rf0x@obsidianconflict.net)
+
+Description:
+
+Destroying those coolants caused a security lock-down.
+You can't progress with your mission as long as the base A.I. is online.
+
+Mission: Make your way to the A.I. and destroy it.

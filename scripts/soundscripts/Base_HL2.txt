@@ -1,0 +1,22 @@
+SoundCache
+{
+	"precache_file"		"scripts/level_sounds_eli_lab.txt"
+	"precache_file"		"scripts/level_sounds_trainyard.txt"
+	"precache_file"		"scripts/level_sounds_k_lab.txt"
+	"precache_file"		"scripts/level_sounds_k_lab2.txt"
+	"precache_file"		"scripts/level_sounds_coast.txt"
+	"precache_file"		"scripts/level_sounds_novaprospekt.txt"
+	"precache_file"		"scripts/level_sounds_streetwar.txt"
+	"precache_file"		"scripts/level_sounds_streetwar2.txt"
+	"precache_file"		"scripts/level_sounds_breencast.txt"
+	"precache_file"		"scripts/level_sounds_citadel.txt"
+	"precache_file"		"scripts/level_sounds_canals.txt"
+	"precache_file"		"scripts/level_sounds_ravenholm.txt"
+	"precache_file"		"scripts/level_sounds_ravenholm2.txt"
+	"precache_file"		"scripts/level_sounds_canals2.txt"
+	"precache_file"		"scripts/level_sounds_c17_02a.txt"
+	"precache_file"		"scripts/level_sounds_e3_c17.txt"
+	"precache_file"		"scripts/level_sounds_e3_town.txt"
+	"precache_file"		"scripts/level_sounds_e3_bugbait.txt"
+	"precache_file"		"scripts/level_sounds_music.txt"
+}

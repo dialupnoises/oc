@@ -1,0 +1,239 @@
+//Weapons
+
+// MG1
+
+"Weapon_HMG1.Single"
+{
+	"channel"		"CHAN_WEAPON"
+	"volume"		"0.85"
+	"soundlevel"		"SNDLVL_GUNFIRE"
+	"pitch"			"85,95"
+
+	"wave"			"^weapons/ar1/ar1_dist1.wav"
+}
+
+"Weapon_HMG1.Reload_Rotate"
+{
+	"channel"		"CHAN_ITEM"
+	"volume"		"0.9"
+	"soundlevel"	"SNDLVL_NORM"
+
+	"wave"			"weapons/hmg1/hmg1_reload_rotate.wav"
+} 
+
+"Weapon_HMG1.Reload_Push"
+{
+	"channel"		"CHAN_ITEM"
+	"volume"		"0.9"
+	"soundlevel"	"SNDLVL_NORM"
+
+	"wave"			"weapons/hmg1/hmg1_reload_push.wav"
+}
+
+//Music
+
+//Security lift ride up
+
+"be2c_seclift_up"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"1.00"
+	"pitch"			"100"
+
+	"soundlevel"	"0"
+
+	"wave"			"*#broken_escape2/ost-reclaimer.mp3"
+}
+
+//Entering AI room
+
+"be2c_aienter"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"1.00"
+	"pitch"			"100"
+
+	"soundlevel"	"0"
+
+	"wave"			"*#broken_escape2/edgen_halo.mp3"
+}
+
+//AI room Enforcer fight
+
+"be2c_aifight"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"1.00"
+	"pitch"			"100"
+
+	"soundlevel"	"0"
+
+	"wave"			"*#broken_escape2/deltahalosuit_cut.mp3"
+}
+
+//VO
+
+//Energybridge 1
+
+"be2c_vo_bridge1"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"1.00"
+	"pitch"			"100"
+
+	"soundlevel"	"0"
+
+	"wave"			"*#broken_escape2\vo\mike\energybridge_radio.wav"
+}
+
+//Energybridge 2
+
+"be2c_vo_bridge2"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"1.00"
+	"pitch"			"100"
+
+	"soundlevel"	"0"
+
+	"wave"			"*#broken_escape2\vo\mike\energybridge_getready_radio.wav"
+}
+
+//After energybridge is activated
+
+"be2c_vo_liftupahead"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"1.00"
+	"pitch"			"100"
+
+	"soundlevel"	"0"
+
+	"wave"			"*#broken_escape2\vo\mike\liftupahead_radio.wav"
+}
+
+//When high security lift is coming down
+
+"be2c_vo_liftincoming"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"1.00"
+	"pitch"			"100"
+
+	"soundlevel"	"0"
+
+	"wave"			"*#broken_escape2\vo\mike\liftincoming_radio.wav"
+}
+
+//When high security lift stops for the first time
+
+"be2c_vo_stuckelevator"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"1.00"
+	"pitch"			"100"
+
+	"soundlevel"	"0"
+
+	"wave"			"*#broken_escape2\vo\mike\stuckelevator_radio.wav"
+}
+
+//When players enter A.I. room
+
+"be2c_vo_aicoils_01"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"1.00"
+	"pitch"			"100"
+
+	"soundlevel"	"0"
+
+	"wave"			"*#broken_escape2\vo\mike\aicoils_01_radio.wav"
+}
+
+//When players exposed A.I. coils
+
+"be2c_vo_aicoils_02"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"1.00"
+	"pitch"			"100"
+
+	"soundlevel"	"0"
+
+	"wave"			"*#broken_escape2\vo\mike\aicoils_02_radio.wav"
+}
+
+//When players destroyed A.I. coils
+
+"be2c_vo_aicoils_03"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"1.00"
+	"pitch"			"100"
+
+	"soundlevel"	"0"
+
+	"wave"			"*#broken_escape2\vo\mike\aicoils_03_radio.wav"
+}
+
+//After exiting the A.I. room, before access lift gets called up
+
+"be2c_vo_combinebreakingin_01"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"1.00"
+	"pitch"			"100"
+
+	"soundlevel"	"0"
+
+	"wave"			"*#broken_escape2\vo\mike\combinebreakingin_01_radio.wav"
+}
+
+//After exiting the A.I. room, access lift going up with players on
+
+"be2c_vo_combinebreakingin_02"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"1.00"
+	"pitch"			"100"
+
+	"soundlevel"	"0"
+
+	"wave"			"*#broken_escape2\vo\mike\combinebreakingin_02_radio.wav"
+}
+
+//Enforcer uses a helicopter as Base NPC, rotor sounds don't fit so we use dropship sounds until we get some proper sounds for it. (todo)
+
+"NPC_AttackHelicopter.Rotors"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"VOL_NORM"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_140dB"
+
+	"wave"			"npc/combine_gunship/dropship_engine_distant_loop1.wav"
+}
+
+"NPC_AttackHelicopter.RotorsLoud"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"VOL_NORM"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_140dB"
+
+	"wave"			"npc/combine_gunship/dropship_engine_distant_loop1.wav"
+}
+
+"NPC_AttackHelicopter.RotorBlast"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"VOL_NORM"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_130dB"
+
+	"wave"			"npc/combine_gunship/dropship_engine_near_loop1.wav"
+}

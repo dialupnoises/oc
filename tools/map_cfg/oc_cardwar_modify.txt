@@ -1,0 +1,7 @@
+"oc_cardwar"
+{
+	SpawnItems
+	{
+		"weapon_crowbar" "1"
+	}
+}

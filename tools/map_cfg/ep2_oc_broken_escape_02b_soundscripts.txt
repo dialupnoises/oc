@@ -1,0 +1,100 @@
+//Weapons
+
+// MG1
+
+"Weapon_HMG1.Single"
+{
+	"channel"		"CHAN_WEAPON"
+	"volume"		"0.85"
+	"soundlevel"		"SNDLVL_GUNFIRE"
+	"pitch"			"85,95"
+
+	"wave"			"^weapons/ar1/ar1_dist1.wav"
+}
+
+"Weapon_HMG1.Reload_Rotate"
+{
+	"channel"		"CHAN_ITEM"
+	"volume"		"0.9"
+	"soundlevel"	"SNDLVL_NORM"
+
+	"wave"			"weapons/hmg1/hmg1_reload_rotate.wav"
+} 
+
+"Weapon_HMG1.Reload_Push"
+{
+	"channel"		"CHAN_ITEM"
+	"volume"		"0.9"
+	"soundlevel"	"SNDLVL_NORM"
+
+	"wave"			"weapons/hmg1/hmg1_reload_push.wav"
+}
+
+//Music
+
+//Entering strider hall
+
+"be2b_song_strider_hall"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"1.00"
+	"pitch"			"100"
+
+	"soundlevel"	"0"
+
+	"wave"			"*#broken_escape2/perchance_to_dream.mp3"
+}
+
+//VO
+
+//First emitter sight
+
+"be2c_vo_emitters_01"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"1.00"
+	"pitch"			"100"
+
+	"soundlevel"	"0"
+
+	"wave"			"*#broken_escape2\vo\mike\emitters_01_radio.wav"
+}
+
+//First emitter destroyed
+
+"be2c_vo_emitters_02"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"1.00"
+	"pitch"			"100"
+
+	"soundlevel"	"0"
+
+	"wave"			"*#broken_escape2\vo\mike\emitters_02_radio.wav"
+}
+
+//Second emitter destroyed, security system enabled
+
+"be2c_vo_problem"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"1.00"
+	"pitch"			"100"
+
+	"soundlevel"	"0"
+
+	"wave"			"*#broken_escape2\vo\mike\problem_radio.wav"
+}
+
+//All coolants destroyed
+
+"be2c_vo_apcramp"
+{
+	"channel"		"CHAN_STATIC"
+	"volume"		"1.00"
+	"pitch"			"100"
+
+	"soundlevel"	"0"
+
+	"wave"			"*#broken_escape2\vo\mike\youdidit_radio.wav"
+}

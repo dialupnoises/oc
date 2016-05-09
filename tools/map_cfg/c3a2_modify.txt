@@ -1,0 +1,138 @@
+c3a2
+{
+    Remove
+    {
+        ClassName
+        {
+            "info_player_start" {}
+            "logic_auto" {}
+        }
+        Origin
+        {
+            "1952 288 360" {}
+        }
+    }
+    Add
+    {
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "targetname" "c3a2_starts"
+            "origin" "1988.71 419.768 129"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "targetname" "c3a2_starts"
+            "origin" "1910 420 129"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "c3a2_starts"
+            "origin" "1880 483 129"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "c3a2_starts"
+            "origin" "1881 559 129"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "c3a2_starts"
+            "origin" "1953 559 129"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "c3a2_starts"
+            "origin" "1951 486 129"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "c3a2_starts"
+            "origin" "2006 486 129"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "c3a2_starts"
+            "origin" "2008 562 129"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "c3a2_starts"
+            "origin" "1830 562 129"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "c3a2_starts"
+            "origin" "1826 485 129"
+        }
+        "filter_activator_name"
+        {
+            "filtername" "NULL"
+            "Negated" "0"
+            "targetname" "sci_dmg_filter"
+            "origin" "-647 1908.56 301.475"
+        }
+    }
+    Modify
+    {
+        ClassName
+        {
+            "worldspawn"
+            {
+                "mapversion" "9"
+            }
+            "weapon_gauss"
+            {
+                "spawnflags" "0"
+            }
+        }
+        TargetName
+        {
+            "c3a2elebutT1"
+            {
+                "locked_sound" "2"
+                "spawnflags" "3073"
+            }
+            "c3a2_gluonguy"
+            {
+                "damagefilter" "sci_dmg_filter"
+                "npchealth" "0"
+            }
+            "c3a2_gluonsent"
+            {
+                "OnEndSentence" "c3a2elebutT1,Unlock,,0,-1"
+            }
+            "scientist_c3a2"
+            {
+                "damagefilter" "sci_dmg_filter"
+                "npchealth" "0"
+            }
+        }
+        Origin
+        {
+            "-1008 1152 -250"
+            {
+                "nosmooth" "1"
+                "spawngroup" "c3a2a_starts"
+                "transitionradius" "1"
+            }
+        }
+    }
+SpawnItems
+{
+    "weapon_crowbar" "1"
+    "weapon_smg1" "1"
+    "item_battery" "1"
+    "item_ammo_smg1" "3"
+    "weapon_healer" "1"
+}
+}

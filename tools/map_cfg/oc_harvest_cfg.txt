@@ -1,0 +1,11 @@
+//Created for use in Obsidian Conflict ONLY!
+"oc_harvest_v2_b6"
+{
+	"mp_falldamage"	"1"
+	"mp_flashlight" "1"
+	"sv_infinite_aux_power" "0"
+	"r_rainwidth" "6"
+	"sv_deathpenalty" "30"
+	"sv_allownegativescore" "0"
+
+}

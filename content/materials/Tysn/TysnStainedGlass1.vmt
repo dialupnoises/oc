@@ -1,0 +1,7 @@
+"LightmappedGeneric"
+{
+
+ "$basetexture" "Tysn/TysnStainedGlass1"
+	"$surfaceprop" "glass"
+"$translucent" "1"
+} 

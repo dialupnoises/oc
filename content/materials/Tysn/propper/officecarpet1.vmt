@@ -1,0 +1,9 @@
+"vertexlitgeneric"
+{
+	"$basetexture" "maps/cleanup/officecarpet1"
+	"$bumpmap"	"maps/cleanup/officecarpet1_normal"
+ 	//"$envmap" "env_cubemap"
+	//"$envmapcontrast" "1"
+	"$surfaceprop" "carpet"
+	"%keywords" "cleanup" 
+}

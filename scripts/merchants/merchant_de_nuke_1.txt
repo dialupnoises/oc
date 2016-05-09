@@ -1,0 +1,32 @@
+"merchant_de_nuke_1"
+{
+	"Name"	"Rebel Odessa"
+
+	"Weapons"
+	{
+		"weapon_crossbow" "30"
+		"weapon_slam" "5"
+		"weapon_pistol" "5"
+		"weapon_smg1" "15"
+		"weapon_healer" "15"
+		"weapon_frag" "5"
+		"weapon_shotgun" "20"
+		"weapon_uzi" "15"
+		"weapon_357" "15"
+	}
+	"Items"
+	{
+		"item_ammo_pistol" "1"
+		"item_ammo_smg1" "2"
+		"item_ammo_357" "2"
+		"item_box_buckshot" "3"
+		"item_ammo_ar2" "3"
+		"item_ammo_smg1_grenade" "4"
+		"item_rpg_round" "6"
+		"item_ammo_crossbow" "3"
+		"item_box_alyxrounds" "2"
+		"item_healthkit" "3"
+		"item_battery" "3"
+		"item_box_sniper_rounds" "7"
+	}
+}

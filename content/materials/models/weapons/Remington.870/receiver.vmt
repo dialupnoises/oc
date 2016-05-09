@@ -1,0 +1,6 @@
+VertexLitGeneric
+{
+	"$basetexture"	"models\weapons\Remington.870\receiver wood"
+	"$envmap" "env_cubemap"
+	"$envmapmask" "models\weapons\Remington.870\receiver_ref"
+}

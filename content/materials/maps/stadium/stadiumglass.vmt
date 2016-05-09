@@ -1,0 +1,7 @@
+"LightmappedGeneric"
+{
+
+	"$basetexture" "maps/stadium/stadiumglass"
+	"$surfaceprop" "glass"
+	"$additive" "1"
+}

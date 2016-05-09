@@ -1,0 +1,128 @@
+"Turret.Alert"
+{
+	"channel"	"CHAN_BODY"
+	"volume"	"0.65"
+	"soundlevel"	"SNDLVL_80db"
+	"rndwave"
+	{
+		"wave"		"turret/tu_alert.wav"
+	}
+}
+
+"Turret.Die"
+{
+	"channel"	"CHAN_BODY"
+	"volume"	"0.65"
+	"soundlevel"	"SNDLVL_80db"
+	"rndwave"
+	{
+		"wave"		"turret/tu_die.wav"
+		"wave"		"turret/tu_die2.wav"
+		"wave"		"turret/tu_die3.wav"
+	}
+}
+
+"Turret.Spinup"
+{
+	"channel"	"CHAN_STATIC"
+	"volume"	"0.65"
+	"soundlevel"	"SNDLVL_80db"
+	"wave"		"turret/tu_active2.wav"
+}
+
+"Turret.Deploy"
+{
+	"channel"	"CHAN_BODY"
+	"volume"	"0.65"
+	"soundlevel"	"SNDLVL_80db"
+	"rndwave"
+	{
+		"wave"		"turret/tu_deploy.wav"
+	}
+}
+
+"Turret.Undeploy"
+{
+	"channel"	"CHAN_BODY"
+	"volume"	"0.65"
+	"soundlevel"	"SNDLVL_80db"
+	"pitch"		"120"
+	"rndwave"
+	{
+		"wave"		"turret/tu_deploy.wav"
+	}
+}
+
+"Turret.Ping"
+{
+	"channel"	"CHAN_ITEM"
+	"volume"	"0.9"
+	"soundlevel"	"SNDLVL_80db"
+	"rndwave"
+	{
+		"wave"		"turret/tu_ping.wav"
+	}
+}
+
+
+"Turret.Shoot"
+{
+	"channel"	"CHAN_WEAPON"
+	"volume"	"1.0"
+	"soundlevel"	"SNDLVL_140dB"
+	"rndwave"
+	{
+		"wave"		"turret/tu_fire1.wav"
+	}
+}
+
+"Turret.SpinUpCall"
+{
+	"channel"	"CHAN_BODY"
+	"volume"	"0.6"
+	"soundlevel"	"SNDLVL_80db"
+	"rndwave"
+	{
+		"wave"		"turret/tu_spinup.wav"
+	}
+}
+
+"Turret.SpinDownCall"
+{
+	"channel"	"CHAN_ITEM"
+	"volume"	"0.6"
+	"soundlevel"	"SNDLVL_80db"
+	"pitch"		"90,110"
+	"rndwave"
+	{
+		"wave"		"turret/tu_spindown.wav"
+	}
+}
+
+
+"Sentry.Shoot"
+{
+	"channel"	"CHAN_WEAPON"
+	"volume"	"0.9"
+	"soundlevel"	"SNDLVL_140db"
+	"rndwave"
+	{
+		"wave"		"weapons/hks1.wav"
+		"wave"		"weapons/hks2.wav"
+		"wave"		"weapons/hks3.wav"
+	}
+}
+
+
+"Sentry.Die"
+{
+	"channel"	"CHAN_BODY"
+	"volume"	"0.65"
+	"soundlevel"	"SNDLVL_80db"
+	"rndwave"
+	{
+		"wave"		"turret/tu_die.wav"
+		"wave"		"turret/tu_die2.wav"
+		"wave"		"turret/tu_die3.wav"
+	}
+}

@@ -1,0 +1,20 @@
+"Refract"
+{
+ 	"$model" 1
+	"$refractamount" "0.04"
+	"$scale" "[1 1]"
+ 	"$dudvmap" "models/Player/shader3_dudv"
+	"$normalmap" "models/Player/shader3_normal"
+
+	"Proxies"
+	{
+		"TextureScroll"
+		{
+			"texturescrollvar" "$bumptransform"
+			"texturescrollrate" .3
+			"texturescrollangle" -90
+		}
+
+	}
+
+}

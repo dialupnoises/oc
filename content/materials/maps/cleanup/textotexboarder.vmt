@@ -1,0 +1,6 @@
+"LightmappedGeneric"
+{
+	"$baseTexture" "maps/cleanup/textotexboarder"
+	//"$translucent" 1
+	"$decal" 1
+}

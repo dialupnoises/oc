@@ -1,0 +1,123 @@
+// Manually created file by skidz, this map refuses to decompile correctly.
+c2a4d
+{
+    Remove
+    {
+        ClassName
+        {
+            "info_player_start" {}
+        }
+    }
+    Add
+    {
+	// Starting area.
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "c2a4e_starts"
+            "origin" "615 13 192"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "c2a4e_starts"
+            "origin" "724 12 192"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "c2a4e_starts"
+            "origin" "724 166 192"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "c2a4e_starts"
+            "origin" "627 -163 192"
+        }
+
+	// From stairs down.
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "c2a4e_starts2"
+            "origin" "-519 1928 192"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "c2a4e_starts2"
+            "origin" "-613 1928 192"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "c2a4e_starts2"
+            "origin" "-613 1853 192"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "c2a4e_starts2"
+            "origin" "-519 1853 192"
+        }
+
+	// Fall from map f
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "c2a4e_starts3"
+            "origin" "-1376 2097 0"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "c2a4e_starts3"
+            "origin" "-1680 2103 0"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "c2a4e_starts3"
+            "origin" "-1674 2303 0"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "c2a4e_starts3"
+            "origin" "-1369 2295 0"
+        }
+    }
+    Modify
+    {
+        Origin
+        {
+            "1464 -32 80"
+            {
+                "spawngroup" "c2a4d_starts2"
+                "transitionradius" "729"
+            }
+            "-296 1888 304"
+            {
+                "spawngroup" "c2a4f_starts"
+                "transitionradius" "256"
+            }
+            "0 -1240 184"
+            {
+                "spawngroup" "c2a4g_starts"
+                "transitionradius" "400"
+            }
+            "-1536 2112 200"
+            {
+		"spawnflags" "2"
+            }
+        }
+    }
+SpawnItems
+{
+    "weapon_healer" "1"
+    "weapon_crowbar" "1"
+    "weapon_pistol" "1"
+    "weapon_smg1" "1"
+}
+}

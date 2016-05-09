@@ -1,0 +1,119 @@
+"NPC_Defender.Alert"
+{
+	"channel"		"CHAN_ITEM"
+	"volume"		"1.0"
+	"pitch"			"100, 150"
+
+	"soundlevel"	"SNDLVL_90dB"
+
+	"rndwave"
+	{
+		"wave"			"npc/scanner/scanner_scan5.wav"
+		"wave"			"npc/scanner/scanner_alert1.wav"
+	}
+}
+
+// NOTE: all 'short' loops must be on chan voice
+
+"NPC_Defender.Combat"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.65"
+	"pitch"			"165,195"
+
+	"soundlevel"	"SNDLVL_85dB"
+
+	"rndwave"
+	{
+		"wave"	"npc/scanner/combat_scan_loop2.wav"
+//		"wave"	"npc/defender/illuminate_loop.wav"
+	}
+}
+
+
+// NOTE: must be on CHAN_VOICE to kill all loops when defender dies
+
+"NPC_Defender.Die"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"1.0"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_120dB"
+
+	"wave"	"npc/scanner/cbot_energyexplosion1.wav"
+}
+
+"NPC_Defender.FlyLoop"
+{
+	"channel"		"CHAN_STATIC"
+	"soundlevel"	"SNDLVL_NORM"
+
+	"wave"	"npc/scanner/scanner_combat_loop1.wav"
+}
+
+"NPC_Defender.Gib"
+{
+	"channel"		"CHAN_ITEM"
+	"volume"		"1.0"
+	"pitch"			"PITCH_NORM"
+
+	"soundlevel"	"SNDLVL_90dB"
+
+	"wave"			"npc/scanner/scanner_explode_crash1.wav"
+}
+
+"NPC_Defender.Idle"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.6"
+	"pitch"			"90,110"
+
+	"soundlevel"	"SNDLVL_70dB"
+
+	"rndwave"
+	{
+		"wave"	"npc/scanner/cbot_servochatter.wav"
+		"wave"	"npc/scanner/combat_scan5.wav"
+	}
+}
+
+// when the defender sees the player, but is out of range
+"NPC_Defender.OutOfRange"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"0.75"
+	"pitch"			"70,80"
+
+	"soundlevel"	"SNDLVL_80dB"
+
+	"wave"	"npc/defender/outofrange_loop.wav"
+}
+
+"NPC_Defender.Pain"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"1.0"
+	"pitch"			"100,120"
+
+	"soundlevel"	"SNDLVL_90dB"
+
+	"rndwave"
+	{
+		"wave"			"npc/scanner/scanner_pain1.wav"
+		"wave"			"npc/scanner/scanner_pain2.wav"
+		"wave"			"npc/scanner/scanner_electric1.wav"
+		"wave"			"npc/scanner/scanner_electric2.wav"
+	}
+}
+
+//"NPC_Defender.CannonSound"
+//{
+//	"channel"		"CHAN_STATIC"
+//	"volume"		"1.0"
+//	"pitch"			"90"
+//
+//	"soundlevel"	"SNDLVL_140dB"
+//
+//	"wave"			"npc/combine_gunship/gunship_fire_loop1.wav"
+//}

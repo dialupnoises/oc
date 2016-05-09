@@ -1,0 +1,9 @@
+"UnlitGeneric"
+{
+	"$basetexture" "Tysn/Tysn_Waypoint_Kitchen_FryingPan"
+	"$vertexcolors" "1"
+	"$translucent" "1"
+//	"$additive" "1"
+	"$ignorez" "1"
+	"$no_fullbright" "1"
+}

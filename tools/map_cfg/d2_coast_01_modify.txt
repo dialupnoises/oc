@@ -1,0 +1,130 @@
+d2_coast_01
+{
+    Remove
+    {
+        ClassName
+        {
+            "player_loadsaved" {}
+            "info_player_start" {}
+        }
+        TargetName
+        {
+            "jeep_lost_in_water" {}
+        }
+        Origin
+        {
+            "-7805.71 -10085.9 931" {}
+            "-2608 -4848 576" {}
+        }
+    }
+    Add
+    {
+        "infodecal"
+        {
+            "texture" "decals/jeepspawning"
+            "origin" "-8255.78 -10240 963.18"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "targetname" "coast_01_spawn1"
+            "origin" "-8229 -10200 897"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "targetname" "coast_01_spawn1"
+            "origin" "-7710 -10186 897"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "targetname" "coast_01_spawn1"
+            "origin" "-7862 -10172 897"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 89 0"
+            "targetname" "coast_01_spawn1"
+            "origin" "-8355 -10200 897"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "coast_01_spawn1"
+            "origin" "-8361 -10100 897"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "coast_01_spawn1"
+            "origin" "-7689 -10044 897"
+        }
+        "npc_headcrab"
+        {
+            "angles" "0 47.5 0"
+            "model" "models/Headcrabclassic.mdl"
+            "physdamagescale" "1.0"
+            "renderamt" "255"
+            "rendercolor" "255 255 255"
+            "spawnflags" "4"
+            "startburrowed" "No"
+            "origin" "-12973 612 1525.49"
+        }
+        "npc_headcrab"
+        {
+            "angles" "0 60.5 0"
+            "model" "models/Headcrabclassic.mdl"
+            "physdamagescale" "1.0"
+            "renderamt" "255"
+            "rendercolor" "255 255 255"
+            "spawnflags" "4"
+            "startburrowed" "No"
+            "origin" "-12872 634 1525.49"
+        }
+        "npc_headcrab"
+        {
+            "angles" "0 0 0"
+            "model" "models/Headcrabclassic.mdl"
+            "physdamagescale" "1.0"
+            "renderamt" "255"
+            "rendercolor" "255 255 255"
+            "spawnflags" "4"
+            "startburrowed" "No"
+            "origin" "-12954.1 697.031 1525.49"
+        }
+    }
+    Modify
+    {
+        ClassName
+        {
+            "worldspawn"
+            {
+                "disableareaportals" "1"
+                "canspawnjeep" "1"
+            }
+        }
+        Origin
+        {
+            "-11840 5088 1664"
+            {
+                "spawngroup" "coast_03_spawn1"
+            }
+        }
+    }
+SpawnItems
+{
+    "weapon_smg1" "1"
+    "weapon_ar2" "1"
+    "weapon_shotgun" "1"
+    "weapon_crowbar" "1"
+    "weapon_physcannon" "1"
+    "weapon_357" "1"
+    "weapon_frag" "1"
+    "weapon_pistol" "1"
+    "item_box_buckshot" "2"
+    "item_ammo_smg1" "3"
+    "item_battery" "3"
+    "weapon_healer" "1"
+}
+}

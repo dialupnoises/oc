@@ -1,0 +1,12 @@
+Obsidian Conflict
+
+Map: oc_courier
+Author: Tysn
+
+Description:
+
+Beginning with the delivery of documents, the players are to make their way through hostile environments to various rebel outposts, where they can purchase equipment.
+
+
+
+Note: Lostcoast must be mounted to play this map properly.

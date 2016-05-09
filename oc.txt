@@ -1,0 +1,7 @@
+"oc"
+{
+	"base" "base"
+	"title" "Obsidian Conflict"
+	"maps" "^oc_"
+	"menusystem" "1"
+}

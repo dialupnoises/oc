@@ -1,0 +1,225 @@
+d1_eli_01
+{
+    Remove
+    {
+        TargetName
+        {
+            "trigger_inner_door" {}
+            "trigger_alyxtour01" {}
+            "trigger_alyxtour01_door_close" {}
+        }
+        Origin
+        {
+            "179.7 4434.42 -1379" {}
+        }
+    }
+    Add
+    {
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "targetname" "eli_01_spawn1"
+            "origin" "119 4577 -1400"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "targetname" "eli_01_spawn1"
+            "origin" "13 4577 -1400"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "targetname" "eli_01_spawn1"
+            "origin" "-112 4577 -1400"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "targetname" "eli_01_spawn1"
+            "origin" "-233 4577 -1400"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "targetname" "eli_01_spawn1"
+            "origin" "-361 4577 -1400"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "targetname" "eli_01_spawn1"
+            "origin" "-486 4577 -1400"
+        }
+        "point_trigger"
+        {
+            "spawnflags" "1"
+            "StartDisabled" "1"
+            "targetname" "trigger_inner_door"
+            "TriggerOnce" "1"
+            "TriggerRadius" "280"
+            "OnStartTouch" "speaker_FollowMossNag,TurnOff,,0.1,-1"
+            "OnStartTouch" "logic_FollowMossNag0,Disable,,0,-1"
+            "OnStartTouch" "counter_lcs_mosstour03,Add,1,0,-1"
+            "OnStartTouch" "logic_beams_elevator_1,Trigger,,0,-1"
+            "origin" "564 2058 -1271"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "StartDisabled" "1"
+            "targetname" "eli_01_spawn2"
+            "origin" "360 1813 -2735"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "StartDisabled" "1"
+            "targetname" "eli_01_spawn2"
+            "origin" "361 1878 -2735"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "StartDisabled" "1"
+            "targetname" "eli_01_spawn2"
+            "origin" "360 1937 -2735"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "StartDisabled" "1"
+            "targetname" "eli_01_spawn2"
+            "origin" "610 1890 -2735"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "StartDisabled" "1"
+            "targetname" "eli_01_spawn2"
+            "origin" "531 1945 -2735"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "StartDisabled" "1"
+            "targetname" "eli_01_spawn2"
+            "origin" "571 1793 -2735"
+        }
+        "point_teleport"
+        {
+            "angles" "0 0 0"
+            "radius" "3719"
+            "spawnflags" "2048"
+            "targetname" "teleport_players"
+            "TeleportDestination" "lab_teleport_target"
+            "origin" "9 4150 1528"
+        }
+        "info_teleport_destination"
+        {
+            "angles" "0 0 0"
+            "StartDisabled" "0"
+            "targetname" "lab_teleport_target"
+            "origin" "360 1813 -2727"
+        }
+        "info_teleport_destination"
+        {
+            "angles" "0 0 0"
+            "StartDisabled" "0"
+            "targetname" "lab_teleport_target"
+            "origin" "361 1878 -2727"
+        }
+        "info_teleport_destination"
+        {
+            "angles" "0 0 0"
+            "StartDisabled" "0"
+            "targetname" "lab_teleport_target"
+            "origin" "360 1937 -2727"
+        }
+        "info_teleport_destination"
+        {
+            "angles" "0 270 0"
+            "StartDisabled" "0"
+            "targetname" "lab_teleport_target"
+            "origin" "531 1945 -2727"
+        }
+        "info_teleport_destination"
+        {
+            "angles" "0 180 0"
+            "StartDisabled" "0"
+            "targetname" "lab_teleport_target"
+            "origin" "610 1890 -2727"
+        }
+        "info_teleport_destination"
+        {
+            "angles" "0 90 0"
+            "StartDisabled" "0"
+            "targetname" "lab_teleport_target"
+            "origin" "571 1793 -2727"
+        }
+        "point_trigger"
+        {
+            "spawnflags" "1"
+            "StartDisabled" "1"
+            "targetname" "trigger_alyxtour01"
+            "TriggerOnce" "1"
+            "TriggerRadius" "286"
+            "OnStartTouch" "lcs_alyxtour01,Start,,1,-1"
+            "OnStartTouch" "speaker_GoWithAlyxNag,TurnOff,,0.1,-1"
+            "OnStartTouch" "logic_kitchenscene_kill,Trigger,,0,-1"
+            "OnStartTouch" "logic_GoWithALyxNag,Disable,,0,-1"
+            "OnStartTouch" "logic_Xen_BeamsKill,Trigger,,0,-1"
+            "OnStartTouch" "logic_beams_elevator_1,Trigger,,0,-1"
+            "origin" "-164 2128 -2727"
+        }
+        "point_teleport"
+        {
+            "angles" "0 0 0"
+            "radius" "492"
+            "spawnflags" "2048"
+            "targetname" "teleport_players"
+            "TeleportDestination" "lab_teleport_target"
+            "origin" "456 1960 -1216"
+        }
+    }
+    Modify
+    {
+        ClassName
+        {
+            "worldspawn"
+            {
+                "disableareaportals" "1"
+            }
+        }
+        TargetName
+        {
+            "lcs_airlock01"
+            {
+                "OnTrigger3" "doors_Airlock_Outside,Open,,0,-1"
+                "OnTrigger3" "doors_Airlock_Outsideb,Open,,0,-1"
+                "OnTrigger3" "pclip_airlock_1_a,Disable,,0,-1"
+            }
+            "changelevel_to_eli_02"
+            {
+                "nosmooth" "1"
+                "spawngroup" "eli_02_spawn1"
+            }
+            "elevator_path_3"
+            {
+                "OnPass" "eli_01_spawn1,Disable,,3,1"
+                "OnPass" "eli_01_spawn2,Enable,,3,1"
+                "OnPass" "teleport_players,Enable,,3,1"
+            }
+        }
+    }
+SpawnItems
+{
+    "item_ammo_smg1_large" "1"
+    "weapon_pistol" "1"
+    "weapon_smg1" "1"
+    "weapon_357" "1"
+    "item_ammo_pistol_large" "1"
+    "weapon_crowbar" "1"
+    "weapon_healer" "1"
+}
+}

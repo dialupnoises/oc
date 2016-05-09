@@ -1,0 +1,11 @@
+Obsidian Conflict
+
+Map: oc_freezingpoint
+
+Description:
+
+In an effort to destroy the combine training facilities your team has landed
+ashore a frozen landmass that is believed to be the combines lead facilities.
+
+Your mission is to shut down the combines arctic training facilities.
+

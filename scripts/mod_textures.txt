@@ -1,0 +1,262 @@
+"sprites/640_hud"
+{
+	TextureData
+	{
+		"icon_helmet"
+		{
+				"file"		"sprites/icon_helmet"
+				"x"			"0"
+				"y"			"0"
+				"width"		"128"
+				"height"	"128"
+		}
+		"icon_health"
+		{
+				"file"		"sprites/health"
+				"x"			"0"
+				"y"			"0"
+				"width"		"128"
+				"height"	"128"
+		}
+		"icon_energy"
+		{
+				"file"		"sprites/energy"
+				"x"			"0"
+				"y"			"0"
+				"width"		"128"
+				"height"	"128"
+		}
+		"icon_hudtab"
+		{
+			"file"			"sprites/hud_tab1"
+			"x"			"0"
+			"y"			"0"
+			"width"			"300"
+			"height"		"128"
+		}
+		"icon_hudtab_med"
+		{
+			"file"			"sprites/hud_tab2"
+			"x"			"0"
+			"y"			"0"
+			"width"			"326"
+			"height"		"128"
+		}
+		"icon_hudtab_long"
+		{
+			"file"			"sprites/hud_tab3"
+			"x"			"0"
+			"y"			"0"
+			"width"			"430"
+			"height"		"128"
+		}
+		"icon_hudnumpreview"
+		{
+			"file"			"sprites/hud_num_preview"
+			"x"			"0"
+			"y"			"0"
+			"width"			"301"
+			"height"		"128"
+		}
+		"icon_hudtab2preview"
+		{
+			"file"			"sprites/hud_tab_secondary_preview"
+			"x"			"0"
+			"y"			"0"
+			"width"			"64"
+			"height"		"64"
+		}
+		"icon_flashlight"
+		{
+			"file"			"sprites/flashlight_preview"
+			"x"			"0"
+			"y"			"0"
+			"width"			"128"
+			"height"		"128"
+		}
+		"icon_episode_one"
+		{
+			"file"			"sprites/episode_one_logo"
+			"x"			"0"
+			"y"			"0"
+			"width"			"512"
+			"height"		"256"
+		}
+		"icon_css"
+		{
+			"file"			"sprites/icon_css"
+			"x"			"0"
+			"y"			"0"
+			"width"			"16"
+			"height"		"16"
+		}
+		"icon_dods"
+		{
+			"file"			"sprites/icon_dods"
+			"x"			"0"
+			"y"			"0"
+			"width"			"16"
+			"height"		"16"
+		}
+		"icon_hls"
+		{
+			"file"			"sprites/icon_hls"
+			"x"			"0"
+			"y"			"0"
+			"width"			"16"
+			"height"		"16"
+		}
+		"icon_lostcoast"
+		{
+			"file"			"sprites/icon_lostcoast"
+			"x"			"0"
+			"y"			"0"
+			"width"			"16"
+			"height"		"16"
+		}
+
+
+		//--------
+		// Weapons
+		//--------
+		"weapon_357"
+		{
+				"file"		"sprites/weapons/weapon_357"
+				"x"			"0"
+				"y"			"0"
+				"width"		"128"
+				"height"	"128"
+		}
+		"weapon_ar2"
+		{
+				"file"		"sprites/weapons/weapon_ar2"
+				"x"			"0"
+				"y"			"0"
+				"width"		"128"
+				"height"	"128"
+		}
+		"weapon_crossbow"
+		{
+				"file"		"sprites/weapons/weapon_crossbow"
+				"x"			"0"
+				"y"			"0"
+				"width"		"128"
+				"height"	"128"
+		}
+		"weapon_frag"
+		{
+				"file"		"sprites/weapons/weapon_frag"
+				"x"			"0"
+				"y"			"0"
+				"width"		"128"
+				"height"	"128"
+		}
+		"weapon_gauss"
+		{
+				"file"		"sprites/weapons/weapon_gauss"
+				"x"			"0"
+				"y"			"0"
+				"width"		"128"
+				"height"	"128"
+		}
+		"weapon_healer"
+		{
+				"file"		"sprites/weapons/weapon_healer"
+				"x"			"0"
+				"y"			"0"
+				"width"		"128"
+				"height"	"128"
+		}
+		"weapon_manhack"
+		{
+				"file"		"sprites/weapons/weapon_manhack"
+				"x"			"0"
+				"y"			"0"
+				"width"		"128"
+				"height"	"128"
+		}
+		"weapon_pistol"
+		{
+				"file"		"sprites/weapons/weapon_pistol"
+				"x"			"0"
+				"y"			"0"
+				"width"		"128"
+				"height"	"128"
+		}
+		"weapon_rpg"
+		{
+				"file"		"sprites/weapons/weapon_rpg"
+				"x"			"0"
+				"y"			"0"
+				"width"		"128"
+				"height"	"128"
+		}
+		"weapon_shotgun"
+		{
+				"file"		"sprites/weapons/weapon_shotgun"
+				"x"			"0"
+				"y"			"0"
+				"width"		"128"
+				"height"	"128"
+		}
+		"weapon_slam"
+		{
+				"file"		"sprites/weapons/weapon_slam"
+				"x"			"0"
+				"y"			"0"
+				"width"		"128"
+				"height"	"128"
+		}
+		"weapon_smg1"
+		{
+				"file"		"sprites/weapons/weapon_smg1"
+				"x"			"0"
+				"y"			"0"
+				"width"		"128"
+				"height"	"128"
+		}
+		"weapon_sniperrifle"
+		{
+				"file"		"sprites/weapons/weapon_sniperrifle"
+				"x"			"0"
+				"y"			"0"
+				"width"		"128"
+				"height"	"128"
+		}
+		"weapon_uzi"
+		{
+				"file"		"sprites/weapons/weapon_smg1"
+				"x"			"0"
+				"y"			"0"
+				"width"		"128"
+				"height"	"128"
+		}
+		"weapon_alyxgun"
+		{
+				"file"		"sprites/weapons/weapon_alyxgun"
+				"x"			"0"
+				"y"			"0"
+				"width"		"128"
+				"height"	"128"
+		}
+
+		//--------
+		// Weapons Death Icons
+		//--------
+		"death_uzi"
+		{
+				"font"		"ObsidianTypeDeath"
+				"character"	"b"
+		}
+		"death_sniper"
+		{
+				"font"		"ObsidianTypeDeath"
+				"character"	"c"
+		}
+		"death_alyxgun"
+		{
+				"font"		"ObsidianTypeDeath"
+				"character"	"d"
+		}
+	}	
+}

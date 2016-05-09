@@ -1,0 +1,149 @@
+"NPC_BigMomma.SpitTouch1"
+{
+	"channel"		"CHAN_WEAPON"
+	"volume"		"1.0"
+	"soundlevel"		"SNDLVL_80dB"
+	"pitch"			"PITCH_NORM"
+	"wave"				"npc/bullsquid/acid1.wav"
+}
+
+"NPC_BigMomma.SpitHit1"
+{
+	"channel"		"CHAN_WEAPON"
+	"volume"		"1.0"
+	"soundlevel"		"SNDLVL_80dB"
+	"pitch"			"PITCH_NORM"
+	"wave"				"npc/bullsquid/spithit1.wav"
+}
+
+"NPC_BigMomma.SpitHit2"
+{
+	"channel"		"CHAN_WEAPON"
+	"volume"		"1.0"
+	"soundlevel"		"SNDLVL_80dB"
+	"pitch"			"PITCH_NORM"
+	"wave"				"npc/bullsquid/spithit2.wav"
+}
+
+"NPC_BigMomma.ChildDieSounds"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"1.0"
+	"soundlevel"		"SNDLVL_NORM"
+
+	"rndwave"
+	{
+		"wave"			"npc/gonarch/gon_childdie1.wav"
+		"wave"			"npc/gonarch/gon_childdie2.wav"
+		"wave"			"npc/gonarch/gon_childdie3.wav"
+	}
+}
+
+"NPC_BigMomma.SackSounds"
+{
+	"channel"		"CHAN_BODY"
+	"volume"		"1.0"
+	"soundlevel"		"SNDLVL_NORM"
+
+	"rndwave"
+	{
+		"wave"			"npc/gonarch/gon_sack1.wav"
+		"wave"			"npc/gonarch/gon_sack2.wav"
+		"wave"			"npc/gonarch/gon_sack3.wav"
+	}
+}
+
+"NPC_BigMomma.DeathSounds"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"1.0"
+	"soundlevel"		"SNDLVL_NORM"
+	"pitch"			"PITCH_NORM"
+	"wave"				"npc/gonarch/gon_die1.wav"
+}
+
+"NPC_BigMomma.AttackSounds"
+{
+	"channel"		"CHAN_WEAPON"
+	"volume"		"1.0"
+	"soundlevel"		"SNDLVL_NORM"
+
+	"rndwave"
+	{
+		"wave"			"npc/gonarch/gon_attack1.wav"
+		"wave"			"npc/gonarch/gon_attack2.wav"
+		"wave"			"npc/gonarch/gon_attack3.wav"
+	}
+}
+
+"NPC_BigMomma.AttackHitSounds"
+{
+	"channel"		"CHAN_WEAPON"
+	"volume"		"0.95"
+	"pitch"			"95, 105"
+
+	"soundlevel"	"SNDLVL_NORM"
+
+	"rndwave"
+	{
+		"wave"	"npc/zombie/claw_strike1.wav"
+		"wave"	"npc/zombie/claw_strike2.wav"
+		"wave"	"npc/zombie/claw_strike3.wav"
+	}
+}
+
+"NPC_BigMomma.BirthSounds"
+{
+	"channel"		"CHAN_BODY"
+	"volume"		"1.0"
+	"soundlevel"		"SNDLVL_NORM"
+
+	"rndwave"
+	{
+		"wave"			"npc/gonarch/gon_birth1.wav"
+		"wave"			"npc/gonarch/gon_birth2.wav"
+		"wave"			"npc/gonarch/gon_birth3.wav"
+	}
+}
+
+"NPC_BigMomma.AlertSounds"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"1.0"
+	"soundlevel"		"SNDLVL_NORM"
+
+	"rndwave"
+	{
+		"wave"			"npc/gonarch/gon_alert1.wav"
+		"wave"			"npc/gonarch/gon_alert2.wav"
+		"wave"			"npc/gonarch/gon_alert3.wav"
+	}
+}
+
+"NPC_BigMomma.PainSounds"
+{
+	"channel"		"CHAN_VOICE"
+	"volume"		"1.0"
+	"soundlevel"		"SNDLVL_NORM"
+
+	"rndwave"
+	{
+		"wave"			"npc/gonarch/gon_pain2.wav"
+		"wave"			"npc/gonarch/gon_pain4.wav"
+		"wave"			"npc/gonarch/gon_pain5.wav"
+	}
+}
+
+"NPC_BigMomma.FootSounds"
+{
+	"channel"		"CHAN_BODY"
+	"volume"		"1.0"
+	"soundlevel"		"SNDLVL_NORM"
+
+	"rndwave"
+	{
+		"wave"			"npc/gonarch/gon_step1.wav"
+		"wave"			"npc/gonarch/gon_step2.wav"
+		"wave"			"npc/gonarch/gon_step3.wav"
+	}
+}

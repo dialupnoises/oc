@@ -1,0 +1,62 @@
+// File was created for use in Obsidian Conflict ONLY!
+c1a1g
+{
+	SpawnItems {}
+
+	Add
+	{
+		"info_player_deathmatch"
+		{
+			"angles" "0 0 0"
+			"StartDisabled" "0"
+			"origin" "528 316 -239"
+		}
+		
+		"info_player_deathmatch"
+		{
+			"angles" "0 0 0"
+			"StartDisabled" "0"
+			"origin" "528 276 -239"
+		}
+		
+		"info_player_deathmatch"
+		{
+			"angles" "0 0 0"
+			"StartDisabled" "0"
+			"origin" "528 356 -239"
+		}
+		
+		"info_player_deathmatch"
+		{
+			"angles" "0 0 0"
+			"StartDisabled" "0"
+			"origin" "568 316 -239"
+		}
+		
+		"info_player_deathmatch"
+		{
+			"angles" "0 0 0"
+			"StartDisabled" "0"
+			"origin" "568 276 -239"
+		}
+		
+		"info_player_deathmatch"
+		{
+			"angles" "0 0 0"
+			"StartDisabled" "0"
+			"origin" "568 356 -239"
+		}
+	}
+	
+	Modify
+	{		
+		Targetname
+		{
+			"change_to_c1a1f"
+			{
+				"transitionradius" "320"
+				"spawngroup" "g_spawns"
+			}
+		}
+	}
+}

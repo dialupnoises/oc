@@ -1,0 +1,215 @@
+
+
+//play in main controll room
+
+"be2b.main_control_room"
+{
+
+	"dsp"	"1"
+
+// position 0 is upper reactor
+
+	"playlooping"
+	{
+		"volume"	"0.4"
+		"pitch"		"100"
+		"attenuation"	"0.5" //Distance falloff
+		"wave"		"ambient/levels/citadel/advisor_enter_loop.wav"
+		"position"	"0"
+	}
+
+
+
+// position 1 is combine computer terminal
+
+	"playsoundscape"
+	{
+		"name"	"combine.computer"
+		"volume"	"1.0"
+		"positionoverride"	"1"
+	}
+
+	"playlooping"
+	{
+		"volume"	"0.3"
+		"pitch"		"100"
+		"wave"		"ambient/levels/citadel/citadel_drone_loop6.wav"
+	}
+}
+
+
+//Play in uper reactor room
+
+"be2b.upper_reactor_room"
+{
+	"dsp"	"1"
+
+// position 0 is upper reactor
+
+	"playlooping"
+	{
+		"volume"	"1.0"
+		"pitch"		"100"
+		"attenuation"	"0.5" //Distance falloff
+		"wave"		"ambient/levels/citadel/advisor_enter_loop.wav"
+		"position"	"0"
+	}
+
+	"playlooping"
+	{
+		"volume"	"0.42"
+		"pitch"		"100"
+		"wave"		"ambient/levels/citadel/citadel_drone_loop4.wav"
+	}
+
+	"playsoundscape"
+	{
+		"name"		"d3_citadel.util_hits"
+		"volume"	"1.0"
+	}
+
+	"playsoundscape"
+	{
+		"name"		"d3_citadel.util_activity"
+		"volume"	"1.0"
+	}
+
+	"playrandom"
+	{
+		"time"		"30, 60"
+		"volume"	"0.15,0.25"
+		"pitch"		"90,110"
+		"soundlevel"	"0"
+		"rndwave"
+		{
+			"wave"	"*ambient/levels/citadel/citadel_ambient_voices1.wav"
+		}
+	}
+}
+
+
+//Play in strider hall
+
+"be2b.strider_hall"
+{
+
+
+	"playlooping"
+	{
+		"volume"	"0.48"
+		"pitch"		"100"
+		"wave"		"*ambient/levels/citadel/citadel_drone_loop3.wav"
+	}
+
+	"playlooping"
+	{
+		"volume"	"0.15"
+		"wave"		"ambient/levels/citadel/citadel_drone_loop2.wav"
+		"pitch"		"95"
+	}
+
+	"playsoundscape"
+	{
+		"name"		"d3_citadel.util_hits"
+		"volume"	"0.65"
+	}
+}
+
+
+//Play in coolants
+
+"be2b.coolants"
+{
+	"dsp"	"1"
+
+	"playlooping"
+	{
+		"volume"	"0.5"
+		"pitch"		"100"
+		"wave"		"ambient/levels/citadel/field_loop1.wav"
+	}
+
+	"playsoundscape"
+	{
+		"name"		"d3_citadel.util_hits"
+		"volume"	"0.8"
+	}
+
+	// position 0 - stasis field
+
+	"playlooping"
+	{
+		"volume"	"1"
+		"pitch"		"90,110"
+		"attenuation"	"0.99" //Distance falloff
+		"position"	"0"
+		"wave"	"ambient/levels/citadel/extract_loop1.wav"
+	}
+}
+
+
+//Play in coolants after they are destroyed
+
+"be2b.coolants_down"
+{
+	"dsp"	"1"
+
+	"playlooping"
+	{
+		"volume"	"0.5"
+		"pitch"		"100"
+		"wave"		"ambient/levels/citadel/field_loop1.wav"
+	}
+
+	"playsoundscape"
+	{
+		"name"		"d3_citadel.util_hits"
+		"volume"	"0.8"
+	}
+
+}
+
+//Play in airlock
+
+"be2b.airlock"
+{
+	"dsp"	"1"
+
+	// position 0 - ball field
+
+	"playlooping"
+	{
+		"volume"	"1.0"
+		"pitch"		"100"
+		"position"	"0"
+		"soundlevel" "SNDLVL_120db"
+
+		"wave"		")ambient/levels/citadel/field_loop3.wav"
+	}
+
+	"playlooping"
+	{
+		"volume"	"0.25"
+		"pitch"		"100"
+		"wave"		"ambient/levels/citadel/field_loop1.wav"
+	}
+
+	"playsoundscape"
+	{
+		"name"		"d3_citadel.util_activity"
+		"volume"	"1.0"
+	}
+
+	"playsoundscape"
+	{
+		"name"		"d3_citadel.util_pods"
+		"volume"	"0.5"
+	}
+
+	"playsoundscape"
+	{
+		"name"		"d3_citadel.util_hits"
+		"volume"	"0.8"
+	}
+
+}

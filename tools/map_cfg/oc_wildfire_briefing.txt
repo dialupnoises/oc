@@ -1,0 +1,16 @@
+Obsidian Conflict
+
+Map: oc_wildfire
+Author: Tysn
+
+Description:
+
+After being stranded due to the APC's engine failure, your squad must make their way back to the rebel encampment.
+
+
+
+
+
+Special Thanks:
+
+Worfox - Fixing the g36c model

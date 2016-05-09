@@ -1,0 +1,18 @@
+"tysn_merchant_troopers_3"
+{
+	"Name"	"Equipment"
+
+	"Weapons"
+	{
+		"weapon_physcannon" "45"
+		"weapon_healer" "10"
+	}
+	"Items"
+	{
+		"item_healthvial" "1"
+		"item_healthkit" "3"
+		"item_battery" "5"
+		"item_cloak" "100"
+		"item_shield" "100"
+	}
+}

@@ -1,0 +1,4 @@
+"oc_paysan"
+{
+	"MountEpisodeTwo" "1"
+}

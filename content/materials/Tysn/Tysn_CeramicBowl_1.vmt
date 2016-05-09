@@ -1,0 +1,7 @@
+"vertexlitGeneric"
+{
+	"$basetexture" "Tysn/Tysn_CeramicBowl_1"
+	"$surfaceprop" "tile"
+	"$envmap" "env_cubemap"
+	"$envmaptint" "[.4 .4 .4]"
+}

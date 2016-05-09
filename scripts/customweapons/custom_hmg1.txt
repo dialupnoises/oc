@@ -1,0 +1,161 @@
+"WeaponData"
+{
+	// Weapon data is loaded by both the Game and Client DLLs.
+	"printname"			"HMG 1"
+	"viewmodel"			"models/weapons/v_hmg1.mdl"
+	"playermodel"			"models/weapons/w_hmg1.mdl"
+	"anim_prefix"			"ar2"
+	"bucket"			"3"
+	"bucket_position"		"10"
+
+	"clip_size"			"120"
+	"clip2_size"			"-1"
+
+	"default_clip"			"120"
+	"default_clip2"			"-1"
+
+	"primary_ammo"			"AR2"
+	"secondary_ammo"		"None"
+
+	"weight"			"6"
+	"item_flags"			"0"
+
+	"BuiltRightHanded" 		"1"
+	"AllowFlipping" 		"1"
+
+	"csviewmodel"			"0"
+
+
+	// Sounds for the weapon. There is a max of 16 sounds per category (i.e. max 16 "single_shot" sounds)
+	"SoundData"
+	{
+		"special1"		"Weapon_CombineGuard.Special1"
+		"empty"			"Weapon_IRifle.Empty"
+		"double_shot"		"Weapon_IRifle.Single"
+		"reload"		"Weapon_AR2.Reload"
+		"single_shot"		"Weapon_HMG1.Single"
+
+		"single_shot_npc"	"Weapon_AR2.NPC_Single"
+		"reload_npc"		"Weapon_AR2.NPC_Reload"
+		"double_shot_npc"	"Weapon_AR2.NPC_Double"
+	}
+
+	// Weapon Sprite data is loaded by the Client DLL.
+	"TextureData"
+	{
+		"weapon"
+		{
+				"font"		"CustomWeaponIcons"
+				"character"	"H"
+		}
+		"weapon_s"
+		{	
+				"font"		"CustomWeaponIconsSelected"
+				"character"	"H"
+		}
+		"ammo"
+		{
+				"font"		"WeaponIcons"
+				"character"	"u"
+		}
+		"crosshair"
+		{
+				"font"		"Crosshairs"
+				"character"	"Q"
+		}
+		"autoaim"
+		{
+				"file"		"sprites/crosshairs"
+				"x"			"0"
+				"y"			"48"
+				"width"		"24"
+				"height"	"24"
+		}
+	}
+	"Advanced" // only for Weapon_Scripted
+	{
+
+	// **Primary Attack**
+
+		// 0 = none, 1 = Basic Bullet, 2 = Burst, 3 = shotgun, 4 = autoshotgun, 5 = laser, 6 = warp
+		"FireType1"	"1"
+
+
+		// Rate of Weapons Fire ( Not for laser or warp )
+		"FireRate1"	"0.05"
+
+		// Allow a refire as fast as the player can click, Basic Bullet Only.
+		"FastFire1"	"0"
+
+		// Allow Fire Underwater?
+		"FireUnderWater1"	"0"
+
+		// How many bullets in a burst. ( For Burst Weapon Only! )
+		"BurstAmount1"	"0"
+		"BetweenBurstTime1"	"0.05"
+
+		// For Bullet accuracy
+		"FireCone1"		"2" // Starting Value ( 0-20 )
+		"FireConeLerp1"		"1" // Bool
+		"FireConeLerpto1"	"6" // Value to lerp accuracy too ( 0-20 )
+
+	// **Secondary Attack**
+
+		// 0 = none, 1 = Basic Bullet, 2 = Burst, 3 = shotgun, 4 = autoshotgun, 5 = laser, 6 = warp, 8 = scope
+		"FireType2"	"0"
+
+		// Rate of Weapons Fire ( Not for laser or warp )
+		"FireRate2"	"0.1"
+
+		// Allow a refire as fast as the player can click, Basic Bullet Only.
+		"FastFire2"	"0"
+
+		// Allow Fire Underwater?
+		"FireUnderWater2"	"0"
+
+		// How many bullets in a burst. ( For Burst Weapon Only! )
+		"BurstAmount2"	"4"
+		"BetweenBurstTime2"	"0.05"
+
+		// Secondary Fire uses Secondary Ammo Type. If 0, will use primary ammo.
+		"SecondaryAmmoUsed"	"0"
+
+	// **Global Weapon Settings**
+
+		// Number of Recoil Animations, weapon models with ACT_VM_RECOIL animations.
+		// ( Only if a weapon has recoil animations, Not for laser or warp )
+		"NumberOfRecoilAnims"	"1"
+
+		// Shots fired till next recoil animation. ( Only if a weapon has recoil animations )
+		"RecoilIncrementSpeed"	"1"
+
+		// 1 = Pistol, 2 = AR2, 3 = crossbow, 4 = physgun, 5 = shotgun, 6 = smg1
+		// This is the player animation set that will be used on all players you view ingame.
+		"PlayerAnimationSet"	"2"
+
+		//Tracer type ( Bullet weapons only )
+		// 0 = none, 1 = normal, 2 = strider, 3 = ar2, 4 = helicopter, 5 = Gunship, 6 = Gauss, 7 = Airboat
+		"TracerType"	"3"
+
+		//Tracer Frequency
+		"TracerFrequency"	"1"
+
+		// Bullet Impact Effect, 0 = none, 1 = normal, 2 = AR2, 3 = jeep, 4 = Gauss, 5 = airboat, 6 = helicopter
+		"ImpactEffect"	"2"
+
+	// **NPC Weapon Settings**
+
+		// NPCs use a ShotRegulator in code, these settings corrispond with it.
+		"NPCRateofFire"		"0.1"
+		"NPCMinBursts"		"4"
+		"NPCMaxBursts"		"20"
+		"NPCMinRest"		"0.3"
+		"NPCMaxRest"		"0.6"
+
+		// Range the NPC can fire this weapon at, if the player is less than min, the npc cant fire and will try to get a better vantage point.
+		"NPCMinRange1"		"24"
+		"NPCMaxRange1"		"1500"
+		"NPCMinRange2"		"24"
+		"NPCMaxRange2"		"200"
+	}
+}

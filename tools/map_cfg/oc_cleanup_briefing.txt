@@ -1,0 +1,7 @@
+Obsidian Conflict
+
+Map: oc_cleanup
+
+Description:
+You have been captured in a large office building.
+Fight your way out.

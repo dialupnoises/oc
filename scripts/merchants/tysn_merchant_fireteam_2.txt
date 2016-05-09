@@ -1,0 +1,30 @@
+"tysn_merchant_fireteam_2"
+{
+	"Name"	"Arms Dealer"
+
+	"Weapons"
+	{
+		"weapon_357" "10"
+		"weapon_ar2" "25"
+		"weapon_shotgun" "25"
+		"weapon_sniperrifle" "20"
+		"weapon_rpg" "40"
+		"weapon_frag" "5"
+		"weapon_healer" "30"
+	}
+	"Items"
+	{
+		"item_ammo_pistol" "1"
+		"item_box_alyxrounds" "1"
+		"item_ammo_crossbow" "2"
+		"item_ammo_357" "3"
+		"item_ammo_smg1_grenade" "4"
+		"item_ammo_ar2" "3"
+		"item_ammo_ar2_altfire" "9"
+		"item_box_buckshot" "3"
+		"item_box_sniper_rounds" "4"
+		"item_rpg_round" "3"
+		"item_healthkit" "3"
+		"item_battery" "3"
+	}
+}

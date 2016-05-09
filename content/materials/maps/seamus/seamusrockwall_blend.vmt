@@ -1,0 +1,11 @@
+"WorldVertexTransition"
+{
+	"$baseTexture" "maps/seamus/seamusrockwall"
+	"$basetexture2" "maps/seamus/seamussand"
+	"%keywords" "seamus" 
+
+	"$surfaceprop" "rock"
+	"$surfaceprop2" "sand"
+	"$bumpmap" "maps/seamus/seamusrockwall_normal"
+	"$bumpmap2" "maps/seamus/seamussand_normal"
+}

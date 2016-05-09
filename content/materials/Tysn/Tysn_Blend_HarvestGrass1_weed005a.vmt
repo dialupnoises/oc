@@ -1,0 +1,11 @@
+"WorldVertexTransition"
+{
+	"$basetexture" "nature/seaweed002a"
+	"$basetexture2" "Tysn/Tysn_Harvest_Grass_1"
+        	"$basetexturetransform" "center .5 .5 scale 1 1 rotate 0  translate 0 0"
+        	"$basetexturetransform2" "center .5 .5 scale 1 1 rotate 0 translate 0 0"
+	//"%detailtype" "canal_reeds"
+	"$bumpmap" "nature/seaweed002a_normal"
+	"$surfaceprop" "dirt"
+	"%keywords" "Tysn"
+}

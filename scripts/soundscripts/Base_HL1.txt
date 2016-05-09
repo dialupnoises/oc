@@ -1,0 +1,16 @@
+SoundCache
+{
+	"precache_file"		"scripts/game_sounds_hl1.txt"
+	"precache_file"		"scripts/game_sounds_music.txt"
+	"precache_file"		"scripts/npc_sounds_agrunt.txt"
+	"precache_file"		"scripts/npc_sounds_roach.txt"
+	"precache_file"		"scripts/npc_sounds_scientist.txt"
+	"precache_file"		"scripts/npc_sounds_bigmomma.txt"
+	"precache_file"		"scripts/npc_sounds_assassin.txt"
+	"precache_file"		"scripts/npc_sounds_gargantua.txt"
+	"precache_file"		"scripts/npc_sounds_snark.txt"
+	"precache_file"		"scripts/npc_sounds_tentacle.txt"
+	"precache_file"		"scripts/npc_sounds_controller.txt"
+	"precache_file"		"scripts/npc_sounds_nihilanth.txt"
+	"precache_file"		"scripts/npc_sounds_hl1turret.txt"
+}

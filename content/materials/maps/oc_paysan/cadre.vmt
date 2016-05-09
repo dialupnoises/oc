@@ -1,0 +1,7 @@
+"lightmappedGeneric"
+{
+	"$baseTexture" "maps/oc_paysan/cadre"
+	"$bumpmap" "maps/oc_paysan/cadre_normal"
+	"$surfaceprop" "wood"
+	"%keywords" "obsidian" 
+}

@@ -1,0 +1,294 @@
+ep1_c17_02a
+{
+    Remove
+    {
+        ClassName
+        {
+            "info_player_start" {}
+        }
+        TargetName
+        {
+            "brush_fall" {}
+            "clip_combineshieldwall3" {}
+            "brush_combineshieldwall3" {}
+        }
+        Origin
+        {
+            "5280 6448 -2517.5" {}
+            "5332 6460 -2452" {}
+            "5556 6460 -2452" {}
+        }
+    }
+    Add
+    {
+        "logic_auto"
+        {
+            "spawnflags" "1"
+            "OnMapSpawn" "global_newgame_template_base_items,ForceSpawn,,0.5,-1"
+            "OnMapSpawn" "alyx,Kill,,0.1,-1"
+            "OnMapSpawn" "door_startmap,Kill,,0.1,-1"
+            "OnMapSpawn" "yumyumyum,Eat,,0.8,-1"
+            "OnMapSpawn" "alyx,SetDamageFilter,filter_NoDamage,1,-1"
+            "origin" "5280 6448 -2517.5"
+        }
+        "prop_door_rotating"
+        {
+            "ajarangles" "0 0 0"
+            "angles" "0 0 0"
+            "axis" "5582 6417 -2494, 5582 6417 -2494"
+            "disableshadows" "1"
+            "distance" "90"
+            "hardware" "1"
+            "model" "models/props_c17/door01_left.mdl"
+            "returndelay" "-1"
+            "skin" "8"
+            "spawnflags" "10240"
+            "speed" "100"
+            "origin" "5582 6417 -2494"
+        }
+        "prop_door_rotating"
+        {
+            "ajarangles" "0 0 0"
+            "angles" "0 180 0"
+            "axis" "5582 6511 -2494, 5582 6511 -2494"
+            "disableshadows" "1"
+            "distance" "90"
+            "hardware" "1"
+            "model" "models/props_c17/door01_left.mdl"
+            "returndelay" "-1"
+            "skin" "8"
+            "spawnflags" "10240"
+            "speed" "100"
+            "origin" "5582 6511 -2494"
+        }
+        "point_weapon_eater"
+        {
+            "EatRadius" "50"
+            "targetname" "yumyumyum"
+            "origin" "5283 6475 -2505"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "targetname" "ep1_c17_02a_spawn1"
+            "origin" "5462 6371 -2513"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "targetname" "ep1_c17_02a_spawn1"
+            "origin" "5265 6371 -2513"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "targetname" "ep1_c17_02a_spawn1"
+            "origin" "5095 6371 -2513"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "targetname" "ep1_c17_02a_spawn1"
+            "origin" "5096 6552 -2513"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "targetname" "ep1_c17_02a_spawn1"
+            "origin" "5463 6552 -2513"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "targetname" "ep1_c17_02a_spawn1"
+            "origin" "5266 6552 -2513"
+        }
+        "weapon_rpg"
+        {
+            "angles" "0 0 90"
+            "fademindist" "-1"
+            "fadescale" "1"
+            "origin" "2436 8491 -2357"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "StartDisabled" "1"
+            "targetname" "ep1_c17_02a_spawn2"
+            "origin" "2454 7768 -2532"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "StartDisabled" "1"
+            "targetname" "ep1_c17_02a_spawn2"
+            "origin" "2335 7767 -2532"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "StartDisabled" "1"
+            "targetname" "ep1_c17_02a_spawn2"
+            "origin" "2590 7767 -2532"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "StartDisabled" "1"
+            "targetname" "ep1_c17_02a_spawn2"
+            "origin" "1813 7767 -2532"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "StartDisabled" "1"
+            "targetname" "ep1_c17_02a_spawn2"
+            "origin" "1932 7768 -2532"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "StartDisabled" "1"
+            "targetname" "ep1_c17_02a_spawn2"
+            "origin" "2068 7767 -2532"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "StartDisabled" "1"
+            "targetname" "ep1_c17_02a_spawn3"
+            "origin" "-756 8689 -2829"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "StartDisabled" "1"
+            "targetname" "ep1_c17_02a_spawn3"
+            "origin" "-756 8761 -2829"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "StartDisabled" "1"
+            "targetname" "ep1_c17_02a_spawn3"
+            "origin" "-756 8848 -2829"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "StartDisabled" "1"
+            "targetname" "ep1_c17_02a_spawn3"
+            "origin" "-756 8923 -2829"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "StartDisabled" "1"
+            "targetname" "ep1_c17_02a_spawn4"
+            "origin" "306 8845 -2711"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "StartDisabled" "1"
+            "targetname" "ep1_c17_02a_spawn4"
+            "origin" "306 8766 -2711"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "StartDisabled" "1"
+            "targetname" "ep1_c17_02a_spawn4"
+            "origin" "306 8677 -2711"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "StartDisabled" "1"
+            "targetname" "ep1_c17_02a_spawn4"
+            "origin" "305 8568 -2711"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "StartDisabled" "1"
+            "targetname" "ep1_c17_02a_spawn4"
+            "origin" "180 8572 -2711"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "StartDisabled" "1"
+            "targetname" "ep1_c17_02a_spawn4"
+            "origin" "21 8572 -2711"
+        }
+        "point_trigger"
+        {
+            "spawnflags" "1"
+            "TriggerOnce" "1"
+            "TriggerRadius" "51"
+            "OnStartTouch" "ep1_c17_02a_spawn3,Disable,,0,-1"
+            "OnStartTouch" "ep1_c17_02a_spawn4,Enable,,0,-1"
+            "origin" "291 8934 -2650"
+        }
+        "filter_multi"
+        {
+            "Negated" "1"
+            "targetname" "filter_NoDamage"
+            "origin" "5389 6560 -2540"
+        }
+        "point_trigger"
+        {
+            "spawnflags" "1"
+            "TriggerOnce" "1"
+            "TriggerRadius" "128"
+            "OnStartTouch" "ep1_c17_02a_spawn2,Enable,,0,-1"
+            "OnStartTouch" "ep1_c17_02a_spawn1,Disable,,0,-1"
+            "origin" "2245 7834 -2361"
+        }
+    }
+    Modify
+    {
+        ClassName
+        {
+            "worldspawn"
+            {
+               "disableareaportals" "1"
+            }
+        }
+        TargetName
+        {
+            "breakable_floor"
+            {
+                "OnBreak" "ep1_c17_02a_spawn2,Disable,,0,-1"
+                "OnBreak" "ep1_c17_02a_spawn3,Enable,,0,-1"
+            }
+        }
+        Origin
+        {
+            "-2702 8208 -2748"
+            {
+                "nosmooth" "1"
+            }
+            "4800 6468 -2460"
+            {
+                "OnTrigger" "follow_alyx,Activate,,0.5,-1"
+                "OnTrigger" "follow_alyx,Deactivate,,0,-1"
+            }
+        }
+    }
+SpawnItems
+{
+    "weapon_physcannon" "1"
+    "weapon_healer" "1"
+    "weapon_pistol" "1"
+    "weapon_shotgun" "1"
+    "item_ammo_pistol_large" "1"
+    "item_box_buckshot" "2"
+    "weapon_smg1" "1"
+    "item_ammo_smg1_large" "1"
+    "weapon_ar2" "1"
+    "item_ammo_ar2_large" "1"
+    "weapon_crossbow" "1"
+}
+}

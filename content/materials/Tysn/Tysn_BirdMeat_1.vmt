@@ -1,0 +1,7 @@
+"vertexlitGeneric"
+{
+	"$basetexture" "Tysn/Tysn_BirdMeat_1"
+	"$surfaceprop" "flesh"
+	"$envmap" "env_cubemap"
+	"$envmaptint" "[.25 .25 .25]"
+}

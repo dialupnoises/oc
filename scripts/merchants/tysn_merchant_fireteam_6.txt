@@ -1,0 +1,21 @@
+"tysn_merchant_fireteam_6"
+{
+	"Name"	"Hermit's Wares"
+
+	"Weapons"
+	{
+		"weapon_357" "10"
+		"weapon_crossbow" "20"
+		"weapon_sniperrifle" "35"
+		"weapon_healer" "15"
+	}
+	"Items"
+	{
+		"item_ammo_357"	"3"
+		"item_box_alyxrounds" "1"
+		"item_ammo_crossbow" "3"
+		"item_box_sniper_rounds" "4"
+		"item_healthvial" "1"
+
+	}
+}

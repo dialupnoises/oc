@@ -1,0 +1,189 @@
+// mp5k
+
+WeaponData
+{
+	// Weapon data is loaded by both the Game and Client DLLs.
+	"printname"	"mp5k"
+	"viewmodel"				"models/weapons/v_mp5k.mdl"
+	"playermodel"			"models/weapons/w_mp5k.mdl"
+	"anim_prefix"			"smg2"
+	"bucket"			"2"
+	"bucket_position"		"6"
+
+	"clip_size"				"20"
+	"clip2_size"			"-1"
+
+
+	"default_clip"			"20"
+	"default_clip2"			"-1"
+
+	"primary_ammo"			"SMG1"
+	"secondary_ammo"		"None" 
+
+	"weight"				"3"
+	"item_flags"			"0"
+	
+	"ironsightoffset"
+	{
+		"x"   "-14.00"
+		"y"   "-6.47"
+		"z"   "3.10"
+   	}
+
+	// Sounds for the weapon. There is a max of 16 sounds per category (i.e. max 16 "single_shot" sounds)
+	SoundData
+	{
+		"reload"			"Weapon_SMG1.Reload"
+		"reload_npc"			"Weapon_SMG1.NPC_Reload"
+		"empty"				"Weapon_SMG1.Empty"
+		"single_shot"			"Weapon_mp5k.Single"
+		"single_shot_npc"		"Weapon_mp5k.Single"
+		"special1"			"Weapon_SMG1.Special1"
+		"special2"			"Weapon_SMG1.Special2"
+		"double_shot"			"Weapon_SMG1.Double"
+		"burst"				"Weapon_mp5k.Burst"
+	}
+
+	// Weapon Sprite data is loaded by the Client DLL.
+	TextureData
+	{
+		"weapon"
+		{
+				"file"		"sprites/w_icons1b"
+				"x"			"128"
+				"y"			"192"
+				"width"		"128"
+				"height"	"64"
+		}
+		"weapon_s"
+		{	
+				"file"		"sprites/w_icons1b"
+				"x"			"128"
+				"y"			"192"
+				"width"		"128"
+				"height"	"64"
+		}
+		"ammo"
+		{
+				"font"		"WeaponIcons"
+				"character"	"r"
+		}
+		"ammo2"
+		{
+				"font"		"WeaponIcons"
+				"character"	"t"
+		}
+		"crosshair"
+		{
+				"font"		"Crosshairs"
+				"character"	"Q"
+		}
+		"autoaim"
+		{
+				"file"		"sprites/crosshairs"
+				"x"			"0"
+				"y"			"48"
+				"width"		"24"
+				"height"	"24"
+		}
+	}
+	"Advanced" // only for Weapon_Scripted
+	{
+
+	// **Primary Attack**
+
+		// 0 = none, 1 = Basic Bullet, 2 = Burst, 3 = shotgun, 4 = autoshotgun, 5 = laser, 6 = warp
+		"FireType1"	"1"
+
+
+		// Rate of Weapons Fire ( Not for laser or warp )
+		"FireRate1"	"0.1"
+
+		// Allow a refire as fast as the player can click, Basic Bullet Only.
+		"FastFire1"	"0"
+
+		// Allow Fire Underwater?
+		"FireUnderWater1"	"0"
+
+		// How many bullets in a burst. ( For Burst Weapon Only! )
+		"BurstAmount1"	"0"
+		"BetweenBurstTime1"	"0.11"
+
+		// For Bullet accuracy
+		"FireCone1"		"2" // Starting Value ( 0-20 )
+		"FireConeLerp1"		"1" // Bool
+		"FireConeLerpto1"	"2.5" // Value to lerp accuracy too ( 0-20 )
+
+	// **Secondary Attack**
+
+		// 0 = none, 1 = Basic Bullet, 2 = Burst, 3 = shotgun, 4 = autoshotgun, 5 = laser, 6 = warp, 7 = scope, 8 = grenade
+		"FireType2"	"0"
+
+		// Rate of Weapons Fire ( Not for laser or warp )
+		"FireRate2"	"1.0"
+
+		// Allow a refire as fast as the player can click, Basic Bullet Only.
+		"FastFire2"	"0"
+
+		// Allow Fire Underwater?
+		"FireUnderWater2"	"0"
+
+		// How many bullets in a burst. ( For Burst Weapon Only! )
+		"BurstAmount2"	"4"
+		"BetweenBurstTime2"	"0.1"
+
+		// Secondary Fire uses Secondary Ammo Type. If 0, will use primary ammo.
+		"SecondaryAmmoUsed"	"0"
+
+	// **Global Weapon Settings**
+
+		// Number of Recoil Animations, weapon models with ACT_VM_RECOIL animations.
+		// ( Only if a weapon has recoil animations, Not for laser or warp )
+		"NumberOfRecoilAnims"	"3"
+
+		// Shots fired till next recoil animation. ( Only if a weapon has recoil animations )
+		"RecoilIncrementSpeed"	"3"
+
+		// 1 = Pistol, 2 = AR2, 3 = crossbow, 4 = physgun, 5 = shotgun, 6 = smg1
+		// This is the player animation set that will be used on all players you view ingame.
+		"PlayerAnimationSet"	"2"
+
+		// Grenade Damage
+		"GrenadeDamage"	"100.0"
+
+		// Grenade Radius
+		"GrenadeRadius"	"250.0"
+
+		//Tracer type ( Bullet weapons only )
+		// 0 = none, 1 = normal, 2 = strider, 3 = ar2, 4 = helicopter, 5 = Gunship, 6 = Gauss, 7 = Airboat
+		"TracerType"	"1"
+
+		//Tracer Frequency
+		"TracerFrequency"	"2"
+
+		// Bullet Impact Effect, 0 = none, 1 = normal, 2 = AR2, 3 = jeep, 4 = Gauss, 5 = airboat, 6 = helicopter
+		"ImpactEffect"	"1"
+
+		// Sniper Scope Settings
+		"UseScopedFireCone"	"1"
+		"ScopedFireCone"	"0"
+		"ScopedColorR"		"90"
+		"ScopedColorG"		"241"
+		"ScopedColorB"		"122"
+
+	// **NPC Weapon Settings**
+
+		// NPCs use a ShotRegulator in code, these settings corrispond with it.
+		"NPCRateofFire"		"0.2"
+		"NPCMinBursts"		"1"
+		"NPCMaxBursts"		"4"
+		"NPCMinRest"		"0.3"
+		"NPCMaxRest"		"0.6"
+
+		// Range the NPC can fire this weapon at, if the player is less than min, the npc cant fire and will try to get a better vantage point.
+		"NPCMinRange1"		"24"
+		"NPCMaxRange1"		"1500"
+		"NPCMinRange2"		"24"
+		"NPCMaxRange2"		"200"
+	}
+}

@@ -1,0 +1,34 @@
+"tysn_merchant_wildfire_1"
+{
+	"Name"	"Garrison Outfitter"
+
+	"Weapons"
+	{
+		"weapon_pistol" "15"
+		"weapon_alyxgun" "20"
+		"weapon_357" "75"
+		"weapon_uzi" "30"
+		"weapon_shotgun" "40"
+		"weapon_ar2" "50"
+		"weapon_sniperrifle" "125"
+		"weapon_rpg" "90"
+		"weapon_frag" "2"
+		"weapon_slam" "3"
+		"weapon_healer" "5"
+	}
+	"Items"
+	{
+		"item_ammo_pistol" "1"
+		"item_box_alyxrounds" "1"
+		"item_ammo_357" "2"
+		"item_ammo_smg1" "1"
+		"item_ammo_smg1_grenade" "3"
+		"item_box_buckshot" "2"
+		"item_ammo_ar2" "1"
+		"item_ammo_ar2_altfire" "3"
+		"item_box_sniper_rounds" "3"
+		"item_rpg_round" "1"
+		"item_healthkit" "1"
+		"item_battery" "2"
+	}
+}

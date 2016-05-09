@@ -1,0 +1,107 @@
+c3a1a
+{
+    Remove
+    {
+        ClassName
+        {
+            "info_player_start" {}
+        }
+    }
+    Add
+    {
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "c3a1a_starts"
+            "origin" "-1954 1325 277"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "c3a1a_starts"
+            "origin" "-1952 1244 277"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "c3a1a_starts"
+            "origin" "-1993 1211 277"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "c3a1a_starts"
+            "origin" "-1995 1258 277"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "c3a1a_starts"
+            "origin" "-1996 1311 277"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "c3a1a_starts"
+            "origin" "-1994 1364 277"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "c3a1a_starts"
+            "origin" "-2039 1383 277"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "c3a1a_starts"
+            "origin" "-2037 1307 277"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "c3a1a_starts"
+            "origin" "-2039 1229 277"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "c3a1a_starts"
+            "origin" "-2038 1169 277"
+        }
+    }
+    Modify
+    {
+        ClassName
+        {
+            "worldspawn"
+            {
+                "mapversion" "4"
+            }
+        }
+        TargetName
+        {
+            "changetoc1a2"
+            {
+                "nosmooth" "1"
+                "spawngroup" "c3a1b_starts"
+                "transitionradius" "44"
+            }
+        }
+        Origin
+        {
+            "-2064 1284 720"
+            {
+                "spawngroup" "c3a1_starts2"
+            }
+        }
+    }
+SpawnItems
+{
+    "weapon_crowbar" "1"
+    "weapon_smg1" "1"
+    "item_battery" "1"
+    "item_ammo_smg1" "3"
+    "weapon_healer" "1"
+}
+}

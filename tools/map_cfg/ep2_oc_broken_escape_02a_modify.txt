@@ -1,0 +1,14 @@
+ep2_oc_broken_escape_02a
+{
+SpawnItems
+{
+    "weapon_smg1" "1"
+    "weapon_crowbar" "1"
+    "weapon_pistol" "1"
+    "weapon_shotgun" "1"
+    "item_box_buckshot" "2"
+    "item_ammo_smg1_large" "1"
+    "item_ammo_pistol_large" "1"
+    "weapon_healer" "1"
+}
+}

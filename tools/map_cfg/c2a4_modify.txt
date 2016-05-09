@@ -1,0 +1,117 @@
+c2a4
+{
+    Remove
+    {
+        ClassName
+        {
+            "info_player_start" {}
+            "logic_auto" {}
+        }
+        TargetName
+        {
+            "player_spawn_template" {}
+        }
+    }
+    Add
+    {
+        "logic_auto"
+        {
+            "spawnflags" "1"
+            "OnNewGame" "c2a4_newgame,Enable,,0,-1"
+            "OnNewGame" "c2a4_starts,Disable,,0,-1"
+            "origin" "-2837.56 127 162"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "StartDisabled" "1"
+            "targetname" "c2a4_newgame"
+            "origin" "-2623.73 125 149"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "StartDisabled" "0"
+            "targetname" "c2a4_starts"
+            "origin" "-2561 128 149"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "StartDisabled" "1"
+            "targetname" "c2a4_newgame"
+            "origin" "-2499.73 125 149"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "StartDisabled" "0"
+            "targetname" "c2a4_starts"
+            "origin" "-2437 128 149"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "StartDisabled" "1"
+            "targetname" "c2a4_newgame"
+            "origin" "-2375.73 126 149"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "StartDisabled" "0"
+            "targetname" "c2a4_starts"
+            "origin" "-2313 129 149"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "StartDisabled" "1"
+            "targetname" "c2a4_newgame"
+            "origin" "-2252.73 126 149"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "StartDisabled" "0"
+            "targetname" "c2a4_starts"
+            "origin" "-2190 129 149"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "StartDisabled" "1"
+            "targetname" "c2a4_newgame"
+            "origin" "-2128.73 128 149"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "StartDisabled" "0"
+            "targetname" "c2a4_starts"
+            "origin" "-2066 131 149"
+        }
+    }
+    Modify
+    {
+        ClassName
+        {
+            "worldspawn"
+            {
+                "mapversion" "4"
+            }
+        }
+        Origin
+        {
+            "-182 736 138"
+            {
+                "spawnflags" "0"
+                "spawngroup" "c2a4a_starts"
+            }
+        }
+    }
+SpawnItems
+{
+    "weapon_crowbar" "1"
+}
+}

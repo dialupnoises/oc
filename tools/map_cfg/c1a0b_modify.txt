@@ -1,0 +1,70 @@
+// File was created for use in Obsidian Conflict ONLY!
+c1a0b
+{
+	SpawnItems {}
+
+	Add
+	{
+		"info_player_deathmatch"
+		{
+			"angles" "0 270 0"
+			"StartDisabled" "0"
+			"origin" "960 1016 -143"
+		}
+		
+		"info_player_deathmatch"
+		{
+			"angles" "0 270 0"
+			"StartDisabled" "0"
+			"origin" "912 1016 -143"
+		}
+		
+		"info_player_deathmatch"
+		{
+			"angles" "0 270 0"
+			"StartDisabled" "0"
+			"origin" "864 1016 -143"
+		}
+		
+		"info_player_deathmatch"
+		{
+			"angles" "0 270 0"
+			"StartDisabled" "0"
+			"origin" "864 968 -143"
+		}
+		
+		"info_player_deathmatch"
+		{
+			"angles" "0 270 0"
+			"StartDisabled" "0"
+			"origin" "912 968 -143"
+		}
+		
+		"info_player_deathmatch"
+		{
+			"angles" "0 270 0"
+			"StartDisabled" "0"
+			"origin" "960 968 -143"
+		}
+	}
+	
+	Modify
+	{
+		Classname
+		{
+			"trigger_changelevel"
+			{
+				"transitionradius" "600"
+			}
+		}
+
+		// Trigger_changelevel that goes back to c1a0a
+		Origin
+		{
+			"576 984 -64"
+			{
+				"spawnflags" "2"
+			}
+		}
+	}
+}

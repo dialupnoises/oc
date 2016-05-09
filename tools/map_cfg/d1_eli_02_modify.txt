@@ -1,0 +1,110 @@
+d1_eli_02
+{
+    Remove
+    {
+        ClassName
+        {
+            "info_player_start" {}
+            "logic_auto" {}
+        }
+        TargetName
+        {
+            "brush_doorAirlock_PClip_2" {}
+            "trigger_RavenDoor_Drop" {}
+        }
+    }
+    Add
+    {
+        "logic_auto"
+        {
+            "spawnflags" "1"
+            "OnNewGame" "spawn_alyx,Spawn,,0,-1"
+            "OnMapSpawn" "alyx,StartScripting,,0.2,-1"
+            "OnMapSpawn" "ravenDoor_0,Kill,,0,-1"
+            "origin" "-504.462 1091.18 -2660"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "eli_02_spawn1"
+            "origin" "-530 941 -2687"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "eli_02_spawn1"
+            "origin" "-530 1030 -2687"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "eli_02_spawn1"
+            "origin" "-530 1113 -2687"
+        }
+        "logic_timer"
+        {
+            "RefireTime" "0.50"
+            "spawnflags" "0"
+            "StartDisabled" "1"
+            "targetname" "timer_open_doors"
+            "OnTimer" "airlock_south_door_exitb,Open,,0,-1"
+            "OnTimer" "airlock_south_door_exit,Open,,0,-1"
+            "origin" "-687 971.468 -2579.95"
+        }
+        "game_player_equip"
+        {
+            "spawnflags" "0"
+            "targetname" "give_player_gravgun"
+            "weapon_physcannon" "1"
+            "origin" "-403.908 739.915 -2679"
+        }
+        "point_trigger"
+        {
+            "spawnflags" "1"
+            "StartDisabled" "1"
+            "targetname" "gravgun_trigger"
+            "TriggerRadius" "711"
+            "OnStartTouch" "give_player_gravgun,EquipAll,,0,-1"
+            "origin" "-615 103 -2679"
+        }
+    }
+    Modify
+    {
+        ClassName
+        {
+            "worldspawn"
+            {
+                "disableareaportals" "1"
+            }
+        }
+        TargetName
+        {
+            "trigger_Get_physgun"
+            {
+                "OnTrigger" "gravgun_trigger,Enable,,0,-1"
+            }
+            "lcs_alyxtour04b"
+            {
+                "OnTrigger1" "timer_open_doors,Enable,,0,-1"
+            }
+        }
+        Origin
+        {
+            "-3504 4048 -1604"
+            {
+                "nosmooth" "1"
+                "spawngroup" "town_01_spawn1"
+            }
+        }
+    }
+SpawnItems
+{
+    "item_ammo_smg1_large" "1"
+    "weapon_pistol" "1"
+    "weapon_smg1" "1"
+    "weapon_357" "1"
+    "item_ammo_pistol_large" "1"
+    "weapon_crowbar" "1"
+    "weapon_healer" "1"
+}
+}

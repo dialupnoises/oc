@@ -1,0 +1,7 @@
+"LightmappedGeneric"
+{
+	"$basetexture" "Tysn/Tysn_Tree_2_Shadow"
+	"$translucent" "1"
+	"$decal" "1"
+	"$decalscale" ".25"
+}

@@ -1,0 +1,170 @@
+d1_trainstation_04
+{
+    Remove
+    {
+        ClassName
+        {
+            "info_player_start" {}
+            "trigger_teleport" {}
+        }
+        TargetName
+        {
+            "window_player_clip" {}
+        }
+        Origin
+        {
+            "-3230 -3466 506" {}
+            "-3366 -3592 508" {}
+            "-7818 -4128 -176" {}
+        }
+    }
+    Add
+    {
+        "point_trigger"
+        {
+            "spawnflags" "1"
+            "StartDisabled" "1"
+            "targetname" "trigger_knockout_teleport"
+            "TriggerOnce" "1"
+            "TriggerRadius" "770"
+            "OnStartTouch" "blackout,Kill,,0.2,-1"
+            "OnStartTouch" "blackout_viewcontroller,Kill,,0.2,-1"
+            "OnStartTouch" "alyx,StartScripting,,0,-1"
+            "OnStartTouch" "blackout_viewcontroller,Disable,,0,-1"
+            "origin" "-7236 -3990 529"
+        }
+        "info_teleport_destination"
+        {
+            "angles" "0 180 0"
+            "targetname" "teleport_down_target"
+            "origin" "-7344 -3964 -254"
+        }
+        "info_teleport_destination"
+        {
+            "angles" "0 180 0"
+            "targetname" "teleport_down_target"
+            "origin" "-7344 -4040 -254"
+        }
+        "info_teleport_destination"
+        {
+            "angles" "0 270 0"
+            "targetname" "teleport_down_target"
+            "origin" "-7560 -3908 -254"
+        }
+        "info_teleport_destination"
+        {
+            "angles" "0 90 0"
+            "targetname" "teleport_down_target"
+            "origin" "-7522 -4166 -254"
+        }
+        "info_teleport_destination"
+        {
+            "angles" "0 90 0"
+            "targetname" "teleport_down_target"
+            "origin" "-7608 -4178 -254"
+        }
+        "info_teleport_destination"
+        {
+            "angles" "0 90 0"
+            "targetname" "teleport_down_target"
+            "origin" "-7446 -4146 -254"
+        }
+        "point_teleport"
+        {
+            "angles" "0 0 0"
+            "radius" "2188"
+            "spawnflags" "2048"
+            "targetname" "teleport_down"
+            "TeleportDestination" "teleport_down_target"
+            "origin" "-5014 -4370 805.136"
+        }
+        "point_teleport"
+        {
+            "angles" "0 0 0"
+            "radius" "578"
+            "spawnflags" "2048"
+            "targetname" "teleport_down"
+            "TeleportDestination" "teleport_down_target"
+            "origin" "-7266 -4140 578"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "trainstation_04_spawn1"
+            "origin" "-3128 -3402 565"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "trainstation_04_spawn1"
+            "origin" "-3128 -3488 565"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "trainstation_04_spawn1"
+            "origin" "-3128 -3578 565"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "trainstation_04_spawn1"
+            "origin" "-3128 -3642 565"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "targetname" "trainstation_04_spawn1"
+            "origin" "-3244 -3400 566"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "targetname" "trainstation_04_spawn1"
+            "origin" "-3336 -3400 566"
+        }
+        "point_trigger"
+        {
+            "spawnflags" "2"
+            "targetname" "trigger_pclip_secret_door"
+            "TriggerOnce" "1"
+            "TriggerRadius" "166"
+            "OnStartTouch" "pclip_secret_door,Kill,,0,-1"
+            "origin" "-7912 -4130 -247"
+        }
+    }
+    Modify
+    {
+        ClassName
+        {
+            "worldspawn"
+            {
+                "disableareaportals" "1"
+            }
+        }
+        TargetName
+        {
+            "elevator_path_3"
+            {
+                "OnPass" "teleport_down,Enable,,0,-1"
+            }
+        }
+        Origin
+        {
+            "-7992 -4128 -176"
+            {
+                "spawngroup" "trainstation_05_spawn1"
+                "transitionradius" "222"
+            }
+            "-3464 -3584 624"
+            {
+                "OnTrigger" "music,Kill,,0.1,1"
+                "OnTrigger" "music,PlaySound,,0,1"
+            }
+        }
+    }
+SpawnItems
+{
+    "weapon_healer" "1"
+}
+}

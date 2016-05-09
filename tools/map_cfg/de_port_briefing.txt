@@ -1,0 +1,8 @@
+Obsidian Conflict
+
+Map: de_port (mapadded mini mission)
+Mapadd Script by W0rf0x (w0rf0x@obsidianconflict.net)
+
+Description:
+
+Your mission is to get to the ship and secure it to escape from the combine.

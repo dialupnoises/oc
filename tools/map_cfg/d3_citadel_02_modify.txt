@@ -1,0 +1,143 @@
+d3_citadel_02
+{
+    Remove
+    {
+        ClassName
+        {
+            "info_player_start" {}
+            "trigger_changelevel" {}
+        }
+        TargetName
+        {
+            "citadel_fade_in" {}
+            "logic_podtrains_L_start_1" {}
+        }
+        Origin
+        {
+            "-6272 6592 2624" {}
+        }
+    }
+    Add
+    {
+        "logic_auto"
+        {
+            "spawnflags" "1"
+            "OnMapSpawn" "playerpod1_camera,SetParent,pod_player,0,-1"
+            "OnMapSpawn" "playerpod1_camera,SetParentAttachment,vehicle_driver_eyes,0.2,-1"
+            "origin" "-6272 6592 2624"
+        }
+        "logic_relay"
+        {
+            "spawnflags" "2"
+            "targetname" "logic_podtrains_L_start_1"
+            "StartDisabled" "0"
+            "OnTrigger" "podtrain_05,StartForward,,8,-1"
+            "OnTrigger" "podtrain_04,StartForward,,6,-1"
+            "OnTrigger" "podtrain_03,StartForward,,5,-1"
+            "OnTrigger" "podtrain_02,StartForward,,0,-1"
+            "OnTrigger" "logic_podtrains_L_control_1,Trigger,,14,-1"
+            "OnTrigger" "podTrain_L_4,StartForward,,5,-1"
+            "OnTrigger" "podTrain_U_1,StartForward,,8,-1"
+            "OnTrigger" "podTrain_U_3,StartForward,,8,-1"
+            "OnTrigger" "logic_podtrains_U_control_1,Trigger,,20,-1"
+            "OnTrigger" "podtrain_player,StartForward,,3,-1"
+            "OnTrigger" "pod_player,Lock,,0.4,-1"
+            "origin" "-2708 5116 2836.33"
+        }
+        "point_viewcontrol"
+        {
+            "angles" "15 0 0"
+            "wait" "10"
+            "spawnflags" "44"
+            "acceleration" "500"
+            "deceleration" "500"
+            "targetname" "playerpod1_camera"
+            "origin" "-6482 6718 2692"
+        }
+        "point_servercommand"
+        {
+            "targetname" "mapchange"
+            "origin" "3850 13369.1 4408.74"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "origin" "-6008 6818 2828"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "origin" "-6116 6818 2828"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "origin" "-6333 6821 2828"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "origin" "-5917.76 6494.59 2828"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "origin" "-6043 6494 2828"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "origin" "-6218.66 6484.42 2828"
+        }
+        "logic_timer"
+        {
+            "targetname" "timer_enable_camera"
+            "StartDisabled" "1"
+            "RefireTime" "1"
+            "OnTimer" "playerpod1_camera,Enable,,0,-1"
+            "origin" "-6353.85 6639.29 2624.77"
+        }
+        "point_trigger"
+        {
+            "spawnflags" "1"
+            "TriggerOnce" "1"
+            "TriggerRadius" "442"
+            "OnStartTouch" "podride_song,PlaySound,,1,1"
+            "OnStartTouch" "playerpod1_camera,Enable,,0.3,1"
+            "OnStartTouch" "logic_podtrains_L_start_1,Trigger,,0.2,1"
+            "OnStartTouch" "timer_enable_camera,Enable,,0,1"
+            "origin" "-6110 6651 2868"
+        }
+    }
+    Modify
+    {
+        ClassName
+        {
+            "worldspawn"
+            {
+                "disableareaportals" "1"
+            }
+        }
+        TargetName
+        {
+            "pod_player37"
+            {
+                "OnPass" "mapchange,Command,changelevel d3_citadel_03,3,-1"
+                "OnPass" "playerpod1_camera,Disable,,2.5,-1"
+                "OnPass" "timer_enable_camera,Kill,,0,-1"
+            }
+        }
+        Origin
+        {
+            "139.95 5532 2416"
+            {
+                "spawnflags" "13"
+            }
+        }
+    }
+SpawnItems
+{
+    "weapon_physcannon" "1"
+    "weapon_healer" "1"
+}
+}

@@ -1,0 +1,140 @@
+// File was created for use in Obsidian Conflict ONLY!
+c1a0e
+{
+	SpawnItems {}
+
+	Remove
+	{
+		Targetname
+		{
+			"portal_begin_mm" {}
+		}
+
+		Origin
+		{
+			"1566 -89 -285" {}
+		}
+	}
+
+	Add
+	{
+		"info_player_deathmatch"
+		{
+			"angles" "0 90 0"
+			"StartDisabled" "0"
+			"origin" "1312 -344 -359"
+		}
+		
+		"info_player_deathmatch"
+		{
+			"angles" "0 90 0"
+			"StartDisabled" "0"
+			"origin" "1360 -344 -359"
+		}
+		
+		"info_player_deathmatch"
+		{
+			"angles" "0 270 0"
+			"StartDisabled" "0"
+			"origin" "1360 -64 -359"
+		}
+		
+		"info_player_deathmatch"
+		{
+			"angles" "0 270 0"
+			"StartDisabled" "0"
+			"origin" "1312 -64 -359"
+		}
+		
+		"info_player_deathmatch"
+		{
+			"angles" "0 270 0"
+			"StartDisabled" "0"
+			"origin" "1336 -104 -359"
+		}
+		
+		"info_player_deathmatch"
+		{
+			"angles" "0 90 0"
+			"StartDisabled" "0"
+			"origin" "1336 -304 -359"
+		}
+		
+		"point_servercommand"
+		{
+			"targetname" "playercollide_command"
+			"origin" "1496 608 -288"
+		}
+
+		"trigger_once"
+		{
+			"model" "*70"
+			"origin" "1566 -89 -285"
+			"spawnflags" "1"
+			"style" "32"
+			"OnStartTouch" "airlock,Trigger,,1,-1"
+			"OnStartTouch" "protorender,Activate,,0,-1"
+		}
+
+		"multi_manager"
+		{
+			"origin" "1145 692 -308"
+			"targetname" "portal_begin_mm"
+			"OnTrigger" "portal_speaker_1,PlaySound,,10,-1"
+			"OnTrigger" "portal_speaker_2,PlaySound,,20,-1"
+			"OnTrigger" "portal_remind_mm,Trigger,,35,-1"
+			"OnTrigger" "motor_button_cover,Open,,35,-1"
+			"OnTrigger" "motor_button,Unlock,,35,-1"
+			"OnTrigger" "bretinal_scanner_looper,Kill,,0,-1"
+			"OnTrigger" "cretinal_scanner_looper,Kill,,0,-1"
+		}
+	}
+	
+	Modify
+	{
+		Targetname
+		{
+			// Make sure players smooth transition in the far away room
+			"change_level"
+			{
+				"transitionradius" "5000"
+			}
+			
+			
+			"ccontrol_retinal2"
+			{
+				"OnEndSequence" "tldoor,Lock,,0.1,-1"
+			}
+			//---------------------------------------------------
+			
+			"probe_arm_mm"
+			{
+				"OnTrigger" "playercollide_command,Command,mp_playercollide 0,5,-1"
+			}
+			
+			"x_black_room_sounds_mm1"
+			{
+				"OnTrigger" "playercollide_command,Command,mp_playercollide 1,9.5,-1"
+			}
+
+			"p_1"
+			{
+				"message" ""
+			}
+
+			"rotor_soundx"
+			{
+				"targetname" "rotor_sound"
+			}
+		}
+
+		// Trigger_changelevel that goes back to c1a0b
+		Origin
+		{
+			"1248 -200 -264"
+			{
+				"spawnflags" "2"
+			}
+		}
+	}
+}

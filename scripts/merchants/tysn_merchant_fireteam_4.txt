@@ -1,0 +1,13 @@
+"tysn_merchant_fireteam_4"
+{
+	"Name"	"Murphy's Discount Stunsticks"
+
+	"Weapons"
+	{
+		"weapon_stunstick" "2"
+	}
+	"Items"
+	{
+
+	}
+}

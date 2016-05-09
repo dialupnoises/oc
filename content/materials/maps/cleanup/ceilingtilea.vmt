@@ -1,0 +1,5 @@
+LightmappedGeneric
+{
+	"$basetexture"	"maps\cleanup/ceilingtilea"
+	"$surfaceprop" "ceiling_tile"
+}

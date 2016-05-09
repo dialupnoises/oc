@@ -1,0 +1,9 @@
+// File was created for use in Obsidian Conflict ONLY!
+"oc_wildfire"
+{
+	"mp_falldamage"	"1"
+	"mp_playercollide" "1"
+	"mp_bunnyhop" "0"
+	"sk_max_ar2" "120"
+
+}

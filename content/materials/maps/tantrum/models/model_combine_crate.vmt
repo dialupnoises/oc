@@ -1,0 +1,14 @@
+"VertexLitGeneric"
+{
+	"$baseTexture" 	"maps/tantrum/models/model_combine_crate"
+	"$envmap" "env_cubemap"
+	"$bumpmap" "maps/tantrum/models/model_combine_crate_normal"
+	"$normalmapalphaenvmapmask" 1
+	"$envmapcontrast" 1
+	"$surfaceprop" "metal"
+	"$model" 1
+	"$selfillum" 1
+}
+
+
+

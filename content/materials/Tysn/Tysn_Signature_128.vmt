@@ -1,0 +1,8 @@
+"UnlitGeneric"
+{
+	// Original shader: BaseTextureAlphaBlend
+	"$basetexture" "Tysn/Tysn_Signature_128"
+	"$model" 1
+	"$nodecal" 1
+}
+

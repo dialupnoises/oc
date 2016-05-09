@@ -1,0 +1,174 @@
+ep2_outland_06a
+{
+    Remove
+    {
+        ClassName
+        {
+	    "trigger_playermovement" {}
+            "info_player_start" {}
+        }
+        TargetName
+        {
+            "playerclip_powerroom" {}
+            "playerclip_elevator" {}
+        }
+        Origin
+        {
+            "8784 206 -2202" {}
+            "-7488 -2880 -1888" {}
+            "5458.23 -144.85 -2420.35" {}
+            "5309.37 -52.29 -2360" {}
+        }
+    }
+    Add
+    {
+        "filter_multi"
+        {
+            "Negated" "1"
+            "targetname" "filter_NoDamage"
+            "origin" "-12777 -12651 456"
+        }
+        "logic_timer"
+        {
+            "RefireTime" "2"
+            "OnTimer" "alyx,SetDamageFilter,filter_NoDamage,0,-1"
+            "origin" "-12851.4 -12588.1 567.059"
+        }
+        "logic_auto"
+        {
+            "spawnflags" "1"
+            "OnMapSpawn" "jeep,Kill,,0.1,-1"
+            "OnMapSpawn" "alyx,Kill,,0.1,-1"
+            "OnMapSpawn" "new_game_items,ForceSpawn,,0.5,-1"
+            "OnMapSpawn" "jeep,LockExit,,0.8,-1"
+            "OnMapSpawn" "alyx,AddContext,pre_hunter_battle:1,0.8,-1"
+            "origin" "5247.72 -0.228314 -2458.07"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "targetname" "outland_06a_spawn1"
+            "origin" "5742 -206 -2465"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "targetname" "outland_06a_spawn1"
+            "origin" "5843 -206 -2465"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "targetname" "outland_06a_spawn1"
+            "origin" "5951 -206 -2465"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "targetname" "outland_06a_spawn1"
+            "origin" "5951 207 -2465"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "targetname" "outland_06a_spawn1"
+            "origin" "5843 207 -2465"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "targetname" "outland_06a_spawn1"
+            "origin" "5742 207 -2465"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "StartDisabled" "1"
+            "targetname" "outland_06a_spawn2"
+            "origin" "-2994 -9905 -1527"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "StartDisabled" "1"
+            "targetname" "outland_06a_spawn2"
+            "origin" "-2987 -9817 -1526"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "StartDisabled" "1"
+            "targetname" "outland_06a_spawn2"
+            "origin" "-3107 -9954 -1526"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "StartDisabled" "1"
+            "targetname" "outland_06a_spawn2"
+            "origin" "-3454 -9954 -1526"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "StartDisabled" "1"
+            "targetname" "outland_06a_spawn2"
+            "origin" "-3537 -9850 -1526"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "StartDisabled" "1"
+            "targetname" "outland_06a_spawn2"
+            "origin" "-3541 -9644 -1526"
+        }
+        "point_trigger"
+        {
+            "spawnflags" "1"
+            "TriggerOnce" "1"
+            "TriggerRadius" "116"
+            "OnStartTouch" "outland_06a_spawn1,Disable,,0,-1"
+            "OnStartTouch" "outland_06a_spawn2,Enable,,0,-1"
+            "origin" "-3087 -9750 -1452"
+        }
+    }
+    Modify
+    {
+        ClassName
+        {
+            "worldspawn"
+            {
+                "disableareaportals" "1"
+                "canspawnjeep" "2"
+            }
+            "logic_choreographed_scene"
+            {
+                "onplayerdeath" "0"
+            }
+        }
+        Origin
+        {
+            "-9952 -3968 -2304"
+            {
+                "spawngroup" "outland_07_spawn1"
+                "nosmooth" "1"
+            }
+        }
+    }
+SpawnItems
+{
+    "weapon_physcannon" "1"
+    "weapon_crowbar" "1"
+    "weapon_healer" "1"
+    "weapon_357" "1"
+    "weapon_shotgun" "1"
+    "weapon_pistol" "1"
+    "weapon_smg1" "1"
+    "item_box_buckshot" "2"
+    "weapon_frag" "1"
+    "item_ammo_smg1" "2"
+    "item_ammo_pistol" "1"
+    "weapon_ar2" "1"
+    "item_ammo_ar2" "2"
+}
+}

@@ -1,0 +1,9 @@
+"VertexLitGeneric"
+{
+	"$baseTexture" "Models/weapons/vortexorb/vortexorb"
+	"$bumpmap" "models/Weapons/vortexorb/vortexorb_normal"
+	"$normalmapalphaenvmapmask" 1
+	"$envmap" "env_cubemap"
+	"$envmaptint" "[.3 .3 .3]"
+	"$envmapcontrast" 0.5
+}

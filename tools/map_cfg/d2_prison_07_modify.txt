@@ -1,0 +1,196 @@
+d2_prison_07
+{
+    Remove
+    {
+        ClassName
+        {
+            "logic_auto" {}
+            "info_player_start" {}
+        }
+        Origin
+        {
+            "-440 -2908 -172" {}
+            "-440 -2796 -172" {}
+            "48 -2544 -172" {}
+            "288 -2544 -172" {}
+        }
+    }
+    Add
+    {
+        "logic_auto"
+        {
+            "spawnflags" "1"
+            "OnMapSpawn" "prop_camera,SetAnimation,idlealert,0,-1"
+            "OnMapSpawn" "sprite_alyx_EMP_MAIN,SetParent,alyx,0,-1"
+            "OnMapSpawn" "sprite_alyx_EMP_MAIN,SetParentAttachment,emp,0.1,-1"
+            "origin" "146.216 -2664 -208"
+        }
+        "prop_door_rotating"
+        {
+            "angles" "0 0 0"
+            "hardware" "1"
+            "ajarangles" "0 0 0"
+            "distance" "90"
+            "speed" "100"
+            "returndelay" "-1"
+            "spawnflags" "10240"
+            "axis" "540 -2643 -186, 540 -2643 -186"
+            "model" "models/props_c17/door01_left.mdl"
+            "skin" "9"
+            "origin" "540 -2643 -186"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "targetname" "prison_07_spawn1"
+            "origin" "353 -2430 -238"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "targetname" "prison_07_spawn1"
+            "origin" "266 -2430 -238"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "targetname" "prison_07_spawn1"
+            "origin" "178 -2430 -238"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "targetname" "prison_07_spawn1"
+            "origin" "-35 -2430 -238"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "targetname" "prison_07_spawn1"
+            "origin" "-206 -2430 -238"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "StartDisabled" "1"
+            "targetname" "prison_07_spawn2"
+            "origin" "3715 -3985 -543"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "StartDisabled" "1"
+            "targetname" "prison_07_spawn2"
+            "origin" "3715 -4531 -543"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "StartDisabled" "1"
+            "targetname" "prison_07_spawn2"
+            "origin" "3707 -4753 -543"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "StartDisabled" "1"
+            "targetname" "prison_07_spawn2"
+            "origin" "4605 -3986 -543"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "StartDisabled" "1"
+            "targetname" "prison_07_spawn2"
+            "origin" "4597 -4208 -543"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "StartDisabled" "1"
+            "targetname" "prison_07_spawn2"
+            "origin" "4597 -4754 -543"
+        }
+        "filter_multi"
+        {
+            "targetname" "filter_NoDamage"
+            "Negated" "1"
+            "origin" "87.8394 -2655.39 -232"
+        }
+        "point_servercommand"
+        {
+            "targetname" "mapchange"
+            "origin" "4390.63 -4376.38 -687"
+        }
+        "logic_timer"
+        {
+            "StartDisabled" "1"
+            "RefireTime" "180"
+            "targetname" "croom2_timer"
+            "OnTimer" "logic_croom2_move_alyx_to_croom2,Trigger,,0,-1"
+            "origin" "-470.377 -3231.01 -159"
+        }
+    }
+    Modify
+    {
+        ClassName
+        {
+            "worldspawn"
+            {
+                "disableareaportals" "1"
+            }
+        }
+        TargetName
+        {
+            "relationship_turret_vs_player_like"
+            {
+                "spawnflags" "0"
+            }
+            "relationship_combine_vs_turret_hate"
+            {
+                "spawnflags" "0"
+            }
+            "math_croom2_count_turrets"
+            {
+                "OnHitMax" "croom2_timer,Enable,,0,-1"
+            }
+            "trigger_ensure_no_combine_left"
+            {
+                "OnEndTouchAll" "logic_croom2_move_alyx_to_croom2,Trigger,,6,-1"
+            }
+            "logic_croom2_finished"
+            {
+                "OnTrigger" "logic_croom2_move_alyx_to_croom2,Trigger,,0,-1"
+            }
+            "math_room5_count_turrets"
+            {
+                "OnHitMax" "prison_07_spawn1,Disable,,0,-1"
+                "OnHitMax" "prison_07_spawn2,Enable,,0,-1"
+            }
+        }
+        Origin
+        {
+            "4476 -4336 -632"
+            {
+                "spawngroup" "prison_08_spawn1"
+            }
+        }
+    }
+SpawnItems
+{
+    "weapon_smg1" "1"
+    "weapon_ar2" "1"
+    "weapon_shotgun" "1"
+    "weapon_crowbar" "1"
+    "weapon_physcannon" "1"
+    "weapon_357" "1"
+    "weapon_frag" "1"
+    "weapon_pistol" "1"
+    "item_box_buckshot" "2"
+    "item_ammo_smg1" "3"
+    "item_battery" "3"
+    "weapon_healer" "1"
+    "weapon_crossbow" "1"
+    "weapon_bugbait" "1"
+}
+}

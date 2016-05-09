@@ -1,0 +1,101 @@
+d1_trainstation_03
+{
+    Remove
+    {
+        ClassName
+        {
+            "info_player_start" {}
+        }
+        TargetName
+        {
+            "trigger_tv_turnoffall" {}
+            "ai_breakin_cop3goal4" {}
+            "ai_breakin_cop3goal3_blockplayer2" {}
+        }
+        Origin
+        {
+            "-5176 -4358 56" {}
+            "-5176 -4486 64" {}
+        }
+    }
+    Add
+    {
+        "prop_door_rotating"
+        {
+            "ajarangles" "0 0 0"
+            "angles" "0 270 0"
+            "axis" "-4999 -4167 54, -4999 -4167 54"
+            "distance" "90"
+            "hardware" "1"
+            "model" "models/props_c17/door01_left.mdl"
+            "returndelay" "-1"
+            "skin" "2"
+            "spawnflags" "10240"
+            "speed" "100"
+            "origin" "-4999 -4167 54"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "trainstation_03_spawn1"
+            "origin" "-4972 -4221 1"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "targetname" "trainstation_03_spawn1"
+            "origin" "-5176 -4190 1"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "trainstation_03_spawn1"
+            "origin" "-5182 -4708 1"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "targetname" "trainstation_03_spawn1"
+            "origin" "-5047 -4190 1"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "targetname" "trainstation_03_spawn1"
+            "origin" "-4955 -4906 10"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "trainstation_03_spawn1"
+            "origin" "-5027 -4800 10"
+        }
+    }
+    Modify
+    {
+        TargetName
+        {
+            "world"
+            {
+               "disableareaportals" "1"
+            }
+            "attic_door_close_relay"
+            {
+                "OnTrigger" "changelevel_trainstation_04,ChangeLevel,,5,-1"
+            }
+        }
+        Origin
+        {
+            "-5169 -4840 612"
+            {
+                "spawngroup" "trainstation_04_spawn1"
+                "targetname" "changelevel_trainstation_04"
+                "transitionradius" "144"
+            }
+        }
+    }
+SpawnItems
+{
+    "weapon_healer" "1"
+}
+}

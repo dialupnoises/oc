@@ -1,0 +1,75 @@
+// ********************************
+// Usage of NPC Merchant Scripts.
+// ********************************
+//
+// merchant name at the top, same name as the file.
+// A good name would be the name of your map, ex. "stadium_merchant1"
+// "weapons" should be first with weapon name then price.
+// ex. "weapon_357" "4"
+// "items" should follow with same format as weapons.
+// ex. "item_cloak" "10"
+//
+// Useable List:
+// Weapons:
+//		weapon_357
+//		weapon_ar2
+//		weapon_crossbow
+//		weapon_crowbar
+//		weapon_frag
+//		weapon_gauss
+//		weapon_healer
+//		weapon_manhack
+//		weapon_physcannon
+//		weapon_pistol
+//		weapon_rpg
+//		weapon_shotgun
+//		weapon_slam
+//		weapon_smg1
+//		weapon_sniperrifle
+//		weapon_stunstick
+//		weapon_uzi
+//		weapon_alyxgun
+// Items:
+//		item_battery
+//		item_healthkit
+//		item_healthvial
+//		item_shield
+//		item_cloak
+//		item_ammo_pistol
+//		item_ammo_smg1
+//		item_ammo_smg1_large
+//		item_ammo_ar2
+//		item_ammo_ar2_large
+//		item_ammo_357
+//		item_ammo_357_large
+//		item_ammo_crossbow
+//		item_rpg_round
+//		item_ammo_smg1_grenade
+//		item_box_sniper_rounds
+//		item_box_buckshot
+//		item_ammo_ar2_altfire
+//		item_ammo_tau
+//		item_box_alyxrounds
+//
+// ********************************
+
+
+"merchant_test"
+{
+	"Name"	"Merchant Test"
+
+	"Weapons"
+	{
+		"weapon_357" "4"
+		"weapon_ar2" "6"
+		"weapon_gauss" "10"
+		"weapon_rpg" "20"
+	}
+	"Items"
+	{
+		"item_cloak" "10"
+		"item_shield" "5"
+		"item_ammo_pistol" "5"
+		"item_ammo_ar2" "7"
+	}
+}

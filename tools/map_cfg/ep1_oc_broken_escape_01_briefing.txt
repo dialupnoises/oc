@@ -1,0 +1,15 @@
+Obsidian Conflict
+
+Map: ep1_oc_broken_escape_01
+Author: W0rf0x (w0rf0x@obsidianconflict.net)
+
+Description:
+
+You are in a small group of citizens, who made it to a train to escape City 17,
+but the train had to stop at an old trainstation, because parts of the roof collapsed
+and the debris are blocking the rails.
+
+Mission: The Citadel reactor is about to collapse, find a way out of the city, 
+if you want to survive!
+
+

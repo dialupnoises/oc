@@ -1,0 +1,9 @@
+"vertexlitGeneric"
+{
+	"$basetexture" "Tysn/Books/Tysn_Book_Open_Recipes_Page_11"
+	"$surfaceprop" "wood"
+	"$nodecal" 1
+	"$envmap" "env_cubemap"
+	"$envmaptint" "[.1 .1 .1]"
+
+}

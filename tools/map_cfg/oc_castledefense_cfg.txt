@@ -1,0 +1,10 @@
+"oc_castledefense"
+{
+		"mp_flashlight" "1"
+                "sk_strider_health" "2000"
+                "sk_strider_num_missiles1" "10"
+                "sk_strider_num_missiles2" "10"
+                "sk_strider_num_missiles3" "10"
+                "sk_antlionguard_health" "1500"
+		"sk_helicopter_blast_push" "0"
+}

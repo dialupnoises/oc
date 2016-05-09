@@ -1,0 +1,14 @@
+"tysn_merchant_wildfire_2"
+{
+	"Name"	"Wino's Boutique"
+
+	"Weapons"
+	{
+		"weapon_stunstick" "3"
+		"weapon_gauss" "200"
+	}
+	"Items"
+	{
+		"item_ammo_tau" "2"
+	}
+}

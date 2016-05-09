@@ -1,0 +1,81 @@
+c2a5g
+{
+    Remove
+    {
+        ClassName
+        {
+            "info_player_start" {}
+        }
+    }
+    Add
+    {
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "targetname" "c2a5g_starts"
+            "origin" "1102.35 -2428.83 -207"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "targetname" "c2a5g_starts"
+            "origin" "1100 -2375 -207"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "c2a5g_starts"
+            "origin" "1099 -2322 -207"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "c2a5g_starts"
+            "origin" "1037 -2320 -207"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "c2a5g_starts"
+            "origin" "985 -2320 -207"
+        }
+        "logic_auto"
+        {
+            "spawnflags" "1"
+            "OnMapSpawn" "wall_shards,Kill,,0,-1"
+            "OnMapSpawn" "bunkerdoor,Kill,,0,-1"
+            "OnMapSpawn" "tower_col1,Open,,0,-1"
+            "origin" "376.824 2007.01 169"
+        }
+    }
+    Modify
+    {
+        ClassName
+        {
+            "worldspawn"
+            {
+                "mapversion" "4"
+            }
+        }
+        Origin
+        {
+            "2494 2360 -212"
+            {
+                "nosmooth" "1"
+                "spawngroup" "c3a1_starts"
+            }
+            "1102 -2471 -162"
+            {
+                "spawngroup" "c2a5f_starts2"
+            }
+        }
+    }
+SpawnItems
+{
+    "weapon_crowbar" "1"
+    "weapon_smg1" "1"
+    "item_battery" "1"
+    "item_ammo_smg1" "3"
+    "weapon_healer" "1"
+}
+}
