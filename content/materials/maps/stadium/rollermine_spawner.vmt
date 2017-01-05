@@ -1,8 +1,0 @@
-LightmappedGeneric
-{
-	"$basetexture"	"maps\stadium\rollermine_spawner"
-	"$translucent" "1"
-	"$decal" "1"
-	"$decalscale" "0.250"
-	"$surfaceprop" "paper"
-}

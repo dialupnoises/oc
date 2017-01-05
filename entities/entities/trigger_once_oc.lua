@@ -1,19 +1,28 @@
 AddCSLuaFile()
 
 ENT.Type = "brush"
-ENT.Base = "base_gmodentity"
+ENT.Base = "base_anim"
 ENT.IsMultiple = false
 ENT.touchAmount = 0
 
-function checkFilter(self, ent)
+function ENT:SetupDataTables()
+	self:NetworkVar("String", 0, "FilterEnt")
+	self:NetworkVar("Bool", 0, "Disabled")
+	self:NetworkVar("Int", 0, "ResetDelay")
+end
+
+local function checkFilter(self, ent)
 	if self:HasSpawnFlags(4096) and ent:IsPlayer() and ent:IsBot() then
 		return false
 	end
 	
-	if IsValid(self:GetNWEntity("filterEnt")) then
-		local result = ent:PassesFilter(self, self:GetNWEntity("filterEnt"))
-		if not result then 
-			return false 
+	if self:GetFilterEnt() ~= nil then
+		local filterEnts = ents.FindByName(self:GetFilterEnt())
+		if #filterEnts > 0 and IsValid(filterEnts[1]) then
+			local result = filterEnts[1]:PassesFilter(self, ent)
+			if not result then 
+				return false 
+			end
 		end
 	end
 
@@ -95,24 +104,24 @@ function ENT:Initialize()
 end
 
 function ENT:Touch(ent)
-	if self:GetNWBool("disabled") then return end
+	if self:GetDisabled() then return end
 	if not checkFilter(self, ent) then return end
 
 	self:TriggerOutput("OnTrigger", ent)
-	if (not self.IsMultiple) or self:GetNWInt("resetDelay") == -1 then
+	if (not self.IsMultiple) or self:GetResetDelay() == -1 then
 		self:Remove()
 	end
 
-	if self:GetNWInt("resetDelay") > 0 then
-		self:SetNWBool("disabled", true)
-		timer.Simple(self:GetNWInt("resetDelay"), function()
-			self:SetNWBool("disabled", false)
+	if self:GetResetDelay() > 0 then
+		self:SetDisabled(true)
+		timer.Simple(self:GetResetDelay(), function()
+			self:SetDisabled(false)
 		end)
 	end
 end
 
 function ENT:StartTouch(ent)
-	if self:GetNWBool("disabled") then return end
+	if self:GetDisabled() then return end
 	if not checkFilter(self, ent) then return end
 	self.touchAmount = self.touchAmount + 1
 
@@ -123,7 +132,7 @@ function ENT:StartTouch(ent)
 end
 
 function ENT:EndTouch(ent)
-	if self:GetNWBool("disabled") then return end
+	if self:GetDisabled() then return end
 	if not checkFilter(self, ent) then return end
 	self.touchAmount = self.touchAmount - 1
 	self:TriggerOutput("OnEndTouch", ent)
@@ -134,11 +143,11 @@ end
 
 function ENT:AcceptInput(name, activator, called, data)
 	if name == "Toggle" then
-		self:SetNWBool("disabled", not self:GetNWBool("disabled"))
+		self:SetDisabled(not self:GetDisabled())
 	elseif name == "Enable" then
-		self:SetNWBool("disabled", false)
+		self:SetDisabled(false)
 	elseif name == "Disable" then
-		self:SetNWBool("disabled", true)
+		self:SetDisabled(true)
 	elseif name == "TouchTest" then
 		if self.triggerAmount == 0 then
 			self:TriggerOutput("OnTouching", nil)
@@ -150,17 +159,15 @@ end
 
 function ENT:KeyValue(key, value)
 	if key == "filtername" then
-		local results = ents.FindByName(value)
-		if #results == 0 then return end
-		self:SetNWEntity("filterEnt", results[1])
+		self:SetFilterEnt(value)
 	elseif key == "StartDisabled" then
 		if self:GetName() == "Final_Trigger" then
-			self:SetNWBool("disabled", true)
+			self:SetDisabled(true)
 		else
-			self:SetNWBool("disabled", value == "1")
+			self:SetDisabled(value == "1")
 		end
 	elseif key == "wait" then
-		self:SetNWInt("resetDelay", tonumber(value))
+		self:SetResetDelay(tonumber(value))
 	elseif key ~= nil and string.Left(key, 2) == "On" then
 		self:StoreOutput(key, value)
 	end

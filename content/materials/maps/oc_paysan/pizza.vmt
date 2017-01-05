@@ -1,7 +1,0 @@
-"lightmappedGeneric"
-{
-	"$baseTexture" "maps/oc_paysan/pizza"
-	"$bumpmap" "maps/oc_paysan/pizza_normal"
-	"$surfaceprop" "cardboard"
-	"%keywords" "obsidian" 
-}

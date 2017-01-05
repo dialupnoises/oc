@@ -1,6 +1,0 @@
-"vertexlitgeneric"
-{
-	// original shader: basetimeslightmap
-	"$basetexture" "props/carpetfloor004a"
-	"$surfaceprop" "carpet"
-}

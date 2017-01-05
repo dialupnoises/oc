@@ -15,7 +15,7 @@ SWEP.AutoSwitchTo = {{=WeaponData.autoswitchto == "1"}}
 SWEP.AutoSwitchFrom = {{=WeaponData.autoswitchfrom == "1"}}
 SWEP.FiresUnderwater = {{=WeaponData.Advanced.FireUnderWater1 == "1"}}
 SWEP.Weight = {{=WeaponData.weight}}
-SWEP.ViewModelFlip = {{=WeaponData.csviewmodel == 1}}
+SWEP.ViewModelFlip = {{=WeaponData.csviewmodel == 0}}
 
 local holdType = {{=WeaponData.Advanced.PlayerAnimationSet || "1"}}
 local holdTypes = {"pistol", "ar2", "crossbow", "physgun", "shotgun", "smg"}
@@ -43,6 +43,11 @@ SWEP.IronSightsPos = Vector(
 	{{=WeaponData.ironsightoffset.y}},
 	{{=WeaponData.ironsightoffset.z}}
 )
+SWEP.IronSightsAng = Angle(
+	{{=WeaponData.ironsightoffset.xori||0}},
+	{{=WeaponData.ironsightoffset.yori||0}},
+	{{=WeaponData.ironsightoffset.zori||0}}
+)
 {{?}}
 
 SWEP.Primary.Round = "{{=WeaponData.primary_ammo}}"
@@ -54,7 +59,7 @@ SWEP.Primary.Automatic = true
 SWEP.Primary.Cone = {{=WeaponData.Advanced.FireCone1 / 20}}
 SWEP.Primary.RPM = {{=60/WeaponData.Advanced.FireRate1}}
 SWEP.Primary.Sound = Sound(Sounds.Primary)
-SWEP.Primary.Damage = 20
+SWEP.Primary.Damage = 30
 
 {{? WeaponData.Advanced.FireType2 != "0" && WeaponData.secondary_ammo != "None" }}
 SWEP.Secondary.Round = "{{=WeaponData.secondary_ammo}}"

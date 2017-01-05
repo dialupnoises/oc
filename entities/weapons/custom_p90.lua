@@ -43,6 +43,11 @@ SWEP.IronSightsPos = Vector(
 	4.63,
 	2.02
 )
+SWEP.IronSightsAng = Angle(
+	0,
+	0,
+	0
+)
 
 
 SWEP.Primary.Round = "SMG1"
@@ -54,5 +59,5 @@ SWEP.Primary.Automatic = true
 SWEP.Primary.Cone = 0.2
 SWEP.Primary.RPM = 857.1428571428571
 SWEP.Primary.Sound = Sound(Sounds.Primary)
-SWEP.Primary.Damage = 20
+SWEP.Primary.Damage = 30
 

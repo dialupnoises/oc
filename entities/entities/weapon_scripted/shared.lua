@@ -1,5 +1,5 @@
 ENT.Type = "point"
-ENT.Base = "base_gmodentity"
+ENT.Base = "base_anim"
 
 ENT.PrintName = "Scripted Weapon"
 ENT.Author = "Obsidian Conflict"

@@ -1,9 +1,0 @@
-"VertexLitGeneric" 
-{ 
-
-	"$basetexture" "Tysn/Tysn_Lobby_Sign"
-	"$surfaceprop" "metal"
-	"$envmap" "env_cubemap"
-	"$envmaptint" "[.25 .25 .25]"
- 
-}

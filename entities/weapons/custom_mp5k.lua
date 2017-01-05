@@ -15,7 +15,7 @@ SWEP.AutoSwitchTo = false
 SWEP.AutoSwitchFrom = false
 SWEP.FiresUnderwater = false
 SWEP.Weight = 3
-SWEP.ViewModelFlip = true
+SWEP.ViewModelFlip = false
 
 local holdType = 2
 local holdTypes = {"pistol", "ar2", "crossbow", "physgun", "shotgun", "smg"}
@@ -43,6 +43,11 @@ SWEP.IronSightsPos = Vector(
 	-6.47,
 	3.10
 )
+SWEP.IronSightsAng = Angle(
+	0,
+	0,
+	0
+)
 
 
 SWEP.Primary.Round = "SMG1"
@@ -54,5 +59,5 @@ SWEP.Primary.Automatic = true
 SWEP.Primary.Cone = 0.1
 SWEP.Primary.RPM = 600
 SWEP.Primary.Sound = Sound(Sounds.Primary)
-SWEP.Primary.Damage = 20
+SWEP.Primary.Damage = 30
 

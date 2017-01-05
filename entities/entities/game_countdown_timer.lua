@@ -1,7 +1,7 @@
 AddCSLuaFile()
 
 ENT.Type = "point"
-ENT.Base = "base_gmodentity"
+ENT.Base = "base_anim"
 
 ENT.PrintName = "Countdown Timer"
 ENT.Spawnable = false
@@ -9,7 +9,7 @@ ENT.AdminSpawnable = false
 
 local timerId = "game_countdown_timerer"
 
-function timerOver()
+local function timerOver()
 	umsg.Start("game_countdown_timer_stop")
 	umsg.End()
 end

@@ -1,47 +1,51 @@
 AddCSLuaFile()
 
 ENT.Type = "point"
-ENT.Base = "base_gmodentity"
+ENT.Base = "base_anim"
 
 ENT.PrintName = "Game Text Quick"
 ENT.Spawnable = false
 
-local entKvs = {}
-local newEnt, name
+ENT.Kvs = {}
+ENT.NewEnt = nil
+ENT.Name = nil
 
-function createEnt()
-	newEnt:SetName(name)
-	for k, v in pairs(entKvs) do
-		newEnt:SetKeyValue(k, v)
+function ENT:createEnt()
+	if not IsValid(self.NewEnt) then self.NewEnt = ents.Create("game_text") end
+	self.NewEnt:SetName(self.Name)
+	for k, v in pairs(self.Kvs) do
+		self.NewEnt:SetKeyValue(k, v)
 	end
 end
 
 function ENT:InitPostEntity()
-	if newEnt then return end
-	newEnt = ents.Create("game_text")
-	name = self:GetName()
-	createEnt()
+	if self.NewEnt then return end
+	self.Name = self:GetName()
+	self:createEnt()
 end
 
 function ENT:AcceptInput(name, activator, caller, val)
-	if newEnt == nil then
-		newEnt = ents.Create("game_text")
-		name = self:GetName()
-		createEnt()
+	if self.NewEnt == nil then
+		self.NewEnt = ents.Create("game_text")
+		self.Name = self:GetName()
+		self:createEnt()
 	end
 
-	if inputName == "DisplayText" then
-		newEnt:Remove()
-		entKvs["message"] = val
-		createEnt()
-		newEnt:Input("Display", activator, caller)
+	if name == "DisplayText" then
+		if IsValid(self.NewEnt) then
+			self.NewEnt:Remove()
+		end
+		self.Kvs["message"] = val
+		self:createEnt()
+		self.NewEnt:Input("Display", activator, caller)
+		MsgN(val)
 		return false
 	end
 
-	newEnt:Input(name, activator, caller, val)
+	self.NewEnt:Input(self.Name, activator, caller, val)
 	return false
 end
 
 function ENT:KeyValue(key, value)
-	entKvs[key] = value
+	self.Kvs[key] = value
 end

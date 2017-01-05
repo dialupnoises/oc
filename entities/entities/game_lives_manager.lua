@@ -1,7 +1,7 @@
 AddCSLuaFile()
 
 ENT.Type = "point"
-ENT.Base = "base_gmodentity"
+ENT.Base = "base_anim"
 
 function ENT:AcceptInput(name, activator, called, data)
 	local numLives = tonumber(data) or 1

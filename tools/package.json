@@ -1,5 +1,6 @@
 {
   "name": "oc-tools",
+  "version": "1.0.0",
   "dependencies": {
     "buffer-dataview": "0.0.2"
   }

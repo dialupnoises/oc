@@ -134,9 +134,12 @@ mapConfig.forEach(function(f) {
 	mapConfigFile += luaName + '["spawn_items"] = ' + convertObjectToTable(config["SpawnItems"]) + '\n';
 	mapConfigFile += luaName + '["add"] = ' + convertObjectToTable(config["Add"]) + '\n';
 	mapConfigFile += luaName + '["remove"] = ' + convertObjectToTable(config["Remove"]) + '\n';
-	if(fs.existsSync('maps/' + mapName + '.bsp'))
+	var mapFile = 'C:/Program Files (x86)/Steam/steamapps/sourcemods/obsidian/maps/' + mapName + '.bsp';
+	if(!fs.existsSync(mapFile))
+		mapFile = 'maps/' + mapName + '.bsp';
+	if(fs.existsSync(mapFile))
 	{
-		var info = parseMap('maps/' + mapName + '.bsp');
+		var info = parseMap(mapFile);
 		mapConfigFile += luaName + '["teamplay"] = ' + (info.teamplay == 1 ? "true" : "false") + "\n";
 		mapConfigFile += luaName + '["numlives"] = ' + (info.numlives || 0) + "\n"; 
 	}

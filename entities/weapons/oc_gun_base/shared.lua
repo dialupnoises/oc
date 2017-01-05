@@ -60,6 +60,7 @@ function SWEP:Initialize()
 	self:SetHoldType(self.HoldType)
 	self.OrigCrossHair = self.DrawCrosshair
 	if SERVER and self.Owner:IsNPC() then
+		MsgN(self.PrintName)
 		self:SetNPCMinBurst(SWEP.NPCMinBurst)
 		self:SetNPCMaxBurst(SWEP.NPCMaxBurst)
 		self:SetNPCFireRate(SWEP.NPCFireRate)

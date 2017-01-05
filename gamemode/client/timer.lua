@@ -3,10 +3,12 @@ OC.Timer.Running = false
 OC.Timer.Display = false
 OC.Timer.Label = "Timer"
 
+local panelWidth = 250
+
 local panel = vgui.Create("DPanel")
-panel:SetSize(500, 100)
-panel:SetPos(ScrW() / 2 - 250, 0)
-panel:SetBackgroundColor(Color(0, 0, 0, 0.5))
+panel:SetSize(panelWidth, 100)
+panel:SetPos(ScrW() / 2 - (panelWidth / 2), 0)
+panel:SetBackgroundColor(Color(0, 0, 0, 150))
 panel:Hide()
 
 local labelLabel = vgui.Create("DLabel")
@@ -27,14 +29,19 @@ function setTimeText()
 	timeLabel:SetText(os.date("!%X", OC.Timer.Time))
 	surface.SetFont("ObsidianLarge")
 	w, h = surface.GetTextSize(timeLabel:GetText())
-	timeLabel:SetPos(250 - w / 2, 30)
+	timeLabel:SetPos((panelWidth / 2) - w / 2, 30)
+	timeLabel:SetSize(w, h)
+
+	panel:SetPos(ScrW() / 2 - (panelWidth / 2), 10)
+	panel:SetSize(panelWidth, 30 + h + 20)
 end
 
 function setLabel()
 	labelLabel:SetText(OC.Timer.Label)
 	surface.SetFont("ObsidianMedium")
 	w, h = surface.GetTextSize(OC.Timer.Label)
-	labelLabel:SetPos(250 - w / 2, 5)
+	labelLabel:SetPos((panelWidth / 2) - w / 2, 10)
+	labelLabel:SetSize(w, h)
 end
 
 OC.Timer.Start = function(time)
@@ -42,6 +49,7 @@ OC.Timer.Start = function(time)
 	OC.Timer.Running = true
 	OC.Timer.Time = time
 	setTimeText()
+	setLabel()
 	panel:Show()
 end
 
@@ -49,7 +57,6 @@ OC.Timer.Tick = function()
 	if not OC.Timer.Running then
 		return
 	end
-	Msg(OC.Timer.Time)
 	OC.Timer.Time = OC.Timer.Time - FrameTime()
 	if OC.Timer.Time < 0 then
 		OC.Timer.Running = false
