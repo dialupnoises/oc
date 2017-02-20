@@ -1,4 +1,0 @@
-"d2_LostCoast"
-{
-	"mp_falldamage"	"1"
-}	

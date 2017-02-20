@@ -1,8 +1,0 @@
-"oc_paysan"
-{
-	SpawnItems
-	{
-		"weapon_crowbar" "0"
-		"weapon_physcannon" "0"
-	}
-}

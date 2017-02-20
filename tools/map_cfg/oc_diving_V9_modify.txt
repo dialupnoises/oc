@@ -1,9 +1,0 @@
-"oc_diving_V9"
-{
-	SpawnItems
-	{
-		"weapon_crowbar" "1"
-		"weapon_physcannon" "1"
-		"weapon_healer" "1"	
-	}
-}

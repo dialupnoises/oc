@@ -1,8 +1,0 @@
-// File was created for use in Obsidian Conflict ONLY!
-"oc_diving_V9"
-{
-	"mp_flashlight" "1"
-	"sv_maxinvobjectweight" "20"
-	"sv_allownegativescore" "0"
-	"sv_deathpenalty" "0"
-}

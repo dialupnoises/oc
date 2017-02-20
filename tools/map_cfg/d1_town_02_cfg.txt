@@ -1,4 +1,0 @@
-"d1_town_02"
-{
-	"mp_falldamage" "1"
-}
