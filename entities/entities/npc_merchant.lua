@@ -85,6 +85,7 @@ function ENT:Draw()
 	if self.iconMaterial == nil then
 		local mat = self:GetIconMaterial()
 		self.iconMaterial = Material(self:GetIconMaterial())
+		if not self.iconMaterial then return end
 	end
 
 	local pos = self:GetPos() + Vector(0, 0, self:GetIconHeight())

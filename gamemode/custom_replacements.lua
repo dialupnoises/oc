@@ -6,7 +6,7 @@ OC.CustomReplacements = {
 	custom_ak47 = "bb_ak47_alt",
 	custom_ak47new = "bb_ak47_alt",
 	custom_ak47new_de_prodigy = "bb_ak47_alt",
-	-- `custom_ak5 = "",
+	custom_ak5 = "m9k_fal",
 	custom_aug = "bb_aug_alt",
 	custom_awp = "bb_awp_alt",
 	custom_cz52 = {"weapon_cz52", "bb_p228_alt"},
@@ -42,4 +42,7 @@ OC.CustomReplacements = {
 	weapon_hopwire = "weapon_bp_hopwire",
 	weapon_sniperrifle = "weapon_bp_sniper",
 	weapon_flaregun = "weapon_bp_flaregun"
+}
+
+OC.NPCReplacements = {
 }

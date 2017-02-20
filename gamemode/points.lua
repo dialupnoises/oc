@@ -2,7 +2,11 @@ OC = OC or {}
 
 OC.Points = {}
 -- for in-memory persistence
-OC.Points.PlayerCache = {}
+OC.Points.PlayerCache = OC.Points.PlayerCache or {}
+
+if SERVER then
+	util.AddNetworkString("alert_points_change")
+end
 
 local function ensureTableCreated()
 	sql.Query("CREATE TABLE IF NOT EXISTS oc_pointcache (steamid TEXT, points INT);")
@@ -69,11 +73,15 @@ end
 
 -- sets the player's number of points
 OC.Points.setPoints = function(ply, amount)
+	local startPoints = OC.Points.getPoints(ply)
 	if OC.Points.areFrags() then
 		ply:SetFrags(amount)
 	else
 		ply:SetNWInt("oc_points", amount)
 	end
+
+	OC.Points.enforceNegative(ply)
+	OC.Points.sendChange(ply, OC.Points.getPoints(ply) - startPoints)
 
 	-- update point persistence
 	if OC.Points.persistenceType() == 2 then
@@ -97,3 +105,21 @@ end
 OC.Points.removePoints = function(ply, amount)
 	OC.Points.givePoints(ply, -amount)
 end
+
+OC.Points.enforceNegative = function(ply)
+	if GetConVar("sv_allownegativescore"):GetBool() then return end
+	if OC.Points.getPoints(ply) < 0 then
+		OC.Points.setPoints(ply, 0)
+	end
+end
+
+OC.Points.sendChange = function(ply, amt)
+	net.Start("alert_points_change")
+	net.WriteInt(amt, 32)
+	net.Send(ply)
+end
+
+net.Receive("alert_points_change", function(len, ply)
+	local amt = net.ReadInt(32)
+	hook.Call("OCPointsChange", nil, amt)
+end)

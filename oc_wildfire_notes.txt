@@ -1,0 +1,3 @@
+- turret doesn't work for players
+- "Objective complete, all players receive an additional life" runs at start of mission
+- Jeep has no tau cannon.

@@ -103,7 +103,7 @@ function createMerchantWindow()
 		net.SendToServer()
 	end
 	function buyWeaponButton:Paint(w, h)
-		local color = Color(62, 119, 233)
+		local color = OC.LightBlueColor
 		if buyWeaponButton:IsHovered() then
 			color = ColorAlpha(color, 200)
 		end
@@ -192,7 +192,7 @@ function createMerchantWindow()
 		net.SendToServer()
 	end
 	function buyItemButton:Paint(w, h)
-		local color = Color(62, 119, 233)
+		local color = OC.LightBlueColor
 		if buyItemButton:IsHovered() then
 			color = ColorAlpha(color, 200)
 		end

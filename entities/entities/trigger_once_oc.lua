@@ -1,7 +1,7 @@
 AddCSLuaFile()
 
 ENT.Type = "brush"
-ENT.Base = "base_anim"
+ENT.Base = "base_brush"
 ENT.IsMultiple = false
 ENT.touchAmount = 0
 
@@ -101,13 +101,19 @@ function ENT:Initialize()
 	if SERVER then
 		self:SetTrigger(true)
 	end
+
+	if self.queuedQutputs ~= nil then
+		for k, v in pairs(self.queuedQutputs) do
+			self:CallAllOutputs(v[1], v[2])
+		end
+	end
 end
 
 function ENT:Touch(ent)
 	if self:GetDisabled() then return end
 	if not checkFilter(self, ent) then return end
 
-	self:TriggerOutput("OnTrigger", ent)
+	self:CallAllOutputs("OnTrigger", ent)
 	if (not self.IsMultiple) or self:GetResetDelay() == -1 then
 		self:Remove()
 	end
@@ -125,9 +131,9 @@ function ENT:StartTouch(ent)
 	if not checkFilter(self, ent) then return end
 	self.touchAmount = self.touchAmount + 1
 
-	self:TriggerOutput("OnStartTouch", ent)
+	self:CallAllOutputs("OnStartTouch", ent)
 	if self.touchAmount == 1 then
-		self:TriggerOutput("OnStartTouchAll", ent)
+		self:CallAllOutputs("OnStartTouchAll", ent)
 	end
 end
 
@@ -135,9 +141,10 @@ function ENT:EndTouch(ent)
 	if self:GetDisabled() then return end
 	if not checkFilter(self, ent) then return end
 	self.touchAmount = self.touchAmount - 1
-	self:TriggerOutput("OnEndTouch", ent)
+
+	self:CallAllOutputs("OnEndTouch", ent)
 	if self.touchAmount == 0 then
-		self:TriggerOutput("OnEndTouchAll", ent)
+		self:CallAllOutputs("OnEndTouchAll", ent)
 	end
 end
 
@@ -150,9 +157,9 @@ function ENT:AcceptInput(name, activator, called, data)
 		self:SetDisabled(true)
 	elseif name == "TouchTest" then
 		if self.triggerAmount == 0 then
-			self:TriggerOutput("OnTouching", nil)
+			self:CallAllOutputs("OnTouching", nil)
 		else
-			self:TriggerOutput("OnNotTouching", nil)
+			self:CallAllOutputs("OnNotTouching", nil)
 		end
 	end
 end
@@ -170,5 +177,65 @@ function ENT:KeyValue(key, value)
 		self:SetResetDelay(tonumber(value))
 	elseif key ~= nil and string.Left(key, 2) == "On" then
 		self:StoreOutput(key, value)
+		self.triggerOutputs = self.triggerOutputs or {}
+		self.outputsUsedCount = self.outputsUsedCount or {}
+		self.outputsUsedCount[key .. value] = 0
+		if self.triggerOutputs[key] == nil then
+			self.triggerOutputs[key] = { value }
+		else
+			table.insert(self.triggerOutputs[key], value)
+		end
+	end
+end
+
+function ENT:CallAllOutputs(name, activator)
+	if not self.triggerOutputs then 
+		self.queuedOutputs = self.queuedOutputs or {}
+		table.insert(self.queuedOutputs, {name, activator})
+		return
+	end
+	if not self.triggerOutputs[name] then return end
+
+	for k, v in pairs(self.triggerOutputs[name]) do
+		self:SendOutput(name, v, activator)
+	end
+end
+
+function ENT:SendOutput(name, output, activator)
+	local outputParts = string.Split(output, ",")
+	local targetName = outputParts[1]
+	local targetEnt = nil
+	if string.equalsi(targetName, "!activator") or string.equalsi(targetName, "!caller") then
+		targetEnt = activator
+	elseif string.equalsi(targetName, "!self") then
+		targetEnt = self
+	elseif string.equalsi(targetName, "!player") then
+		targetEnt = player.GetAll()[1]
+	elseif string.equalsi(targetName, "!pvsplayer") then
+		targetEnt = player.FindInPVS(self)[1]
+	else
+		local foundEnts = ents.FindByName(targetName)
+		if #foundEnts == 0 then return end
+		targetEnt = foundEnts[1]
+	end
+
+	local inputName = outputParts[2]
+	local param = outputParts[3]
+	local delay = tonumber(outputParts[4])
+	local timesUsed = tonumber(outputParts[5])
+
+	function sendOutput()
+		if not IsValid(targetEnt) then return end
+		targetEnt:Input(inputName, activator, activator, param)
+	end
+
+	if timesUsed ~= nil and timesUsed ~= -1 and self.outputsUsedCount[name .. output] >= timesUsed then
+		return
+	end
+
+	if delay ~= 0 then
+		timer.Simple(delay, sendOutput)
+	else
+		sendOutput()
 	end
 end
