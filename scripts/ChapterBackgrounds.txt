@@ -1,5 +1,0 @@
-"chapters"
-{
-	1	"oc_background01"
-	2	"oc_background02"
-}

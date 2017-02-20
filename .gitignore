@@ -1,6 +1,9 @@
 *.bsp
 *.vmf
 *.vmx
+*.prt
+*.log
 *.jar
 tools/map_cfg
 tools/node_modules
+scripts

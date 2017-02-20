@@ -1,2 +1,0 @@
-
-criterion "IsGrunt" "classname" "npc_hgrunt" "required"
