@@ -23,20 +23,22 @@ function ENT:AcceptInput(input, activator, caller, data)
 		activator = caller.lastUseActivator
 	end
 
-	if input == "Enable" then
+	local inputLower = string.lower(input)
+
+	if inputLower == "enable" then
 		self:SetEnabled(true)
 		return true
 	end
 
-	if input == "Purchase" and not self:GetEnabled() then
+	if inputLower == "purchase" and not self:GetEnabled() then
 		self:TriggerOutput("OnDisabled", activator)
 	end
 
 	if not self:GetEnabled() then return true end
-	if input == "Disable" then
+	if inputLower == "disable" then
 		self:SetEnabled(false)
 		return true
-	elseif input == "Purchase" then
+	elseif inputLower == "purchase" then
 		local points = OC.Points.getPoints(activator)
 
 		if self:GetShared() and points > 0 then
@@ -58,6 +60,7 @@ function ENT:AcceptInput(input, activator, caller, data)
 				playPurchaseSound(self)
 			end
 		elseif self:GetCost() <= points then
+			MsgN("purchased, removing ", self:GetCost(), " points from ", activator)
 			OC.Points.removePoints(activator, self:GetCost())
 			self:TriggerOutput("OnPurchased", activator)
 			playPurchaseSound(self)
@@ -65,32 +68,34 @@ function ENT:AcceptInput(input, activator, caller, data)
 			self:TriggerOutput("OnNotEnoughCash", activator)
 			sendNotEnoughMessage(self, activator)
 		end
-	elseif input == "SetPurchaseCost" then
+	elseif inputLower == "setpurchasecost" then
 		self:SetCost(tonumber(data))
-	elseif input == "SetPurchaseName" then
+	elseif inputLower == "setpurchasename" then
 		self:SetPurchaseName(data)
 	end
 	return false
 end
 
 function ENT:KeyValue(key, value)
-	if key == "CostOf" then
+	local keyLower = string.lower(key)
+
+	if keyLower == "costof" then
 		self:SetCost(tonumber(value))
-	elseif key == "StartDisabled" then
+	elseif keyLower == "startdisabled" then
 		self:SetEnabled(value ~= "1")
-	elseif key == "IsShared" then
+	elseif keyLower == "isshared" then
 		self:SetShared(value == "1")
-	elseif key == "AnnounceCashNeeded" then
+	elseif keyLower == "announcecashneeded" then
 		self:SetAnnounce(value == "1")
-	elseif key == "purchasesound" then
+	elseif keyLower == "purchasesound" then
 		self:SetPurchaseSound(value)
-	elseif key == "MaxPointsTake" then
+	elseif keyLower == "maxpointstake" then
 		self:SetMaxPointsToTake(tonumber(value))
-	elseif key == "PurchaseName" then
+	elseif keyLower == "purchasename" then
 		self:SetPurchaseName(value)
 	end
 
-	if string.Left(key, 2) == "On" then
+	if string.Left(keyLower, 2) == "on" then
 		self:StoreOutput(key, value)
 	end
 

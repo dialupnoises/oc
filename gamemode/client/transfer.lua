@@ -52,8 +52,8 @@ function ShowTransferGUI()
 
 		local pointCount = tonumber(inputBox:GetText())
 		net.Start("send_points")
-		net.WriteInt(pointCount, 32)
-		net.WriteInt(plyId, 32)
+			net.WriteInt(pointCount, 32)
+			net.WriteInt(plyId, 32)
 		net.SendToServer()
 	end
 

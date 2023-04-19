@@ -3,23 +3,23 @@ AddCSLuaFile()
 ENT.Type = "point"
 ENT.Base = "base_anim"
 
-ENT.PrintName = "Countdown Timer"
+ENT.PrintName = "Countdown timer"
 ENT.Spawnable = false
 ENT.AdminSpawnable = false
+ENT.LastTimerUpdateSent = 0
 
 local timerId = "game_countdown_timerer"
 
 local function timerOver()
-	umsg.Start("game_countdown_timer_stop")
-	umsg.End()
+	OC.Timer.Stop()
 end
 
 function ENT:AcceptInput(inputName, activator, called, data)
-	if inputName == "SetTimerLabel" then
-		umsg.Start("game_countdown_timer_label")
-		umsg.String(data)
-		umsg.End()
-	elseif inputName == "StartTimer" then
+	local inputLower = string.lower(inputName)
+
+	if inputLower == "settimerlabel" then
+		OC.Timer.SetLabel(data)
+	elseif inputLower == "starttimer" then
 		duration = tonumber(data)
 
 		if timer.Exists(timerId) then
@@ -28,29 +28,42 @@ function ENT:AcceptInput(inputName, activator, called, data)
 
 		timer.Create(timerId, duration, 1, timerOver)
 
-		umsg.Start("game_countdown_timer_start")
-		umsg.Long(duration)
-		umsg.End()
-	elseif inputName == "PauseTimer" then
+		self.LastTimerUpdateSent = RealTime()
+		OC.Timer.Start(duration)
+	elseif inputLower == "pausetimer" then
 		if timer.Exists(timerId) then
 			timer.Pause(timerId)
 		end
 
-		umsg.Start("game_countdown_timer_pause")
-		umsg.End()
-	elseif inputName == "ResumeTimer" then
+		OC.Timer.Pause()
+	elseif inputLower == "resumetimer" then
 		if timer.Exists(timerId) then
 			timer.Resume(timerId)
 		end
 
-		umsg.Start("game_countdown_timer_resume")
-		umsg.End()
-	elseif inputName == "StopTimer" then
+		OC.Timer.Resume()
+	elseif inputLower == "stoptimer" then
 		if timer.Exists(timerId) then
 			timer.Remove(timerId)
 		end
 
-		umsg.Start("game_countdown_timer_stop")
-		umsg.End()
+		OC.Timer.Stop()
 	end
+end
+
+function ENT:Think()
+	if SERVER then
+		if (RealTime() - self.LastTimerUpdateSent) > 5 then
+			self.LastTimerUpdateSent = RealTime()
+			OC.Timer.UpdateClientTime()
+		end
+	end
+
+	return true
+end
+
+if CLIENT then
+	hook.Add("InitPostEntity", "countdown_timer_update_post_ent", function()
+		OC.Timer.UpdateNewPlayer()
+	end)
 end

@@ -56,13 +56,15 @@ function ENT:SetupDataTables()
 end
 
 function ENT:AcceptInput(name, activator, caller, val)
-	if name == "Enable" or name == "EnableForActivator" then
+	local nameLower = string.lower(name)
+
+	if nameLower == "enable" or nameLower == "enableforactivator" then
 		local duration = tonumber(val)
 		net.Start("EnableWaypointOC")
 		net.WriteEntity(self)
 		net.WriteFloat(duration)
 
-		if name == "EnableForActivator" then
+		if name == "enableforactivator" then
 			net.Send(activator)
 		else
 			net.Broadcast()
@@ -76,11 +78,11 @@ function ENT:AcceptInput(name, activator, caller, val)
 		end
 
 		return true
-	elseif name == "Disable" or name == "DisableForActivator" then
+	elseif nameLower == "disable" or nameLower == "disableforactivator" then
 		net.Start("DisableWaypointOC")
 		net.WriteEntity(self)
 
-		if name == "DisableForActivator" then
+		if name == "disableforactivator" then
 			net.Send(activator)
 		else
 			net.Broadcast()
@@ -98,9 +100,11 @@ function ENT:AcceptInput(name, activator, caller, val)
 end
 
 function ENT:KeyValue(key, value)
-	if key == "image" then
+	local keyLower = string.lower(key)
+
+	if keyLower == "image" then
 		self:SetImage(value)
-	elseif key == "text" then
+	elseif keyLower == "text" then
 		self:SetText(value)
 	end
 end

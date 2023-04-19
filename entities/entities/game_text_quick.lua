@@ -28,7 +28,9 @@ function ENT:SetupDataTables()
 end
 
 function ENT:AcceptInput(name, activator, caller, val)
-	if name == "Display" then
+	local nameLower = string.lower(name)
+
+	if nameLower == "display" then
 		net.Start("oc_game_text_quick_display")
 		net.WriteEntity(self)
 		if self:HasSpawnFlags(1) then
@@ -36,7 +38,7 @@ function ENT:AcceptInput(name, activator, caller, val)
 		else
 			net.Broadcast()
 		end
-	elseif name == "DisplayText" then
+	elseif nameLower == "displaytext" then
 		if val == nil then return end
 		self:SetMessage(val)
 		net.Start("oc_game_text_quick_display")
@@ -52,21 +54,23 @@ function ENT:AcceptInput(name, activator, caller, val)
 end
 
 function ENT:KeyValue(key, value)
-	if key == "message" then
+	local keyLower = string.lower(key)
+
+	if keyLower == "message" then
 		self:SetMessage(value)
-	elseif key == "x" then
+	elseif keyLower == "x" then
 		self:SetX(tonumber(value))
-	elseif key == "y" then
+	elseif keyLower == "y" then
 		self:SetY(tonumber(value))
-	elseif key == "fadein" then
+	elseif keyLower == "fadein" then
 		self:SetFadeInTime(tonumber(value))
-	elseif key == "fadeout" then
+	elseif keyLower == "fadeout" then
 		self:SetFadeOutTime(tonumber(value))
-	elseif key == "holdtime" then
+	elseif keyLower == "holdtime" then
 		self:SetHoldTime(tonumber(value))
-	elseif key == "color1" then
+	elseif keyLower == "color1" then
 		self:SetTextColor(value)
-	elseif key == "channel" then
+	elseif keyLower == "channel" then
 		self:SetChannel(tonumber(value))
 	end
 end
@@ -113,7 +117,7 @@ function DrawChannel(c)
 		end
 	end
 
-	surface.SetFont("CloseCaption_Bold")
+	surface.SetFont("HudHintTextLarge")
 	local w, h = surface.GetTextSize(c.message)
 
 	local x = 0

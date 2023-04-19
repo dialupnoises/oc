@@ -36,20 +36,22 @@ function ENT:SetupDataTables()
 end
 
 function ENT:KeyValue(key, value)
-	if key == "model" then
+	local keyLower = string.lower(key)
+
+	if keyLower == "model" then
 		self:SetModel(value)
 		self:SetSequence(self:LookupSequence("LineIdle03"))
-	elseif key == "npcname" then
+	elseif keyLower == "npcname" then
 		self:SetNWString("npcname", value)
-	elseif key == "IconHeight" then
+	elseif keyLower == "iconheight" then
 		self:SetIconHeight(tonumber(value))
-	elseif key == "MerchantIconMaterial" then
+	elseif keyLower == "merchanticonmaterial" then
 		self:SetIconMaterial(value)
-	elseif key == "ExpressionOverride" then
+	elseif keyLower == "expressionoverride" then
 		self:SetExpression(value)
-	elseif key == "ShowIcon" then
+	elseif keyLower == "showicon" then
 		self:SetShowIcon(value == "1")
-	elseif key == "MerchantScript" then
+	elseif keyLower == "merchantscript" then
 		local result = file.Read("scripts/merchants/" .. value .. ".txt", "GAME")
 		if result == nil then
 			error("Can't find merchant script " .. value)
@@ -67,10 +69,10 @@ function ENT:NPCUse(activator, caller, type, value)
 	if CurTime() - self.merchantLastUsed < 1 then return end
 	self.merchantLastUsed = CurTime()
 	net.Start("OCNPCMerchant_Use")
-	net.WriteEntity(self)
-	net.WriteString(self:GetMerchantName())
-	net.WriteTable(self.weapons)
-	net.WriteTable(self.items)
+		net.WriteEntity(self)
+		net.WriteString(self:GetMerchantName())
+		net.WriteTable(self.weapons)
+		net.WriteTable(self.items)
 	net.Send(activator)
 end
 

@@ -49,6 +49,18 @@ OC.Lives.setLives = function(ply, lives)
 end
 
 OC.Lives.addLives = function(ply, lives)
+	if CLIENT then
+		if LocalPlayer():UserID() ~= ply:UserID() then
+			ply:PrintMessage(HUD_PRINTCONSOLE, "Can't set someone else's lives.")
+			return
+		end
+
+		net.Start("do_give_lives")
+			net.WriteInt(lives, 32)
+		net.SendToServer()
+		return
+	end
+
 	local prevLives = OC.Lives.getLives(ply)
 	OC.Lives.setLives(ply, prevLives + lives)
 
@@ -124,3 +136,19 @@ OC.Lives.handleAllDead = function()
 		timer.Simple(10, function() game.LoadNextMap() end)
 	end
 end
+
+if SERVER then
+	util.AddNetworkString("do_give_lives")
+end
+
+net.Receive("do_give_lives", function(len, ply)
+	local amt = net.ReadInt(32)
+
+	local cheatsConvar = GetConVar("sv_cheats")
+	if not cheatsConvar:GetBool() and not ply:IsAdmin() then
+		ply:PrintMessage(HUD_PRINTCONSOLE, "sv_cheats must be enabled, or you must be an admin.")
+		return
+	end
+
+	OC.Lives.addLives(ply, amt)
+end)

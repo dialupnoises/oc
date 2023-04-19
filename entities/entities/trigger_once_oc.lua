@@ -149,13 +149,15 @@ function ENT:EndTouch(ent)
 end
 
 function ENT:AcceptInput(name, activator, called, data)
-	if name == "Toggle" then
+	local nameLower = string.lower(name)
+
+	if nameLower == "toggle" then
 		self:SetDisabled(not self:GetDisabled())
-	elseif name == "Enable" then
+	elseif nameLower == "enable" then
 		self:SetDisabled(false)
-	elseif name == "Disable" then
+	elseif nameLower == "disable" then
 		self:SetDisabled(true)
-	elseif name == "TouchTest" then
+	elseif nameLower == "touchtest" then
 		if self.triggerAmount == 0 then
 			self:CallAllOutputs("OnTouching", nil)
 		else
@@ -165,17 +167,19 @@ function ENT:AcceptInput(name, activator, called, data)
 end
 
 function ENT:KeyValue(key, value)
-	if key == "filtername" then
+	local keyLower = string.lower(key)
+
+	if keyLower == "filtername" then
 		self:SetFilterEnt(value)
-	elseif key == "StartDisabled" then
+	elseif keyLower == "startdisabled" then
 		if self:GetName() == "Final_Trigger" then
 			self:SetDisabled(true)
 		else
 			self:SetDisabled(value == "1")
 		end
-	elseif key == "wait" then
+	elseif keyLower == "wait" then
 		self:SetResetDelay(tonumber(value))
-	elseif key ~= nil and string.Left(key, 2) == "On" then
+	elseif keyLower ~= nil and string.Left(keyLower, 2) == "on" then
 		self:StoreOutput(key, value)
 		self.triggerOutputs = self.triggerOutputs or {}
 		self.outputsUsedCount = self.outputsUsedCount or {}

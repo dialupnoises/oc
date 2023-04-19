@@ -39,15 +39,6 @@ function SWEP:Initialize()
 				self:SetClip2(math.min(self:Clip2() + 5, 100))
 			end
 		end)
-	else
-		timer.Create("medkit_sound_" .. self:EntIndex(), self.HealInterval + 0.1, 0, function()
-			timer.Stop("medkit_sound_" .. self:EntIndex())
-			if self.HealSoundPatch == nil then return end
-			MsgN("stopping")
-			if self.HealSoundPatch:IsPlaying() then
-				self.HealSoundPatch:Stop()
-			end
-		end)
 	end
 end
 
@@ -86,14 +77,13 @@ function SWEP:PrimaryAttack()
 	if SERVER then
 		tr.Entity:SetHealth(tr.Entity:Health() + 1)
 		self:SetClip2(self:Clip2() - 1)
-	end
+	elseif CLIENT then
+		if self.HealSoundPatch == nil then
+			self.HealSoundPatch = CreateSound(self.Weapon, self.HealSound)
+		end
 
-	if self.HealSoundPatch == nil then
-		self.HealSoundPatch = CreateSound(self.Weapon, self.HealSound)
+		self.HealSoundPatch:Play()
 	end
-
-	self.HealSoundPatch:Play()
-	timer.Start("medkit_sound_" .. self:EntIndex())
 end
 
 function SWEP:CanSecondaryAttack()
@@ -129,4 +119,10 @@ end
 
 function SWEP:OnRemove()
 	timer.Remove("medkit_ammo_" .. self:EntIndex())
+end
+
+function SWEP:Think()
+	if self.HealSoundPatch ~= nil and self.HealSoundPatch:IsPlaying() and (CurTime() - self.LastHeal) > 0.1 then
+		self.HealSoundPatch:Stop()
+	end
 end

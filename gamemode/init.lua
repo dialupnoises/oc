@@ -4,7 +4,6 @@ AddCSLuaFile("ammo_types.lua")
 AddCSLuaFile("teams.lua")
 AddCSLuaFile("util.lua")
 AddCSLuaFile("weapon_sounds.lua")
-AddCSLuaFile("client/timer.lua")
 AddCSLuaFile("client/npc_info.lua")
 AddCSLuaFile("client/points.lua")
 AddCSLuaFile("client/strings.lua")
@@ -14,6 +13,7 @@ AddCSLuaFile("client/transfer.lua")
 AddCSLuaFile("custom_replacements.lua")
 AddCSLuaFile("convars.lua")
 AddCSLuaFile("points.lua")
+AddCSLuaFile("timer.lua")
 AddCSLuaFile("lives.lua")
 
 include("shared.lua")
@@ -25,6 +25,8 @@ local mapConfig = {}
 -- OC func_precipitation allows enabling/disabling
 -- we're just assuming you don't have multiple on a map that are independently enabled and disabled
 local rainOn = true
+
+local allowFlashlight = true
 
 local numlives = 0
 local teamplay = false
@@ -41,35 +43,37 @@ function GM:EntityKeyValue(ent, key, value)
 end
 
 function ReplaceKeyValues(ent, key, value)
-	if ent:GetClass() == "npc_maker" and string.equalsi(key, "npctype") and OC.NPCReplacements[value] ~= nil then
+	local keyLower = string.lower(key)
+
+	if ent:GetClass() == "npc_maker" and string.equalsi(keyLower, "npctype") and OC.NPCReplacements[value] ~= nil then
 		return OC.NPCReplacements[value]
 	end
 
 	if ent:IsNPC() or ent:GetClass() == "npc_maker" then
-		if key == "npchealth" then
+		if keyLower == "npchealth" then
 			ent:SetHealth(tonumber(value))
-		elseif key == "npcname" then
+		elseif keyLower == "npcname" then
 			ent:SetNWString("npcname", value)
-		elseif key == "teamnumber" and teamplay then
+		elseif keyLower == "teamnumber" and teamplay then
 			ent:SetNWInt("npcteam", tonumber(value))
-		elseif key == "additionalequipment" and value == "Nothing" then
+		elseif kkeyLowerey == "additionalequipment" and value == "Nothing" then
 			return ""
-		elseif key == "additionalequipment" and OC.CustomReplacements[value] ~= nil then
+		elseif keyLower == "additionalequipment" and OC.CustomReplacements[value] ~= nil then
 			return ResolveOCWeapon(value)
 		end
 	end
 
-	if ent:GetClass() == "game_score" and key == "points" then
+	if ent:GetClass() == "game_score" and keyLower == "points" then
 		ent.pointAmount = tonumber(value)
 	end
 
-	if ent:GetClass() == "info_player_deathmatch" and key == "StartDisabled" then
+	if ent:GetClass() == "info_player_deathmatch" and keyLower == "startdisabled" then
 		ent.spawnEnabled = (value == "0")
-	elseif ent:GetClass() == "info_player_deathmatch" and key == "OnPlayerSpawn" then
+	elseif ent:GetClass() == "info_player_deathmatch" and keyLower == "onplayerspawn" then
 		ent:StoreOutput(key, value)
 	end
 
-	if ent:GetClass() == "func_precipitation" and key == "startoff" and value == "1" then
+	if ent:GetClass() == "func_precipitation" and keyLower == "startoff" and value == "1" then
 		rainOn = false
 		SetRainEnabled(rainOn)
 	end
@@ -88,7 +92,11 @@ function GM:InitPostEntity()
 
 	if config.convars ~= nil then
 		for k, v in pairs(config.convars) do 
-			RunConsoleCommand(k, v)
+			if k == "mp_flashlight" then 
+				allowFlashlight = (tonumber(v) == 1)
+			else
+				RunConsoleCommand(k, v)
+			end
 		end
 	end
 
@@ -130,7 +138,7 @@ function GM:InitPostEntity()
 end
 
 function GM:Initialize()
-	resource.AddFile("resource/obsidian.ttf")
+	resource.AddFile("resource/zrnic.ttf")
 
 	if mapConfig[game.GetMap()] == nil then
 		mapConfig[game.GetMap()] = LoadMapConfig(game.GetMap())
@@ -151,7 +159,7 @@ function GM:PlayerInitialSpawn(ply)
 	OC.Lives.initPlayer(ply)
 	OC.Points.initPlayer(ply)
 
-	ply:AllowFlashlight(true)
+	ply:AllowFlashlight(allowFlashlight)
 
 	SetRainEnabled(rainOn, ply)
 end
@@ -216,11 +224,13 @@ function GM:OnEntityCreated(ent)
 end
 
 function GM:AcceptInput(ent, input, activator, caller, value)
-	if input == "Use" then
+	local inputLower = string.lower(input)
+
+	if inputLower == "Use" then
 		ent.lastUseActivator = activator
 	end
 
-	if input == "ApplyScore" then
+	if inputLower == "applyscore" then
 		local kvs = ent:GetKeyValues()
 		local points = ent.pointAmount
 		if points ~= nil then
@@ -235,7 +245,7 @@ function GM:AcceptInput(ent, input, activator, caller, value)
 	end
 
 	-- patch game_score for points not being frags
-	if input == "ApplyScore" and not OC.Points.areFrags() then
+	if inputLower == "applyscore" and not OC.Points.areFrags() then
 		local kvs = ent:GetKeyValues()
 		local points = ent.pointAmount
 
@@ -251,18 +261,18 @@ function GM:AcceptInput(ent, input, activator, caller, value)
 		return true
 	end
 
-	if ent:GetClass() == "info_player_deathmatch" and input == "Enable" then
+	if ent:GetClass() == "info_player_deathmatch" and inputLower == "enable" then
 		ent.spawnEnabled = true
-	elseif ent:GetClass() == "info_player_deathmatch" and input == "Disable" then
+	elseif ent:GetClass() == "info_player_deathmatch" and inputLower == "disable" then
 		ent.spawnEnabled = false
 	end
 
 	if ent:GetClass() == "func_precipitation" then
-		if input == "Enable" then 
+		if inputLower == "enable" then 
 			rainOn = true
-		elseif input == "Disable" then
+		elseif inputLower == "disable" then
 			rainOn = false
-		elseif input == "Toggle" then
+		elseif inputLower == "toggle" then
 			rainOn = not rainOn
 		end
 		SetRainEnabled(rainOn)

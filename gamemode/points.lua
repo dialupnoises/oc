@@ -98,7 +98,18 @@ end
 
 -- Adds the given amount of points
 OC.Points.givePoints = function(ply, amount)
-	OC.Points.setPoints(ply, OC.Points.getPoints(ply) + amount)
+	if CLIENT then
+		if LocalPlayer():UserID() ~= ply:UserID() then
+			ply:PrintMessage(HUD_PRINTCONSOLE, "Can't set someone else's points.")
+			return
+		end
+
+		net.Start("do_give_points")
+			net.WriteInt(amount, 32)
+		net.SendToServer()
+	else
+		OC.Points.setPoints(ply, OC.Points.getPoints(ply) + amount)
+	end
 end
 
 -- Subtracts the given amount of points
@@ -119,7 +130,24 @@ OC.Points.sendChange = function(ply, amt)
 	net.Send(ply)
 end
 
+if SERVER then
+	util.AddNetworkString("alert_points_change")
+	util.AddNetworkString("do_give_points")
+end
+
 net.Receive("alert_points_change", function(len, ply)
 	local amt = net.ReadInt(32)
 	hook.Call("OCPointsChange", nil, amt)
+end)
+
+net.Receive("do_give_points", function(len, ply)
+	local amt = net.ReadInt(32)
+	
+	local cheatsConvar = GetConVar("sv_cheats")
+	if not cheatsConvar:GetBool() and not ply:IsAdmin() then
+		ply:PrintMessage(HUD_PRINTCONSOLE, "sv_cheats must be enabled, or you must be an admin.")
+		return
+	end
+
+	OC.Points.givePoints(ply, amt)
 end)

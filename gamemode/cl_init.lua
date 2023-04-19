@@ -38,7 +38,6 @@ function GM:Initialize()
 	})
 end
 
-include("client/timer.lua")
 include("client/npc_info.lua")
 include("client/points.lua")
 include("client/strings.lua")

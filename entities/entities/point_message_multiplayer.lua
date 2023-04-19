@@ -13,11 +13,13 @@ function ENT:SetupDataTables()
 end
 
 function ENT:KeyValue(key, value)
-	if key == "message" then
+	local keyLower = string.lower(key)
+
+	if keyLower == "message" then
 		self:SetMessage(value)
-	elseif key == "radius" then
+	elseif keyLower == "radius" then
 		self:SetRadius(tonumber(value))
-	elseif key == "textcolor" then
+	elseif keyLower == "textcolor" then
 		self:SetTextColor(value)
 	end
 
@@ -60,11 +62,13 @@ function drawText(self)
 end
 
 function ENT:AcceptInput(name, activator, caller, val)
-	if name == "ChangeMessage" then
+	local nameLower = string.lower(name)
+
+	if nameLower == "changemessage" then
 		self:SetMessage("message", val)
-	elseif name == "Enable" then
+	elseif nameLower == "enable" then
 		self:SetEnabled(true)
-	elseif name == "Disable" then
+	elseif nameLower == "disable" then
 		self:SetEnabled(false)
 	end
 
