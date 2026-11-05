@@ -1,0 +1,285 @@
+// Obsidian ( Lost Coast ) Modifications for Cooperative Gameplay. ( Nov, 25. 2006 )
+// File was created for use in Obsidian Conflict ONLY!
+"d2_LostCoast"
+{
+	"Remove"
+	{
+		Classname
+		{
+			"info_player_start" {}
+		}
+		"Targetname"
+		{
+			"lengthconstraint_lamp1" {}
+			"lengthconstraint_lamp2" {}
+			"lengthconstraint_lamp3" {}
+			"lengthconstraint_lamp4" {}
+			"lengthconstraint_chandelier" {}
+			"trigger_clifffall" {}
+			"trigger_clifffall_detector" {}
+			"lcs_fisherman_outro1" {}
+			"command" {}
+			"template_spawnequipment" {}
+			"start_equipment" {}
+			"trigger_knockout_teleport" {}
+			"clientcommand" {}
+			"blackout_viewcontroller" {}
+			"blackout" {}
+			"destination_knockout_1" {}
+			"door_courtyard" {}
+			"brush_rearwall_playerclip" {}
+		}
+	}
+	"Add"
+	{
+		// MPs lack of a good length constraint has forced me to use ball constraints instead.
+		"phys_ballsocket"
+		{
+			"attach1" "anchor_lamp1"
+			"origin" "1408 3776 3245"
+		}
+		"phys_ballsocket"
+		{
+			"attach1" "anchor_lamp2"
+			"origin" "1536 3777 3245"
+		}
+		"phys_ballsocket"
+		{
+			"attach1" "anchor_lamp3"
+			"origin" "1532 3905 3245"
+		}
+		"phys_ballsocket"
+		{
+			"attach1" "anchor_lamp4"
+			"origin" "1536 3633 3245"
+		}
+		"phys_ballsocket"
+		{
+			"attach1" "anchor_chandelier"
+			"origin" "1472 3264 3629"
+		}
+		"game_end"
+		{
+			"targetname" "lostcoast_end"
+			"origin" "1578.98 2132 125"
+		}
+		// choreographed scene replacment without disconnect
+		"logic_choreographed_scene"
+		{
+			"ResumeSceneFile" "TLK_RESUME"
+			"targetname" "lcs_fisherman_outro1"
+			"busyactor" "1"
+			"target1" "fisherman"
+			"SceneFile" "scenes/lostcoast/fisherman_outro1.vcd"
+			"OnCompletion" "fade_outro,Fade,,0,-1"
+			"OnCompletion" "lcs_fisherman_outro2,Start,,0,-1"
+			"OnCompletion" "lostcoast_end,EndGame,,7,-1"
+			"origin" "-1936 -1888 -11.1805"
+		}
+		//*****************************
+		// Player Start Point Number 1
+		//*****************************
+		"info_player_deathmatch"
+		{
+			"angles" "0 135.5 0"
+			"targetname" "lostcoast_playstart1"
+			"origin" "1453 2377 -46"
+		}
+		"info_player_deathmatch"
+		{
+			"angles" "0 135.5 0"
+			"targetname" "lostcoast_playstart1"
+			"origin" "1410 2463 -46"
+		}
+		"info_player_deathmatch"
+		{
+			"angles" "0 135.5 0"
+			"targetname" "lostcoast_playstart1"
+			"origin" "1341.38 2398.44 -46"
+		}
+		"info_player_deathmatch"
+		{
+			"angles" "0 135.5 0"
+			"targetname" "lostcoast_playstart1"
+			"origin" "1341 2318 -46"
+		}
+		"info_player_deathmatch"
+		{
+			"angles" "0 135.5 0"
+			"targetname" "lostcoast_playstart1"
+			"origin" "1252 2441 -46"
+		}
+		"info_player_deathmatch"
+		{
+			"angles" "0 135.5 0"
+			"targetname" "lostcoast_playstart1"
+			"origin" "1243 2350 -46"
+		}
+		"info_player_deathmatch"
+		{
+			"angles" "0 135.5 0"
+			"targetname" "lostcoast_playstart1"
+			"origin" "1262 2301 -46"
+		}
+		"info_player_deathmatch"
+		{
+			"angles" "0 135.5 0"
+			"targetname" "lostcoast_playstart1"
+			"origin" "1296 2256 -46"
+		}
+		"info_player_deathmatch"
+		{
+			"angles" "0 135.5 0"
+			"targetname" "lostcoast_playstart1"
+			"origin" "1196 2273 -46"
+		}
+		"info_player_deathmatch"
+		{
+			"angles" "0 135.5 0"
+			"targetname" "lostcoast_playstart1"
+			"origin" "1146 2363 -46"
+		}
+		//*****************************
+		// Player Start Point Number 2
+		//*****************************
+		"info_player_deathmatch"
+		{
+			"angles" "0 0 0"
+			"StartDisabled" "1"
+			"targetname" "lostcoast_playstart2"
+			"origin" "1201.54 5174.06 2433"
+		}
+		"info_player_deathmatch"
+		{
+			"angles" "0 0 0"
+			"StartDisabled" "1"
+			"targetname" "lostcoast_playstart2"
+			"origin" "1291.17 5175.92 2433"
+		}
+		"info_player_deathmatch"
+		{
+			"angles" "0 0 0"
+			"StartDisabled" "1"
+			"targetname" "lostcoast_playstart2"
+			"origin" "1334.44 5247.74 2433"
+		}
+		"info_player_deathmatch"
+		{
+			"angles" "0 0 0"
+			"StartDisabled" "1"
+			"targetname" "lostcoast_playstart2"
+			"origin" "1286.13 5278.92 2433"
+		}
+		"info_player_deathmatch"
+		{
+			"angles" "0 0 0"
+			"StartDisabled" "1"
+			"targetname" "lostcoast_playstart2"
+			"origin" "1213.8 5254.09 2433"
+		}
+		"info_player_deathmatch"
+		{
+			"angles" "0 0 0"
+			"StartDisabled" "1"
+			"targetname" "lostcoast_playstart2"
+			"origin" "1219.51 5305.26 2433"
+		}
+		"info_player_deathmatch"
+		{
+			"angles" "0 0 0"
+			"StartDisabled" "1"
+			"targetname" "lostcoast_playstart2"
+			"origin" "1229.17 5354.38 2433"
+		}
+		"info_player_deathmatch"
+		{
+			"angles" "0 0 0"
+			"StartDisabled" "1"
+			"targetname" "lostcoast_playstart2"
+			"origin" "1260.56 5401.32 2433"
+		}
+		"info_player_deathmatch"
+		{
+			"angles" "0 0 0"
+			"StartDisabled" "1"
+			"targetname" "lostcoast_playstart2"
+			"origin" "1273.46 5456.43 2433"
+		}
+		"info_player_deathmatch"
+		{
+			"angles" "0 0 0"
+			"StartDisabled" "1"
+			"targetname" "lostcoast_playstart2"
+			"origin" "1304.68 5429.64 2433"
+		}
+		"info_player_deathmatch"
+		{
+			"angles" "0 0 0"
+			"StartDisabled" "1"
+			"targetname" "lostcoast_playstart2"
+			"origin" "1334.33 5490.28 2433"
+		}
+		"info_player_deathmatch"
+		{
+			"angles" "0 0 0"
+			"StartDisabled" "1"
+			"targetname" "lostcoast_playstart2"
+			"origin" "1323.68 5335.49 2433"
+		}
+	}
+	"Modify"
+	{
+		"Targetname"
+		{
+			"propphys_lamp1"
+			{
+				"spawnflags" "512"
+			}
+			"propphys_lamp2"
+			{
+				"spawnflags" "512"
+			}
+			"propphys_lamp3"
+			{
+				"spawnflags" "512"
+			}
+			"propphys_lamp4"
+			{
+				"spawnflags" "512"
+			}
+		}
+		"Origin"
+		{
+			"1904.52 4696 2624"
+			{
+				"OnTrigger" "areaportal_monastery,Close,,0,-1"
+				"OnTrigger" "lostcoast_playstart2,Enable,,0,-1"
+				"OnTrigger" "lostcoast_playstart1,Disable,,0,-1"
+			}
+			"1472.08 3264.43 3083.44"
+			{
+				"parentname" "propphys_chandelier"
+			}
+		}
+	}
+
+	"SpawnItems"
+	{
+		"weapon_physcannon" "1"
+		"weapon_crowbar" "1"
+		"weapon_pistol" "1"
+		"weapon_smg1" "1"
+		"weapon_uzi" "2"
+		"weapon_healer" "1"
+	}
+	"SoundCache"
+	{
+		"Base_BASE"		"1"
+		"Base_HL2"		"1"
+		"Base_EP1"		"1"
+		"Base_NPC"		"1"
+		"Base_NPCEP1"		"1"
+		"Base_LC"		"1"
+	}
+
+}

@@ -1,0 +1,92 @@
+c2a2
+{
+    Remove
+    {
+        ClassName
+        {
+            "info_player_start" {}
+            "logic_auto" {}
+        }
+    }
+    Add
+    {
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "c2a2_starts"
+            "origin" "-2193.22 -2318.98 -1351"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "c2a2_starts"
+            "origin" "-2072 -2321 -1351"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "c2a2_starts"
+            "origin" "-2131 -2321 -1351"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "c2a2_starts"
+            "origin" "-2256 -2319 -1351"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "c2a2_starts"
+            "origin" "-2263 -2110.02 -1351"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "c2a2_starts"
+            "origin" "-2200.22 -2110 -1351"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "c2a2_starts"
+            "origin" "-2138 -2112.02 -1351"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "c2a2_starts"
+            "origin" "-2079 -2112.02 -1351"
+        }
+    }
+    Modify
+    {
+        ClassName
+        {
+            "worldspawn"
+            {
+                "mapversion" "4"
+            }
+        }
+        Origin
+        {
+            "-2460 -2216 -1272"
+            {
+                "StartDisabled" "1"
+            }
+            "-1096 -1564 -1904"
+            {
+                "spawngroup" "c2a2a_starts"
+                "transitionradius" "429"
+            }
+        }
+    }
+SpawnItems
+{
+    "weapon_crowbar" "1"
+    "weapon_smg1" "1"
+    "item_battery" "1"
+    "item_ammo_smg1" "3"
+    "weapon_healer" "1"
+}
+}

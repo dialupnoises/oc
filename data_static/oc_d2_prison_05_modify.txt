@@ -1,0 +1,99 @@
+d2_prison_05
+{
+    Remove
+    {
+        ClassName
+        {
+            "info_player_start" {}
+        }
+        TargetName
+        {
+            "point_of_no_return" {}
+        }
+        Origin
+        {
+            "1440 424 448" {}
+            "-4048 -528 560" {}
+        }
+    }
+    Add
+    {
+        "logic_auto"
+        {
+            "spawnflags" "1"
+            "OnMapSpawn" "exit_gate,Close,,0.1,-1"
+            "origin" "1527 805.915 467.594"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "prison_05_spawn1"
+            "origin" "1375 374 385"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "prison_05_spawn1"
+            "origin" "1375 528 385"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "prison_05_spawn1"
+            "origin" "1375 688 385"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "prison_05_spawn1"
+            "origin" "1505 374 385"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "prison_05_spawn1"
+            "origin" "1505 534 385"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "prison_05_spawn1"
+            "origin" "1505 688 385"
+        }
+    }
+    Modify
+    {
+        ClassName
+        {
+            "worldspawn"
+            {
+                "disableareaportals" "1"
+            }
+        }
+        Origin
+        {
+            "-4179.75 -1017.56 568"
+            {
+                "nosmooth" "1"
+                "spawngroup" "prison_06_spawn1"
+            }
+        }
+    }
+SpawnItems
+{
+    "weapon_smg1" "1"
+    "weapon_ar2" "1"
+    "weapon_shotgun" "1"
+    "weapon_crowbar" "1"
+    "weapon_physcannon" "1"
+    "weapon_357" "1"
+    "weapon_frag" "1"
+    "weapon_pistol" "1"
+    "item_box_buckshot" "2"
+    "item_ammo_smg1" "3"
+    "item_battery" "3"
+    "weapon_healer" "1"
+    "weapon_bugbait" "1"
+    "weapon_crossbow" "1"
+}
+}

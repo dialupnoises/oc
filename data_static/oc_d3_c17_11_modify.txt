@@ -1,0 +1,94 @@
+d3_c17_11
+{
+    Remove
+    {
+        ClassName
+        {
+            "info_player_start" {}
+        }
+        Origin
+        {
+            "768 7864 969" {}
+        }
+    }
+    Add
+    {
+        "logic_auto"
+        {
+            "spawnflags" "1"
+            "OnNewGame" "citizen_1_maker,Spawn,,0,-1"
+            "OnNewGame" "citizen_2_maker,Spawn,,0,-1"
+            "origin" "768 7864 969"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "c17_11_spawn1"
+            "origin" "796 8005 961"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "c17_11_spawn1"
+            "origin" "796 7955 961"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "c17_11_spawn1"
+            "origin" "796 7905.21 961"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "c17_11_spawn1"
+            "origin" "874 7905 961"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "c17_11_spawn1"
+            "origin" "874 7955 961"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "c17_11_spawn1"
+            "origin" "874 8004.79 961"
+        }
+    }
+    Modify
+    {
+        ClassName
+        {
+            "worldspawn"
+            {
+                "disableareaportals" "1"
+            }
+        }
+        Origin
+        {
+            "1104 3344 992"
+            {
+                "nosmooth" "1"
+                "spawngroup" "c17_12_spawn1"
+            }
+        }
+    }
+SpawnItems
+{
+    "weapon_smg1" "1"
+    "weapon_ar2" "1"
+    "weapon_shotgun" "1"
+    "weapon_crowbar" "1"
+    "weapon_physcannon" "1"
+    "weapon_357" "1"
+    "weapon_frag" "1"
+    "weapon_pistol" "1"
+    "item_box_buckshot" "2"
+    "item_ammo_smg1" "3"
+    "item_battery" "3"
+    "weapon_healer" "1"
+    "weapon_crossbow" "1"
+}
+}

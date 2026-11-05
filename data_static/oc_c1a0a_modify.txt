@@ -1,0 +1,69 @@
+// File was created for use in Obsidian Conflict ONLY!
+c1a0a
+{
+	SpawnItems {}
+	Add
+	{
+		"info_player_deathmatch"
+		{
+			"angles" "0 0 0"
+			"StartDisabled" "0"
+			"origin" "320 2176 729"
+		}
+		
+		"info_player_deathmatch"
+		{
+			"angles" "0 0 0"
+			"StartDisabled" "0"
+			"origin" "320 2112 729"
+		}
+		
+		"info_player_deathmatch"
+		{
+			"angles" "0 0 0"
+			"StartDisabled" "0"
+			"origin" "320 2048 729"
+		}
+		
+		"info_player_deathmatch"
+		{
+			"angles" "0 0 0"
+			"StartDisabled" "0"
+			"origin" "320 2240 729"
+		}
+		
+		"info_player_deathmatch"
+		{
+			"angles" "0 0 0"
+			"StartDisabled" "0"
+			"origin" "320 1984 729"
+		}
+		
+		"info_player_deathmatch"
+		{
+			"angles" "0 0 0"
+			"StartDisabled" "0"
+			"origin" "368 2112 729"
+		}
+	}
+	
+	Modify
+	{
+		// Trigger_changelevel that goes back to c1a0d
+		Targetname
+		{
+			"airlocktransition1"
+			{
+				"spawnflags" "2"
+			}
+		}
+
+		Classname
+		{
+			"trigger_changelevel"
+			{
+				"transitionradius" "512"
+			}
+		}
+	}
+}

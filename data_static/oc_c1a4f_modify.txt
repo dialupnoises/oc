@@ -1,0 +1,99 @@
+c1a4f
+{
+    Remove
+    {
+        ClassName
+        {
+            "info_player_start" {}
+        }
+    }
+    Add
+    {
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "c1a4f_starts"
+            "origin" "-1154.98 -205.826 1041"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "c1a4f_starts"
+            "origin" "-1175 -152 1041"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "c1a4f_starts"
+            "origin" "-1102 -158 1041"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "c1a4f_starts"
+            "origin" "-1098 -204 1041"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "c1a4f_starts"
+            "origin" "-1040 -153 1041"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "c1a4f_starts"
+            "origin" "-1034 -207 1041"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "c1a4f_starts"
+            "origin" "-983 -147 1041"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "c1a4f_starts"
+            "origin" "-967 -204 1041"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "c1a4f_starts"
+            "origin" "-907 -204 1041"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "c1a4f_starts"
+            "origin" "-910 -153 1041"
+        }
+    }
+    Modify
+    {
+        ClassName
+        {
+            "worldspawn"
+            {
+                "mapversion" "6"
+            }
+        }
+	Origin
+	{
+	    "-1264 -161 1199"
+            {
+                "spawngroup" "c1a4b_starts3"
+                "transitionradius" "688"
+            }
+	}
+    }
+SpawnItems
+{
+    "weapon_crowbar" "1"
+    "weapon_smg1" "1"
+    "item_battery" "1"
+    "item_ammo_smg1" "2"
+    "weapon_healer" "1"
+}
+}

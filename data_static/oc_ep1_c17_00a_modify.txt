@@ -1,0 +1,163 @@
+ep1_c17_00a
+{
+    Remove
+    {
+        ClassName
+        {
+            "info_player_start" {}
+        }
+        TargetName
+        {
+            "trigger_elevator_player" {}
+            "math_count_door" {}
+        }
+        Origin
+        {
+            "776 2592 333.524" {}
+        }
+    }
+    Add
+    {
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "spawn1"
+            "origin" "805 2881 373"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "targetname" "spawn1"
+            "origin" "865 2576 309"
+        }
+        "filter_multi"
+        {
+            "targetname" "filter_NoDamage"
+            "Negated" "1"
+            "origin" "851 2564 436"
+        }
+        "logic_auto"
+        {
+            "spawnflags" "1"
+            "OnMapSpawn" "tonemap_controller,SetTonemapRate,.25,0,-1"
+            "OnMapSpawn" "tonemap_controller,SetAutoExposureMin,.5,0,-1"
+            "OnMapSpawn" "tonemap_controller,SetAutoExposureMax,4,0,-1"
+            "OnMapSpawn" "alyx,SetDamageFilter,filter_NoDamage,1,-1"
+            "OnMapSpawn" "weapons,Kill,,0.8,-1"
+            "OnMapSpawn" "physcannon,Kill,,0.8,-1"
+            "OnMapSpawn" "suit,Kill,,0.8,-1"
+            "OnMapSpawn" "new_game_template,ForceSpawn,,0.5,-1"
+            "OnMapSpawn" "alyx,Kill,,0.1,-1"
+            "origin" "776 2592 333.524"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "targetname" "spawn1"
+            "origin" "834 2788 245"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "targetname" "spawn1"
+            "origin" "831 2585 181"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270.5 0"
+            "targetname" "spawn1"
+            "origin" "799 2792 117"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "targetname" "spawn1"
+            "origin" "865 2586 53"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "targetname" "spawn2"
+            "StartDisabled" "1"
+            "origin" "4611 3413 409"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "targetname" "spawn2"
+            "StartDisabled" "1"
+            "origin" "4612 3767 426"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "targetname" "spawn2"
+            "StartDisabled" "1"
+            "origin" "4029 3170 429"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "targetname" "spawn2"
+            "StartDisabled" "1"
+            "origin" "3683 3183 427"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "targetname" "spawn2"
+            "StartDisabled" "1"
+            "origin" "4263 4274 431"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "targetname" "spawn2"
+            "StartDisabled" "1"
+            "origin" "3940 4336 412"
+        }
+        "point_trigger"
+        {
+            "spawnflags" "1"
+            "targetname" "trigger_elevator_player"
+            "TriggerOnce" "1"
+            "TriggerRadius" "65"
+            "OnStartTouch" "counter_elevator,Add,1,0,-1"
+            "origin" "4619 3579 453"
+        }
+    }
+    Modify
+    {
+        ClassName
+        {
+            "worldspawn"
+            {
+                "disableareaportals" "1"
+            }
+        }
+        TargetName
+        {
+            "elev_start"
+            {
+                "OnTrigger" "spawn2,Enable,,0,-1"
+                "OnTrigger" "spawn1,Disable,,0,-1"
+            }
+        }
+        Origin
+        {
+            "829.32 2742.73 138"
+            {
+                "spawnflags" "2"
+            }
+        }
+    }
+SpawnItems
+{
+    "weapon_physcannon" "1"
+    "weapon_healer" "1"
+    "weapon_pistol" "1"
+    "weapon_shotgun" "1"
+    "item_ammo_pistol_large" "1"
+    "item_box_buckshot" "2"
+}
+}

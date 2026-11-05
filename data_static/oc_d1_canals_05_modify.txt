@@ -1,0 +1,316 @@
+d1_canals_05
+{
+    Remove
+    {
+        ClassName
+        {
+            "info_player_start" {}
+            "logic_auto" {}
+        }
+        TargetName
+        {
+            "relay_rockfall_docollapse" {}
+            "relay_rockfall_start" {}
+            "tigger_closegate" {}
+        }
+        Origin
+        {
+            "3792 6744 -264" {}
+        }
+    }
+    Add
+    {
+        "prop_dynamic_override"
+        {
+            "angles" "0 0 90"
+            "fademindist" "-1"
+            "fadescale" "1"
+            "MaxAnimTime" "10"
+            "MinAnimTime" "5"
+            "model" "models/props_c17/concrete_barrier001a.mdl"
+            "renderamt" "255"
+            "rendercolor" "255 255 255"
+            "skin" "0"
+            "solid" "6"
+            "origin" "4029 6848 -248"
+        }
+        "prop_dynamic_override"
+        {
+            "angles" "0 180 90"
+            "fademindist" "-1"
+            "fadescale" "1"
+            "MaxAnimTime" "10"
+            "MinAnimTime" "5"
+            "model" "models/props_c17/concrete_barrier001a.mdl"
+            "renderamt" "255"
+            "rendercolor" "255 255 255"
+            "skin" "0"
+            "solid" "6"
+            "origin" "4029 6752 -248"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "canals_05_spawn1"
+            "origin" "3985 6799 -301"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "targetname" "canals_05_spawn1"
+            "origin" "3787 6797 -301"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "canals_05_spawn1"
+            "origin" "3797 6636 -301"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "targetname" "canals_05_spawn1"
+            "origin" "3486 6680 -282"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "canals_05_spawn1"
+            "origin" "3509 6560 -282"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "canals_05_spawn1"
+            "origin" "3509 6463 -282"
+        }
+        "point_teleport"
+        {
+            "angles" "0 90 0"
+            "radius" "128"
+            "spawnflags" "2048"
+            "target" "airboat1"
+            "targetname" "teleport_airboat1"
+            "origin" "7352 1402 -466"
+        }
+        "prop_vehicle_airboat"
+        {
+            "actionScale" "1"
+            "angles" "0 90 0"
+            "fademindist" "-1"
+            "fadescale" "1"
+            "model" "models/airboat.mdl"
+            "origin" "6783 1976.99 326"
+            "solid" "6"
+            "targetname" "airboat1"
+            "vehiclescript" "scripts/vehicles/airboat.txt"
+        }
+        "point_trigger"
+        {
+            "filtername" "airboat_filter"
+            "spawnflags" "12"
+            "targetname" "trigger_airboat1"
+            "TriggerRadius" "347"
+            "OnEndTouchAll" "teleport_airboat1,Teleport,,0,1"
+            "OnEndTouchAll" "trigger_airboat1,Disable,,0,1"
+            "OnEndTouchAll" "trigger_airboat2,Enable,,1,1"
+            "origin" "7534 1406 -439"
+        }
+        "filter_activator_class"
+        {
+            "filterclass" "prop_vehicle_airboat"
+            "Negated" "Allow entities that match criteria"
+            "targetname" "airboat_filter"
+            "origin" "7415.41 1319.52 -439"
+        }
+        "point_trigger"
+        {
+            "filtername" "airboat_filter"
+            "spawnflags" "12"
+            "StartDisabled" "1"
+            "targetname" "trigger_airboat2"
+            "TriggerRadius" "347"
+            "OnEndTouchAll" "teleport_airboat2,Teleport,,0,1"
+            "OnEndTouchAll" "trigger_airboat2,Disable,,0,1"
+            "OnEndTouchAll" "trigger_airboat3,Enable,,1,1"
+            "origin" "7534 1406 -439"
+        }
+        "point_teleport"
+        {
+            "angles" "0 90 0"
+            "radius" "128"
+            "spawnflags" "2048"
+            "target" "airboat2"
+            "targetname" "teleport_airboat2"
+            "origin" "7352 1402 -466"
+        }
+        "prop_vehicle_airboat"
+        {
+            "actionScale" "1"
+            "angles" "0 90 0"
+            "fademindist" "-1"
+            "fadescale" "1"
+            "model" "models/airboat.mdl"
+            "origin" "6965 1976.99 326"
+            "solid" "6"
+            "targetname" "airboat2"
+            "vehiclescript" "scripts/vehicles/airboat.txt"
+        }
+        "point_trigger"
+        {
+            "filtername" "airboat_filter"
+            "spawnflags" "12"
+            "StartDisabled" "1"
+            "targetname" "trigger_airboat3"
+            "TriggerRadius" "347"
+            "OnEndTouchAll" "teleport_airboat3,Teleport,,0,1"
+            "OnEndTouchAll" "trigger_airboat4,Enable,,1,1"
+            "OnEndTouchAll" "trigger_airboat3,Disable,,0,1"
+            "origin" "7534 1406 -439"
+        }
+        "point_teleport"
+        {
+            "angles" "0 90 0"
+            "radius" "128"
+            "spawnflags" "2048"
+            "target" "airboat3"
+            "targetname" "teleport_airboat3"
+            "origin" "7352 1402 -466"
+        }
+        "prop_vehicle_airboat"
+        {
+            "actionScale" "1"
+            "angles" "0 90 0"
+            "fademindist" "-1"
+            "fadescale" "1"
+            "model" "models/airboat.mdl"
+            "origin" "7142 1976.99 326"
+            "solid" "6"
+            "targetname" "airboat3"
+            "vehiclescript" "scripts/vehicles/airboat.txt"
+        }
+        "point_trigger"
+        {
+            "filtername" "airboat_filter"
+            "spawnflags" "12"
+            "StartDisabled" "1"
+            "targetname" "trigger_airboat4"
+            "TriggerRadius" "347"
+            "OnEndTouchAll" "teleport_airboat4,Teleport,,0,1"
+            "OnEndTouchAll" "trigger_airboat4,Disable,,0,1"
+            "OnEndTouchAll" "trigger_airboat5,Enable,,1,1"
+            "origin" "7534 1406 -439"
+        }
+        "point_teleport"
+        {
+            "angles" "0 90 0"
+            "radius" "128"
+            "spawnflags" "2048"
+            "target" "airboat4"
+            "targetname" "teleport_airboat4"
+            "origin" "7352 1402 -466"
+        }
+        "prop_vehicle_airboat"
+        {
+            "actionScale" "1"
+            "angles" "0 90 0"
+            "fademindist" "-1"
+            "fadescale" "1"
+            "model" "models/airboat.mdl"
+            "origin" "7320 1976.99 326"
+            "solid" "6"
+            "targetname" "airboat4"
+            "vehiclescript" "scripts/vehicles/airboat.txt"
+        }
+        "point_trigger"
+        {
+            "filtername" "airboat_filter"
+            "spawnflags" "12"
+            "StartDisabled" "1"
+            "targetname" "trigger_airboat5"
+            "TriggerRadius" "347"
+            "OnEndTouchAll" "teleport_airboat5,Teleport,,0,1"
+            "OnEndTouchAll" "trigger_airboat5,Disable,,0,1"
+            "OnEndTouchAll" "trigger_airboat6,Enable,,1,1"
+            "origin" "7534 1406 -439"
+        }
+        "point_teleport"
+        {
+            "angles" "0 90 0"
+            "radius" "128"
+            "spawnflags" "2048"
+            "target" "airboat5"
+            "targetname" "teleport_airboat5"
+            "origin" "7352 1402 -466"
+        }
+        "prop_vehicle_airboat"
+        {
+            "actionScale" "1"
+            "angles" "0 90 0"
+            "fademindist" "-1"
+            "fadescale" "1"
+            "model" "models/airboat.mdl"
+            "origin" "7500 1976.99 326"
+            "solid" "6"
+            "targetname" "airboat5"
+            "vehiclescript" "scripts/vehicles/airboat.txt"
+        }
+        "point_trigger"
+        {
+            "filtername" "airboat_filter"
+            "spawnflags" "12"
+            "StartDisabled" "1"
+            "targetname" "trigger_airboat6"
+            "TriggerRadius" "347"
+            "OnEndTouchAll" "teleport_airboat6,Teleport,,0,1"
+            "OnEndTouchAll" "trigger_airboat6,Disable,,0,1"
+            "origin" "7534 1406 -439"
+        }
+        "point_teleport"
+        {
+            "angles" "0 90 0"
+            "radius" "128"
+            "spawnflags" "2048"
+            "target" "airboat6"
+            "targetname" "teleport_airboat6"
+            "origin" "7352 1402 -466"
+        }
+        "prop_vehicle_airboat"
+        {
+            "actionScale" "1"
+            "angles" "0 90 0"
+            "fademindist" "-1"
+            "fadescale" "1"
+            "model" "models/airboat.mdl"
+            "origin" "7751 1976.99 326"
+            "solid" "6"
+            "targetname" "airboat6"
+            "vehiclescript" "scripts/vehicles/airboat.txt"
+        }
+    }
+    Modify
+    {
+        ClassName
+        {
+            "worldspawn"
+            {
+                "disableareaportals" "1"
+            }
+        }
+        Origin
+        {
+            "-4160 -2304 -416"
+            {
+                "spawngroup" "canals_06_spawn1"
+            }
+        }
+    }
+SpawnItems
+{
+    "weapon_crowbar" "1"
+    "weapon_pistol" "1"
+    "weapon_smg1" "1"
+    "item_ammo_pistol_large" "1"
+    "weapon_healer" "1"
+}
+}

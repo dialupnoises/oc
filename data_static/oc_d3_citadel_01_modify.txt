@@ -1,0 +1,104 @@
+d3_citadel_01
+{
+    Remove
+    {
+        ClassName
+        {
+            "info_player_start" {}
+        }
+        TargetName
+        {
+            "zapper_fade" {}
+        }
+        Origin
+        {
+            "6374 2858.83 -278" {}
+            "8992 3468 -1396" {}
+            "6400 2496 60" {}
+        }
+    }
+    Add
+    {
+        "logic_auto"
+        {
+            "spawnflags" "1"
+            "OnNewGame" "pt_newgame,ForceSpawn,,0,-1"
+            "origin" "6374 2858.83 -278"
+        }
+        "point_servercommand"
+        {
+            "targetname" "mapchange"
+            "origin" "10996.8 5975 -1656.71"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "citadel_01_spawn1"
+            "origin" "6362.86 2754.07 -275"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "citadel_01_spawn1"
+            "origin" "6359.31 2844.69 -271.446"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "citadel_01_spawn1"
+            "origin" "6357.41 2977.19 -269.555"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "citadel_01_spawn1"
+            "origin" "6357.29 3084.83 -269.426"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "citadel_01_spawn1"
+            "origin" "6357.15 3190.14 -269.295"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "citadel_01_spawn1"
+            "origin" "6357 3327.89 -269.141"
+        }
+    }
+    Modify
+    {
+        ClassName
+        {
+            "worldspawn"
+            {
+                "disableareaportals" "1"
+            }
+        }
+        Origin
+        {
+            "11176 5888 -1672"
+            {
+                "OnTrigger" "mapchange,Command,changelevel d3_citadel_02,2,-1"
+            }
+        }
+    }
+SpawnItems
+{
+    "weapon_smg1" "1"
+    "weapon_ar2" "1"
+    "weapon_shotgun" "1"
+    "weapon_crowbar" "1"
+    "weapon_physcannon" "1"
+    "weapon_357" "1"
+    "weapon_frag" "1"
+    "weapon_pistol" "1"
+    "item_box_buckshot" "2"
+    "item_ammo_smg1" "3"
+    "item_battery" "3"
+    "weapon_healer" "1"
+    "weapon_crossbow" "1"
+    "weapon_bugbait" "1"
+}
+}

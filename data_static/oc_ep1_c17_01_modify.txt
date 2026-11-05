@@ -1,0 +1,219 @@
+ep1_c17_01
+{
+    Remove
+    {
+        ClassName
+        {
+            "info_player_start" {}
+        }
+        TargetName
+        {
+            "relay_collapse" {}
+            "sc_alyx_startGarrisonScene" {}
+            "aisc_AlyxWaitsForPlayerToGetClose" {}
+            "aisc_AlyxWaitsForPlayerToLook" {}
+            "relay_closewall" {}
+            "Crushing_wall_player_blocker" {}
+        }
+    }
+    Add
+    {
+        "logic_relay"
+        {
+            "spawnflags" "1"
+            "targetname" "relay_collapse"
+            "OnTrigger" "breakable_collapse,Break,,0.1,-1"
+            "OnTrigger" "ptemplate_collapse,ForceSpawn,,0.1,-1"
+            "OnTrigger" "ar2exp_collapse,Explode,,0.1,-1"
+            "OnTrigger" "scriptconditions_tablezombie,Enable,,0.1,-1"
+            "OnTrigger" "rollermine,TurnOn,,10,-1"
+            "origin" "1557.62 1729 231.044"
+        }
+        "logic_relay"
+        {
+            "StartDisabled" "0"
+            "spawnflags" "1"
+            "targetname" "relay_closewall"
+            "OnTrigger" "goalfollow_alyx,Activate,,0,-1"
+            "origin" "2632 -1272 4"
+        }
+        "logic_auto"
+        {
+            "spawnflags" "1"
+            "OnMapSpawn" "suit,Kill,,0.8,-1"
+            "OnMapSpawn" "physgun,Kill,,0.8,-1"
+            "OnMapSpawn" "shotgun,Kill,,0.8,-1"
+            "OnMapSpawn" "pistol,Kill,,0.8,-1"
+            "OnMapSpawn" "alyx,Kill,,0.1,-1"
+            "OnMapSpawn" "alyx,AddContext,al_hint_c17_CrankPuzzle:1,0.8,-1"
+            "OnMapSpawn" "items_transition,Kill,,0.1,-1"
+            "OnMapSpawn" "physbox_crank_beans,Kill,,0.1,-1"
+            "OnMapSpawn" "ptemplate_newgame,ForceSpawn,,0.5,-1"
+            "origin" "4986 -398.643 -202.302"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "spawn1"
+            "StartDisabled" "0"
+            "origin" "4529.6 -408.369 -255"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "spawn1"
+            "StartDisabled" "0"
+            "origin" "4520.64 79.9037 -255"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "spawn1"
+            "StartDisabled" "0"
+            "origin" "4574.54 -166.463 -255"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "targetname" "spawn1"
+            "StartDisabled" "0"
+            "origin" "4584 331 -255"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "spawn1"
+            "StartDisabled" "0"
+            "origin" "4731 -183 -255"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "spawn1"
+            "StartDisabled" "0"
+            "origin" "4764 -74 -255"
+        }
+        "filter_multi"
+        {
+            "targetname" "filter_NoDamage"
+            "Negated" "1"
+            "origin" "-3439 521 262"
+        }
+        "logic_auto"
+        {
+            "spawnflags" "1"
+            "OnMapSpawn" "alyx,SetDamageFilter,filter_NoDamage,1,-1"
+            "origin" "-3455 521 262"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "spawn2"
+            "StartDisabled" "1"
+            "origin" "176 1289 39.8846"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "spawn2"
+            "StartDisabled" "1"
+            "origin" "211 1394 48.584"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "spawn2"
+            "StartDisabled" "1"
+            "origin" "247 1503 52.7254"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "spawn2"
+            "StartDisabled" "1"
+            "origin" "261 1664 31.0444"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "targetname" "spawn2"
+            "StartDisabled" "1"
+            "origin" "365 1266 1"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "targetname" "spawn2"
+            "StartDisabled" "1"
+            "origin" "432.677 1672.29 1"
+        }
+        "point_trigger"
+        {
+            "spawnflags" "1"
+            "StartDisabled" "1"
+            "targetname" "aisc_AlyxWaitsForPlayerToGetClose"
+            "TriggerOnce" "1"
+            "TriggerRadius" "178"
+            "OnStartTouch" "lcs_sniper_headoff,Start,,0,1"
+            "origin" "491 340 51"
+        }
+        "point_trigger"
+        {
+            "spawnflags" "1"
+            "StartDisabled" "1"
+            "targetname" "aisc_AlyxWaitsForPlayerToLook"
+            "TriggerOnce" "1"
+            "TriggerRadius" "178"
+            "OnStartTouch" "lcs_sniper_headoff,Resume,,0,-1"
+            "origin" "491 340 67"
+        }
+        "point_trigger"
+        {
+            "spawnflags" "1"
+            "StartDisabled" "1"
+            "targetname" "sc_alyx_startGarrisonScene"
+            "TriggerOnce" "1"
+            "TriggerRadius" "155"
+            "OnStartTouch" "lcs_alyx_Garrison01,Start,,0,-1"
+            "origin" "-3391 512 9"
+        }
+        "logic_timer"
+        {
+            "RefireTime" "5"
+            "spawnflags" "0"
+            "OnTimer" "relationship_alyxSniper,ApplyRelationship,,0,-1"
+            "origin" "535.87 323.865 313.999"
+        }
+    }
+    Modify
+    {
+        ClassName
+        {
+            "worldspawn"
+            {
+                "disableareaportals" "1"
+            }
+        }
+        Origin
+        {
+            "824 1604 55"
+            {
+                "OnTrigger" "spawn2,Enable,,0,1"
+                "OnTrigger" "spawn1,Disable,,0,1"
+            }
+            "-3728 264 64"
+            {
+                "nosmooth" "1"
+            }
+        }
+    }
+SpawnItems
+{
+    "weapon_physcannon" "1"
+    "weapon_healer" "1"
+    "weapon_pistol" "1"
+    "weapon_shotgun" "1"
+    "item_ammo_pistol_large" "1"
+    "item_box_buckshot" "2"
+}
+}

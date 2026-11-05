@@ -7,3 +7,4 @@
 tools/map_cfg
 tools/node_modules
 scripts
+*.DS_Store

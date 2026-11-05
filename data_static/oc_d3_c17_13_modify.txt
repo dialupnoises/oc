@@ -1,0 +1,166 @@
+d3_c17_13
+{
+    Remove
+    {
+        ClassName
+        {
+            "info_player_start" {}
+        }
+        Origin
+        {
+            "4684.48 -2482.66 11.876" {}
+        }
+    }
+    Add
+    {
+        "logic_auto"
+        {
+            "spawnflags" "1"
+            "OnMapSpawn" "citizen_story_seq_0,BeginSequence,,0.5,-1"
+            "OnMapSpawn" "citizen_story,StartScripting,,0.5,-1"
+            "OnMapSpawn" "citizen_fears_strider_relationship,ApplyRelationship,,1,-1"
+            "origin" "4684.48 -2482.66 11.876"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "c17_13_spawn1"
+            "origin" "5021 -3104 1"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "c17_13_spawn1"
+            "origin" "5021 -3028 1"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "targetname" "c17_13_spawn1"
+            "origin" "4914 -3083 1"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "c17_13_spawn1"
+            "origin" "4909 -2939 1"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "c17_13_spawn1"
+            "origin" "4962 -2792 1"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "c17_13_spawn1"
+            "origin" "4962 -2881 1"
+        }
+        "weapon_rpg"
+        {
+            "angles" "0 0 0"
+            "fademaxdist" "600"
+            "fademindist" "550"
+            "fadescale" "1"
+            "origin" "5328 -795 264.464"
+        }
+        "weapon_rpg"
+        {
+            "angles" "0 0 0"
+            "fademaxdist" "600"
+            "fademindist" "550"
+            "fadescale" "1"
+            "origin" "5328 -779 264.464"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "StartDisabled" "1"
+            "targetname" "c17_13_spawn2"
+            "origin" "5757 -422 257"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "StartDisabled" "1"
+            "targetname" "c17_13_spawn2"
+            "origin" "5673 -422 257"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "StartDisabled" "1"
+            "targetname" "c17_13_spawn2"
+            "origin" "5547 -685 257"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "StartDisabled" "1"
+            "targetname" "c17_13_spawn2"
+            "origin" "5542 -599 257"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "StartDisabled" "1"
+            "targetname" "c17_13_spawn2"
+            "origin" "5468 -589 257"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "StartDisabled" "1"
+            "targetname" "c17_13_spawn2"
+            "origin" "5469 -702 257"
+        }
+    }
+    Modify
+    {
+        ClassName
+        {
+            "worldspawn"
+            {
+                "disableareaportals" "1"
+            }
+        }
+        TargetName
+        {
+            "rooftop_trigger"
+            {
+                "OnTrigger" "c17_13_spawn1,Disable,,0,-1"
+                "OnTrigger" "c17_13_spawn2,Enable,,0,-1"
+            }
+            "trigger_barneyGoodbye"
+            {
+                "OnTrigger" "c17_13_changelevel,ChangeLevel,,10,-1"
+            }
+        }
+        Origin
+        {
+            "8388 1488 -360"
+            {
+                "nosmooth" "1"
+                "spawngroup" "citadel_01_spawn1"
+                "targetname" "c17_13_changelevel"
+            }
+        }
+    }
+SpawnItems
+{
+    "weapon_smg1" "1"
+    "weapon_ar2" "1"
+    "weapon_shotgun" "1"
+    "weapon_crowbar" "1"
+    "weapon_physcannon" "1"
+    "weapon_357" "1"
+    "weapon_frag" "1"
+    "weapon_pistol" "1"
+    "item_box_buckshot" "2"
+    "item_ammo_smg1" "3"
+    "item_battery" "3"
+    "weapon_healer" "1"
+    "weapon_crossbow" "1"
+}
+}

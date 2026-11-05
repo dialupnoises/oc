@@ -1,0 +1,150 @@
+d1_town_05
+{
+    Remove
+    {
+        ClassName
+        {
+            "logic_auto" {}
+            "info_player_start" {}
+        }
+        TargetName
+        {
+            "aisc_attentiontoradio" {}
+            "aisc_leaonwait1" {}
+            "trigger_close_door" {}
+        }
+        Origin
+        {
+            "-9968 4352 1024" {}
+        }
+    }
+    Add
+    {
+        "prop_dynamic_override"
+        {
+            "angles" "0 0 0"
+            "disableshadows" "1"
+            "fademindist" "-1"
+            "fadescale" "1"
+            "MaxAnimTime" "10"
+            "MinAnimTime" "5"
+            "model" "models/props_c17/fence01a.mdl"
+            "renderamt" "255"
+            "rendercolor" "255 255 255"
+            "rendermode" "10"
+            "skin" "0"
+            "solid" "6"
+            "origin" "-9490 4418 949"
+        }
+        "prop_dynamic_override"
+        {
+            "angles" "0 0 0"
+            "disableshadows" "1"
+            "fademindist" "-1"
+            "fadescale" "1"
+            "MaxAnimTime" "10"
+            "MinAnimTime" "5"
+            "model" "models/props_c17/fence01a.mdl"
+            "renderamt" "255"
+            "rendercolor" "255 255 255"
+            "rendermode" "10"
+            "skin" "0"
+            "solid" "6"
+            "origin" "-9490 4285 949"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "targetname" "town_05_spawn1"
+            "origin" "-10579 4255 897"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "targetname" "town_05_spawn1"
+            "origin" "-10769 4255 897"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "targetname" "town_05_spawn1"
+            "origin" "-10953 4255 897"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "targetname" "town_05_spawn1"
+            "origin" "-10579 4442 897"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "targetname" "town_05_spawn1"
+            "origin" "-10763 4442 897"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "targetname" "town_05_spawn1"
+            "origin" "-10953 4442 897"
+        }
+        "point_trigger"
+        {
+            "spawnflags" "1"
+            "StartDisabled" "1"
+            "targetname" "aisc_leaonwait1"
+            "TriggerOnce" "1"
+            "TriggerRadius" "145"
+            "OnStartTouch" "radio_nag,Disable,,0,-1"
+            "OnStartTouch" "warehouse_leonleads_lcs,Resume,,0,-1"
+            "origin" "-1308 9944 946"
+        }
+        "point_trigger"
+        {
+            "spawnflags" "1"
+            "StartDisabled" "1"
+            "targetname" "aisc_attentiontoradio"
+            "TriggerOnce" "1"
+            "TriggerRadius" "96"
+            "OnStartTouch" "lcs_leon_radios3,Start,,0,-1"
+            "OnStartTouch" "radio_nag,Kill,,0,-1"
+            "OnStartTouch" "lcs_leon_nag,Kill,,0,-1"
+            "OnStartTouch" "alyx_camera,SetOn,,0,-1"
+            "origin" "-1310 10775 925"
+        }
+    }
+    Modify
+    {
+        ClassName
+        {
+            "worldspawn"
+            {
+                "disableareaportals" "1"
+            }
+        }
+        TargetName
+        {
+            "d1_town-coast_changelevel"
+            {
+                "nosmooth" "1"
+                "spawngroup" "coast_01_spawn1"
+            }
+            "aisc_leon_waits"
+            {
+                "spawnflags" "0"
+            }
+        }
+    }
+SpawnItems
+{
+    "weapon_physcannon" "1"
+    "item_ammo_smg1_large" "1"
+    "weapon_pistol" "1"
+    "weapon_smg1" "1"
+    "weapon_357" "1"
+    "item_ammo_pistol_large" "1"
+    "weapon_shotgun" "1"
+    "weapon_crowbar" "1"
+    "weapon_healer" "1"
+}
+}

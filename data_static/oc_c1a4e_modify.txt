@@ -1,0 +1,79 @@
+c1a4e
+{
+    Remove
+    {
+        ClassName
+        {
+            "info_player_start" {}
+        }
+    }
+    Add
+    {
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "targetname" "c1a4e_starts"
+            "origin" "2008 -442 -1139"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "targetname" "c1a4e_starts"
+            "origin" "1947 -394 -1139"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "targetname" "c1a4e_starts"
+            "origin" "1994 -347 -1139"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "targetname" "c1a4e_starts"
+            "origin" "1949 -295 -1139"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "targetname" "c1a4e_starts"
+            "origin" "1941 -349 -1139"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "targetname" "c1a4e_starts"
+            "origin" "1948 -447 -1139"
+        }
+    }
+    Modify
+    {
+        ClassName
+        {
+            "worldspawn"
+            {
+                "mapversion" "4"
+            }
+        }
+        Origin
+        {
+            "1590 765 343"
+            {
+                "spawngroup" "c1a4d_starts2"
+            }
+            "1892 -408 -1024"
+            {
+                "spawnflags" "0"
+                "StartDisabled" "1"
+            }
+        }
+    }
+SpawnItems
+{
+    "weapon_crowbar" "1"
+    "weapon_smg1" "1"
+    "item_battery" "1"
+    "item_ammo_smg1" "2"
+    "weapon_healer" "1"
+}
+}

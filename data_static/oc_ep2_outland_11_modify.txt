@@ -1,0 +1,333 @@
+ep2_outland_11
+{
+    Remove
+    {
+        ClassName
+        {
+	    "trigger_playermovement" {}
+            "info_player_start" {}
+            "trigger_remove" {}
+        }
+        TargetName
+        {
+            "path_elevator_3" {}
+            "trigger_start_lift_1" {}
+            "lcs_silo_entry_03" {}
+            "lcs_silo_entry_03b" {}
+            "changelevel_to_10" {}
+            "path_elevator_8" {}
+            "path_elevator_10" {}
+            "pclip_blastdoors_1" {}
+            "lcs_silo_entry_doghandoff_02" {}
+            "count_al_garage_1" {}
+            "pclip_fence" {}
+        }
+        Origin
+        {
+            "-840 -11311.5 92" {}
+            "-947.7 -11269 76.5012" {}
+            "-1021.68 -11347 69.06" {}
+        }
+    }
+    Add
+    {
+        "filter_multi"
+        {
+            "Negated" "1"
+            "targetname" "filter_NoDamage"
+            "origin" "-12777 -12651 456"
+        }
+        "logic_timer"
+        {
+            "RefireTime" "2"
+            "OnTimer" "alyx,SetDamageFilter,filter_NoDamage,0,-1"
+            "origin" "-12851.4 -12588.1 567.059"
+        }
+        "path_track"
+        {
+            "angles" "0 0 0"
+            "hammerid" "427915"
+            "orientationtype" "0"
+            "radius" "0"
+            "spawnflags" "0"
+            "speed" "0"
+            "target" "path_elevator_4"
+            "targetname" "path_elevator_3"
+            "OnPass" "lift_1,Stop,,0,-1"
+            "OnPass" "lift_1,Resume,,1.5,-1"
+            "origin" "1344 -9936 -320"
+        }
+        "logic_choreographed_scene"
+        {
+            "busyactor" "0"
+            "hammerid" "428279"
+            "onplayerdeath" "0"
+            "SceneFile" "scenes/outland_11/silo_entry_03.vcd"
+            "targetname" "lcs_silo_entry_03"
+            "OnStart" "Alyx,StartScripting,,0,-1"
+            "OnStart" "eli,StartScripting,,0,-1"
+            "OnTrigger2" "ss_al_kleiner_hug,BeginSequence,,0,-1"
+            "OnTrigger4" "Alarm_relay2,Trigger,,0,-1"
+            "OnTrigger5" "Alarm_relay1_off1,Trigger,,0,-1"
+            "OnTrigger7" "ss_lamar,BeginSequence,,0,-1"
+            "OnTrigger6" "ss_lamar_jump,BeginSequence,,0,-1"
+            "OnTrigger3" "ss_give_emp,BeginSequence,,0,-1"
+            "OnTrigger8" "trigger_leaveplayer,TouchTest,,0.01,-1"
+            "OnTrigger8" "trigger_leaveplayer,Enable,,0,-1"
+            "OnTrigger1" "door_hatch_ladder_1,Open,,0,-1"
+            "OnCompletion" "lcs_mag_ladderhatch_nag_01,Start,,3,-1"
+            "OnTrigger8" "lcs_silo_entry_03,Pause,,0,-1"
+            "OnTrigger8" "timer_nags_gowithmag,Enable,,0.5,-1"
+            "OnTrigger9" "ss_magnus_console,BeginSequence,,0,-1"
+            "OnCompletion" "lcs_mag_cycle,Start,,0,-1"
+            "origin" "440 -9928 168"
+        }
+        "logic_choreographed_scene"
+        {
+            "busyactor" "0"
+            "hammerid" "767088"
+            "onplayerdeath" "0"
+            "SceneFile" "scenes/outland_11/silo_entry_03b.vcd"
+            "targetname" "lcs_silo_entry_03b"
+            "OnCompletion" "lift_1,Resume,,1,-1"
+            "OnCompletion" "doors_biground_1,Open,,0,-1"
+            "OnStart" "pclip_blastdoors_1,Enable,,0,-1"
+            "origin" "440 -9948 168"
+        }
+        "path_track"
+        {
+            "angles" "0 0 0"
+            "hammerid" "2073264"
+            "orientationtype" "0"
+            "radius" "0"
+            "spawnflags" "0"
+            "speed" "0"
+            "target" "path_elevator_7"
+            "targetname" "path_elevator_8"
+            "OnPass" "ss_cit_walkon_floor2_01,StartSchedule,,1.1,-1"
+            "OnPass" "ss_cit_walkon_floor2_02,StartSchedule,,1.35,-1"
+            "OnPass" "template_cits_elevator,ForceSpawn,,1,-1"
+            "OnPass" "lcs_mag_aband_popular,Start,,3.5,-1"
+            "OnPass" "relay_teleport_mag,Trigger,,3,-1"
+            "OnPass" "steam_silo1_1,Start,,1,-1"
+            "origin" "1344 -9936 -584"
+        }
+        "path_track"
+        {
+            "angles" "0 0 0"
+            "hammerid" "2073308"
+            "orientationtype" "0"
+            "radius" "0"
+            "spawnflags" "0"
+            "speed" "0"
+            "target" "path_elevator_11"
+            "targetname" "path_elevator_10"
+            "OnPass" "lift_1,Stop,,0,-1"
+            "OnPass" "lift_1,Resume,,4.4,-1"
+            "origin" "1128 -9936 -316"
+        }
+        "logic_choreographed_scene"
+        {
+            "busyactor" "1"
+            "hammerid" "2203932"
+            "onplayerdeath" "0"
+            "SceneFile" "scenes/outland_11/silo_entry_doghandoff_02.vcd"
+            "targetname" "lcs_silo_entry_doghandoff_02"
+            "OnTrigger2" "ss_dog_stand,BeginSequence,,0,-1"
+            "OnTrigger1" "trigger_gunschool,Enable,,0.5,-1"
+            "origin" "-692.267 -10855.2 140.861"
+        }
+        "math_counter"
+        {
+            "hammerid" "2264002"
+            "max" "2"
+            "min" "0"
+            "startvalue" "0"
+            "targetname" "count_al_garage_1"
+            "OnHitMax" "follow_alyx,Deactivate,,0,-1"
+            "OnHitMax" "npcclip_alyx_hall_1,Kill,,0,-1"
+            "OnHitMax" "trigger_start_entry_01,Enable,,0,-1"
+            "OnHitMax" "count_al_garage_1,Kill,,0.01,-1"
+            "origin" "-97 -10491.4 112.39"
+        }
+        "logic_auto"
+        {
+            "spawnflags" "1"
+            "OnMapSpawn" "alyx,Kill,,0.1,-1"
+            "OnMapSpawn" "dog,Kill,,0.1,-1"
+            "OnMapSpawn" "template_alyx,ForceSpawn,,0.5,-1"
+            "OnMapSpawn" "template_dog,ForceSpawn,,0.5,-1"
+            "OnMapSpawn" "global_friendly_encounter,TurnOn,,1.5,-1"
+            "OnMapSpawn" "cit_class_teacher,StartScripting,,1,-1"
+            "OnMapSpawn" "MIRT,StartScripting,,0,-1"
+            "OnMapSpawn" "door_to_11,Open,,1,-1"
+            "OnMapSpawn" "lcs_silo_entry_doghandoff_01,Start,,2,-1"
+            "OnMapSpawn" "lab_plotter,SetDefaultAnimation,print,1,-1"
+            "OnMapSpawn" "door_silo_lab_4,Lock,,1,-1"
+            "origin" "-1010.49 -11220.6 68.8301"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "outland_11_spawn1"
+            "origin" "-1086 -11231 64"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "outland_11_spawn1"
+            "origin" "-1086 -11305 64"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "outland_11_spawn1"
+            "origin" "-1086 -11372 64"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "outland_11_spawn1"
+            "origin" "-1087 -11443 64"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "outland_11_spawn1"
+            "origin" "-1087 -11170 64"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "outland_11_spawn1"
+            "origin" "-745 -11287 74"
+        }
+        "info_teleport_destination"
+        {
+            "angles" "0 54 0"
+            "targetname" "lift_teleport_destination"
+            "origin" "1550 -10290 -1398"
+        }
+        "info_teleport_destination"
+        {
+            "angles" "0 63.5 0"
+            "targetname" "lift_teleport_destination"
+            "origin" "1511 -10207 -1398"
+        }
+        "info_teleport_destination"
+        {
+            "angles" "0 26.5 0"
+            "targetname" "lift_teleport_destination"
+            "origin" "1479 -10112 -1398"
+        }
+        "info_teleport_destination"
+        {
+            "angles" "0 253.5 0"
+            "targetname" "lift_teleport_destination"
+            "origin" "1664 -9822 -1398"
+        }
+        "info_teleport_destination"
+        {
+            "angles" "0 320.5 0"
+            "targetname" "lift_teleport_destination"
+            "origin" "1609 -9921 -1398"
+        }
+        "info_teleport_destination"
+        {
+            "angles" "0 191.5 0"
+            "targetname" "lift_teleport_destination"
+            "origin" "1686 -9935 -1398"
+        }
+        "point_teleport"
+        {
+            "angles" "0 0 0"
+            "radius" "2011"
+            "spawnflags" "2048"
+            "targetname" "lift_teleport"
+            "TeleportDestination" "lift_teleport_destination"
+            "origin" "-920 -10463 147"
+        }
+        "point_teleport"
+        {
+            "angles" "0 0 0"
+            "radius" "996"
+            "spawnflags" "2048"
+            "targetname" "lift_teleport"
+            "TeleportDestination" "lift_teleport_destination"
+            "origin" "1815 -9925 -63"
+        }
+        "point_trigger"
+        {
+            "spawnflags" "1"
+            "StartDisabled" "1"
+            "targetname" "trigger_start_lift_1"
+            "TriggerOnce" "1"
+            "TriggerRadius" "128"
+            "OnStartTouch" "lcs_cit_vort,Start,,1.5,-1"
+            "OnStartTouch" "timer_alyxnag_generic,Kill,,0.01,-1"
+            "OnStartTouch" "timer_alyxnag_generic,Disable,,0,-1"
+            "OnStartTouch" "npc_flr1_citizen1,Kill,,2,-1"
+            "OnStartTouch" "lift_1,SetSpeedReal,34,1.61,-1"
+            "OnStartTouch" "lift_1,StartForward,,1.5,-1"
+            "OnStartTouch" "npc_flr1_citizen2,Kill,,1,-1"
+            "OnStartTouch" "move_al_elevator_push_1,Open,,0.1,-1"
+            "OnStartTouch" "prop_eledoor_1,SetAnimation,close,0,-1"
+            "OnStartTouch" "lcs_silo_entry_02,Start,,0,-1"
+            "OnStartTouch" "lift_door_1_a,Close,,0,-1"
+            "origin" "524 -9933 141.641"
+        }
+    }
+    Modify
+    {
+        ClassName
+        {
+            "worldspawn"
+            {
+                "disableareaportals" "1"
+            }
+            "logic_choreographed_scene"
+            {
+                "onplayerdeath" "0"
+            }
+        }
+        TargetName
+        {
+            "path_elevator_4"
+            {
+                "OnPass" "lift_door_1_a,Open,,0,-1"
+                "OnPass" "prop_eledoor_1,SetAnimation,open,0,-1"
+            }
+            "path_elevator_5"
+            {
+                "OnPass" "lift_teleport,Enable,,1,-1"
+            }
+            "door_silo_lab_4"
+            {
+                "OnClose" "changelevel_to_11a,ChangeLevel,,5,-1"
+            }
+            "changelevel_to_11a"
+            {
+                "spawngroup" "outland_11a_spawn1"
+                "nosmooth" "1"
+            }
+        }
+    }
+SpawnItems
+{
+    "weapon_physcannon" "1"
+    "weapon_crowbar" "1"
+    "weapon_healer" "1"
+    "weapon_357" "1"
+    "weapon_shotgun" "1"
+    "weapon_pistol" "1"
+    "weapon_smg1" "2"
+    "item_box_buckshot" "3"
+    "weapon_frag" "1"
+    "item_ammo_smg1" "2"
+    "item_ammo_pistol" "1"
+    "weapon_ar2" "1"
+    "item_ammo_ar2" "2"
+    "weapon_crossbow" "1"
+    "item_ammo_357" "1"
+}
+}

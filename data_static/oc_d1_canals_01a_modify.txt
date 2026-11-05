@@ -1,0 +1,77 @@
+d1_canals_01a
+{
+    Remove
+    {
+        ClassName
+        {
+            "info_player_start" {}
+        }
+        Origin
+        {
+            "704 2552 0" {}
+            "576.631 2850.74 -68" {}
+        }
+    }
+    Add
+    {
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "canals_01a_spawn1"
+            "origin" "478 2877 -89"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "canals_01a_spawn1"
+            "origin" "554 2833 -89"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 89.5 0"
+            "targetname" "canals_01a_spawn1"
+            "origin" "710 2768 -89"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "canals_01a_spawn1"
+            "origin" "702 2821 -89"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "targetname" "canals_01a_spawn1"
+            "origin" "532 2906 -58"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "targetname" "canals_01a_spawn1"
+            "origin" "606 2911 -69"
+        }
+    }
+    Modify
+    {
+        ClassName
+        {
+            "worldspawn"
+            {
+                "disableareaportals" "1"
+            }
+        }
+        Origin
+        {
+            "-5832 9064 -16"
+            {
+                "spawngroup" "canals_02_spawn1"
+            }
+        }
+    }
+SpawnItems
+{
+    "weapon_crowbar" "1"
+    "weapon_pistol" "1"
+    "weapon_healer" "1"
+}
+}

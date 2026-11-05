@@ -1,0 +1,117 @@
+d1_trainstation_01
+{
+    Remove
+    {
+        ClassName
+        {
+            "info_player_start" {}
+        }
+        TargetName
+        {
+            "barney_door_close_trigger" {}
+            "razortrain_gate_cop_2" {}
+            "cage_playerclip" {}
+            "barney_room_blocker" {}
+            "trigger_cop_close_door_1" {}
+            "trigger_barney_close_exitdoor" {}
+            "barney_room_blocker_2" {}
+            "train_door_2_counter" {}
+            "logic_kill_citizens" {}
+        }
+        Origin
+        {
+            "-14112 -13824 -1140" {}
+        }
+    }
+    Add
+    {
+        "logic_auto"
+        {
+            "spawnflags" "1"
+            "OnMapSpawn" "logic_start_train,Trigger,,0,-1"
+            "origin" "-9608.78 -2414.19 51.1139"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "trainstation_01_spawn1"
+            "origin" "-5853 -1962.81 -31"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "trainstation_01_spawn1"
+            "origin" "-5853 -2053 -31"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "trainstation_01_spawn1"
+            "origin" "-5853 -2143 -31"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "targetname" "trainstation_01_spawn1"
+            "origin" "-5671 -2144 -31"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "targetname" "trainstation_01_spawn1"
+            "origin" "-5671 -1964 -31"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "targetname" "trainstation_01_spawn1"
+            "origin" "-5557 -2144 -31"
+        }
+        "point_trigger"
+        {
+            "spawnflags" "1"
+            "StartDisabled" "1"
+            "targetname" "barney_door_close_trigger"
+            "TriggerOnce" "1"
+            "TriggerRadius" "293"
+            "OnStartTouch" "lcs_breakroom_pacer_arms,Resume,,0,-1"
+            "OnStartTouch" "weapon_point_2,Cancel,,0,-1"
+            "OnStartTouch" "lcs_cop_introom_preIdle,Start,,0,-1"
+            "OnStartTouch" "conditions_introom_look,Enable,,0,-1"
+            "OnStartTouch" "camera_tv_breen,SetOff,,0,-1"
+            "OnStartTouch" "kleiner_security_camera_1,SetOnAndTurnOthersOff,,0,-1"
+            "OnStartTouch" "lcs_tv_breencast,Kill,,0,-1"
+            "OnStartTouch" "ss_citizen_introom_chair,BeginSequence,,0,-1"
+            "OnStartTouch" "introom_door_2_slot,SetAnimation,open,0,-1"
+            "OnStartTouch" "introom_door_cop_1,StartScripting,,0,-1"
+            "OnStartTouch" "weapon_point_1,Cancel,,0,-1"
+            "origin" "-3684 -514 28"
+        }
+    }
+    Modify
+    {
+        ClassName
+        {
+            "worldspawn"
+            {
+                "disableareaportals" "1"
+            }
+            "trigger_changelevel"
+            {
+                "spawngroup" "trainstation_02_spawn1"
+                "transitionradius" "91"
+            }
+        }
+        TargetName
+        {
+            "customs_template"
+            {
+                "OnEntitySpawned" "razortrain_gate_cop_2,Kill,,1,-1"
+            }
+        }
+    }
+SpawnItems
+{
+    "weapon_healer" "1"
+}
+}

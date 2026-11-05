@@ -1,0 +1,131 @@
+ep2_outland_11a
+{
+    Remove
+    {
+        ClassName
+        {
+	    "trigger_playermovement" {}
+            "info_player_start" {}
+        }
+        TargetName
+        {
+            "door_blast_attack_1b" {}
+            "pclip_hall_attack_1" {}
+        }
+        Origin
+        {
+            "1976.34 -9080.83 -1527" {}
+        }
+    }
+    Add
+    {
+        "logic_auto"
+        {
+            "hammerid" "2068562"
+            "spawnflags" "1"
+            "OnMapTransition" "lockers_1_door_right,Open,,0,-1"
+            "OnNewGame" "lockers_1_door_right,Open,,0,-1"
+            "OnMapTransition" "prop_door_silo_lab_4,SetAnimation,lock,0.2,1"
+            "origin" "1976.34 -9080.83 -1527"
+            "OnMapspawn" "removethatfuckingdoor,Enable,,1,-1"
+            "OnMapspawn" "removethatfuckingdoor,Disable,,2,-1"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "outland_11a_spawn1"
+            "origin" "2105 -9021 -1535"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "outland_11a_spawn1"
+            "origin" "2105 -9141 -1535"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 99.5 0"
+            "targetname" "outland_11a_spawn1"
+            "origin" "1844 -9127 -1535"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "targetname" "outland_11a_spawn1"
+            "origin" "2023 -9016 -1535"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "targetname" "outland_11a_spawn1"
+            "origin" "2039 -9151 -1535"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "targetname" "outland_11a_spawn1"
+            "origin" "1871 -9033 -1535"
+        }
+        "point_trigger"
+        {
+            "filtername" "fuckingdoor_filter"
+            "spawnflags" "64"
+            "StartDisabled" "1"
+            "targetname" "removethatfuckingdoor"
+            "TriggerRadius" "44"
+            "OnStartTouch" "!activator,Kill,,0,-1"
+            "origin" "992 -9168 -1428.63"
+        }
+        "filter_activator_class"
+        {
+            "filterclass" "prop_dynamic"
+            "Negated" "Allow entities that match criteria"
+            "targetname" "fuckingdoor_filter"
+            "origin" "953 -9132.28 -1442.96"
+        }
+    }
+    Modify
+    {
+        ClassName
+        {
+            "worldspawn"
+            {
+                "disableareaportals" "1"
+            }
+            "logic_choreographed_scene"
+            {
+                "onplayerdeath" "0"
+            }
+        }
+        TargetName
+        {
+            "changelevel_to_11b"
+            {
+                "spawngroup" "outland_11b_spawn1"
+                "nosmooth" "1"
+            }
+            "door_silo_lab_2"
+            {
+                "OnFullyClosed" "changelevel_to_11b,ChangeLevel,,1,-1"
+            }
+        }
+    }
+SpawnItems
+{
+    "weapon_physcannon" "1"
+    "weapon_crowbar" "1"
+    "weapon_healer" "1"
+    "weapon_357" "1"
+    "weapon_shotgun" "1"
+    "weapon_pistol" "1"
+    "weapon_smg1" "2"
+    "item_box_buckshot" "3"
+    "weapon_frag" "1"
+    "item_ammo_smg1" "2"
+    "item_ammo_pistol" "1"
+    "weapon_ar2" "1"
+    "item_ammo_ar2" "2"
+    "weapon_crossbow" "1"
+    "item_ammo_357" "1"
+}
+}

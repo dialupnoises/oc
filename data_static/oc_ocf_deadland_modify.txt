@@ -1,0 +1,9 @@
+ocf_deadland
+{
+	SpawnItems
+	{
+		"weapon_healer" "1"
+		"weapon_crowbar" "1"
+		"weapon_pistol" "1"
+	}
+}

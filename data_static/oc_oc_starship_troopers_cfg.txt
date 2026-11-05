@@ -1,0 +1,8 @@
+// File was created for use in Obsidian Conflict ONLY!
+"oc_starship_troopers"
+{
+	"mp_falldamage"	"1"
+	"mp_bunnyhop" "0"
+	"sk_max_smg1" "300"
+
+}

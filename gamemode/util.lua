@@ -48,23 +48,44 @@ function ReplaceEnt(a, bname)
 	a:Remove()
 end
 
+-- Workshop addons may only ship loose .txt files under data_static/, so configs
+-- live at data_static/oc_<map>_<kind>.txt. The repo's own data_static/ is read
+-- when it is cloned into gamemodes/oc, and maps/cfg/ for hand-installed copies.
+local MAP_CONFIG_PATHS = {
+	"data_static/oc_%s_%s.txt",
+	"gamemodes/oc/data_static/oc_%s_%s.txt",
+	"maps/cfg/%s_%s.txt"
+}
+
+local function readMapConfigFile(map, kind)
+	for _, pattern in ipairs(MAP_CONFIG_PATHS) do
+		local path = string.format(pattern, map, kind)
+
+		if file.Exists(path, "GAME") then
+			MsgN("[OC] Loaded map config " .. path)
+			return util.KeyValuesToTable(file.Read(path, "GAME"))
+		end
+	end
+
+	return nil
+end
+
 function LoadMapConfig(map)
-	local convars = {}
 	local add = {}
 	local remove = {}
 	local spawnItems = {}
 	local modify = {}
-	local mounts = {}
 
-	if file.Exists("maps/cfg/" .. map .. "_cfg.txt", "GAME") then
-		local data = file.Read("maps/cfg/" .. map .. "_cfg.txt", "GAME")
-		convars = util.KeyValuesToTable(data)
+	local convars = readMapConfigFile(map, "cfg")
+	local modifyFile = readMapConfigFile(map, "modify")
+
+	if convars == nil and modifyFile == nil then
+		MsgN("[OC] No map config found for " .. map .. " (looked in data_static/, gamemodes/oc/data_static/ and maps/cfg/)")
 	end
 
-	if file.Exists("maps/cfg/" .. map .. "_modify.txt", "GAME") then
-		local data = file.Read("maps/cfg/" .. map .. "_modify.txt", "GAME")
-		local modifyFile = util.KeyValuesToTable(data)
+	convars = convars or {}
 
+	if modifyFile ~= nil then
 		add = modifyFile["add"] or {}
 		remove = modifyFile["remove"] or {}
 		spawnItems = modifyFile["spawnitems"] or {}

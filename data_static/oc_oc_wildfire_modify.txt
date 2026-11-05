@@ -1,0 +1,9 @@
+"oc_wildfire"
+{
+	SpawnItems
+	{
+		"weapon_crowbar" "1"
+		"weapon_smg1" "1"
+		"item_ammo_smg1" "11"
+	}
+}

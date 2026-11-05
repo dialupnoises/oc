@@ -1,0 +1,110 @@
+d2_prison_01
+{
+    Remove
+    {
+        ClassName
+        {
+            "info_player_start" {}
+        }
+        Origin
+        {
+            "4158.9 -4440.75 1116" {}
+            "4160 -5112 1086" {}
+        }
+    }
+    Add
+    {
+        "prop_dynamic_override"
+        {
+            "angles" "0 90 0"
+            "fademindist" "-1"
+            "fadescale" "1"
+            "MaxAnimTime" "10"
+            "MinAnimTime" "5"
+            "model" "models/props_canal/canal_bars002.mdl"
+            "renderamt" "255"
+            "rendercolor" "255 255 255"
+            "skin" "0"
+            "solid" "6"
+            "origin" "4160 -5242 1088"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "targetname" "prison_01_spawn1"
+            "origin" "4160 -5215 1036"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 133.5 0"
+            "targetname" "prison_01_spawn1"
+            "origin" "4220 -4509 1103"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 223.5 0"
+            "targetname" "prison_01_spawn1"
+            "origin" "4220 -4388 1103"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 313.5 0"
+            "targetname" "prison_01_spawn1"
+            "origin" "4103 -4390 1103"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 43.5 0"
+            "targetname" "prison_01_spawn1"
+            "origin" "4108 -4502 1103"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "prison_01_spawn1"
+            "origin" "4159 -4447 1103"
+        }
+        "weapon_rpg"
+        {
+            "angles" "0 0 0"
+            "fademindist" "-1"
+            "fadescale" "1"
+            "origin" "1693 -2425 1546"
+        }
+    }
+    Modify
+    {
+        ClassName
+        {
+            "worldspawn"
+            {
+                "disableareaportals" "1"
+            }
+        }
+        TargetName
+        {
+            "changelevel_01-02"
+            {
+                "spawngroup" "prison_02_spawn1"
+                "transitionradius" "600"
+            }
+        }
+    }
+SpawnItems
+{
+    "weapon_smg1" "1"
+    "weapon_ar2" "1"
+    "weapon_shotgun" "1"
+    "weapon_crowbar" "1"
+    "weapon_physcannon" "1"
+    "weapon_357" "1"
+    "weapon_frag" "1"
+    "weapon_pistol" "1"
+    "item_box_buckshot" "2"
+    "item_ammo_smg1" "3"
+    "item_battery" "3"
+    "weapon_healer" "1"
+    "weapon_bugbait" "1"
+    "weapon_crossbow" "1"
+}
+}

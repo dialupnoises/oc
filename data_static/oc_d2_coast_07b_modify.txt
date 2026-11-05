@@ -1,0 +1,182 @@
+d2_coast_07
+{
+    Remove
+    {
+        ClassName
+        {
+            "info_player_start" {}
+            "logic_auto" {}
+            "player_loadsaved" {}
+            "env_message" {}
+        }
+        TargetName
+        {
+            "fog" {}
+        }
+        Origin
+        {
+            "-8672.84 3755.71 1744" {}
+            "3328 3568 1600" {}
+            "2944 3712 1200" {}
+            "2944 6784 676" {}
+        }
+    }
+    Add
+    {
+        "infodecal"
+        {
+            "angles" "0 0 0"
+            "texture" "decals/jeepspawning"
+            "origin" "-5888.1 4311 1685"
+        }
+        "infodecal"
+        {
+            "angles" "0 0 0"
+            "texture" "decals/jeepspawning"
+            "origin" "-5888 4904.3 1685"
+        }
+        "logic_auto"
+        {
+            "spawnflags" "1"
+            "OnMapSpawn" "bridge_door_2,Close,,0,-1"
+            "OnMapSpawn" "bridge_door_2,Lock,,1,-1"
+            "OnMapSpawn" "coast07_spawn1,Disable,,0,-1"
+            "origin" "3305 3633.58 1637.69"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "coast07_spawn2"
+            "origin" "3519 3680 1537"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "targetname" "coast07_spawn2"
+            "origin" "3416 3815 1537"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "targetname" "coast07_spawn2"
+            "origin" "3195.72 3816.21 1537"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "targetname" "coast07_spawn2"
+            "origin" "3325 3668 1537"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "targetname" "coast07_spawn2"
+            "origin" "3178 3671 1537"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "coast07_spawn2"
+            "origin" "3096 3751 1537"
+        }
+        "prop_dynamic_override"
+        {
+            "angles" "0 164 0"
+            "fademindist" "-1"
+            "fadescale" "1"
+            "MaxAnimTime" "10"
+            "MinAnimTime" "5"
+            "model" "models/props_wasteland/rockcliff05f.mdl"
+            "renderamt" "255"
+            "rendercolor" "255 255 255"
+            "skin" "0"
+            "solid" "6"
+            "spawnflags" "0"
+            "origin" "-8800 692 1618"
+        }
+        "prop_dynamic_override"
+        {
+            "angles" "0 0 0"
+            "fademindist" "-1"
+            "fadescale" "1"
+            "MaxAnimTime" "10"
+            "MinAnimTime" "5"
+            "model" "models/props_wasteland/rockcliff05f.mdl"
+            "renderamt" "255"
+            "rendercolor" "255 255 255"
+            "skin" "0"
+            "solid" "6"
+            "spawnflags" "0"
+            "origin" "-8938 659 1618"
+        }
+        "prop_dynamic_override"
+        {
+            "angles" "0 0 0"
+            "fademindist" "-1"
+            "fadescale" "1"
+            "MaxAnimTime" "10"
+            "MinAnimTime" "5"
+            "model" "models/props_wasteland/rockcliff05f.mdl"
+            "renderamt" "255"
+            "rendercolor" "255 255 255"
+            "skin" "0"
+            "solid" "6"
+            "spawnflags" "0"
+            "origin" "-9148 662 1618"
+        }
+        "env_fog_controller"
+        {
+            "angles" "0 0 0"
+            "farz" "6650"
+            "fogblend" "1"
+            "fogcolor" "176 192 202"
+            "fogcolor2" "206 216 222"
+            "fogdir" "1 0 0"
+            "fogenable" "1"
+            "fogend" "6500"
+            "fogmaxdensity" "1"
+            "fogstart" "2048"
+            "targetname" "fog"
+            "use_angles" "1"
+            "origin" "1097 4003 1618"
+        }
+    }
+    Modify
+    {
+        ClassName
+        {
+            "worldspawn"
+            {
+                "disableareaportals" "1"
+                "canspawnjeep" "1"
+            }
+        }
+        TargetName
+        {
+            "gunship_trigger_10"
+            {
+                "OnTrigger" "gunship_trigger_10,Kill,,2,-1"
+            }
+            "gunship_trigger_12"
+            {
+                "OnTrigger" "gunship_trigger_12,Kill,,0.5,-1"
+            }
+        }
+    }
+SpawnItems
+{
+    "weapon_smg1" "1"
+    "weapon_ar2" "1"
+    "weapon_shotgun" "1"
+    "weapon_crowbar" "1"
+    "weapon_physcannon" "1"
+    "weapon_357" "1"
+    "weapon_frag" "1"
+    "weapon_pistol" "1"
+    "item_box_buckshot" "2"
+    "item_ammo_smg1" "3"
+    "item_battery" "3"
+    "weapon_healer" "1"
+    "weapon_crossbow" "1"
+}
+}

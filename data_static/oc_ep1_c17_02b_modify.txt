@@ -1,0 +1,216 @@
+ep1_c17_02b
+{
+    Remove
+    {
+        ClassName
+        {
+            "info_player_start" {}
+            "ai_goal_lead" {}
+        }
+        TargetName
+        {
+            "lcs_cit_c17_02_entering_apartments_01" {}
+            "sc_PlayCitMeetupScene" {}
+        }
+        Origin
+        {
+            "-1867 2167 -76.45" {}
+            "-2056.88 2093.07 -89" {}
+        }
+    }
+    Add
+    {
+        "logic_auto"
+        {
+            "spawnflags" "1"
+            "OnMapSpawn" "looktargets_inside,EnableHint,,0,-1"
+            "OnMapSpawn" "global_newgame_spawner_smg,Kill,,0.8,-1"
+            "OnMapSpawn" "global_newgame_spawner_shotgun,Kill,,0.8,-1"
+            "OnMapSpawn" "global_newgame_spawner_physcannon,Kill,,0.8,-1"
+            "OnMapSpawn" "global_newgame_spawner_suit,Kill,,0.8,-1"
+            "OnMapSpawn" "global_newgame_spawner_ar2,Kill,,0.8,-1"
+            "OnMapSpawn" "alyx,Kill,,0.1,-1"
+            "OnMapSpawn" "airvent_door_1,Kill,,0.1,-1"
+            "OnMapSpawn" "global_newgame_template_base_items,ForceSpawn,,0.5,-1"
+            "origin" "-2056.88 2093.07 -89"
+        }
+        "filter_multi"
+        {
+            "targetname" "filter_NoDamage"
+            "Negated" "1"
+            "origin" "-2029 2167 -120"
+        }
+        "logic_auto"
+        {
+            "spawnflags" "1"
+            "OnMapSpawn" "alyx,SetDamageFilter,filter_NoDamage,1,-1"
+            "origin" "-2045 2167 -120"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "spawn1"
+            "origin" "-1857 1888 -127"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "spawn1"
+            "origin" "-1861 2029 -127"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "spawn1"
+            "origin" "-1651 1949 -127"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "spawn1"
+            "origin" "-1658 2184 -127"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "targetname" "spawn1"
+            "origin" "-1917 2260 -127"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "spawn1"
+            "origin" "-2045 2231 -127"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "targetname" "spawn2"
+            "StartDisabled" "1"
+            "origin" "1788 2072 -313"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90.5 0"
+            "targetname" "spawn2"
+            "StartDisabled" "1"
+            "origin" "1502 2016 -312"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "targetname" "spawn2"
+            "StartDisabled" "1"
+            "origin" "1694 2016 -312"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "targetname" "spawn2"
+            "StartDisabled" "1"
+            "origin" "1380 2068 -313"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "spawn2"
+            "StartDisabled" "1"
+            "origin" "1832 2257 -311"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "spawn2"
+            "StartDisabled" "1"
+            "origin" "1780 2461 -313"
+        }
+        "weapon_crowbar"
+        {
+            "angles" "0 0 0"
+            "fademindist" "400"
+            "fadescale" "1"
+            "fademaxdist" "500"
+            "origin" "925 2759 69.1526"
+        }
+        "weapon_crowbar"
+        {
+            "angles" "0 0 0"
+            "fademindist" "400"
+            "fadescale" "1"
+            "fademaxdist" "500"
+            "origin" "924 2782 69.1526"
+        }
+        "weapon_crowbar"
+        {
+            "angles" "0 0 0"
+            "fademindist" "400"
+            "fadescale" "1"
+            "fademaxdist" "500"
+            "origin" "923 2810 69.1526"
+        }
+        "logic_choreographed_scene"
+        {
+            "busyactor" "0"
+            "SceneFile" "scenes/episode_1/c17/cit_c17_02_entering_apartments_01.vcd"
+            "target1" "courtyard_citizens_lead"
+            "targetname" "lcs_cit_c17_02_entering_apartments_01"
+            "OnCompletion" "backstreet_exit_door_1_blocker,Kill,,0,-1"
+            "OnCompletion" "bld_a_frontdoor_1_ss_1,BeginSequence,,0,-1"
+            "origin" "888.012 2576.74 -183"
+        }
+        "point_trigger"
+        {
+            "spawnflags" "1"
+            "StartDisabled" "1"
+            "targetname" "sc_PlayCitMeetupScene"
+            "TriggerOnce" "1"
+            "TriggerRadius" "191"
+            "OnStartTouch" "lcs_cit_c17_02_entering_apartments_01,Start,,0.1,-1"
+            "OnStartTouch" "timer_CitAttractPlayer,Disable,,0,-1"
+            "origin" "323 2843 -56"
+        }
+    }
+    Modify
+    {
+        ClassName
+        {
+            "worldspawn"
+            {
+                "disableareaportals" "1"
+            }
+        }
+        TargetName
+        {
+            "bld_a_frontdoor_1"
+            {
+                "OnOpen" "spawn1,Disable,,0,1"
+                "OnOpen" "spawn2,Enable,,0,1"
+            }
+        }
+        Origin
+        {
+            "-300 4120 416"
+            {
+                "nosmooth" "1"
+            }
+            "-2264 2332 -68"
+            {
+                "OnTrigger" "follow_alyx,Deactivate,,0,-1"
+                "OnTrigger" "follow_alyx,Activate,,0.4,-1"
+            }
+        }
+    }
+SpawnItems
+{
+    "weapon_physcannon" "1"
+    "weapon_healer" "1"
+    "weapon_pistol" "1"
+    "weapon_shotgun" "1"
+    "item_ammo_pistol_large" "1"
+    "item_box_buckshot" "2"
+    "weapon_smg1" "1"
+    "item_ammo_smg1_large" "1"
+    "weapon_ar2" "1"
+    "item_ammo_ar2_large" "1"
+}
+}

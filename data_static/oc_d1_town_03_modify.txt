@@ -1,0 +1,118 @@
+d1_town_03
+{
+    Remove
+    {
+        ClassName
+        {
+            "info_player_start" {}
+        }
+        Origin
+        {
+            "-3648 -288 -3508" {}
+            "-3672.9 -457.209 -3550" {}
+        }
+    }
+    Add
+    {
+        "prop_dynamic_override"
+        {
+            "angles" "0 270 0"
+            "disableshadows" "1"
+            "fademindist" "-1"
+            "fadescale" "1"
+            "MaxAnimTime" "10"
+            "MinAnimTime" "5"
+            "model" "models/props_c17/fence01a.mdl"
+            "renderamt" "255"
+            "rendercolor" "255 255 255"
+            "rendermode" "10"
+            "skin" "0"
+            "solid" "6"
+            "origin" "-3648 -307 -3530"
+        }
+        "prop_dynamic_override"
+        {
+            "angles" "0 270 0"
+            "disableshadows" "1"
+            "fademindist" "-1"
+            "fadescale" "1"
+            "MaxAnimTime" "10"
+            "MinAnimTime" "5"
+            "model" "models/props_c17/fence01a.mdl"
+            "renderamt" "255"
+            "rendercolor" "255 255 255"
+            "rendermode" "10"
+            "skin" "0"
+            "solid" "6"
+            "origin" "-3648 -307 -3435"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "town_03_spawn1"
+            "origin" "-3686 -357 -3583"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "town_03_spawn1"
+            "origin" "-3686 -436 -3583"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "town_03_spawn1"
+            "origin" "-3686 -531 -3583"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "town_03_spawn1"
+            "origin" "-3613 -357 -3583"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "town_03_spawn1"
+            "origin" "-3613 -452 -3583"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "town_03_spawn1"
+            "origin" "-3613 -531 -3583"
+        }
+    }
+    Modify
+    {
+        ClassName
+        {
+            "worldspawn"
+            {
+                "disableareaportals" "1"
+            }
+        }
+        Origin
+        {
+            "-3760 -36 -3396"
+            {
+                "spawnflags" "0"
+                "mapmodifyfile" "d1_town_02b_modify"
+                "spawngroup" "town_02_spawn2"
+                "transitionradius" "285"
+            }
+        }
+    }
+SpawnItems
+{
+    "weapon_physcannon" "1"
+    "item_ammo_smg1_large" "1"
+    "weapon_pistol" "1"
+    "weapon_smg1" "1"
+    "weapon_357" "1"
+    "item_ammo_pistol_large" "1"
+    "weapon_shotgun" "1"
+    "weapon_crowbar" "1"
+    "weapon_healer" "1"
+}
+}

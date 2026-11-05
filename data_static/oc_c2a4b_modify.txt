@@ -1,0 +1,77 @@
+c2a4b
+{
+    Remove
+    {
+        ClassName
+        {
+            "info_player_start" {}
+        }
+    }
+    Add
+    {
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "c2a4b_starts"
+            "origin" "704 -184.25 -200"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "c2a4b_starts"
+            "origin" "702 -126 -200"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "c2a4b_starts"
+            "origin" "699 -68 -200"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "c2a4b_starts"
+            "origin" "699 -8 -200"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "c2a4b_starts"
+            "origin" "698 55 -200"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "c2a4b_starts"
+            "origin" "701 120 -200"
+        }
+    }
+    Modify
+    {
+        ClassName
+        {
+            "worldspawn"
+            {
+                "mapversion" "4"
+            }
+        }
+        Origin
+        {
+            "1196 144 -120"
+            {
+                "spawnflags" "2"
+            }
+            "-424 -2624 -392"
+            {
+                "spawngroup" "c2a4c_starts"
+                "transitionradius" "560"
+            }
+        }
+    }
+SpawnItems
+{
+    "weapon_healer" "1"
+    "weapon_crowbar" "1"
+    "weapon_pistol" "1"
+}
+}

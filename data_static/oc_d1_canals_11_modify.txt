@@ -1,0 +1,190 @@
+d1_canals_11
+{
+    Remove
+    {
+        ClassName
+        {
+            "info_player_start" {}
+        }
+        TargetName
+        {
+            "relay_guncave_gate_exit_close" {}
+            "gate1" {}
+        }
+        Origin
+        {
+            "10100.2 9040.8 -935" {}
+            "9984 10032 -832" {}
+            "9984 9360 -832" {}
+            "-11520 -1584 -968" {}
+        }
+    }
+    Add
+    {
+        "infodecal"
+        {
+            "texture" "decals/airboatspawning"
+            "angles" "0 0 0"
+            "origin" "10176 8989 -825"
+        }
+        "infodecal"
+        {
+            "texture" "decals/airboatspawning"
+            "angles" "0 0 0"
+            "origin" "9536 8989 -825"
+        }
+        "infodecal"
+        {
+            "texture" "decals/airboatspawning"
+            "angles" "0 0 0"
+            "origin" "10240 7969 -802"
+        }
+        "infodecal"
+        {
+            "texture" "decals/airboatspawning"
+            "angles" "0 0 0"
+            "origin" "9552 8192 -845"
+        }
+        "point_weapon_eater"
+        {
+            "EatRadius" "66"
+            "targetname" "yumyumyum"
+            "origin" "10107 9040 -917.836"
+        }
+        "logic_auto"
+        {
+            "spawnflags" "1"
+            "OnMapSpawn" "global_newgame_spawner_airboat,Kill,,0.2,-1"
+            "OnMapSpawn" "global_newgame_template,ForceSpawn,,0.5,-1"
+            "OnMapSpawn" "yumyumyum,Eat,,0.8,-1"
+            "origin" "10166.5 8938.25 -894.836"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "canals_11_spawn1"
+            "origin" "10181 8067 -888"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "canals_11_spawn1"
+            "origin" "10198 7990 -888"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "canals_11_spawn1"
+            "origin" "10162 7898 -870"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "canals_11_spawn1"
+            "origin" "10116 8924 -941"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "canals_11_spawn1"
+            "origin" "10116 9057 -941"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "canals_11_spawn1"
+            "origin" "10116 8988 -941"
+        }
+        "logic_timer"
+        {
+            "RefireTime" "10"
+            "StartDisabled" "1"
+            "targetname" "timer_airboat_enable_gun"
+            "OnTimer" "prop_vehicle_airboat,EnableGun,1,0,-1"
+            "origin" "6254.51 4933.07 -722"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "StartDisabled" "1"
+            "targetname" "canals_11_spawn2"
+            "origin" "6417 4671 -886"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "StartDisabled" "1"
+            "targetname" "canals_11_spawn2"
+            "origin" "6498 4668 -886"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "StartDisabled" "1"
+            "targetname" "canals_11_spawn2"
+            "origin" "6156 4692 -886"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "StartDisabled" "1"
+            "targetname" "canals_11_spawn2"
+            "origin" "6077 4693 -886"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "StartDisabled" "1"
+            "targetname" "canals_11_spawn2"
+            "origin" "5942 4694 -886"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "StartDisabled" "1"
+            "targetname" "canals_11_spawn2"
+            "origin" "6010 4693 -886"
+        }
+    }
+    Modify
+    {
+        ClassName
+        {
+            "worldspawn"
+            {
+                "disableareaportals" "1"
+                "canspawnairboat" "1"
+            }
+        }
+        TargetName
+        {
+            "relay_guncave_gateopen"
+            {
+                "OnTrigger" "canals_11_spawn1,Disable,,0,-1"
+                "OnTrigger" "canals_11_spawn2,Enable,,0,-1"
+            }
+            "relay_guncave_startgunmount"
+            {
+                "OnTrigger" "prop_vehicle_airboat,EnableGun,1,9,-1"
+                "OnTrigger" "timer_airboat_enable_gun,Enable,,9,-1"
+            }
+        }
+        Origin
+        {
+            "-11520 -1104 -968"
+            {
+                "spawngroup" "canals_12_spawn1"
+            }
+        }
+    }
+SpawnItems
+{
+    "item_ammo_smg1_large" "1"
+    "weapon_pistol" "1"
+    "weapon_smg1" "1"
+    "weapon_357" "1"
+    "item_ammo_pistol_large" "1"
+    "weapon_crowbar" "1"
+    "weapon_healer" "1"
+}
+}

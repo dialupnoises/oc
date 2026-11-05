@@ -1,0 +1,4 @@
+"d3_citadel_04"
+{
+	"mp_falldamage" "0"
+}

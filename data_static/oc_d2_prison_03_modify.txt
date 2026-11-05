@@ -1,0 +1,88 @@
+d2_prison_03
+{
+    Remove
+    {
+        ClassName
+        {
+            "info_player_start" {}
+            "logic_auto" {}
+        }
+        Origin
+        {
+            "-2136 3200 256" {}
+        }
+    }
+    Add
+    {
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "targetname" "prison_03_spawn1"
+            "origin" "-2773 3229 134"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "targetname" "prison_03_spawn1"
+            "origin" "-2633 3229 134"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "prison_03_spawn1"
+            "origin" "-2631 3097 134"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "prison_03_spawn1"
+            "origin" "-2631 2940 134"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "prison_03_spawn1"
+            "origin" "-2775 3005 134"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "prison_03_spawn1"
+            "origin" "-2775 3126 134"
+        }
+    }
+    Modify
+    {
+        ClassName
+        {
+            "worldspawn"
+            {
+                "disableareaportals" "1"
+            }
+        }
+        Origin
+        {
+            "-3416 6048 112"
+            {
+                "spawngroup" "prison_04_spawn1"
+            }
+        }
+    }
+SpawnItems
+{
+    "weapon_smg1" "1"
+    "weapon_ar2" "1"
+    "weapon_shotgun" "1"
+    "weapon_crowbar" "1"
+    "weapon_physcannon" "1"
+    "weapon_357" "1"
+    "weapon_frag" "1"
+    "weapon_pistol" "1"
+    "item_box_buckshot" "2"
+    "item_ammo_smg1" "3"
+    "item_battery" "3"
+    "weapon_healer" "1"
+    "weapon_bugbait" "1"
+    "weapon_crossbow" "1"
+}
+}

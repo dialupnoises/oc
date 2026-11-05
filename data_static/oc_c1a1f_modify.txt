@@ -1,0 +1,135 @@
+// File was created for use in Obsidian Conflict ONLY!
+c1a1f
+{
+	SpawnItems {}
+
+	Add
+	{
+		// Spawngroup from c1a1a
+		"info_player_deathmatch"
+		{
+			"targetname" "a_spawns"
+			"angles" "0 0 0"
+			"StartDisabled" "0"
+			"origin" "-1568 360 -264"
+		}
+		
+		"info_player_deathmatch"
+		{
+			"targetname" "a_spawns"
+			"angles" "0 0 0"
+			"StartDisabled" "0"
+			"origin" "-1568 320 -264"
+		}
+		
+		"info_player_deathmatch"
+		{
+			"targetname" "a_spawns"
+			"angles" "0 0 0"
+			"StartDisabled" "0"
+			"origin" "-1568 280 -264"
+		}
+		
+		"info_player_deathmatch"
+		{
+			"targetname" "a_spawns"
+			"angles" "0 0 0"
+			"StartDisabled" "0"
+			"origin" "-1520 360 -256"
+		}
+		
+		"info_player_deathmatch"
+		{
+			"targetname" "a_spawns"
+			"angles" "0 0 0"
+			"StartDisabled" "0"
+			"origin" "-1520 320 -256"
+		}
+		
+		"info_player_deathmatch"
+		{
+			"targetname" "a_spawns"
+			"angles" "0 0 0"
+			"StartDisabled" "0"
+			"origin" "-1520 280 -256"
+		}
+		// End c1a1a
+		
+		// Spawngroup from c1a1g
+		"info_player_deathmatch"
+		{
+			"targetname" "g_spawns"
+			"angles" "0 180 0"
+			"StartDisabled" "0"
+			"origin" "624 356 -239"
+		}
+		
+		"info_player_deathmatch"
+		{
+			"targetname" "g_spawns"
+			"angles" "0 180 0"
+			"StartDisabled" "0"
+			"origin" "624 316 -239"
+		}
+		
+		"info_player_deathmatch"
+		{
+			"targetname" "g_spawns"
+			"angles" "0 180 0"
+			"StartDisabled" "0"
+			"origin" "624 276 -239"
+		}
+		
+		"info_player_deathmatch"
+		{
+			"targetname" "g_spawns"
+			"angles" "0 180 0"
+			"StartDisabled" "0"
+			"origin" "584 316 -239"
+		}
+		
+		"info_player_deathmatch"
+		{
+			"targetname" "g_spawns"
+			"angles" "0 180 0"
+			"StartDisabled" "0"
+			"origin" "584 356 -239"
+		}
+		
+		"info_player_deathmatch"
+		{
+			"targetname" "g_spawns"
+			"angles" "0 180 0"
+			"StartDisabled" "0"
+			"origin" "584 276 -239"
+		}
+		// End c1a1g
+	}
+	
+	Modify
+	{
+		Classname
+		{
+			"trigger_changelevel"
+			{
+				"transitionradius" "512"
+			}
+		}
+		
+		Targetname
+		{
+			"change_to_c1a1g"
+			{
+				"transitionradius" "330"
+			}
+		}
+
+		Origin
+		{
+			"-1467 320 -164"
+			{
+				"spawnflags" "2"
+			}
+		}
+	}
+}

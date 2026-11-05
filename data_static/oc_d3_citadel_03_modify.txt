@@ -1,0 +1,105 @@
+d3_citadel_03
+{
+    Remove
+    {
+        ClassName
+        {
+            "trigger_weapon_strip" {}
+            "trigger_weapon_dissolve" {}
+            "info_player_start" {}
+        }
+        TargetName
+        {
+            "weapon_strip_motion_disable" {}
+            "weapon_strip_motion_disable_player" {}
+        }
+        Origin
+        {
+            "7703.56 -1419.75 2140" {}
+            "7725 -1322 2224.86" {}
+            "7712 -1200 3024" {}
+            "7712 -1200 3024" {}
+        }
+    }
+    Add
+    {
+        "logic_auto"
+        {
+            "spawnflags" "1"
+            "OnMapSpawn" "strip_stop,Trigger,,3,-1"
+            "OnMapSpawn" "superphysgun_on,TurnOn,,0,-1"
+            "origin" "7769.14 -1311.79 2121"
+        }
+        "env_global"
+        {
+            "initialstate" "0"
+            "globalstate" "super_phys_gun"
+            "targetname" "superphysgun_on"
+            "origin" "7778.52 -1245.56 2121"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "origin" "7651.42 -1426.91 2113"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "origin" "7645 -1308.37 2113"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "origin" "7644.33 -1213.34 2113"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "origin" "7801.67 -1213.85 2113"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "origin" "7804.72 -1322.66 2113"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "origin" "7805 -1422 2113"
+        }
+    }
+    Modify
+    {
+        ClassName
+        {
+            "worldspawn"
+            {
+                "disableareaportals" "1"
+            }
+        }
+        TargetName
+        {
+            "logic_room0_end_scan"
+            {
+                "spawnflags" "0"
+            }
+            "logic_room0_open_exit_door"
+            {
+                "spawnflags" "0"
+            }
+        }
+        Origin
+        {
+            "720 -320 2432"
+            {
+                "spawnflags" "0"
+                "transitionradius" "184"
+            }
+        }
+    }
+SpawnItems
+{
+    "weapon_physcannon" "1"
+    "weapon_healer" "1"
+}
+}

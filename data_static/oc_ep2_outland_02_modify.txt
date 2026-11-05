@@ -1,0 +1,152 @@
+ep2_outland_02
+{
+    Remove
+    {
+        ClassName
+        {
+	    "trigger_playermovement" {}
+            "info_player_start" {}
+        }
+        TargetName
+        {
+            "exit_gate_door_close_rl" {}
+            "exit_gate_rolltop_door_playerblock" {}
+        }
+        Origin
+        {
+            "-2293.12 -8265.61 -462.834" {}
+            "-2531.78 -8257.43 -365.06" {}
+        }
+    }
+    Add
+    {
+        "weapon_shotgun"
+        {
+            "angles" "0 324.5 0"
+            "fademindist" "-1"
+            "fadescale" "1"
+            "origin" "-2731 -8965 -705"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "outland_02_spawn1"
+            "origin" "-2292 -8258 -488"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "outland_02_spawn1"
+            "origin" "-2292 -8258 -406"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "outland_02_spawn1"
+            "origin" "-2253 -8268 -486"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "outland_02_spawn1"
+            "origin" "-2209 -8274 -481"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 311 0"
+            "targetname" "outland_02_spawn1"
+            "origin" "-2077 -8264 -495"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "StartDisabled" "1"
+            "targetname" "outland_02_spawn2"
+            "origin" "-3246 -9348 -894"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "StartDisabled" "1"
+            "targetname" "outland_02_spawn2"
+            "origin" "-3246 -9428 -894"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "StartDisabled" "1"
+            "targetname" "outland_02_spawn2"
+            "origin" "-3246 -9519 -894"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "StartDisabled" "1"
+            "targetname" "outland_02_spawn2"
+            "origin" "-3246 -9597 -894"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "StartDisabled" "1"
+            "targetname" "outland_02_spawn2"
+            "origin" "-3169 -9695 -894"
+        }
+        "point_trigger"
+        {
+            "spawnflags" "1"
+            "TriggerOnce" "1"
+            "TriggerRadius" "244"
+            "OnStartTouch" "outland_02_spawn1,Disable,,0,-1"
+            "OnStartTouch" "outland_02_spawn2,Enable,,0,-1"
+            "origin" "-2594 -9179 -620"
+        }
+        "point_trigger"
+        {
+            "spawnflags" "1"
+            "TriggerOnce" "1"
+            "TriggerRadius" "68"
+            "OnStartTouch" "vort,Kill,,0,-1"
+            "origin" "-929 -10246 -448"
+        }
+        "logic_timer"
+        {
+            "RefireTime" "2"
+            "OnTimer" "alyx,SetDamageFilter,filter_NoDamage,0,-1"
+            "OnTimer" "npc_vortigaunt,SetDamageFilter,filter_NoDamage,0,-1"
+            "origin" "-12851.4 -12588.1 567.059"
+        }
+        "filter_multi"
+        {
+            "Negated" "1"
+            "targetname" "filter_NoDamage"
+            "origin" "-567 -1040 -1560"
+        }
+    }
+    Modify
+    {
+        ClassName
+        {
+            "worldspawn"
+            {
+                "disableareaportals" "1"
+            }
+        }
+        Origin
+        {
+            "-925 -10261 -428"
+            {
+                "spawngroup" "outland_03_spawn1"
+            }
+        }
+    }
+SpawnItems
+{
+    "weapon_physcannon" "1"
+    "weapon_crowbar" "1"
+    "weapon_healer" "1"
+    "weapon_357" "1"
+    "weapon_shotgun" "1"
+    "weapon_pistol" "1"
+}
+}

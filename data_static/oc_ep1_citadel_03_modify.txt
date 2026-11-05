@@ -1,0 +1,371 @@
+// File was created for use in Obsidian Conflict ONLY!
+ep1_citadel_03
+{
+	"SpawnItems"
+	{
+		"weapon_healer" "1"
+		"weapon_physcannon" "1"
+	}
+	
+	"Remove"
+	{
+		"Classname"
+		{
+			"info_player_start" {}
+		}
+		
+		"Targetname"
+		{
+			"trigger_door_comb_close" {}
+			"brush_doorblocker_corelift" {}
+			"door_comb_2_1" {}
+			"door_comb_2_2" {}
+			"door_comb_2_3" {}
+			"door_comb_2_4" {}
+			"door_comb_2_5" {}
+			"door_comb_2_6" {}
+			"door_comb_2_7" {}
+			"door_comb_2_8" {}
+			"door_comb_2_9" {}
+			"door_comb_2_10" {}
+			"trigger_fall" {}
+			"trigger_fall_2" {}
+			"brush_elevator_clip" {}
+			"Teleport_lift_doors" {}
+			"brush_airlock_comb_clip" {}
+			"door_airlock_comb_1_2" {}
+			"door_airlock_comb_1_5" {}
+			"door_airlock_comb_1_4" {}
+			"door_airlock_comb_1_9" {}
+			"door_airlock_comb_1_6" {}
+			"door_airlock_comb_1_1" {}
+			"door_airlock_comb_1_3" {}
+			"door_airlock_comb_1_7" {}
+			"pclip_core_elevator_1" {}
+			"brush_doorblocker_corelift" {}
+		}
+		
+		"Origin"
+		{
+			"-964 12160 5480" {}
+			"1204 13550 5360" {}
+			"1880.46 12932.3 5444" {}
+			"-735.61 12191.6 5381" {}
+		}
+	}
+	
+	"Add"
+	{
+        "logic_auto"
+        {
+            "spawnflags" "1"
+            "OnMapSpawn" "timer_ball_tube1,Enable,,1,-1"
+            "origin" "1523 13124 5386"
+        }
+        
+        "logic_auto"
+        {
+            "spawnflags" "1"
+            "OnMapSpawn" "global_newgame_template_base_items,ForceSpawn,,0.5,1"
+            "OnMapSpawn" "alyx,EnableAlwaysTransition,,0.8,-1"
+            "OnMapSpawn" "alyx,Kill,,0,-1"
+            "OnMapSpawn" "global_newgame_spawner_suit,Kill,,0.8,-1"
+            "OnMapSpawn" "global_newgame_spawner_physcannon,Kill,,0.8,-1"
+            "OnMapSpawn" "alyx,SetDamageFilter,filter_NoDamage,1,-1"
+            "OnMapSpawn" "renamedballspawntimer,Enable,,1,-1"
+            "origin" "-735.61 12191.6 5381"
+        }
+        
+        "filter_multi"
+        {
+            "targetname" "filter_NoDamage"
+            "Negated" "1"
+            "origin" "-822 12348 5385"
+        }
+        
+		"info_player_deathmatch"
+		{
+			"targetname" "firstspawn"
+			"angles" "0 0 0"
+			"StartDisabled" "0"
+			"origin" "-869 12093 5349"
+		}
+		
+		"info_player_deathmatch"
+		{
+			"targetname" "firstspawn"
+			"angles" "0 0 0"
+			"StartDisabled" "0"
+			"origin" "-867 12182 5349"
+		}
+		
+		"info_player_deathmatch"
+		{
+			"targetname" "firstspawn"
+			"angles" "0 0 0"
+			"StartDisabled" "0"
+			"origin" "-878 12269 5349"
+		}
+		
+		"info_player_deathmatch"
+		{
+			"targetname" "firstspawn"
+			"angles" "0 0 0"
+			"StartDisabled" "0"
+			"origin" "-796 12101 5349"
+		}
+		
+		"info_player_deathmatch"
+		{
+			"targetname" "firstspawn"
+			"angles" "0 0 0"
+			"StartDisabled" "0"
+			"origin" "-781 12260 5349"
+		}
+		
+		"info_player_deathmatch"
+		{
+			"targetname" "secondspawn"
+			"angles" "0 0 0"
+			"StartDisabled" "1"
+			"origin" "2013 11837 4261"
+		}
+		
+		"info_player_deathmatch"
+		{
+			"targetname" "secondspawn"
+			"angles" "0 0 0"
+			"StartDisabled" "1"
+			"origin" "1983 11708 4261"
+		}
+		
+		"info_player_deathmatch"
+		{
+			"targetname" "secondspawn"
+			"angles" "0 0 0"
+			"StartDisabled" "1"
+			"origin" "1983 11708 4261"
+		}
+		
+		"info_player_deathmatch"
+		{
+			"targetname" "secondspawn"
+			"angles" "0 0 0"
+			"StartDisabled" "1"
+			"origin" "2103 11639 4261"
+		}
+		
+		"info_player_deathmatch"
+		{
+			"targetname" "secondspawn"
+			"angles" "0 0 0"
+			"StartDisabled" "1"
+			"origin" "2068 11557 4261"
+		}
+		
+		"point_servercommand"
+		{
+			"targetname" "servercommand"
+			"origin" "-6320 6472 2685"
+		}
+		
+        "info_teleport_destination"
+        {
+            "angles" "0 270 0"
+            "targetname" "coreteleport_destination"
+            "origin" "1641 11804 4225"
+        }
+        
+        "info_teleport_destination"
+        {
+            "angles" "0 270 0"
+            "targetname" "coreteleport_destination"
+            "origin" "1721 11804 4225"
+        }
+        
+        "info_teleport_destination"
+        {
+            "angles" "0 270 0"
+            "targetname" "coreteleport_destination"
+            "origin" "1830 11804 4225"
+        }
+        
+        "info_teleport_destination"
+        {
+            "angles" "0 90 0"
+            "targetname" "coreteleport_destination"
+            "origin" "1829 11687 4225"
+        }
+        
+        "info_teleport_destination"
+        {
+            "angles" "0 90 0"
+            "targetname" "coreteleport_destination"
+            "origin" "1720 11687 4225"
+        }
+        
+        "info_teleport_destination"
+        {
+            "angles" "0 90 0"
+            "targetname" "coreteleport_destination"
+            "origin" "1640 11687 4225"
+        }
+        
+        "point_teleport"
+        {
+            "angles" "0 0 0"
+            "radius" "381"
+            "spawnflags" "2048"
+            "targetname" "coreteleport"
+            "TeleportDestination" "coreteleport_destination"
+            "origin" "1229 11743 5321"
+        }
+        
+        "point_teleport"
+        {
+            "angles" "0 0 0"
+            "radius" "154"
+            "spawnflags" "2048"
+            "targetname" "coreteleport"
+            "TeleportDestination" "coreteleport_destination"
+            "origin" "1633 12129 5321"
+        }
+        
+        "point_teleport"
+        {
+            "angles" "0 0 0"
+            "radius" "154"
+            "spawnflags" "2048"
+            "targetname" "coreteleport"
+            "TeleportDestination" "coreteleport_destination"
+            "origin" "1414 12129 5321"
+        }
+        
+        "point_teleport"
+        {
+            "angles" "0 0 0"
+            "radius" "169"
+            "spawnflags" "2048"
+            "targetname" "coreteleport"
+            "TeleportDestination" "coreteleport_destination"
+            "origin" "1167 12118 5321"
+        }
+        
+        "point_teleport"
+        {
+            "angles" "0 0 0"
+            "radius" "512"
+            "spawnflags" "2048"
+            "targetname" "coreteleport"
+            "TeleportDestination" "coreteleport_destination"
+            "origin" "716 12130 5321"
+        }
+        
+        "point_teleport"
+        {
+            "angles" "0 0 0"
+            "radius" "918"
+            "spawnflags" "2048"
+            "targetname" "coreteleport"
+            "TeleportDestination" "coreteleport_destination"
+            "origin" "-408 12138 5321"
+        }
+	}
+	
+	"Modify"
+	{
+        "Classname"
+        {
+            "worldspawn"
+            {
+                "disableareaportals" "1"
+            }
+        }
+        
+		"Targetname"
+		{
+            "timer_ball_tube1"
+            {
+                "targetname" "renamedballspawntimer"
+            }
+            "relay_core_completed"
+            {
+                "OnTrigger" "firstspawn,Enable,,2,-1"
+                "OnTrigger" "secondspawn,Disable,,2,-1"
+            }
+            "trigger_alyx_reunion"
+            {
+                "OnTrigger" "door_core_breaker_room_04,Kill,,0,-1"
+            }
+			"goal_follow_alyx"
+			{
+				"goal" "player"
+			}
+			"follow_alyx"
+			{
+				"goal" "player"
+			}
+			"alyx"
+			{
+				"npcname" "Alyx Vance"
+				"OnDeath" "servercommand,command,changelevel ep1_citadel_03,5,-1"
+			}
+			"lcs_core_control_scene"
+			{
+				"OnStart" "pclip_door1,disable,,5,-1"
+				"OnStart" "door_comb_1_1,open,,5,-1"
+				"OnStart" "door_comb_1_2,open,,5,-1"
+				"OnStart" "door_comb_1_3,open,,5,-1"
+				"OnStart" "door_comb_1_4,open,,5,-1"
+				"OnStart" "door_comb_1_5,open,,5,-1"
+				"OnStart" "door_comb_1_6,open,,5,-1"
+				"OnStart" "door_comb_1_7,open,,5,-1"
+				"OnStart" "door_comb_1_8,open,,5,-1"
+				"OnStart" "door_comb_1_9,open,,5,-1"
+				"OnStart" "door_comb_1_10,open,,5,-1"
+			}
+			"Teleport_lift_doors"
+			{
+				"OnFullyClosed" "super_phys_gun,TurnOff,,5,-1"
+			}
+			"relay_laserpower_fail"
+			{
+				"OnTrigger" "counter_laserpower_batteries,SetValue,3,0.42,-1"
+			}
+			"path_lift_control_4"
+			{
+				"OnPass" "super_phys_gun,TurnOff,,0,-1"
+				"OnPass" "servercommand,command,changelevel ep1_citadel_04,2,-1"
+			}
+            "lift_airlock"
+            {
+                "OnFullyClosed" "coreteleport,Teleport,,0,-1"
+				"OnFullyClosed"  "secondspawn,enable,,0,-1"
+				"OnFullyClosed"  "firstspawn,disable,,0,-1"
+            }
+            "trigger_entry"
+            {
+                "OnTrigger" "goal_follow_alyx,Activate,,0.5,-1"
+                "OnTrigger" "goal_follow_alyx,Deactivate,,0,-1"
+			}
+		}
+		"Origin"
+		{
+            "1104 13296 3824"
+            {
+                "nosmooth" "1"
+            }
+			"1152 13648 4960"
+			{
+				"OnTrigger"  "brush_elevator_clip,disable,,0,-1"
+				"OnTrigger"  "Teleport_lift_doors,kill,,0,-1"
+			}
+			"1880.46 12932.3 5444"
+			{
+				"OnStartTouch" "physicstrap_ball_killer2,enable,,0.25,-1"
+				"OnStartTouch" "physicstrap_ball_killer2,disable,,1,-1"
+				"OnStartTouch" "relay_destroyed_panel_2,trigger,,0,-1"
+			}
+        }
+	}
+}

@@ -1,0 +1,263 @@
+d3_c17_07
+{
+    Remove
+    {
+        ClassName
+        {
+            "player_loadsaved" {}
+            "info_player_start" {}
+        }
+        TargetName
+        {
+            "gate_close_trigger" {}
+            "gate_close_counter" {}
+            "gate_close_playerclip" {}
+            "turretroom_boards_relay" {}
+            "turretroom_doorbreak_conditions" {}
+            "turretroom_exit_counter" {}
+            "alyx_briefingroom_exitdoor_conditions" {}
+            "gate_closing_hurt" {}
+        }
+        Origin
+        {
+            "4292 1016 220" {}
+            "4392 1174.85 289" {}
+        }
+    }
+    Add
+    {
+        "math_counter"
+        {
+            "max" "2"
+            "min" "0"
+            "startvalue" "0"
+            "targetname" "gate_close_counter"
+            "OnHitMax" "alyx_waitforplayer_lcs0,Kill,,0,-1"
+            "OnHitMax" "alyx_waitforplayer_lcs1,Kill,,0,-1"
+            "OnHitMax" "alyx_waitforplayer_lcs2,Kill,,0,-1"
+            "OnHitMax" "alyx_waitforplayer_lcs3,Kill,,0,-1"
+            "OnHitMax" "alyx_waitforplayer_relay,Kill,,0,-1"
+            "OnHitMax" "killsoldiersassault_killtrigger,Enable,,1,-1"
+            "OnHitMax" "fallback_assault,Deactivate,,2,-1"
+            "OnHitMax" "alyx_end_seq,CancelSequence,,1,-1"
+            "OnHitMax" "gate_danger,InsertSound,300,0,-1"
+            "OnHitMax" "balcony_cop1,Kill,,0,-1"
+            "OnHitMax" "southfront_pressuresoldiers_maker,Kill,,3,-1"
+            "OnHitMax" "gate_close_trigger,Kill,,0,-1"
+            "OnHitMax" "northfront_pressuresoldiers_maker,Kill,,3,-1"
+            "OnHitMax" "killsoldiers_sched,StartSchedule,,3,-1"
+            "OnHitMax" "finalassault_south,Deactivate,,2,-1"
+            "OnHitMax" "finalassault_north,Deactivate,,2,-1"
+            "OnHitMax" "lcs_alyx_notices_bridge,Start,,2,-1"
+            "OnHitMax" "gate_closed_nodelink,TurnOff,,0,-1"
+            "OnHitMax" "final_assault,Activate,,2.5,-1"
+            "OnHitMax" "final_soundscape,Enable,,0,-1"
+            "OnHitMax" "lcs_citizens_watch_alyx,Start,,7,-1"
+            "origin" "7400 1536 144"
+        }
+        "logic_relay"
+        {
+            "spawnflags" "1"
+            "StartDisabled" "0"
+            "targetname" "turretroom_boards_relay"
+            "OnTrigger" "alyxfight_weaponmanager,Kill,,0,-1"
+            "OnTrigger" "turretroom_nodelink,TurnOn,,0,-1"
+            "OnTrigger" "alyx_doorbreak_seq,BeginSequence,,0.1,-1"
+            "OnTrigger" "turretroom_break,Break,,0.05,-1"
+            "OnTrigger" "turretroom_boards_expl,Explode,,0.1,-1"
+            "OnTrigger" "turretroom_boards_breaksound,PlaySound,,0.1,-1"
+            "OnTrigger" "turretroom_turrets,Disable,,0,-1"
+            "OnTrigger" "turretroom_killtrigger,Enable,,0.2,-1"
+            "OnTrigger" "turretroom_killtrigger,Kill,,0.3,-1"
+            "origin" "4600 672 192"
+        }
+        "math_counter"
+        {
+            "max" "3"
+            "min" "0"
+            "startvalue" "0"
+            "targetname" "turretroom_exit_counter"
+            "OnHitMax" "alyx_doorbreak_lcs1,Start,,1.5,-1"
+            "OnHitMax" "turretroom_boards_relay,Trigger,,0.4,-1"
+            "OnHitMax" "alyxfight_soldier2,Kill,,0,-1"
+            "OnHitMax" "alyxfight_soldier_makers,Disable,,0,-1"
+            "OnHitMax" "alyxfight_soldier1,Kill,,0,-1"
+            "OnHitMax" "alyxfight_brushes,Kill,,0,-1"
+            "origin" "4584 832 192"
+        }
+        "ai_script_conditions"
+        {
+            "ActorInPVS" "2"
+            "ActorInVehicle" "2"
+            "ActorSeePlayer" "2"
+            "ActorSeeTarget" "2"
+            "ActorTargetProximity" "0"
+            "MaximumState" "3"
+            "MaxTimeout" "0"
+            "MinimumState" "1"
+            "MinTimeout" "0"
+            "PlayerActorFOV" "360"
+            "PlayerActorFOVTrueCone" "0"
+            "PlayerActorLOS" "2"
+            "PlayerActorProximity" "0"
+            "PlayerBlockingActor" "2"
+            "PlayerInVehicle" "2"
+            "PlayerTargetFOV" "360"
+            "PlayerTargetFOVTrueCone" "0"
+            "PlayerTargetLOS" "2"
+            "PlayerTargetProximity" "1000"
+            "RequiredTime" "0"
+            "ScriptStatus" "2"
+            "StartDisabled" "1"
+            "target" "alyx_briefingroom_exitdoor_conditions"
+            "targetname" "alyx_briefingroom_exitdoor_conditions"
+            "OnConditionsSatisfied" "briefingroom_exitdoor_nodelink,TurnOff,,0,-1"
+            "origin" "6528.88 1535 149.236"
+        }
+        "prop_dynamic_override"
+        {
+            "angles" "0 0 0"
+            "disableshadows" "1"
+            "fademindist" "-1"
+            "fadescale" "1"
+            "MaxAnimTime" "10"
+            "MinAnimTime" "5"
+            "model" "models/props_debris/barricade_tall02a.mdl"
+            "renderamt" "255"
+            "rendercolor" "255 255 255"
+            "skin" "0"
+            "solid" "6"
+            "spawnflags" "0"
+            "origin" "4121 1017 139"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "c17_07_spawn1"
+            "origin" "4187 993 109"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "targetname" "c17_07_spawn1"
+            "origin" "4455 994 217"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "c17_07_spawn1"
+            "origin" "4357 1213 319"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "c17_07_spawn1"
+            "origin" "4448 1205 281"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "targetname" "c17_07_spawn1"
+            "origin" "4400 994 217"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "c17_07_spawn1"
+            "origin" "4187 1044 109"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "StartDisabled" "1"
+            "targetname" "c17_07_spawn2"
+            "origin" "5579.67 977.003 1"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "StartDisabled" "1"
+            "targetname" "c17_07_spawn2"
+            "origin" "5586.4 1832.92 1"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "StartDisabled" "1"
+            "targetname" "c17_07_spawn2"
+            "origin" "5572.77 1246.45 1"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "StartDisabled" "1"
+            "targetname" "c17_07_spawn2"
+            "origin" "5571.13 1691.37 1"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "StartDisabled" "1"
+            "targetname" "c17_07_spawn2"
+            "origin" "6551 834 1"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 114 0"
+            "StartDisabled" "1"
+            "targetname" "c17_07_spawn2"
+            "origin" "6622 942 1"
+        }
+        "point_trigger"
+        {
+            "spawnflags" "1"
+            "TriggerOnce" "1"
+            "TriggerRadius" "569"
+            "OnStartTouch" "gate_close_counter,Add,1,0,1"
+            "origin" "7948 1539 137"
+        }
+    }
+    Modify
+    {
+        ClassName
+        {
+            "worldspawn"
+            {
+                "disableareaportals" "1"
+            }
+        }
+        TargetName
+        {
+            "intiate_scenario_relay"
+            {
+                "OnTrigger" "c17_07_spawn1,Disable,,0,1"
+                "OnTrigger" "c17_07_spawn2,Enable,,0,1"
+            }
+        }
+        Origin
+        {
+            "10160 2940 -400"
+            {
+                "nosmooth" "1"
+                "spawnflags" "0"
+                "spawngroup" "c17_08_spawn1"
+            }
+        }
+    }
+SpawnItems
+{
+    "weapon_smg1" "1"
+    "weapon_ar2" "1"
+    "weapon_shotgun" "1"
+    "weapon_crowbar" "1"
+    "weapon_physcannon" "1"
+    "weapon_357" "1"
+    "weapon_frag" "1"
+    "weapon_pistol" "1"
+    "item_box_buckshot" "2"
+    "item_ammo_smg1" "3"
+    "item_battery" "3"
+    "weapon_healer" "1"
+    "weapon_crossbow" "1"
+}
+}

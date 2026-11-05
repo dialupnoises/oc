@@ -1,7 +1,9 @@
 AddCSLuaFile()
 
 ENT.Type = "brush"
-ENT.Base = "base_brush"
+-- base_brush is only a thin stub over base_entity and is not registered under
+-- every base gamemode, so derive from base_entity directly.
+ENT.Base = "base_entity"
 ENT.IsMultiple = false
 ENT.touchAmount = 0
 
@@ -97,6 +99,11 @@ local function checkFilter(self, ent)
 	return true
 end
 
+-- what base_brush did: let anything through to Touch, where checkFilter decides
+function ENT:PassesTriggerFilters(ent)
+	return true
+end
+
 function ENT:Initialize()
 	if SERVER then
 		self:SetTrigger(true)
@@ -183,16 +190,20 @@ function ENT:KeyValue(key, value)
 		self:StoreOutput(key, value)
 		self.triggerOutputs = self.triggerOutputs or {}
 		self.outputsUsedCount = self.outputsUsedCount or {}
-		self.outputsUsedCount[key .. value] = 0
-		if self.triggerOutputs[key] == nil then
-			self.triggerOutputs[key] = { value }
+		self.outputsUsedCount[keyLower .. value] = 0
+		if self.triggerOutputs[keyLower] == nil then
+			self.triggerOutputs[keyLower] = { value }
 		else
-			table.insert(self.triggerOutputs[key], value)
+			table.insert(self.triggerOutputs[keyLower], value)
 		end
 	end
 end
 
+-- Output names are case-insensitive: the map file says OnStartTouch, but the map
+-- config's keys arrive lowercased, so everything is stored and looked up lowercased.
 function ENT:CallAllOutputs(name, activator)
+	name = string.lower(name)
+
 	if not self.triggerOutputs then 
 		self.queuedOutputs = self.queuedOutputs or {}
 		table.insert(self.queuedOutputs, {name, activator})
@@ -205,7 +216,18 @@ function ENT:CallAllOutputs(name, activator)
 	end
 end
 
+-- ent_io_spew 1 logs the outputs this trigger sends; they never reach the engine's I/O
+local function spew(message)
+	local convar = GetConVar("ent_io_spew")
+
+	if convar ~= nil and convar:GetBool() then
+		MsgN("[IO] " .. message)
+	end
+end
+
 function ENT:SendOutput(name, output, activator)
+	spew(string.format("output %s of %s (%s): %s", name, self:GetClass(), self:GetName(), output))
+
 	local outputParts = string.Split(output, ",")
 	local targetName = outputParts[1]
 	local targetEnt = nil
@@ -219,7 +241,10 @@ function ENT:SendOutput(name, output, activator)
 		targetEnt = player.FindInPVS(self)[1]
 	else
 		local foundEnts = ents.FindByName(targetName)
-		if #foundEnts == 0 then return end
+		if #foundEnts == 0 then
+			spew("  no entity named '" .. targetName .. "', output dropped")
+			return
+		end
 		targetEnt = foundEnts[1]
 	end
 

@@ -1,0 +1,9 @@
+// Created for use in Obsidian Conflict ONLY!
+"oc_breakout"
+{
+	SpawnItems
+	{
+		"weapon_crowbar"	"1"
+		"weapon_healer"		"1"
+	}
+}

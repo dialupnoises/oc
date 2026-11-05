@@ -1,0 +1,103 @@
+// File was created for use in Obsidian Conflict ONLY!
+c1a0
+{
+	SpawnItems {}
+
+	Add
+	{
+		"info_player_deathmatch"
+		{
+			"angles" "0 180 0"
+			"StartDisabled" "0"
+			"origin" "576 316 -227"
+		}
+		
+		"info_player_deathmatch"
+		{
+			"angles" "0 180 0"
+			"StartDisabled" "0"
+			"origin" "496 316 -227"
+		}
+		
+		"info_player_deathmatch"
+		{
+			"angles" "0 180 0"
+			"StartDisabled" "0"
+			"origin" "496 376 -227"
+		}
+		
+		"info_player_deathmatch"
+		{
+			"angles" "0 180 0"
+			"StartDisabled" "0"
+			"origin" "416 376 -227"
+		}
+		
+		"info_player_deathmatch"
+		{
+			"angles" "0 180 0"
+			"StartDisabled" "0"
+			"origin" "416 316 -227"
+		}
+		
+		"info_player_deathmatch"
+		{
+			"angles" "0 180 0"
+			"StartDisabled" "0"
+			"origin" "416 256 -227"
+		}
+		
+		"info_player_deathmatch"
+		{
+			"angles" "0 180 0"
+			"StartDisabled" "0"
+			"origin" "496 256 -227"
+		}
+		
+		"info_player_deathmatch"
+		{
+			"angles" "0 180 0"
+			"StartDisabled" "0"
+			"origin" "576 376 -227"
+		}
+		
+		"info_player_deathmatch"
+		{
+			"angles" "0 180 0"
+			"StartDisabled" "0"
+			"origin" "576 256 -227"
+		}
+		
+		"info_player_deathmatch"
+		{
+			"angles" "0 180 0"
+			"StartDisabled" "0"
+			"origin" "656 376 -227"
+		}
+		
+		"info_player_deathmatch"
+		{
+			"angles" "0 180 0"
+			"StartDisabled" "0"
+			"origin" "656 316 -227"
+		}
+		
+		"info_player_deathmatch"
+		{
+			"angles" "0 180 0"
+			"StartDisabled" "0"
+			"origin" "656 256 -227"
+		}
+	}
+	
+	Modify
+	{
+		Classname
+		{
+			"trigger_changelevel"
+			{
+				"transitionradius" "256"
+			}
+		}
+	}
+}

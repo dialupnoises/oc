@@ -1,0 +1,113 @@
+c1a3b
+{
+    Remove
+    {
+        ClassName
+        {
+            "info_player_start" {}
+            "trigger_once" {}
+        }
+    }
+    Add
+    {
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "targetname" "c1a3b_starts"
+            "origin" "113.071 -885.914 641"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "targetname" "c1a3b_starts"
+            "origin" "181 -886 641"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "targetname" "c1a3b_starts"
+            "origin" "245 -886 641"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "targetname" "c1a3b_starts"
+            "origin" "305 -886 641"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "targetname" "c1a3b_starts"
+            "origin" "353 -882 641"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "targetname" "c1a3b_starts"
+            "origin" "355 -816 641"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "targetname" "c1a3b_starts"
+            "origin" "294 -815 641"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "targetname" "c1a3b_starts"
+            "origin" "238 -815 641"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "targetname" "c1a3b_starts"
+            "origin" "179 -815 641"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "targetname" "c1a3b_starts"
+            "origin" "112 -815 641"
+        }
+    }
+    Modify
+    {
+        ClassName
+        {
+            "worldspawn"
+            {
+                "mapversion" "9"
+            }
+        }
+        TargetName
+        {
+            "c1a3b_changelevel"
+            {
+                "spawnflags" "0"
+                "StartDisabled" "1"
+            }
+        }
+        Origin
+        {
+            "-928 -1580 368"
+            {
+                "spawngroup" "c1a3c_starts2"
+                "transitionradius" "172"
+            }
+            "200 -812 664"
+            {
+                "OnTrigger" "music_track_2,PlaySound,,0,1"
+                "OnStartTouch" "c1a3_eleblast_mm,Trigger,,0,1"
+            }
+        }
+    }
+SpawnItems
+{
+    "weapon_crowbar" "1"
+    "weapon_smg1" "1"
+    "item_battery" "1"
+    "item_ammo_smg1" "3"
+    "weapon_healer" "1"
+}
+}

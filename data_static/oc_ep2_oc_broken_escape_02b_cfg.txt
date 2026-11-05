@@ -1,0 +1,16 @@
+"ep2_oc_broken_escape_02b"
+{
+		"mp_flashlight" "1"
+		"mp_falldamage" "1"
+		"mp_forcerespawn" "1"
+
+// Stalker
+sk_stalker_aggressive 		"1"
+
+
+// =================
+//  PLAYER WEAPONS MAX AMMO
+// =================
+
+sk_max_ar2			"120"
+}

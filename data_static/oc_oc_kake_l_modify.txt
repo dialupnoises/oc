@@ -1,0 +1,57 @@
+"oc_kake_l"			{add{"logic_auto"{
+
+//Excluded combination
+//N01:Zombie N02:Combine N03:antlion N04:Manhack N05:Houndeye N06:Headcrab N07:Antlionguard 
+//N08:Rebels N09:Assassin N10:Dream N11:Vortigaunt N12:Aliengrunt N13:bullsquid N14:Hgrunt
+//N15:Metropolice N16:TeamBrue N17:Stalker N18:Hunter N19:Mortarsynth N20:Scanner N21 TeamRed
+//N22:Antlion workers N23:Gargantua N24:Bigmomma N25:Genie N26:Odessas
+
+	//Combine-Mortarsynth
+		"OnMapSpawn" "npc_spawn_T01_N02,AddOutput,OnTrigger npc_choice_flag_T02_N19:SetValue:1:0:-1,0,-1"
+		"OnMapSpawn" "npc_spawn_T01_N19,AddOutput,OnTrigger npc_choice_flag_T02_N02:SetValue:1:0:-1,0,-1"
+
+    //Scanner-Aliengrunt
+		"OnMapSpawn" "npc_spawn_T01_N20,AddOutput,OnTrigger npc_choice_flag_T02_N12:SetValue:1:0:-1,0,-1"
+		"OnMapSpawn" "npc_spawn_T01_N12,AddOutput,OnTrigger npc_choice_flag_T02_N20:SetValue:1:0:-1,0,-1"
+
+    //Hunter-Aliengrunt
+		"OnMapSpawn" "npc_spawn_T01_N18,AddOutput,OnTrigger npc_choice_flag_T02_N12:SetValue:1:0:-1,0,-1"
+		"OnMapSpawn" "npc_spawn_T01_N12,AddOutput,OnTrigger npc_choice_flag_T02_N18:SetValue:1:0:-1,0,-1"
+
+    //Stalker-Assassin
+		"OnMapSpawn" "npc_spawn_T01_N17,AddOutput,OnTrigger npc_choice_flag_T02_N09:SetValue:1:0:-1,0,-1"
+		"OnMapSpawn" "npc_spawn_T01_N09,AddOutput,OnTrigger npc_choice_flag_T02_N17:SetValue:1:0:-1,0,-1"
+
+    //Stalker-Dream
+//		"OnMapSpawn" "npc_spawn_T01_N17,AddOutput,OnTrigger npc_choice_flag_T02_N10:SetValue:1:0:-1,0,-1"
+//		"OnMapSpawn" "npc_spawn_T01_N10,AddOutput,OnTrigger npc_choice_flag_T02_N17:SetValue:1:0:-1,0,-1"
+
+    //Stalker-Mortarsynth
+		"OnMapSpawn" "npc_spawn_T01_N17,AddOutput,OnTrigger npc_choice_flag_T02_N19:SetValue:1:0:-1,0,-1"
+		"OnMapSpawn" "npc_spawn_T01_N19,AddOutput,OnTrigger npc_choice_flag_T02_N17:SetValue:1:0:-1,0,-1"
+
+						}}modify{targetname{"rate_player"{
+
+//Ratio of player battle(0~10)
+	"CompareValue" "2"
+	
+						}"player_weapon"{
+
+//The player's equipment in player battle
+	"weapon_healer" "1"
+	"weapon_crowbar" "1"
+	"weapon_357" "1"
+	"weapon_pistol" "1"
+	"weapon_smg1" "1"
+	"weapon_shotgun" "1"
+	"weapon_ar2" "1"
+
+	"item_ammo_smg1" "6"
+	"item_ammo_smg1_grenade" "1"
+	"item_box_buckshot" "3"
+	"item_ammo_pistol" "8"
+	"item_ammo_ar2" "2"
+	"item_ammo_357" "2"
+
+						}}}	SpawnItems{}
+}

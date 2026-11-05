@@ -1,0 +1,47 @@
+c2a3e
+{
+    Remove
+    {
+        ClassName
+        {
+            "info_player_start" {}
+        }
+    }
+    Add
+    {
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "c2a3e_starts"
+            "origin" "-2620.31 -37.9157 469"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "c2a3e_starts"
+            "origin" "-2628 31 469"
+        }
+    }
+    Modify
+    {
+        ClassName
+        {
+            "worldspawn"
+            {
+                "mapversion" "3"
+            }
+        }
+        Origin
+        {
+            "-2656 128 191"
+            {
+                "spawngroup" "c2a4_starts"
+                "transitionradius" "231"
+            }
+        }
+    }
+SpawnItems
+{
+    "weapon_crowbar" "1"
+}
+}
