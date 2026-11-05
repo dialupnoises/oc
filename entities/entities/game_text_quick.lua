@@ -27,27 +27,33 @@ function ENT:SetupDataTables()
 	self:SetChannel(1)
 end
 
+-- Spawnflag 1 is "All Players", as in Valve's game_text. Without it the text is
+-- for the activator alone, and a map often fires it from a relay, prop or world
+-- (no player to show it to), when there is nothing to send.
+function ENT:Display(activator)
+	local toAll = self:HasSpawnFlags(1)
+
+	if not toAll and not (IsValid(activator) and activator:IsPlayer()) then return end
+
+	net.Start("oc_game_text_quick_display")
+	net.WriteEntity(self)
+
+	if toAll then
+		net.Broadcast()
+	else
+		net.Send(activator)
+	end
+end
+
 function ENT:AcceptInput(name, activator, caller, val)
 	local nameLower = string.lower(name)
 
 	if nameLower == "display" then
-		net.Start("oc_game_text_quick_display")
-		net.WriteEntity(self)
-		if self:HasSpawnFlags(1) then
-			net.Send(activator)
-		else
-			net.Broadcast()
-		end
+		self:Display(activator)
 	elseif nameLower == "displaytext" then
 		if val == nil then return end
 		self:SetMessage(val)
-		net.Start("oc_game_text_quick_display")
-		net.WriteEntity(self)
-		if self:HasSpawnFlags(1) then
-			net.Send(activator)
-		else
-			net.Broadcast()
-		end
+		self:Display(activator)
 	end
 
 	return false
