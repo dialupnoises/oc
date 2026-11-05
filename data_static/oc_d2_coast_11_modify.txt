@@ -1,0 +1,264 @@
+d2_coast_11
+{
+    Remove
+    {
+        ClassName
+        {
+            "ai_goal_lead_weapon" {}
+            "info_player_start" {}
+        }
+        TargetName
+        {
+            "aisc_vort_follow" {}
+            "aisc_vort_lead_to_guard" {}
+            "aisc_vort_begin_extract" {}
+            "mc_both_in" {}
+        }
+        Origin
+        {
+            "3391.3 -10174.3 1572" {}
+            "3872 -11136 1760" {}
+            "584 11544 544.85" {}
+        }
+    }
+    Add
+    {
+        "info_player_deathmatch"
+        {
+            "angles" "0 245.5 0"
+            "targetname" "coast_11_spawn1"
+            "origin" "3549 -10822 1554"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 239.5 0"
+            "targetname" "coast_11_spawn1"
+            "origin" "3681 -10908 1580"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 235.5 0"
+            "targetname" "coast_11_spawn1"
+            "origin" "3834 -10971 1595"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 37.5 0"
+            "targetname" "coast_11_spawn1"
+            "origin" "3525 -11019 1587"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 41.5 0"
+            "targetname" "coast_11_spawn1"
+            "origin" "3620.04 -11135 1585"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 47.5 0"
+            "targetname" "coast_11_spawn1"
+            "origin" "3735 -11213 1602"
+        }
+        "point_trigger"
+        {
+            "spawnflags" "1"
+            "StartDisabled" "1"
+            "targetname" "aisc_vort_follow"
+            "TriggerOnce" "1"
+            "TriggerRadius" "128"
+            "OnStartTouch" "aisc_vort_follow,Kill,,0,-1"
+            "OnStartTouch" "vortigaunt_bugbait,ExtractBugbait,citizen_ambush_guard,0.1,1"
+            "origin" "5288 9920 229.846"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "StartDisabled" "1"
+            "targetname" "coast_11_spawn2"
+            "origin" "4279 6478 591"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "StartDisabled" "1"
+            "targetname" "coast_11_spawn2"
+            "origin" "4337 6676 598"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "StartDisabled" "1"
+            "targetname" "coast_11_spawn2"
+            "origin" "4315 6886.34 567"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "StartDisabled" "1"
+            "targetname" "coast_11_spawn2"
+            "origin" "4487 6449 596"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "StartDisabled" "1"
+            "targetname" "coast_11_spawn2"
+            "origin" "4475 6570 601"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "StartDisabled" "1"
+            "targetname" "coast_11_spawn2"
+            "origin" "4573 6753 595"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "StartDisabled" "1"
+            "targetname" "coast_11_spawn3"
+            "origin" "5117 9994 183"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "StartDisabled" "1"
+            "targetname" "coast_11_spawn3"
+            "origin" "4968 9995 184"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "StartDisabled" "1"
+            "targetname" "coast_11_spawn3"
+            "origin" "4827 10017 188"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "StartDisabled" "1"
+            "targetname" "coast_11_spawn3"
+            "origin" "5045 9848 197"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "StartDisabled" "1"
+            "targetname" "coast_11_spawn3"
+            "origin" "4916 9858 193"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "StartDisabled" "1"
+            "targetname" "coast_11_spawn3"
+            "origin" "4822 9896 192"
+        }
+        "point_trigger"
+        {
+            "spawnflags" "1"
+            "TriggerRadius" "235"
+            "OnStartTouch" "give_players_bugbait,EquipAll,,0,-1"
+            "origin" "4951 9938 178"
+        }
+        "game_player_equip"
+        {
+            "spawnflags" "0"
+            "targetname" "give_players_bugbait"
+            "weapon_bugbait" "1"
+            "origin" "4951 9954 194"
+        }
+        "logic_timer"
+        {
+            "RefireTime" "1"
+            "spawnflags" "0"
+            "StartDisabled" "1"
+            "targetname" "antlions_neutral_player2_counter"
+            "OnTimer" "antlions_neutral_player2,ApplyRelationship,,0,-1"
+            "origin" "268 11926 433"
+        }
+    }
+    Modify
+    {
+        ClassName
+        {
+            "worldspawn"
+            {
+                "disableareaportals" "1"
+            }
+        }
+        TargetName
+        {
+            "autosave_beforeguard"
+            {
+                "OnStartTouch" "coast_11_spawn1,Disable,,0,-1"
+                "OnStartTouch" "coast_11_spawn2,Enable,,0,-1"
+            }
+            "antspawner_1"
+            {
+                "OnSpawnNPC" "antlions_neutral_player2_counter,Enable,,0.1,1"
+            }
+            "antlions_neutral_citizen"
+            {
+                "spawnflags" "0"
+            }
+            "antlions_neutral_player2"
+            {
+                "spawnflags" "0"
+            }
+            "citizens_neutral_antlions"
+            {
+                "spawnflags" "0"
+            }
+            "vortigaunt_neutral_antlions"
+            {
+                "spawnflags" "0"
+            }
+            "antlions_neutral_vortigaunt"
+            {
+                "spawnflags" "0"
+            }
+            "antlions_hate_bullseye"
+            {
+                "spawnflags" "0"
+            }
+            "antlions_neutral_bullseye"
+            {
+                "spawnflags" "0"
+            }
+            "relay_guarddead"
+            {
+                "OnTrigger" "vortigaunt_bugbait,AddOutput,OnFinishedExtractingBugbait camp_setup:trigger:0:1,1,1"
+            }
+        }
+        Origin
+        {
+            "4996 9920 472"
+            {
+                "OnTrigger" "coast_11_spawn2,Disable,,0,-1"
+                "OnTrigger" "coast_11_spawn3,Enable,,0,-1"
+            }
+            "-2496 12960 480"
+            {
+                "spawngroup" "coast_12_spawn1"
+            }
+        }
+    }
+SpawnItems
+{
+    "weapon_smg1" "1"
+    "weapon_ar2" "1"
+    "weapon_shotgun" "1"
+    "weapon_crowbar" "1"
+    "weapon_physcannon" "1"
+    "weapon_357" "1"
+    "weapon_frag" "1"
+    "weapon_pistol" "1"
+    "item_box_buckshot" "2"
+    "item_ammo_smg1" "3"
+    "item_battery" "3"
+    "weapon_healer" "1"
+    "weapon_rpg" "1"
+    "weapon_crossbow" "1"
+}
+}

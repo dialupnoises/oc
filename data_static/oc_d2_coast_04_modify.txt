@@ -1,0 +1,165 @@
+d2_coast_04
+{
+        ClassName
+        {
+            "info_player_start" {}
+        }
+    Remove
+    {
+        Origin
+        {
+            "-9784.2 -391.9 84" {}
+            "-9888 -2200 240" {}
+            "-2784 10496 1888" {}
+            "2944 1664 688" {}
+            "10496 -6144 -20" {}
+            "2944 1664 704" {}
+        }
+    }
+    Add
+    {
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "coast_04_spawn1"
+            "origin" "-10104.1 -612.433 61.0873"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "coast_04_spawn1"
+            "origin" "-10061.2 -459.24 63.4472"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "coast_04_spawn1"
+            "origin" "-10001.9 -346.918 75.4893"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "coast_04_spawn1"
+            "origin" "-9917 -254.187 91"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "coast_04_spawn1"
+            "origin" "-10084.3 -774.358 59.2441"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "coast_04_spawn1"
+            "origin" "-10081.6 -887.074 57.7325"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "StartDisabled" "1"
+            "targetname" "coast_04_spawn2"
+            "origin" "2255.67 -4113.91 513"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "StartDisabled" "1"
+            "targetname" "coast_04_spawn2"
+            "origin" "2357.27 -4113.41 513"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "StartDisabled" "1"
+            "targetname" "coast_04_spawn2"
+            "origin" "2460 -4111.09 513"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "StartDisabled" "1"
+            "targetname" "coast_04_spawn2"
+            "origin" "2558.63 -4109.86 513"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "StartDisabled" "1"
+            "targetname" "coast_04_spawn2"
+            "origin" "2656.98 -4110.49 513"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "StartDisabled" "1"
+            "targetname" "coast_04_spawn2"
+            "origin" "2759.51 -4110.92 513"
+        }
+        "weapon_rpg"
+        {
+            "angles" "0 44 0"
+            "fademindist" "-1"
+            "fadescale" "1"
+            "origin" "2425 3680 1037"
+        }
+        "weapon_rpg"
+        {
+            "angles" "0 0 0"
+            "fademindist" "-1"
+            "fadescale" "1"
+            "origin" "2391 3655 1036"
+        }
+    }
+    Modify
+    {
+        ClassName
+        {
+            "worldspawn"
+            {
+                "disableareaportals" "1"
+                "canspawnjeep" "1"
+            }
+        }
+        TargetName
+        {
+            "jeepwindow_breakrelay"
+            {
+                "spawnflags" "0"
+                "OnTrigger" "coast_04_spawn1,Disable,,0,-1"
+                "OnTrigger" "coast_04_spawn2,Enable,,0,-1"
+            }
+            "jeepwindow_jeepfilter"
+            {
+                "classname" "filter_activator_class"
+                "filterclass" "prop_vehicle_jeep"
+            }
+            "jeepwindow_smack"
+            {
+                "damagefilter" ""
+            }
+        }
+        Origin
+        {
+            "-3360 10496 1888"
+            {
+                "spawngroup" "coast_05_spawn1"
+            }
+        }
+    }
+SpawnItems
+{
+    "weapon_smg1" "1"
+    "weapon_ar2" "1"
+    "weapon_shotgun" "1"
+    "weapon_crowbar" "1"
+    "weapon_physcannon" "1"
+    "weapon_357" "1"
+    "weapon_frag" "1"
+    "weapon_pistol" "1"
+    "item_box_buckshot" "2"
+    "item_ammo_smg1" "3"
+    "item_battery" "3"
+    "weapon_healer" "1"
+}
+}

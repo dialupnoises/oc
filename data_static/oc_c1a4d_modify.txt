@@ -1,0 +1,112 @@
+c1a4d
+{
+    Remove
+    {
+        ClassName
+        {
+            "info_player_start" {}
+        }
+    }
+    Add
+    {
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "targetname" "c1a4d_starts"
+            "origin" "2623 1104 313"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "targetname" "c1a4d_starts"
+            "origin" "2649 1177 313"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "targetname" "c1a4d_starts"
+            "origin" "2626 1241 313"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "targetname" "c1a4d_starts"
+            "origin" "2663 1297 313"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "targetname" "c1a4d_starts"
+            "origin" "2627 1346 313"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "targetname" "c1a4d_starts"
+            "origin" "2673 1403 313"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "targetname" "c1a4d_starts2"
+            "origin" "1849 601 241"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "targetname" "c1a4d_starts2"
+            "origin" "1792 642 241"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "targetname" "c1a4d_starts2"
+            "origin" "1794 597 241"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "targetname" "c1a4d_starts2"
+            "origin" "1787 473 241"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "targetname" "c1a4d_starts2"
+            "origin" "1874 521 241"
+        }
+    }
+    Modify
+    {
+        ClassName
+        {
+            "worldspawn"
+            {
+                "mapversion" "7"
+            }
+        }
+        Origin
+        {
+            "1571.5 975 343"
+            {
+                "StartDisabled" "1"
+            }
+            "2638 1000 484"
+            {
+                "spawngroup" "c1a4b_starts2"
+            }
+            "2709 -36.5 -1032"
+            {
+                "spawngroup" "c1a4e_starts"
+            }
+        }
+    }
+SpawnItems
+{
+    "weapon_crowbar" "1"
+    "weapon_smg1" "1"
+    "item_battery" "1"
+    "item_ammo_smg1" "2"
+    "weapon_healer" "1"
+}
+}

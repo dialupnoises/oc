@@ -1,0 +1,7 @@
+// Created for use in Obsidian Conflict ONLY!
+"oc_breakout"
+{
+		"mp_falldamage" "1"
+		"mp_flashlight" "1"
+		"sk_max_ar2" "120"
+}

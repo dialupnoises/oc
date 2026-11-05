@@ -1,0 +1,107 @@
+d1_canals_08
+{
+    Remove
+    {
+        ClassName
+        {
+            "info_player_start" {}
+        }
+        TargetName
+        {
+            "relay_locks_closegates" {}
+        }
+        Origin
+        {
+            "7528 -11397.7 -439" {}
+            "7328 -11328 -352" {}
+            "6816 -11328 -352" {}
+        }
+    }
+    Add
+    {
+        "infodecal"
+        {
+            "texture" "decals/airboatspawning"
+            "angles" "0 0 0"
+            "origin" "7801 -10976 -291"
+        }
+        "infodecal"
+        {
+            "texture" "decals/airboatspawning"
+            "angles" "0 0 0"
+            "origin" "8156.05 -10976 -291"
+        }
+        "infodecal"
+        {
+            "texture" "decals/airboatspawning"
+            "angles" "0 0 0"
+            "origin" "8156 -11680 -291"
+        }
+        "infodecal"
+        {
+            "texture" "decals/airboatspawning"
+            "angles" "0 0 0"
+            "origin" "7801 -11680 -291"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "targetname" "canals_08_spawn1"
+            "origin" "7707 -11052 -406"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "targetname" "canals_08_spawn1"
+            "origin" "7788 -11052 -406"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "targetname" "canals_08_spawn1"
+            "origin" "7869 -11052 -406"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "targetname" "canals_08_spawn1"
+            "origin" "7955 -11052 -406"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "targetname" "canals_08_spawn1"
+            "origin" "8041 -11052 -406"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "targetname" "canals_08_spawn1"
+            "origin" "8139 -11052 -406"
+        }
+    }
+    Modify
+    {
+        ClassName
+        {
+            "worldspawn"
+            {
+                "disableareaportals" "1"
+                "canspawnairboat" "1"
+            }
+            "trigger_changelevel"
+            {
+                "spawngroup" "canals_09_spawn1"
+            }
+        }
+    }
+SpawnItems
+{
+    "item_ammo_smg1_large" "1"
+    "weapon_pistol" "1"
+    "weapon_smg1" "1"
+    "item_ammo_pistol_large" "1"
+    "weapon_crowbar" "1"
+    "weapon_healer" "1"
+}
+}

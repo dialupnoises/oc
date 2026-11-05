@@ -1,0 +1,101 @@
+d3_c17_03
+{
+    Remove
+    {
+        ClassName
+        {
+            "info_player_start" {}
+        }
+        Origin
+        {
+            "-5280.86 -4208.1 28" {}
+        }
+        TargetName
+        {
+            "plaza_exit_conditions" {}
+        }
+    }
+    Add
+    {
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "targetname" "c17_03_spawn1"
+            "origin" "-5328 -4368 1"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "c17_03_spawn1"
+            "origin" "-5341 -4213 1"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "targetname" "c17_03_spawn1"
+            "origin" "-5254 -4254 1"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "targetname" "c17_03_spawn1"
+            "origin" "-5172 -4251 1"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "targetname" "c17_03_spawn1"
+            "origin" "-5288 -4189 1"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "targetname" "c17_03_spawn1"
+            "origin" "-5206 -4191 1"
+        }
+        "point_trigger"
+        {
+            "spawnflags" "1"
+            "StartDisabled" "1"
+            "targetname" "plaza_exit_conditions"
+            "TriggerOnce" "1"
+            "TriggerRadius" "1640"
+            "OnStartTouch" "plaza_exit_relay,Trigger,,0,-1"
+            "origin" "-2351 -1433 102.953"
+        }
+    }
+    Modify
+    {
+        ClassName
+        {
+            "worldspawn"
+            {
+                "disableareaportals" "1"
+            }
+        }
+        Origin
+        {
+            "-1128 -3552 128"
+            {
+                "nosmooth" "1"
+                "spawngroup" "c17_04_spawn1"
+            }
+        }
+    }
+SpawnItems
+{
+    "weapon_smg1" "1"
+    "weapon_ar2" "1"
+    "weapon_shotgun" "1"
+    "weapon_crowbar" "1"
+    "weapon_physcannon" "1"
+    "weapon_357" "1"
+    "weapon_frag" "1"
+    "weapon_pistol" "1"
+    "item_box_buckshot" "2"
+    "item_ammo_smg1" "3"
+    "item_battery" "3"
+    "weapon_healer" "1"
+    "weapon_crossbow" "1"
+}
+}

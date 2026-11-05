@@ -1,0 +1,213 @@
+ep2_outland_09
+{
+    Remove
+    {
+        ClassName
+        {
+	    "trigger_playermovement" {}
+            "info_player_start" {}
+            "game_text" {}
+            "logic_branch_listener" {}
+        }
+        TargetName
+        {
+            "loadsaved_ally_died" {}
+        }
+        Origin
+        {
+            "1023.08 -9203.36 80" {}
+            "905.534 -9200.16 81" {}
+        }
+    }
+    Add
+    {
+        "filter_multi"
+        {
+            "Negated" "1"
+            "targetname" "filter_NoDamage"
+            "origin" "-12777 -12651 456"
+        }
+        "logic_timer"
+        {
+            "RefireTime" "2"
+            "OnTimer" "alyx,SetDamageFilter,filter_NoDamage,0,-1"
+            "origin" "-12851.4 -12588.1 567.059"
+        }
+        "logic_branch_listener"
+        {
+            "Branch01" "branch.player.out.of.garage"
+            "Branch02" "branch.jeep.out.of.garage"
+            "hammerid" "3156881"
+            "OnAllTrue" "lcs.radar,Resume,,5,-1"
+            "origin" "307 -8892.15 259.179"
+        }
+        "point_weapon_eater"
+        {
+            "EatRadius" "62"
+            "targetname" "yumyumyum"
+            "origin" "1032 -9181 118"
+        }
+        "logic_auto"
+        {
+            "spawnflags" "1"
+            "OnMapSpawn" "new_game_items,ForceSpawn,,0.5,-1"
+            "OnMapSpawn" "alyx,Kill,,0.1,-1"
+            "OnMapSpawn" "npc_citizen_opengate,Kill,,0.1,-1"
+            "OnMapSpawn" "yumyumyum,Eat,,0.8,-1"
+            "OnMapSpawn" "cit_welder_01,AddOutput,OnDamaged !self:SetHealth:100:0:-1,0.1,-1"
+            "OnMapSpawn" "npc_citizen_opengate,AddOutput,OnDamaged !self:SetHealth:100:0:-1,0.8,-1"
+            "OnMapSpawn" "prop_dynamic,DisablePhyscannonPickup,,0.1,-1"
+            "OnMapSpawn" "cit_welder_01,StartScripting,,0.1,-1"
+            "OnMapSpawn" "door_08_to_09,Lock,,0.1,-1"
+            "OnMapSpawn" "npc_citizen_opengate,StartScripting,,0.8,-1"
+            "OnMapSpawn" "alyx,StartScripting,,0.8,-1"
+            "origin" "995.388 -9255 148.785"
+        }
+        "point_vehiclespawn"
+        {
+            "CanSpawnJeep" "2"
+            "spawnflags" "1"
+            "StartDisabled" "1"
+            "targetname" "enable_vehiclespawn"
+            "TriggerRadius" "11939"
+            "origin" "1559 -1958 393"
+        }
+        "point_trigger"
+        {
+            "spawnflags" "1"
+            "targetname" "kill_rushers"
+            "TriggerRadius" "128"
+            "OnStartTouch" "!activator,SetHealth,0,0,-1"
+            "origin" "-2387 -8315 73"
+        }
+        "point_trigger"
+        {
+            "spawnflags" "1"
+            "targetname" "kill_rushers"
+            "TriggerRadius" "128"
+            "OnStartTouch" "!activator,SetHealth,0,0,-1"
+            "origin" "-2137 -8315 73"
+        }
+        "point_trigger"
+        {
+            "spawnflags" "1"
+            "targetname" "kill_rushers"
+            "TriggerRadius" "128"
+            "OnStartTouch" "!activator,SetHealth,0,0,-1"
+            "origin" "-1888 -8315 73"
+        }
+        "point_trigger"
+        {
+            "spawnflags" "1"
+            "targetname" "kill_rushers"
+            "TriggerRadius" "128"
+            "OnStartTouch" "!activator,SetHealth,0,0,-1"
+            "origin" "-1731 -8315 73"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "outland_09_spawn1"
+            "origin" "724 -9231 84"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "outland_09_spawn1"
+            "origin" "1060 -9233 84"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "outland_09_spawn1"
+            "origin" "1060 -9140 84"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "targetname" "outland_09_spawn1"
+            "origin" "842 -9229 84"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "targetname" "outland_09_spawn1"
+            "origin" "968 -9148 84"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "outland_09_spawn1"
+            "origin" "1040 -9187 84"
+        }
+        "logic_timer"
+        {
+            "RefireTime" "5"
+            "StartDisabled" "1"
+            "targetname" "jeep_enable_radar"
+            "OnTimer" "prop_vehicle_jeep_episodic,EnableRadar,,0,-1"
+            "origin" "394.915 -8737 135.454"
+        }
+        "point_vehiclespawn"
+        {
+            "CanSpawnJeep" "2"
+            "spawnflags" "1"
+            "StartDisabled" "1"
+            "targetname" "enable_vehiclespawn"
+            "TriggerRadius" "2586"
+            "origin" "-1415 -8837 393"
+        }
+    }
+    Modify
+    {
+        ClassName
+        {
+            "worldspawn"
+            {
+                "disableareaportals" "1"
+            }
+            "logic_choreographed_scene"
+            {
+                "onplayerdeath" "0"
+            }
+        }
+        TargetName
+        {
+            "citizen_warehouse_door_0"
+            {
+                "OnFullyClosed" "citizen_warehouse_door_0,Unlock,,0.5,-1"
+            }
+            "door.garage.main"
+            {
+                "OnOpen" "enable_vehiclespawn,Enable,,0,1"
+                "OnOpen" "kill_rushers,Disable,,0,1"
+                "OnOpen" "jeep_enable_radar,Enable,,0,1"
+            }
+        }
+        Origin
+        {
+            "3328 9904 333"
+            {
+                "spawngroup" "outland_10_spawn1"
+            }
+        }
+    }
+SpawnItems
+{
+    "weapon_physcannon" "1"
+    "weapon_crowbar" "1"
+    "weapon_healer" "1"
+    "weapon_357" "1"
+    "weapon_shotgun" "1"
+    "weapon_pistol" "1"
+    "weapon_smg1" "1"
+    "item_box_buckshot" "2"
+    "weapon_frag" "1"
+    "item_ammo_smg1" "2"
+    "item_ammo_pistol" "1"
+    "weapon_ar2" "1"
+    "item_ammo_ar2" "2"
+    "weapon_crossbow" "1"
+    "item_ammo_357" "1"
+}
+}

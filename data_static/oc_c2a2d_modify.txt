@@ -1,0 +1,128 @@
+c2a2d
+{
+    Remove
+    {
+        ClassName
+        {
+            "info_player_start" {}
+        }
+    }
+    Add
+    {
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "c2a2d_starts"
+            "origin" "3453 2549 -246"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "c2a2d_starts"
+            "origin" "3447 2473 -246"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "c2a2d_starts"
+            "origin" "3378 2474 -246"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "c2a2d_starts"
+            "origin" "3384 2550 -246"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "c2a2d_starts"
+            "origin" "3315 2474 -246"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "c2a2d_starts"
+            "origin" "3321 2550 -246"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "c2a2d_starts"
+            "origin" "3258 2474 -246"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "c2a2d_starts"
+            "origin" "3264 2550 -246"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "targetname" "c2a2d_starts2"
+            "origin" "-3122 1892 -627"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "targetname" "c2a2d_starts2"
+            "origin" "-3125 1935 -627"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "targetname" "c2a2d_starts2"
+            "origin" "-3125 1983 -627"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "targetname" "c2a2d_starts2"
+            "origin" "-3294 1984 -627"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "targetname" "c2a2d_starts2"
+            "origin" "-3294 1936 -627"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "targetname" "c2a2d_starts2"
+            "origin" "-3291 1893 -627"
+        }
+    }
+    Modify
+    {
+        ClassName
+        {
+            "worldspawn"
+            {
+                "mapversion" "8"
+            }
+        }
+        Origin
+        {
+            "-3208 1810 -564"
+            {
+                "spawngroup" "c2a2e_starts"
+                "transitionradius" "521"
+            }
+            "3604 2508 -272"
+            {
+                "spawngroup" "c2a2c_starts3"
+                "transitionradius" "505"
+            }
+        }
+    }
+SpawnItems
+{
+    "weapon_crowbar" "1"
+    "weapon_smg1" "1"
+    "item_battery" "1"
+    "item_ammo_smg1" "3"
+    "weapon_healer" "1"
+}
+}

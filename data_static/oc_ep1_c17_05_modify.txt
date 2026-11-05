@@ -1,0 +1,196 @@
+ep1_c17_05
+{
+    Remove
+    {
+        TargetName
+        {
+            "trigger_lastTrain" {}
+            "relay_pickup_citizens" {}
+        }
+        Origin
+        {
+            "9854 12421.3 -601.679" {}
+            "9845.04 12432.4 -622.896" {}
+        }
+    }
+    Add
+    {
+		"logic_relay"
+		{
+			"origin" "10327.4 10544 -683.512"
+			"spawnflags" "0"
+			"targetname" "relay_pickup_citizens"
+			"classname" "logic_relay"
+			"OnTrigger" "trigger_pickup_citizens,Disable,,0,-1"
+			"OnTrigger" "citizen_refugees*,AddToPlayerSquad,,0,-1"
+			"OnTrigger" "relay_barney_speak_escort,Trigger,,0,-1"
+			"OnTrigger" "relay_assault_citizen_unhide,Trigger,,0,-1"
+			"OnTrigger" "autosave,SaveDangerous,30,0,-1"
+			"OnTrigger" "aisc_nag_evacNextGroup,Disable,,0,-1"
+			"OnTrigger" "relay_nag_evacNextGroup,CancelPending,,0,-1"
+                "OnTrigger" "ep1_c17_05_spawn2,Enable,,0,1"
+                "OnTrigger" "ep1_c17_05_spawn1,Disable,,0,1"
+                "OnTrigger" "timer_addcitizenstosquad,Enable,,0,1"
+		}
+        "logic_auto"
+        {
+            "spawnflags" "1"
+            "OnMapSpawn" "alyx,GiveWeapon,weapon_shotgun,0.6,-1"
+            "OnMapSpawn" "_ptemp_map_start,ForceSpawn,,0.3,-1"
+            "OnMapSpawn" "exit_doors,Kill,,0.1,-1"
+            "OnMapSpawn" "alyx,Kill,,0.1,-1"
+            "OnMapSpawn" "global_newgame_entmaker,ForceSpawn,,0.3,-1"
+            "OnMapSpawn" "yumyumyum,Eat,,0.5,-1"
+            "origin" "9845.04 12432.4 -622.896"
+        }
+        "point_weapon_eater"
+        {
+            "EatRadius" "58"
+            "targetname" "yumyumyum"
+            "origin" "9855 12441 -573"
+        }
+        "logic_timer"
+        {
+            "RefireTime" "5"
+            "spawnflags" "0"
+            "StartDisabled" "0"
+            "UseRandomTime" "0"
+            "OnTimer" "alyx,SetDamageFilter,filter_NoDamage,1,-1"
+            "origin" "9843 12507 -624"
+        }
+        "filter_multi"
+        {
+            "Negated" "1"
+            "targetname" "filter_NoDamage"
+            "origin" "9859 12507 -624"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "targetname" "ep1_c17_05_spawn1"
+            "origin" "9797 12648 -631"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "targetname" "ep1_c17_05_spawn1"
+            "origin" "9885 12648 -631"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "ep1_c17_05_spawn1"
+            "origin" "9724 12579 -631"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "ep1_c17_05_spawn1"
+            "origin" "9955 12617 -631"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "ep1_c17_05_spawn1"
+            "origin" "9958 12498 -631"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "ep1_c17_05_spawn1"
+            "origin" "9732 12501 -631"
+        }
+        "point_trigger"
+        {
+            "filtername" "filter_train"
+            "spawnflags" "1"
+            "StartDisabled" "1"
+            "targetname" "trigger_lastTrain"
+            "TriggerRadius" "295"
+            "OnStartTouch" "counter_everyone_in_place_for_barney_goodbye,Add,1,0,1"
+            "origin" "9968 9489 -687"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "StartDisabled" "1"
+            "targetname" "ep1_c17_05_spawn2"
+            "origin" "9172 9939 -831"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "StartDisabled" "1"
+            "targetname" "ep1_c17_05_spawn2"
+            "origin" "9341 9935 -831"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "StartDisabled" "1"
+            "targetname" "ep1_c17_05_spawn2"
+            "origin" "9532 9937 -831"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "StartDisabled" "1"
+            "targetname" "ep1_c17_05_spawn2"
+            "origin" "9549 10091 -831"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "StartDisabled" "1"
+            "targetname" "ep1_c17_05_spawn2"
+            "origin" "9561 10255 -831"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "StartDisabled" "1"
+            "targetname" "ep1_c17_05_spawn2"
+            "origin" "9156 10094 -831"
+        }
+        "logic_timer"
+        {
+            "RefireTime" "10"
+            "StartDisabled" "1"
+            "targetname" "timer_addcitizenstosquad"
+            "OnTimer" "citizen_refugees*,AddToPlayerSquad,,0,-1"
+            "origin" "10396.1 10543 -690.115"
+        }
+    }
+    Modify
+    {
+        ClassName
+        {
+            "worldspawn"
+            {
+                "disableareaportals" "1"
+            }
+        }
+        TargetName
+        {
+            "trigger_changelevel_to_06"
+            {
+                "nosmooth" "1"
+            }
+        }
+    }
+SpawnItems
+{
+    "weapon_physcannon" "1"
+    "weapon_healer" "1"
+    "weapon_pistol" "1"
+    "weapon_shotgun" "1"
+    "item_ammo_pistol_large" "1"
+    "item_box_buckshot" "2"
+    "weapon_smg1" "1"
+    "item_ammo_smg1_large" "1"
+    "weapon_ar2" "1"
+    "item_ammo_ar2_large" "1"
+    "weapon_crossbow" "1"
+    "weapon_rpg" "1"
+}
+}

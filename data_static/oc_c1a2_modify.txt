@@ -1,0 +1,222 @@
+c1a2
+{
+    Remove
+    {
+        ClassName
+        {
+            "info_player_start" {}
+            "logic_auto" {}
+        }
+    }
+    Add
+    {
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "targetname" "c1a2_starts"
+            "origin" "2249.29 -925.084 -575"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "targetname" "c1a2_starts"
+            "origin" "2322 -925 -575"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "targetname" "c1a2_starts"
+            "origin" "2395 -925 -575"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "targetname" "c1a2_starts"
+            "origin" "2399 -979 -575"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "targetname" "c1a2_starts"
+            "origin" "2399 -1049 -575"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "targetname" "c1a2_starts"
+            "origin" "2322 -1050 -575"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "targetname" "c1a2_starts"
+            "origin" "2247 -1050 -575"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "targetname" "c1a2_starts"
+            "origin" "2247 -984 -575"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "c1a2_starts2"
+            "origin" "-575 -162 -575"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "c1a2_starts2"
+            "origin" "-575 -80 -575"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "c1a2_starts2"
+            "origin" "-516 -111 -575"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "c1a2_starts2"
+            "origin" "-507 -164 -575"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "c1a2_starts2"
+            "origin" "-456 -137 -575"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "c1a2_starts2"
+            "origin" "-536 -56 -575"
+        }
+        "logic_auto"
+        {
+            "spawnflags" "1"
+            "OnNewGame" "c1a2_starts,Disable,,0,-1"
+            "OnNewGame" "c1a2_starts2,Disable,,0,-1"
+            "OnNewGame" "newgame_spawn,Enable,,0,-1"
+            "OnNewGame" "c1a2_starts3,Disable,,0,-1"
+            "origin" "2365 -1020 -492.34"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "StartDisabled" "1"
+            "targetname" "newgame_spawn"
+            "origin" "2289 -969 -571"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "c1a2_starts3"
+            "origin" "1274.78 -1455.12 -575"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "c1a2_starts3"
+            "origin" "1272 -1389 -575"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "c1a2_starts3"
+            "origin" "1359 -1385 -575"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "c1a2_starts3"
+            "origin" "1446 -1458 -575"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "c1a2_starts3"
+            "origin" "1505 -1455 -575"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "c1a2_starts3"
+            "origin" "1315 -1415 -575"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "StartDisabled" "1"
+            "targetname" "newgame_spawn"
+            "origin" "2350 -968 -571"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "StartDisabled" "1"
+            "targetname" "newgame_spawn"
+            "origin" "2352 -1022 -571"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "StartDisabled" "1"
+            "targetname" "newgame_spawn"
+            "origin" "2286 -1022 -571"
+        }
+    }
+    Modify
+    {
+        ClassName
+        {
+            "worldspawn"
+            {
+                "mapversion" "15"
+            }
+        }
+        TargetName
+        {
+            "elebutton1"
+            {
+                "spawnflags" "1025"
+                "OnIn" "startele1,Open,,1,-1"
+            }
+        }
+        Origin
+        {
+            "2288 -842 -528"
+            {
+                "OnFullyOpen" "startele1,Kill,,0.01,-1"
+                "OnFullyOpen" "elebutton1,Lock,,0.01,-1"
+            }
+            "-472 -238 -444"
+            {
+                "spawnflags" "0"
+                "spawngroup" "c1a2a_spawns"
+                "transitionradius" "323"
+            }
+            "358 -522 -362"
+            {
+                "origin" "358 -522 -355"
+                "spawnflags" "131"
+            }
+            "1327 -1524 -512"
+            {
+                "spawnflags" "0"
+                "spawngroup" "c1a2d_starts"
+                "transitionradius" "222"
+            }
+        }
+    }
+SpawnItems
+{
+    "weapon_crowbar" "1"
+    "weapon_smg1" "1"
+    "item_battery" "1"
+    "item_ammo_smg1" "3"
+    "weapon_healer" "1"
+}
+}

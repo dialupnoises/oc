@@ -1,0 +1,22 @@
+"ep2_oc_broken_escape_02a"
+{
+		"mp_flashlight" "1"
+                "sk_strider_health" "2000"
+                "sk_strider_num_missiles1" "5"
+                "sk_strider_num_missiles2" "7"
+                "sk_strider_num_missiles3" "10"
+		"mp_falldamage" "0"
+		"mp_forcerespawn" "1"
+
+// Combine Helicopter
+sk_helicopter_blast_push 	"0"
+
+// Combine Gunship
+sk_gunship_health_increments	"7"
+
+// =================
+//  PLAYER WEAPONS MAX AMMO
+// =================
+
+sk_max_ar2			"120"
+}

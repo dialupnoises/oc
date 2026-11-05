@@ -1,0 +1,194 @@
+d2_coast_10
+{
+    Remove
+    {
+        ClassName
+        {
+            "info_player_start" {}
+            "player_loadsaved" {}
+            "env_message" {}
+        }
+        TargetName
+        {
+            "fall_trigger" {}
+            "greeter_critical_death_relay" {}
+            "exit_leader_death_relay" {}
+        }
+        Origin
+        {
+            "2068.06 -5365.76 1408.88" {}
+            "5472 2624 608" {}
+            "-4013.34 -3915.38 1504" {}
+            "8224 1688 1024" {}
+        }
+    }
+    Add
+    {
+        "infodecal"
+        {
+            "texture" "decals/jeepspawning"
+            "angles" "0 0 0"
+            "origin" "1472 -5632 1479"
+        }
+        "infodecal"
+        {
+            "texture" "decals/jeepspawning"
+            "angles" "0 0 0"
+            "origin" "1472 -5120 1479"
+        }
+        "weapon_rpg"
+        {
+            "angles" "0 0 0"
+            "fademindist" "-1"
+            "fadescale" "1"
+            "origin" "8074 1480 2125"
+        }
+        "weapon_rpg"
+        {
+            "angles" "0 0 0"
+            "fademindist" "-1"
+            "fadescale" "1"
+            "origin" "8074 1459 2125"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "targetname" "coast_10_spawn1"
+            "origin" "1461.65 -5155.22 1409"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "targetname" "coast_10_spawn1"
+            "origin" "1316.46 -5162.08 1409"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "targetname" "coast_10_spawn1"
+            "origin" "1165.33 -5164.5 1409"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "targetname" "coast_10_spawn1"
+            "origin" "1459 -5587.71 1409"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "targetname" "coast_10_spawn1"
+            "origin" "1307.87 -5590.13 1409"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "targetname" "coast_10_spawn1"
+            "origin" "1162.68 -5597 1409"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 36.5 0"
+            "StartDisabled" "1"
+            "targetname" "coast_10_spawn2"
+            "origin" "4590 -891.55 927.136"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "StartDisabled" "1"
+            "targetname" "coast_10_spawn2"
+            "origin" "4858.28 -1029 913.973"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "StartDisabled" "1"
+            "targetname" "coast_10_spawn2"
+            "origin" "4516.32 -781.175 920.231"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "StartDisabled" "1"
+            "targetname" "coast_10_spawn2"
+            "origin" "4491.86 -267.597 920.18"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "StartDisabled" "1"
+            "targetname" "coast_10_spawn2"
+            "origin" "4512.74 -479.504 918.818"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "StartDisabled" "1"
+            "targetname" "coast_10_spawn2"
+            "origin" "4693 -741 930"
+        }
+    }
+    Modify
+    {
+        ClassName
+        {
+            "worldspawn"
+            {
+                "canspawnjeep" "1"
+                "disableareaportals" "1"
+            }
+        }
+        TargetName
+        {
+            "dropship1_spawner"
+            {
+                "OnSpawnNPC" "dropship1,AddOutput,Invulnerable 1,1,-1"
+            }
+            "dropship2_spawner"
+            {
+                "OnSpawnNPC" "dropship2,AddOutput,Invulnerable 1,1,-1"
+            }
+            "dropship3_spawner"
+            {
+                "OnSpawnNPC" "dropship3,AddOutput,Invulnerable 1,1,-1"
+            }
+            "dropship4_spawner"
+            {
+                "OnSpawnNPC" "dropship4,AddOutput,Invulnerable 1,1,-1"
+            }
+            "logic_start_leader_exit"
+            {
+                "OnTrigger" "lighthouse_secret_door,Open,,0,-1"
+            }
+        }
+        Origin
+        {
+            "4896 2944 480"
+            {
+                "spawngroup" "coast_11_spawn1"
+            }
+            "5104 -480 944"
+            {
+                "OnTrigger" "coast_10_spawn1,Disable,,0,-1"
+                "OnTrigger" "coast_10_spawn2,Enable,,0,-1"
+            }
+        }
+    }
+SpawnItems
+{
+    "weapon_smg1" "1"
+    "weapon_ar2" "1"
+    "weapon_shotgun" "1"
+    "weapon_crowbar" "1"
+    "weapon_physcannon" "1"
+    "weapon_357" "1"
+    "weapon_frag" "1"
+    "weapon_pistol" "1"
+    "item_box_buckshot" "2"
+    "item_ammo_smg1" "3"
+    "item_battery" "3"
+    "weapon_healer" "1"
+    "weapon_crossbow" "1"
+}
+}

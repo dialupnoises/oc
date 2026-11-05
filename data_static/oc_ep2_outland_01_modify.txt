@@ -1,0 +1,194 @@
+ep2_outland_01
+{
+    Remove
+    {
+        ClassName
+        {
+	    "trigger_playermovement" {}
+            "info_player_start" {}
+        }
+        TargetName
+        {
+            "door_traincar.03" {}
+            "clip_player" {}
+            "clip_player_train" {}
+            "mine_pit_clip_brush" {}
+            "clip_player_roof" {}
+            "speedmod" {}
+        }
+    }
+    Add
+    {
+        "prop_dynamic_override"
+        {
+            "angles" "0 318 0"
+            "fademindist" "-1"
+            "fadescale" "1"
+            "MaxAnimTime" "10"
+            "MinAnimTime" "5"
+            "model" "models/props_foliage/rock_coast02h.mdl"
+            "renderamt" "255"
+            "rendercolor" "255 255 255"
+            "solid" "6"
+            "origin" "200 44 13"
+        }
+        "game_player_equip"
+        {
+            "targetname" "give_players_physgun"
+            "weapon_physcannon" "1"
+            "origin" "530.509 -674.275 123.107"
+        }
+        "point_trigger"
+        {
+            "spawnflags" "1"
+            "StartDisabled" "1"
+            "targetname" "give_players_physgun_trigger"
+            "TriggerRadius" "107"
+            "OnStartTouch" "give_players_physgun,EquipAll,,0,-1"
+            "origin" "513 -751 126.436"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "-15 0 0"
+            "StartDisabled" "0"
+            "targetname" "outland_01_spawn1"
+            "origin" "-668 68 760"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "-15 0 0"
+            "StartDisabled" "0"
+            "targetname" "outland_01_spawn1"
+            "origin" "-668 18 760"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "StartDisabled" "1"
+            "targetname" "outland_01_spawn2"
+            "origin" "61 -660 6.90871"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "StartDisabled" "1"
+            "targetname" "outland_01_spawn2"
+            "origin" "166 -694 22"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "StartDisabled" "1"
+            "targetname" "outland_01_spawn2"
+            "origin" "118 -631 38"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "StartDisabled" "1"
+            "targetname" "outland_01_spawn2"
+            "origin" "-30 -723 38"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "StartDisabled" "1"
+            "targetname" "outland_01_spawn2"
+            "origin" "234 -681 38"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "StartDisabled" "1"
+            "targetname" "outland_01_spawn2"
+            "origin" "315 -609 92"
+        }
+        "point_viewcontrol"
+        {
+            "acceleration" "500"
+            "angles" "0 270 0"
+            "deceleration" "500"
+            "spawnflags" "172"
+            "targetname" "alyx_viewcontroll"
+            "wait" "10"
+            "origin" "-5405 4590 -164"
+        }
+        "point_trigger"
+        {
+            "spawnflags" "1"
+            "StartDisabled" "1"
+            "targetname" "give_players_physgun_trigger"
+            "TriggerRadius" "225"
+            "OnStartTouch" "give_players_physgun,EquipAll,,0,-1"
+            "origin" "116 -616 126.436"
+        }
+        "point_trigger"
+        {
+            "spawnflags" "1"
+            "TriggerOnce" "1"
+            "TriggerRadius" "290"
+            "OnStartTouch" "outland_01_spawn2,Enable,,0,-1"
+            "OnStartTouch" "outland_01_spawn1,Disable,,0,-1"
+            "origin" "104 -859 96.9906"
+        }
+        "point_trigger"
+        {
+            "spawnflags" "1"
+            "StartDisabled" "1"
+            "targetname" "bridgecollapsed_hurt"
+            "TriggerRadius" "836"
+            "OnStartTouch" "!activator,SetHealth,0,0,-1"
+            "origin" "435 393 142"
+        }
+        "point_trigger"
+        {
+            "spawnflags" "1"
+            "TriggerRadius" "589"
+            "OnStartTouch" "!activator,SetHealth,0,0,-1"
+            "origin" "588 -2567 -631"
+        }
+    }
+    Modify
+    {
+        ClassName
+        {
+            "worldspawn"
+            {
+                "disableareaportals" "1"
+            }
+            "trigger_changelevel"
+            {
+                "spawngroup" "outland_01a_spawn1"
+            }
+            "logic_choreographed_scene"
+            {
+                "onplayerdeath" "0"
+            }
+        }
+        TargetName
+        {
+            "relay_bulleye_dead"
+            {
+                "OnTrigger" "alyx_viewcontroll,Disable,,0.1,-1"
+                "OnTrigger" "speedmod,ModifySpeed,1,2,-1"
+            }
+            "trigger_Get_physgun"
+            {
+                "OnTrigger" "give_players_physgun,EquipAll,,0,-1"
+                "OnTrigger" "give_players_physgun_trigger,Enable,,0,-1"
+            }
+            "template.hunter"
+            {
+                "OnEntitySpawned" "alyx_viewcontroll,Enable,,0,-1"
+            }
+            "relay.trainfall"
+            {
+                "OnTrigger" "bridgecollapsed_hurt,Enable,,2,1"
+            }
+        }
+    }
+SpawnItems
+{
+    "weapon_healer" "1"
+}
+}

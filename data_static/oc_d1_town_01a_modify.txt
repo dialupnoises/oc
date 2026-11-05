@@ -1,0 +1,90 @@
+d1_town_01a
+{
+    Remove
+    {
+        ClassName
+        {
+            "info_player_start" {}
+        }
+        Origin
+        {
+            "194 584 -3270" {}
+            "223 288 -3299.85" {}
+            "192 496 -3270" {}
+        }
+    }
+    Add
+    {
+        "logic_auto"
+        {
+            "spawnflags" "1"
+            "OnMapSpawn" "start_door,Lock,,0.3,-1"
+            "origin" "229.795 567 -3256.65"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "town_01a_spawn1"
+            "origin" "159 531 -3327"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "town_01a_spawn1"
+            "origin" "159 429 -3327"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "town_01a_spawn1"
+            "origin" "159 311.949 -3327"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "town_01a_spawn1"
+            "origin" "226 312 -3327"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "town_01a_spawn1"
+            "origin" "226 428 -3327"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "town_01a_spawn1"
+            "origin" "226 531.051 -3327"
+        }
+    }
+    Modify
+    {
+        ClassName
+        {
+            "worldspawn"
+            {
+                "disableareaportals" "1"
+            }
+        }
+        Origin
+        {
+            "-628 708 -3380"
+            {
+                "spawngroup" "town_02_spawn1"
+                "transitionradius" "221"
+            }
+        }
+    }
+SpawnItems
+{
+    "weapon_physcannon" "1"
+    "item_ammo_smg1_large" "1"
+    "weapon_pistol" "1"
+    "weapon_smg1" "1"
+    "weapon_357" "1"
+    "item_ammo_pistol_large" "1"
+    "weapon_crowbar" "1"
+    "weapon_healer" "1"
+}
+}

@@ -1,0 +1,101 @@
+c2a3d
+{
+    Remove
+    {
+        ClassName
+        {
+            "info_player_start" {}
+        }
+    }
+    Add
+    {
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "c2a3d_starts"
+            "origin" "2148 367 169"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "c2a3d_starts"
+            "origin" "2149 459 169"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "c2a3d_starts"
+            "origin" "2150 411 169"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "c2a3d_starts"
+            "origin" "2093 367 169"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "c2a3d_starts"
+            "origin" "2094 459 169"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "c2a3d_starts"
+            "origin" "2095 411 169"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "c2a3d_starts"
+            "origin" "2037 367 169"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "c2a3d_starts"
+            "origin" "2038 459 169"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "c2a3d_starts"
+            "origin" "2039 411 169"
+        }
+    }
+    Modify
+    {
+        ClassName
+        {
+            "worldspawn"
+            {
+                "mapversion" "4"
+            }
+        }
+        TargetName
+        {
+            "gotodrag"
+            {
+                "nosmooth" "1"
+                "spawngroup" "c2a3e_starts"
+            }
+        }
+        Origin
+        {
+            "2256 408 284"
+            {
+                "spawngroup" "c2a3c_starts2"
+                "transitionradius" "621"
+            }
+        }
+    }
+SpawnItems
+{
+    "weapon_pistol" "1"
+    "weapon_smg1" "1"
+    "item_battery" "1"
+    "item_ammo_smg1" "3"
+    "weapon_healer" "1"
+}
+}

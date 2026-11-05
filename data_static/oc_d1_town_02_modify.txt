@@ -1,0 +1,132 @@
+d1_town_02
+{
+    Remove
+    {
+        ClassName
+        {
+            "info_player_start" {}
+        }
+        TargetName
+        {
+            "church_monk_conditions" {}
+        }
+        Origin
+        {
+            "-3916 -680 -3288" {}
+            "-668 972 -3380" {}
+            "-760 840 -3431" {}
+        }
+    }
+    Add
+    {
+        "prop_door_rotating"
+        {
+            "ajarangles" "0 0 0"
+            "angles" "0 180 0"
+            "axis" "-696 995 -3386, -696 995 -3386"
+            "distance" "90"
+            "hardware" "1"
+            "model" "models/props_c17/door01_left.mdl"
+            "returndelay" "-1"
+            "skin" "1"
+            "spawnflags" "10240"
+            "speed" "100"
+            "origin" "-696 995 -3386"
+        }
+        "point_servercommand"
+        {
+            "targetname" "allowplayersjump"
+            "origin" "-2979.77 992.611 -3127"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "town_02_spawn1"
+            "origin" "-947 702 -3439"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "town_02_spawn1"
+            "origin" "-726 881 -3439"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "town_02_spawn1"
+            "origin" "-409.699 671.359 -3439"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "targetname" "town_02_spawn1"
+            "origin" "-414 989 -3439"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "town_02_spawn1"
+            "origin" "-671.168 971.645 -3439"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "town_02_spawn1"
+            "origin" "-483 841 -3439"
+        }
+        "point_trigger"
+        {
+            "spawnflags" "1"
+            "StartDisabled" "1"
+            "targetname" "church_monk_conditions"
+            "TriggerOnce" "1"
+            "TriggerRadius" "84"
+            "OnStartTouch" "bldg4_climbnode_link_west,TurnOn,,5,-1"
+            "OnStartTouch" "bldg4_climbnode_link_east,TurnOn,,5,-1"
+            "OnStartTouch" "monk_rock_scene_b1,Start,,0,-1"
+            "origin" "-4330 1390 -2972"
+        }
+    }
+    Modify
+    {
+        ClassName
+        {
+            "worldspawn"
+            {
+                "disableareaportals" "1"
+            }
+        }
+        TargetName
+        {
+            "freightlift_lift_path2"
+            {
+                "OnPass" "allowplayersjump,Command,mp_falldamage 0,0,-1"
+            }
+        }
+        Origin
+        {
+            "-3648 -448 -3528"
+            {
+                "nosmooth" "1"
+                "spawngroup" "town_03_spawn1"
+            }
+            "-5280 1824 -3136"
+            {
+                "spawnflags" "0"
+                "spawngroup" "town_02a_spawn1"
+                "transitionradius" "761"
+            }
+        }
+    }
+SpawnItems
+{
+    "weapon_physcannon" "1"
+    "item_ammo_smg1_large" "1"
+    "weapon_pistol" "1"
+    "weapon_smg1" "1"
+    "weapon_357" "1"
+    "item_ammo_pistol_large" "1"
+    "weapon_crowbar" "1"
+    "weapon_healer" "1"
+}
+}

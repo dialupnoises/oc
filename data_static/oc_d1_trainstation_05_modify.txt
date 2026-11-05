@@ -1,0 +1,199 @@
+d1_trainstation_05
+{
+    Remove
+    {
+        ClassName
+        {
+            "info_player_start" {}
+            "player_speedmod" {}
+        }
+        TargetName
+        {
+            "start_first_teleport_01" {}
+            "lab_door_clip" {}
+            "Alyx_lab_entry_closedoor_1" {}
+            "teleport_01b_scene" {}
+            "brush_soda_clip_player" {}
+            "brush_soda_clip_player_2" {}
+        }
+        Origin
+        {
+            "-5386 -864 144" {}
+            "-5576 -864 144" {}
+        }
+    }
+    Add
+    {
+        "logic_choreographed_scene"
+        {
+            "busyactor" "1"
+            "SceneFile" "scenes/k_lab/teleport01b.vcd"
+            "targetname" "teleport_01b_scene"
+            "OnCompletion" "tport_switch_cover_1,Open,,3,-1"
+            "OnCompletion" "switchnag_speaker,TurnOn,,1,1"
+            "origin" "-7296 -1336 244"
+        }
+        "point_trigger"
+        {
+            "spawnflags" "1"
+            "StartDisabled" "1"
+            "targetname" "start_first_teleport_01"
+            "TriggerOnce" "1"
+            "TriggerRadius" "112"
+            "OnStartTouch" "start_first_teleport_01_relay,Trigger,,0,-1"
+            "OnStartTouch" "start_first_teleport_01,Kill,,0.5,-1"
+            "origin" "-7240 -1465 9"
+        }
+        "point_trigger"
+        {
+            "spawnflags" "1"
+            "StartDisabled" "1"
+            "targetname" "start_first_teleport_01"
+            "TriggerOnce" "1"
+            "TriggerRadius" "112"
+            "OnStartTouch" "start_first_teleport_01_relay,Trigger,,0,-1"
+            "OnStartTouch" "start_first_teleport_01,Kill,,0.5,-1"
+            "origin" "-7244 -1276 9"
+        }
+        "point_trigger"
+        {
+            "spawnflags" "1"
+            "StartDisabled" "1"
+            "targetname" "start_first_teleport_01"
+            "TriggerOnce" "1"
+            "TriggerRadius" "94"
+            "OnStartTouch" "start_first_teleport_01_relay,Trigger,,0,-1"
+            "OnStartTouch" "start_first_teleport_01,Kill,,0.5,-1"
+            "origin" "-7185 -1191 9"
+        }
+        "logic_relay"
+        {
+            "targetname" "start_first_teleport_01_relay"
+            "OnTrigger" "destination_monitor_static_1,Disable,,14,1"
+            "OnTrigger" "destination_monitor_static_1,Enable,,12,1"
+            "OnTrigger" "destination_monitor_static_1,Disable,,6.5,1"
+            "OnTrigger" "destination_monitor_1,Enable,,6,1"
+            "OnTrigger" "destination_monitor_static_1,Enable,,5,1"
+            "OnTrigger" "teleport_01_scene,Start,,2,1"
+            "OnTrigger" "KleinerTPnag_Loop_Kleiner01_lcs,Kill,,2,1"
+            "OnTrigger" "BarneyTPnag_Loop_Barney01_lcs,Kill,,2,1"
+            "OnTrigger" "sounds_lab_1,Kill,,0.1,1"
+            "OnTrigger" "portroom_speaker,Kill,,0,1"
+            "OnTrigger" "Surveillance_monitor_1,Disable,,0,1"
+            "OnTrigger" "sounds_lab_1,StopSound,,0,1"
+            "origin" "-7199.08 -1401.37 9"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "targetname" "trainstation_05_spawn1"
+            "origin" "-5780 -658 71"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "targetname" "trainstation_05_spawn1"
+            "origin" "-5870 -658 71"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "trainstation_05_spawn1"
+            "origin" "-5983 -710 71"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "trainstation_05_spawn1"
+            "origin" "-5757 -783 71"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "targetname" "trainstation_05_spawn1"
+            "origin" "-5783 -915 71"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "targetname" "trainstation_05_spawn1"
+            "origin" "-5870 -915 71"
+        }
+        "info_teleport_destination"
+        {
+            "angles" "0 270 0"
+            "targetname" "outoflab_teleport_destination"
+            "origin" "-10426 -4714 211"
+        }
+        "info_teleport_destination"
+        {
+            "angles" "0 270 0"
+            "targetname" "outoflab_teleport_destination"
+            "origin" "-10325 -4713 211"
+        }
+        "info_teleport_destination"
+        {
+            "angles" "0 270 0"
+            "targetname" "outoflab_teleport_destination"
+            "origin" "-10248 -4714 211"
+        }
+        "info_teleport_destination"
+        {
+            "angles" "0 180 0"
+            "targetname" "outoflab_teleport_destination"
+            "origin" "-10247 -4810 211"
+        }
+        "info_teleport_destination"
+        {
+            "angles" "0 180 0"
+            "targetname" "outoflab_teleport_destination"
+            "origin" "-10247 -4935 211"
+        }
+        "info_teleport_destination"
+        {
+            "angles" "0 180 0"
+            "targetname" "outoflab_teleport_destination"
+            "origin" "-10247 -5068 211"
+        }
+        "point_teleport"
+        {
+            "angles" "0 0 0"
+            "radius" "1221"
+            "spawnflags" "2048"
+            "targetname" "outoflab_teleport"
+            "TeleportDestination" "outoflab_teleport_destination"
+            "origin" "-6475 -1155 9"
+        }
+        "point_servercommand"
+        {
+            "targetname" "servercommand"
+            "origin" "-6435.26 -1113 19.3608"
+        }
+    }
+    Modify
+    {
+        ClassName
+        {
+            "worldspawn"
+            {
+                "disableareaportals" "1"
+            }
+        }
+        TargetName
+        {
+            "player_in_teleport"
+            {
+                "OnTrigger" "outoflab_teleport,Enable,,83,-1"
+                "OnTrigger" "servercommand,Command,mp_playercollide 0,83,-1"
+            }
+            "change_05_to_01"
+            {
+                "spawngroup" "trainstation_06_spawn1"
+            }
+        }
+    }
+SpawnItems
+{
+    "weapon_healer" "1"
+}
+}

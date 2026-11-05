@@ -1,0 +1,105 @@
+d2_prison_04
+{
+    Remove
+    {
+        ClassName
+        {
+            "info_player_start" {}
+        }
+        Origin
+        {
+            "-723.4 340.4 -89" {}
+            "-1256 288 -16" {}
+        }
+    }
+    Add
+    {
+        "prop_dynamic"
+        {
+            "angles" "0 0 0"
+            "disableshadows" "1"
+            "ExplodeDamage" "0"
+            "ExplodeRadius" "0"
+            "fademindist" "-1"
+            "fadescale" "1"
+            "MaxAnimTime" "10"
+            "MinAnimTime" "5"
+            "model" "models/props_wasteland/prison_slidingdoor001a.mdl"
+            "RandomAnimation" "0"
+            "renderamt" "255"
+            "rendercolor" "255 255 255"
+            "solid" "6"
+            "origin" "-1283.2 288 -68"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "targetname" "prison_04_spawn1"
+            "origin" "-950 223 -124"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "targetname" "prison_04_spawn1"
+            "origin" "-1087 223 -124"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "targetname" "prison_04_spawn1"
+            "origin" "-1238 223 -124"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "targetname" "prison_04_spawn1"
+            "origin" "-950 358 -124"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "targetname" "prison_04_spawn1"
+            "origin" "-1101 358 -124"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "targetname" "prison_04_spawn1"
+            "origin" "-1238 358 -124"
+        }
+    }
+    Modify
+    {
+        ClassName
+        {
+            "worldspawn"
+            {
+                "disableareaportals" "1"
+            }
+        }
+        Origin
+        {
+            "-1344 3048 448"
+            {
+                "spawngroup" "prison_05_spawn1"
+            }
+        }
+    }
+SpawnItems
+{
+    "weapon_smg1" "1"
+    "weapon_ar2" "1"
+    "weapon_shotgun" "1"
+    "weapon_crowbar" "1"
+    "weapon_physcannon" "1"
+    "weapon_357" "1"
+    "weapon_frag" "1"
+    "weapon_pistol" "1"
+    "item_box_buckshot" "2"
+    "item_ammo_smg1" "3"
+    "item_battery" "3"
+    "weapon_healer" "1"
+    "weapon_bugbait" "1"
+    "weapon_crossbow" "1"
+}
+}

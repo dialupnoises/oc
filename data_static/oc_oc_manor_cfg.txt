@@ -1,0 +1,6 @@
+// File was created for use in Obsidian Conflict ONLY!
+"oc_manor"
+{
+	"mp_falldamage"	"1"
+	"mp_playercollide" "1"
+}

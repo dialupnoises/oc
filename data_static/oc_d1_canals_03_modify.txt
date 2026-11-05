@@ -1,0 +1,144 @@
+d1_canals_03
+{
+    Remove
+    {
+        ClassName
+        {
+            "info_player_start" {}
+        }
+        TargetName
+        {
+            "relay_setfog_water" {}
+        }
+        Origin
+        {
+            "808 3452 -784" {}
+        }
+    }
+    Add
+    {
+        "point_weapon_eater"
+        {
+            "EatRadius" "56"
+            "targetname" "yumyumyum"
+            "origin" "726 3370 -820"
+        }
+        "logic_auto"
+        {
+            "spawnflags" "1"
+            "OnNewGame" "yumyumyum,Eat,,0.5,-1"
+            "origin" "754.965 3367.69 -770.088"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "targetname" "canals_03_spawn1"
+            "origin" "1261 3366 -783"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "targetname" "canals_03_spawn1"
+            "origin" "1138 3366 -783"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "targetname" "canals_03_spawn1"
+            "origin" "1198 3366 -783"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "canals_03_spawn1"
+            "origin" "1289 3562 -783"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "canals_03_spawn1"
+            "origin" "1289 3632 -783"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "targetname" "canals_03_spawn1"
+            "origin" "1182 3710 -783"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "StartDisabled" "1"
+            "targetname" "canals_03_spawn2"
+            "origin" "-269 -932 -946"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "StartDisabled" "1"
+            "targetname" "canals_03_spawn2"
+            "origin" "-340 -932 -946"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "StartDisabled" "1"
+            "targetname" "canals_03_spawn2"
+            "origin" "-414 -932 -946"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "StartDisabled" "1"
+            "targetname" "canals_03_spawn2"
+            "origin" "-269 -670 -946"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "StartDisabled" "1"
+            "targetname" "canals_03_spawn2"
+            "origin" "-343 -670 -946"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "StartDisabled" "1"
+            "targetname" "canals_03_spawn2"
+            "origin" "-414 -670 -946"
+        }
+        "point_trigger"
+        {
+            "spawnflags" "1"
+            "TriggerOnce" "1"
+            "TriggerRadius" "218"
+            "OnStartTouch" "canals_03_spawn2,Enable,,0,-1"
+            "OnStartTouch" "canals_03_spawn1,Disable,,0,-1"
+            "origin" "-181 -787 -863"
+        }
+    }
+    Modify
+    {
+        ClassName
+        {
+            "worldspawn"
+            {
+                "disableareaportals" "1"
+            }
+        }
+        Origin
+        {
+            "-3544 -80 -1032"
+            {
+                "spawngroup" "canals_05_spawn1"
+            }
+        }
+    }
+SpawnItems
+{
+    "weapon_crowbar" "1"
+    "weapon_pistol" "1"
+    "item_ammo_pistol_large" "1"
+    "weapon_healer" "1"
+}
+}

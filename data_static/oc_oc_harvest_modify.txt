@@ -1,0 +1,8 @@
+"oc_harvest_v2_b6"
+{
+	SpawnItems
+	{
+		"weapon_crowbar" "1"
+		"weapon_physcannon" "1"
+	}
+}

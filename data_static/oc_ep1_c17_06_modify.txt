@@ -1,0 +1,168 @@
+ep1_c17_06
+{
+    Remove
+    {
+        ClassName
+        {
+            "env_credits" {}
+            "info_player_start" {}
+        }
+        TargetName
+        {
+            "trigger_changelevel_to_05" {}
+        }
+        Origin
+        {
+            "9896.36 9614.14 -706.783" {}
+        }
+    }
+    Add
+    {
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "origin" "9684 9788 -707"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "origin" "9783 9790 -707"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "origin" "9667 9593 -707"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "origin" "9687 9700 -707"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "origin" "9846 9565 -707"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "origin" "9786 9565 -707"
+        }
+		"point_servercommand"
+		{
+			"targetname" "servercommand"
+			"origin" "-6320 6472 2685"
+		}
+        "point_viewcontrol"
+        {
+            "acceleration" "500"
+            "angles" "-23.5 0 0"
+            "deceleration" "500"
+            "spawnflags" "172"
+            "targetname" "finalcam"
+            "wait" "10"
+            "origin" "11969 8381 -743"
+        }
+		"game_end"
+		{
+			"targetname" "gameender"
+			"origin" "11965 8387 -716"
+		}
+		"weapon_rpg"
+		{
+			"origin" "11545 8070 -422"
+		}
+		"weapon_rpg"
+		{
+			"origin" "11453 8068 -422"
+		}
+        "game_text"
+        {
+            "channel" "1"
+            "color" "255 255 255"
+            "color2" "240 110 0"
+            "fadein" "1.5"
+            "fadeout" "0.5"
+            "fxtime" "0.25"
+            "holdtime" "5"
+            "message" "Half-Life 2: Episode 1 By Valve"
+            "spawnflags" "1"
+            "targetname" "end_credits1"
+            "x" "-1"
+            "y" "-1"
+            "origin" "-2742 -3404 -13335"
+        }
+        "game_text"
+        {
+            "channel" "2"
+            "color" "255 255 255"
+            "color2" "240 110 0"
+            "fadein" "1.5"
+            "fadeout" "0.5"
+            "fxtime" "0.25"
+            "holdtime" "5"
+            "message" "Coop Mapadd Scripts By W0rf0x"
+            "spawnflags" "1"
+            "targetname" "end_credits2"
+            "x" "-1"
+            "y" "0.6"
+            "origin" "-2742.03 -3387.88 -13335"
+        }
+        "logic_auto"
+        {
+            "spawnflags" "1"
+            "OnMapSpawn" "global_newgame_entmaker,ForceSpawn,,0.5,-1"
+            "OnMapSpawn" "citizen_refugees_1,Kill,,0.1,-1"
+            "OnMapSpawn" "citizen_refugees_2,Kill,,0.1,-1"
+            "OnMapSpawn" "alyx,Kill,,0.1,-1"
+            "OnMapSpawn" "barney,Kill,,0.1,-1"
+            "OnMapSpawn" "yumyumyum,Eat,,0.6,-1"
+            "origin" "9963.5 9655 -663.252"
+        }
+        "point_weapon_eater"
+        {
+            "EatRadius" "150"
+            "targetname" "yumyumyum"
+            "origin" "9899 9634 -692.808"
+        }
+    }
+    Modify
+    {
+        ClassName
+        {
+            "worldspawn"
+            {
+                "disableareaportals" "1"
+            }
+        }
+        TargetName
+        {
+			"trigger_playerontrain"
+			{
+				"OnTrigger" "finalcam,SetParent,outro_train_1_main,0,-1"
+				"OnTrigger" "finalcam,Enable,,5,-1"
+			}
+            "citfx_glowtrack3"
+            {
+                "OnPass" "end_credits1,Display,,11,1"
+                "OnPass" "end_credits2,Display,,12,1"
+                "OnPass" "servercommand,Command,sv_ep2searchpath 1,15,1"
+                "OnPass" "servercommand,Command,changelevel ep2_outland_01,19,1"
+	  "OnPass" "finalcam,disable,,18,-1"
+	  "OnPass" "gameender,EndGame,,20,-1"
+            }
+        }
+    }
+SpawnItems
+{
+		"weapon_healer" "1"
+		"weapon_physcannon" "1"
+		"weapon_pistol" "4"
+		"weapon_shotgun" "2"
+		"weapon_smg1" "3"
+		"weapon_ar2" "3"
+		"weapon_crowbar" "1"
+		"weapon_crossbow" "4"
+		"weapon_357" "3"
+}
+}

@@ -1,0 +1,566 @@
+d3_breen_01
+{
+    Remove
+    {
+        ClassName
+        {
+            "player_loadsaved" {}
+            "trigger_weapon_strip" {}
+            "env_message" {}
+            "info_player_start" {}
+            "trigger_changelevel" {}
+        }
+        TargetName
+        {
+            "citadel_scene_br_start" {}
+            "teleport_breen_blast_1" {}
+            "blackout_viewcontroller" {}
+            "path_lift_control_2" {}
+            "logic_playerExitPod" {}
+            "relay_breenwins" {}
+            "relay_consoleareacleanup" {}
+            "relay_riftcleanup" {}
+            "trigger_gameover_toplevelfallmessage" {}
+            "logic_ending_credits" {}
+            "menu" {}
+        }
+        Origin
+        {
+            "256 0 -576" {}
+            "-672 0 -128" {}
+        }
+    }
+    Add
+    {
+        "path_track"
+        {
+            "target" "path_lift_control_1"
+            "orientationtype" "1"
+            "angles" "0 0 0"
+            "targetname" "path_lift_control_2"
+            "radius" "0"
+            "speed" "100"
+            "OnPass" "relation_soldier_player_like,RevertRelationship,,1,-1"
+            "OnPass" "Train_lift_TP,Resume,,0.1,1"
+            "OnPass" "Train_lift_TP,Stop,,0,-1"
+            "OnPass" "teleport_breen_into_pod,Teleport,,0,1"
+            "OnPass" "timer_relations,Kill,,0,-1"
+            "origin" "-1056 464 -264"
+        }
+        "logic_relay"
+        {
+            "spawnflags" "0"
+            "StartDisabled" "0"
+            "targetname" "logic_playerExitPod"
+            "OnTrigger" "pod,Unlock,,0.65,-1"
+            "OnTrigger" "pod,Open,,0,-1"
+            "OnTrigger" "timer_camera_enable,Kill,,0,-1"
+            "OnTrigger" "playerpod_camera,Disable,,1,-1"
+            "origin" "-2424 632 710"
+        }
+        "logic_relay"
+        {
+            "spawnflags" "0"
+            "targetname" "relay_breenwins"
+            "OnTrigger" "citadel_beam_teleportarc,TurnOff,,7,-1"
+            "OnTrigger" "citadel_sound_rift_crack1,PlaySound,,5,-1"
+            "OnTrigger" "Train_main_lift,Kill,,4.5,-1"
+            "OnTrigger" "Breen,Kill,,4.5,-1"
+            "OnTrigger" "citadel_model_breenballrings,Kill,,4.5,-1"
+            "OnTrigger" "citadel_model_breenballconsole*,Kill,,4.5,-1"
+            "OnTrigger" "citadel_beam_teleportarc,TurnOn,,5,-1"
+            "OnTrigger" "lost_text1,Display,,5,-1"
+            "OnTrigger" "citadel_scene_br_taunt4,Start,,2,-1"
+            "OnTrigger" "countdown,StopCountdown,,0,-1"
+            "OnTrigger" "lcs_al_fail_no,Start,,0,-1"
+            "OnTrigger" "fade_blast_1,Fade,,4.4,-1"
+            "OnTrigger" "lost_text2,Display,,5,-1"
+            "OnTrigger" "end_fade,Fade,,4,-1"
+            "OnTrigger" "reload,Command,changelevel d3_breen_01,10,-1"
+            "origin" "-592 96 1344"
+        }
+        "logic_relay"
+        {
+            "targetname" "logic_ending_credits"
+            "StartDisabled" "0"
+            "spawnflags" "48"
+            "OnTrigger" "intro_outro_fx_1,Deactivate,,0,-1"
+            "OnTrigger" "end_fade2,Fade,,0,-1"
+            "OnTrigger" "end_credits1,Display,,1,-1"
+            "OnTrigger" "end_credits2,Display,,2,-1"
+            "OnTrigger" "logic_lamarr,Trigger,,6,-1"
+            "origin" "14064 14865.8 14960"
+        }
+        "point_viewcontrol"
+        {
+            "angles" "0 0 0"
+            "wait" "10"
+            "spawnflags" "44"
+            "acceleration" "500"
+            "deceleration" "500"
+            "targetname" "playerpod_camera"
+            "origin" "-2438 -1386 156"
+        }
+        "logic_auto"
+        {
+            "spawnflags" "1"
+            "OnMapSpawn" "playerpod_camera,SetParent,pod,0,-1"
+            "OnMapSpawn" "playerpod_camera,SetParentAttachment,vehicle_driver_eyes,0.2,-1"
+            "origin" "-2464.44 -1463 147.753"
+        }
+        "logic_timer"
+        {
+            "targetname" "timer_camera_enable"
+            "RefireTime" "1"
+            "OnTimer" "playerpod_camera,Enable,,0,-1"
+            "origin" "-2493.77 -1463 143.335"
+        }
+        "logic_timer"
+        {
+            "RefireTime" "1"
+            "targetname" "timer_relations"
+            "OnTimer" "relation_soldier_player_like,ApplyRelationship,,0,-1"
+            "origin" "-2487.1 -1463 174.606"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "targetname" "spawn1"
+            "origin" "-1614 413 577"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "targetname" "spawn1"
+            "origin" "-1743.31 406.298 577"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "spawn1"
+            "origin" "-1621.57 549.478 577"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 60 0"
+            "targetname" "spawn1"
+            "origin" "-2194.49 372.339 577"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "spawn1"
+            "origin" "-2384.45 593.237 577"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "spawn1"
+            "origin" "-2332.25 729.428 577"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "targetname" "spawn2"
+            "StartDisabled" "1"
+            "origin" "-1001.85 -123.843 1345"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "targetname" "spawn2"
+            "StartDisabled" "1"
+            "origin" "-1102.8 -131.447 1345"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "spawn2"
+            "StartDisabled" "1"
+            "origin" "-1989.46 2.90475 1345"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "targetname" "spawn2"
+            "StartDisabled" "1"
+            "origin" "-1805.5 -34.1399 1345"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "targetname" "spawn2"
+            "StartDisabled" "1"
+            "origin" "-1626.83 -34.8062 1345"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "targetname" "spawn2"
+            "StartDisabled" "1"
+            "origin" "-1489 -31 1345"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 304 0"
+            "targetname" "spawn3"
+            "StartDisabled" "1"
+            "origin" "-720.596 151.645 -255"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 225 0"
+            "targetname" "spawn3"
+            "StartDisabled" "1"
+            "origin" "-563.782 159.634 -255"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "spawn3"
+            "StartDisabled" "1"
+            "origin" "-559.613 58.9424 -255"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "spawn3"
+            "StartDisabled" "1"
+            "origin" "-550.753 -53.013 -255"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "spawn3"
+            "StartDisabled" "1"
+            "origin" "-551.459 -170.126 -255"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "spawn3"
+            "StartDisabled" "1"
+            "origin" "-550 -351 -255"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "spawn4"
+            "StartDisabled" "1"
+            "origin" "-790.82 -89.724 1281"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "spawn4"
+            "StartDisabled" "1"
+            "origin" "-800.262 95.4671 1281"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "spawn4"
+            "StartDisabled" "1"
+            "origin" "-736.094 178.36 1281"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "spawn4"
+            "StartDisabled" "1"
+            "origin" "-738.97 -166.744 1281"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "spawn4"
+            "StartDisabled" "1"
+            "origin" "-603.629 172.792 1281"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "spawn4"
+            "StartDisabled" "1"
+            "origin" "-600.96 -179.773 1281"
+        }
+        "env_fade"
+        {
+            "duration" "2"
+            "renderamt" "255"
+            "rendercolor" "0 0 0"
+            "targetname" "end_fade"
+            "holdtime" "999"
+            "spawnflags" "0"
+            "origin" "-759 144.071 1444.4"
+        }
+        "game_text"
+        {
+            "x" "-1"
+            "y" "-1"
+            "color" "255 0 0"
+            "color2" "240 110 0"
+            "fadein" "1.5"
+            "fadeout" "0.5"
+            "holdtime" "5"
+            "fxtime" "0.25"
+            "channel" "1"
+            "targetname" "lost_text1"
+            "spawnflags" "1"
+            "message" "Breen escaped!"
+            "origin" "-759 152.502 1506.41"
+        }
+        "game_text"
+        {
+            "x" "-1"
+            "y" "0.6"
+            "color" "255 0 0"
+            "color2" "240 110 0"
+            "fadein" "1.5"
+            "fadeout" "0.5"
+            "holdtime" "5"
+            "fxtime" "0.25"
+            "channel" "2"
+            "targetname" "lost_text2"
+            "spawnflags" "1"
+            "message" "You lost!"
+            "origin" "-759 159.693 1477.58"
+        }
+        "game_text"
+        {
+            "channel" "1"
+            "color" "255 255 255"
+            "color2" "240 110 0"
+            "fadein" "1.5"
+            "fadeout" "0.5"
+            "fxtime" "0.25"
+            "holdtime" "5"
+            "message" "Half-Life 2 By Valve"
+            "spawnflags" "1"
+            "targetname" "end_credits1"
+            "x" "-1"
+            "y" "-1"
+            "origin" "272.027 -1964.12 -1007"
+        }
+        "game_text"
+        {
+            "channel" "2"
+            "color" "255 255 255"
+            "color2" "240 110 0"
+            "fadein" "1.5"
+            "fadeout" "0.5"
+            "fxtime" "0.25"
+            "holdtime" "5"
+            "message" "Coop Mapadd Scripts By W0rf0x"
+            "spawnflags" "1"
+            "targetname" "end_credits2"
+            "x" "-1"
+            "y" "0.6"
+            "origin" "272 -1948 -1007"
+        }
+        "point_servercommand"
+        {
+            "targetname" "reload"
+            "origin" "-759 148.176 1557.71"
+        }
+        "game_end"
+        {
+            "targetname" "end"
+            "origin" "-759 178.698 1571.34"
+        }
+        "env_fade"
+        {
+            "duration" "1"
+            "renderamt" "255"
+            "rendercolor" "0 0 0"
+            "targetname" "end_fade2"
+            "holdtime" "5"
+            "spawnflags" "0"
+            "origin" "-759 183.776 1532.66"
+        }
+        "info_teleport_destination"
+        {
+            "angles" "0 90 0"
+            "StartDisabled" "0"
+            "targetname" "teleport1_target"
+            "origin" "-1002 -123.843 1385"
+        }
+        "info_teleport_destination"
+        {
+            "angles" "0 90 0"
+            "StartDisabled" "0"
+            "targetname" "teleport1_target"
+            "origin" "-1102.95 -131.447 1385"
+        }
+        "info_teleport_destination"
+        {
+            "angles" "0 90 0"
+            "StartDisabled" "0"
+            "targetname" "teleport1_target"
+            "origin" "-1489.15 -31 1385"
+        }
+        "info_teleport_destination"
+        {
+            "angles" "0 90 0"
+            "StartDisabled" "0"
+            "targetname" "teleport1_target"
+            "origin" "-1626.98 -34.8062 1385"
+        }
+        "info_teleport_destination"
+        {
+            "angles" "0 90 0"
+            "StartDisabled" "0"
+            "targetname" "teleport1_target"
+            "origin" "-1805.65 -34.1399 1385"
+        }
+        "info_teleport_destination"
+        {
+            "angles" "0 0 0"
+            "StartDisabled" "0"
+            "targetname" "teleport1_target"
+            "origin" "-1989.61 2.90475 1385"
+        }
+        "point_teleport"
+        {
+            "angles" "0 0 0"
+            "radius" "587"
+            "spawnflags" "2048"
+            "targetname" "teleport1"
+            "TeleportDestination" "teleport1_target"
+            "origin" "-1912 631 599"
+        }
+        "info_teleport_destination"
+        {
+            "angles" "0 304 0"
+            "StartDisabled" "0"
+            "targetname" "teleport2_target"
+            "origin" "-720.596 151.011 -226"
+        }
+        "info_teleport_destination"
+        {
+            "angles" "0 225 0"
+            "StartDisabled" "0"
+            "targetname" "teleport2_target"
+            "origin" "-563.782 159 -226"
+        }
+        "info_teleport_destination"
+        {
+            "angles" "0 180 0"
+            "StartDisabled" "0"
+            "targetname" "teleport2_target"
+            "origin" "-559.613 58.3084 -226"
+        }
+        "info_teleport_destination"
+        {
+            "angles" "0 180 0"
+            "StartDisabled" "0"
+            "targetname" "teleport2_target"
+            "origin" "-550.753 -53.647 -226"
+        }
+        "info_teleport_destination"
+        {
+            "angles" "0 180 0"
+            "StartDisabled" "0"
+            "targetname" "teleport2_target"
+            "origin" "-551.459 -170.76 -226"
+        }
+        "info_teleport_destination"
+        {
+            "angles" "0 180 0"
+            "StartDisabled" "0"
+            "targetname" "teleport2_target"
+            "origin" "-550 -351.634 -226"
+        }
+        "point_teleport"
+        {
+            "angles" "0 0 0"
+            "radius" "610"
+            "spawnflags" "2048"
+            "targetname" "teleport2"
+            "TeleportDestination" "teleport2_target"
+            "origin" "-1450 -8 1353"
+        }
+    }
+    Modify
+    {
+        ClassName
+        {
+            "worldspawn"
+            {
+                "mapversion" "13"
+            }
+        }
+        TargetName
+        {
+            "Breen_Teleport"
+            {
+                "radius" "128"
+            }
+            "teleport_breen_into_pod"
+            {
+                "radius" "128"
+                "spawnflags" "2048"
+            }
+            "logic_EMP_plead_door_1"
+            {
+                "OnTrigger" "spawn1,Disable,,0,-1"
+                "OnTrigger" "spawn2,Enable,,0,-1"
+                "OnTrigger" "teleport1,Enable,,0,-1"
+            }
+            "brush_plead_shield_1"
+            {
+                "spawnflags" "0"
+            }
+            "teleport_player_gman_1"
+            {
+                "radius" "128"
+            }
+            "teleport_gman_2"
+            {
+                "radius" "128"
+            }
+            "SS_lamarr"
+            {
+                "OnBeginSequence" "point_viewcontrol,Disable,,7,-1"
+                "OnBeginSequence" "reload,Command,sv_ep1searchpath 1,3,1"
+                "OnBeginSequence" "reload,Command,changelevel ep1_citadel_00,8,1"
+                "OnBeginSequence" "end,Endgame,,9,-1"
+            }
+        }
+        Origin
+        {
+            "-896 0 -192"
+            {
+                "OnTrigger" "spawn2,Disable,,0,-1"
+                "OnTrigger" "spawn3,Enable,,0,-1"
+                "OnTrigger" "teleport2,Enable,,0,-1"
+                "OnTrigger" "citadel_train_portalpistonlift3,StartForward,,3,-1"
+                "OnTrigger" "train_digger2,StartForward,,2.1,-1"
+                "OnTrigger" "rotating_diggerguard,SetPosition,1,1.75,-1"
+                "OnTrigger" "train_digger1,StartForward,,0.1,-1"
+                "OnTrigger" "track_digger2_start,EnablePath,,0,-1"
+                "OnTrigger" "track_digger1_start,EnablePath,,0,-1"
+                "OnTrigger" "soldier_assault6_relay,Trigger,,13,-1"
+                "OnTrigger" "lcs_br_bubble_loop,Start,,10,-1"
+            }
+            "-640 -464 1424"
+            {
+                "OnTrigger" "spawn3,Disable,,0,-1"
+                "OnTrigger" "spawn4,Enable,,0,-1"
+            }
+            "-1832 912 586"
+            {
+                "spawnflags" "0"
+            }
+//            "15444 14336 15012"
+//            {
+//                "sides" ""
+//            }
+        }
+    }
+SpawnItems
+{
+    "weapon_physcannon" "1"
+    "weapon_healer" "1"
+}
+}

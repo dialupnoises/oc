@@ -10,7 +10,7 @@ As for getting maps working, you're going to need to find all of the content the
 
 I made a program that can find the dependencies of an Obsidian Conflict map: https://github.com/dialupnoises/SourceMapAnalyzer
 
-Remember to copy the proper files from scripts/merchants and maps/cfg. If you don't, strange things might happen.
+Remember to copy the proper files from scripts/merchants and the map configs. The repo's `data_static/` already holds the converted configs and is read when the repo is cloned into `gamemodes/oc`. To add or override one, put it in the game's `data_static/` as `oc_<map>_cfg.txt` and `oc_<map>_modify.txt` (the old `maps/cfg/<map>_cfg.txt` location is still read as a fallback, but Workshop addons can't ship it). If you don't, strange things might happen; a missing config is logged as `[OC] No map config found`.
 
 There's a tools folder here that you probably don't need to worry about. It's almost entirely obsolete at this point.
 

@@ -1,0 +1,213 @@
+d2_coast_12
+{
+    Remove
+    {
+        ClassName
+        {
+            "info_player_start" {}
+        }
+        Origin
+        {
+            "4812.06 -12088.3 336.88" {}
+            "9792 -11616 352" {}
+            "9344 -11168 352" {}
+        }
+    }
+    Add
+    {
+        "logic_auto"
+        {
+            "spawnflags" "1"
+            "OnMapSpawn" "thumper_1_button_model,SetAnimation,depressed,0,-1"
+            "OnMapSpawn" "thumper_2_button_model,SetAnimation,depressed,0,-1"
+            "OnMapSpawn" "thumper_3_button_model,SetAnimation,depressed,0,-1"
+            "OnMapSpawn" "thumper_1,Enable,,0.5,-1"
+            "OnMapSpawn" "thumper_1,Disable,,0,-1"
+            "origin" "4812.06 -12088.3 336.88"
+        }
+        "prop_dynamic_override"
+        {
+            "angles" "0 0 0"
+            "fademaxdist" "3010"
+            "fademindist" "3000"
+            "fadescale" "1"
+            "MaxAnimTime" "10"
+            "MinAnimTime" "5"
+            "model" "models/props_wasteland/rockcliff05b.mdl"
+            "renderamt" "255"
+            "rendercolor" "255 255 255"
+            "skin" "0"
+            "solid" "6"
+            "origin" "10977 -12244 405"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "coast_12_spawn1"
+            "origin" "6172.99 -11946.9 172.35"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "coast_12_spawn1"
+            "origin" "6168.09 -12100 186.827"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "coast_12_spawn1"
+            "origin" "6171.12 -12275 189.992"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 254.5 0"
+            "targetname" "coast_12_spawn1"
+            "origin" "5887.69 -11535 196.039"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 242 0"
+            "targetname" "coast_12_spawn1"
+            "origin" "5637.54 -11472.2 220.892"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 256.5 0"
+            "targetname" "coast_12_spawn1"
+            "origin" "5418.45 -11419.2 247"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "StartDisabled" "1"
+            "targetname" "coast_12_spawn2"
+            "origin" "2082 -1118 688"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "StartDisabled" "1"
+            "targetname" "coast_12_spawn2"
+            "origin" "2212 -1084 691"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "StartDisabled" "1"
+            "targetname" "coast_12_spawn2"
+            "origin" "2374 -1078 683"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "StartDisabled" "1"
+            "targetname" "coast_12_spawn2"
+            "origin" "2496 -1069 682"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "StartDisabled" "1"
+            "targetname" "coast_12_spawn2"
+            "origin" "2638 -1066 683"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "StartDisabled" "1"
+            "targetname" "coast_12_spawn2"
+            "origin" "2783 -1076 700"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "StartDisabled" "1"
+            "targetname" "coast_12_spawn3"
+            "origin" "6376 7188 920"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "StartDisabled" "1"
+            "targetname" "coast_12_spawn3"
+            "origin" "6520 7199 923"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "StartDisabled" "1"
+            "targetname" "coast_12_spawn3"
+            "origin" "6652 7213 919"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "StartDisabled" "1"
+            "targetname" "coast_12_spawn3"
+            "origin" "6798 7274 925"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "StartDisabled" "1"
+            "targetname" "coast_12_spawn3"
+            "origin" "6923 7331 917"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "StartDisabled" "1"
+            "targetname" "coast_12_spawn3"
+            "origin" "7059 7332 922"
+        }
+    }
+    Modify
+    {
+        ClassName
+        {
+            "worldspawn"
+            {
+	        "disableareaportals" "1"
+            }
+        }
+        Origin
+        {
+            "5120 6048 704"
+            {
+                "OnTrigger" "coast_12_spawn2,Disable,,0,-1"
+                "OnTrigger" "coast_12_spawn3,Enable,,0,-1"
+            }
+            "2752 -736 767.75"
+            {
+                "OnTrigger" "coast_12_spawn1,Disable,,0,-1"
+                "OnTrigger" "coast_12_spawn2,Enable,,0,-1"
+            }
+            "9280 8520 2142"
+            {
+                "nosmooth" "1"
+                "spawngroup" "prison_01_spawn1"
+            }
+            "9280 8496 2160"
+            {
+                "sides" ""
+            }
+        }
+    }
+SpawnItems
+{
+    "weapon_smg1" "1"
+    "weapon_ar2" "1"
+    "weapon_shotgun" "1"
+    "weapon_crowbar" "1"
+    "weapon_physcannon" "1"
+    "weapon_357" "1"
+    "weapon_frag" "1"
+    "weapon_pistol" "1"
+    "item_box_buckshot" "2"
+    "item_ammo_smg1" "3"
+    "item_battery" "3"
+    "weapon_healer" "1"
+    "weapon_bugbait" "1"
+    "weapon_crossbow" "1"
+}
+}

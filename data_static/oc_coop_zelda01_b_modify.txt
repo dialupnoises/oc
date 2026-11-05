@@ -1,0 +1,32 @@
+coop_zelda01_b
+{
+    Add
+    {
+        "point_servercommand"
+        {
+            "targetname" "addserver"
+        }
+        "logic_auto"
+        {
+            "OnMapspawn" "addserver,command,sk_plr_dmg_buckshot 5,0,-1"
+            "OnMapspawn" "addserver,command,sk_headcrab_health 20,0,-1"
+            "OnMapspawn" "addserver,command,sk_headcrab_melee_dmg 10,0,-1"
+            "OnMapspawn" "addserver,command,sk_headcrab_fast_health 20,0,-1"
+            "OnMapspawn" "addserver,command,sk_headcrab_poison_health 70,0,-1"
+            "OnMapspawn" "addserver,command,sk_manhack_health 50,0,-1"
+            "OnMapspawn" "addserver,command,sk_manhack_melee_dmg 20,0,-1"
+            "OnMapspawn" "addserver,command,sk_scanner_health 60,0,-1"
+            "OnMapspawn" "addserver,command,sk_scanner_dmg_dive 25,0,-1"
+            "OnMapspawn" "addserver,command,sk_scanner_dmg_dive 60,0,-1"
+            "OnMapspawn" "addserver,command,sk_zombie_health 100,0,-1"
+            "OnMapspawn" "addserver,command,sk_zombie_dmg_one_slash 20,0,-1"
+            "OnMapspawn" "addserver,command,sk_zombie_dmg_both_slash 50,0,-1"
+            "OnMapspawn" "addserver,command,sk_zombie_poison_health 300,0,-1"
+            "OnMapspawn" "addserver,command,sk_zombie_poison_dmg_spit 40,0,-1"
+            "OnMapspawn" "addserver,command,sk_agrunt_health 200,0,-1"
+            "OnMapspawn" "addserver,command,sk_agrunt_dmg_punch 40,0,-1"
+            "OnMapspawn" "addserver,command,sk_npc_dmg_hornet 10,0,-1"
+            "OnMapspawn" "addserver,command,sk_hassassin_health 100,0,-1"
+		}
+	}
+}

@@ -1,0 +1,100 @@
+c2a5c
+{
+    Remove
+    {
+        ClassName
+        {
+            "info_player_start" {}
+        }
+    }
+    Add
+    {
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "c2a5c_starts"
+            "origin" "1317 -104 -351"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "c2a5c_starts"
+            "origin" "1317 -40 -351"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "c2a5c_starts"
+            "origin" "1319 29 -351"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "c2a5c_starts"
+            "origin" "1264 27 -351"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "c2a5c_starts"
+            "origin" "1262 -42 -351"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "c2a5c_starts"
+            "origin" "1262 -106 -351"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "c2a5c_starts"
+            "origin" "1211 29 -351"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "c2a5c_starts"
+            "origin" "1209 -40 -351"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "c2a5c_starts"
+            "origin" "1209 -104 -351"
+        }
+    }
+    Modify
+    {
+        ClassName
+        {
+            "worldspawn"
+            {
+                "mapversion" "5"
+            }
+        }
+        TargetName
+        {
+            "c2a5cexit"
+            {
+                "spawngroup" "c2a5b_starts2"
+                "transitionradius" "316"
+            }
+        }
+        Origin
+        {
+            "-116 -680 -180"
+            {
+                "spawngroup" "c2a5d_starts"
+            }
+        }
+    }
+SpawnItems
+{
+    "weapon_crowbar" "1"
+    "weapon_smg1" "1"
+    "item_battery" "1"
+    "item_ammo_smg1" "3"
+    "weapon_healer" "1"
+}
+}

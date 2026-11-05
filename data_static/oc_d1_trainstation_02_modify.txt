@@ -1,0 +1,75 @@
+d1_trainstation_02
+{
+    Remove
+    {
+        ClassName
+        {
+            "info_player_start" {}
+        }
+        Origin
+        {
+            "-4368 136 432" {}
+        }
+    }
+    Add
+    {
+        "info_player_deathmatch"
+        {
+            "angles" "0 270.5 0"
+            "targetname" "trainstation_02_spawn1"
+            "origin" "-4354 276 13"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "trainstation_02_spawn1"
+            "origin" "-4201 109 13"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "trainstation_02_spawn1"
+            "origin" "-4201 5 13"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "trainstation_02_spawn1"
+            "origin" "-4201 -95 13"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "trainstation_02_spawn1"
+            "origin" "-4370 150 13"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "trainstation_02_spawn1"
+            "origin" "-4370 48 13"
+        }
+    }
+    Modify
+    {
+        ClassName
+        {
+            "worldspawn"
+            {
+                "disableareaportals" "1"
+            }
+        }
+        Origin
+        {
+            "-5328 -4358 56"
+            {
+                "spawngroup" "trainstation_03_spawn1"
+                "transitionradius" "131"
+            }
+        }
+    }
+SpawnItems
+{
+    "weapon_healer" "1"
+}
+}

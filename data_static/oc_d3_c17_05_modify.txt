@@ -1,0 +1,91 @@
+d3_c17_05
+{
+    Remove
+    {
+        ClassName
+        {
+            "info_player_start" {}
+        }
+        Origin
+        {
+            "252.003 -5857.07 168.736" {}
+        }
+    }
+    Add
+    {
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "c17_05_spawn1"
+            "origin" "-86 -6073 129"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "c17_05_spawn1"
+            "origin" "-41 -5845 129"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "targetname" "c17_05_spawn1"
+            "origin" "280 -5845 129"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "targetname" "c17_05_spawn1"
+            "origin" "204 -6004 129"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90.5 0"
+            "targetname" "c17_05_spawn1"
+            "origin" "-10.9999 -6082 129"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "c17_05_spawn1"
+            "origin" "286 -6005 129"
+        }
+    }
+    Modify
+    {
+        ClassName
+        {
+            "worldspawn"
+            {
+               "disableareaportals" "1"
+            }
+        }
+        Origin
+        {
+            "2704 -3388 -68"
+            {
+                "nosmooth" "1"
+                "spawngroup" "c17_06a_spawn1"
+            }
+            "24 -5848 188"
+            {
+                "spawnflags" "2"
+            }
+        }
+    }
+SpawnItems
+{
+    "weapon_smg1" "1"
+    "weapon_ar2" "1"
+    "weapon_shotgun" "1"
+    "weapon_crowbar" "1"
+    "weapon_physcannon" "1"
+    "weapon_357" "1"
+    "weapon_frag" "1"
+    "weapon_pistol" "1"
+    "item_box_buckshot" "2"
+    "item_ammo_smg1" "3"
+    "item_battery" "3"
+    "weapon_healer" "1"
+    "weapon_crossbow" "1"
+}
+}

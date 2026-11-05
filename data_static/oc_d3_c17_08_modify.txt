@@ -1,0 +1,242 @@
+d3_c17_08
+{
+    Remove
+    {
+        ClassName
+        {
+            "info_player_start" {}
+        }
+        Origin
+        {
+            "-2235.37 -3200 239.31" {}
+        }
+    }
+    Add
+    {
+        "prop_dynamic_override"
+        {
+            "angles" "0 90 0"
+            "disableshadows" "1"
+            "fademindist" "-1"
+            "fadescale" "1"
+            "MaxAnimTime" "10"
+            "MinAnimTime" "5"
+            "model" "models/props_c17/fence01b.mdl"
+            "renderamt" "255"
+            "rendercolor" "255 255 255"
+            "rendermode" "10"
+            "skin" "0"
+            "solid" "6"
+            "spawnflags" "0"
+            "origin" "-2240 -3280 286"
+        }
+        "prop_dynamic_override"
+        {
+            "angles" "0 90 0"
+            "disableshadows" "1"
+            "fademindist" "-1"
+            "fadescale" "1"
+            "MaxAnimTime" "10"
+            "MinAnimTime" "5"
+            "model" "models/props_c17/fence01b.mdl"
+            "renderamt" "255"
+            "rendercolor" "255 255 255"
+            "rendermode" "10"
+            "skin" "0"
+            "solid" "6"
+            "spawnflags" "0"
+            "origin" "-2240 -3280 381"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "targetname" "c17_08_spawn1"
+            "origin" "-2245 -3137 277"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 180 0"
+            "targetname" "c17_08_spawn1"
+            "origin" "-2116 -2879 265"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 227.5 0"
+            "targetname" "c17_08_spawn1"
+            "origin" "-2140 -2802 265"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "targetname" "c17_08_spawn1"
+            "origin" "-2273 -2793 265"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 127 0"
+            "targetname" "c17_08_spawn1"
+            "origin" "-2139 -2955 272"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 48 0"
+            "targetname" "c17_08_spawn1"
+            "origin" "-2323 -3003 298"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "StartDisabled" "1"
+            "targetname" "c17_08_spawn2"
+            "origin" "1097 -1010 65"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "StartDisabled" "1"
+            "targetname" "c17_08_spawn2"
+            "origin" "962.053 -954.063 65"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "StartDisabled" "1"
+            "targetname" "c17_08_spawn2"
+            "origin" "1271 -954 65"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 90 0"
+            "StartDisabled" "1"
+            "targetname" "c17_08_spawn2"
+            "origin" "1431 -1003 65"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "StartDisabled" "1"
+            "targetname" "c17_08_spawn2"
+            "origin" "858.001 -785.33 65"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "StartDisabled" "1"
+            "targetname" "c17_08_spawn2"
+            "origin" "887.032 -899.831 65"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "StartDisabled" "1"
+            "targetname" "c17_08_spawn3"
+            "origin" "1490 610 401"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "StartDisabled" "1"
+            "targetname" "c17_08_spawn3"
+            "origin" "1090 615 401"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "StartDisabled" "1"
+            "targetname" "c17_08_spawn3"
+            "origin" "890.455 -199.087 401"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "StartDisabled" "1"
+            "targetname" "c17_08_spawn3"
+            "origin" "892.927 -382.084 401"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "StartDisabled" "1"
+            "targetname" "c17_08_spawn3"
+            "origin" "887.188 -567.395 401"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 0 0"
+            "StartDisabled" "1"
+            "targetname" "c17_08_spawn3"
+            "origin" "894.74 -718.155 401"
+        }
+    }
+    Modify
+    {
+        ClassName
+        {
+            "worldspawn"
+            {
+                "disableareaportals" "1"
+            }
+        }
+        TargetName
+        {
+            "platform_X_axis"
+            {
+                "spawnflags" "6815744"
+            }
+            "platform_rail_1"
+            {
+                "spawnflags" "8389376"
+            }
+            "platform_rail_2"
+            {
+                "spawnflags" "8389376"
+            }
+            "crane_control_lever"
+            {
+                "OnFullyOpen" "c17_08_spawn2,Enable,,0,1"
+                "OnFullyOpen" "c17_08_spawn1,Disable,,0,1"
+            }
+            "platform_rail_3"
+            {
+                "spawnflags" "8389376"
+            }
+            "platform_rail_4"
+            {
+                "spawnflags" "8389376"
+            }
+        }
+        Origin
+        {
+            "2552 -424 588"
+            {
+                "nosmooth" "1"
+                "spawngroup" "c17_09_spawn1"
+            }
+            "1502 215 371.5"
+            {
+                "OnTrigger" "c17_08_spawn2,Disable,,0,-1"
+                "OnTrigger" "c17_08_spawn3,Enable,,0,-1"
+            }
+            "-2240 -3300 312"
+            {
+                "spawnflags" "6"
+            }
+        }
+    }
+SpawnItems
+{
+    "weapon_smg1" "1"
+    "weapon_ar2" "1"
+    "weapon_shotgun" "1"
+    "weapon_crowbar" "1"
+    "weapon_physcannon" "1"
+    "weapon_357" "1"
+    "weapon_frag" "1"
+    "weapon_pistol" "1"
+    "item_box_buckshot" "2"
+    "item_ammo_smg1" "3"
+    "item_battery" "3"
+    "weapon_healer" "1"
+    "weapon_crossbow" "1"
+}
+}

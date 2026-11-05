@@ -1,0 +1,108 @@
+c1a4
+{
+    Remove
+    {
+        ClassName
+        {
+            "info_player_start" {}
+            "logic_auto" {}
+        }
+        Origin
+        {
+            "-2566 3098 -560" {}
+        }
+    }
+    Add
+    {
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "targetname" "c1a4_starts"
+            "origin" "-2486.07 3209.01 -623"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "targetname" "c1a4_starts"
+            "origin" "-2548.93 3238.93 -623"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "targetname" "c1a4_starts"
+            "origin" "-2592.93 3185.93 -623"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "targetname" "c1a4_starts"
+            "origin" "-2427 3202 -623"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "targetname" "c1a4_starts"
+            "origin" "-2430 3252 -623"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "targetname" "c1a4_starts"
+            "origin" "-2494 3272 -623"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "targetname" "c1a4_starts"
+            "origin" "-2615 3272 -623"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "targetname" "c1a4_starts"
+            "origin" "-2661 3226 -623"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "targetname" "c1a4_starts"
+            "origin" "-2724 3268 -623"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "targetname" "c1a4_starts"
+            "origin" "-2752 3200 -623"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "targetname" "c1a4_starts"
+            "origin" "-2811 3252 -623"
+        }
+        "info_player_deathmatch"
+        {
+            "angles" "0 270 0"
+            "targetname" "c1a4_starts"
+            "origin" "-2858 3205 -623"
+        }
+    }
+    Modify
+    {
+        Origin
+        {
+            "-126 -2333.5 -3209.5"
+            {
+                "spawngroup" "c1a4k_starts"
+            }
+        }
+    }
+SpawnItems
+{
+    "weapon_crowbar" "1"
+    "weapon_smg1" "1"
+    "item_battery" "1"
+    "item_ammo_smg1" "2"
+    "weapon_healer" "1"
+}
+}

@@ -1,0 +1,9 @@
+// File was created for use in Obsidian Conflict ONLY!
+"oc_courier"
+{
+	"mp_falldamage"	"1"
+	"mp_flashlight" "1"
+	"sk_max_ar2" "120"
+	"sk_max_buckshot" "40"
+
+}
