@@ -25,3 +25,6 @@ CreateConVar("mp_numlives", "-1", FCVAR_REPLICATED, "If > 0, this is the number 
 -- When 1, players are allowed to have a negative score. This is default behavior.
 -- When 0, a player's score can't go lower than 0. This is the best behavior for maps like oc_harvest.
 CreateConVar("sv_allownegativescore", "1", FCVAR_NONE, "Whether negative score should be allowed.")
+
+-- When 1, every entity input (map I/O) is printed to the server console, for debugging map logic.
+CreateConVar("ent_io_spew", "0", FCVAR_NONE, "1 = print every entity input to the server console.")

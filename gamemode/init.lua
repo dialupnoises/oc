@@ -244,8 +244,15 @@ function GM:OnEntityCreated(ent)
     end
 end
 
+local entIoSpew = GetConVar("ent_io_spew")
+
 function GM:AcceptInput(ent, input, activator, caller, value)
     local inputLower = string.lower(input)
+
+    if entIoSpew:GetBool() then
+        MsgN(string.format("[IO] %s (%s) <- %s '%s'  activator=%s caller=%s",
+            ent:GetClass(), ent:GetName(), input, tostring(value), tostring(activator), tostring(caller)))
+    end
 
     if inputLower == "Use" then
         ent.lastUseActivator = activator
