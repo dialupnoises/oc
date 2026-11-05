@@ -32,306 +32,369 @@ local numlives = 0
 local teamplay = false
 
 function GM:EntityKeyValue(ent, key, value)
-	if ent:EntIndex() == 0 and key == "teamplay" then
-		teamplay = (value == "1")
-	elseif ent:EntIndex() == 0 and key == "numlives" then
-		numlives = tonumber(value)
-		OC.Lives.setNumLives(numlives)
-	end
+    if ent:EntIndex() == 0 and key == "teamplay" then
+        teamplay = (value == "1")
+    elseif ent:EntIndex() == 0 and key == "numlives" then
+        numlives = tonumber(value)
+        OC.Lives.setNumLives(numlives)
+    end
 
-	return ReplaceKeyValues(ent, key, value)
+    return ReplaceKeyValues(ent, key, value)
+end
+
+-- info_player_deathmatch is not a scripted entity, so it cannot store or
+-- trigger outputs. Keep its raw OnPlayerSpawn keyvalues at map load and replay
+-- them through an oc_spawn_proxy, created on first use.
+function FireSpawnOutputs(spawnpoint, ply)
+    if not spawnpoint.spawnOutputs then return end
+
+    if not IsValid(spawnpoint.outputProxy) then
+        local proxy = ents.Create("info_player_deathmatch_proxy")
+        proxy:SetPos(spawnpoint:GetPos())
+        proxy:Spawn()
+
+        for _, output in ipairs(spawnpoint.spawnOutputs) do
+            proxy:StoreOutput(output.key, output.value)
+        end
+        spawnpoint.outputProxy = proxy
+    end
+
+    spawnpoint.outputProxy:TriggerOutput("OnPlayerSpawn", ply)
 end
 
 function ReplaceKeyValues(ent, key, value)
-	local keyLower = string.lower(key)
+    local keyLower = string.lower(key)
 
-	if ent:GetClass() == "npc_maker" and string.equalsi(keyLower, "npctype") and OC.NPCReplacements[value] ~= nil then
-		return OC.NPCReplacements[value]
-	end
+    if ent:GetClass() == "npc_maker" and string.equalsi(keyLower, "npctype") and OC.NPCReplacements[value] ~= nil then
+        return OC.NPCReplacements[value]
+    end
 
-	if ent:IsNPC() or ent:GetClass() == "npc_maker" then
-		if keyLower == "npchealth" then
-			ent:SetHealth(tonumber(value))
-		elseif keyLower == "npcname" then
-			ent:SetNWString("npcname", value)
-		elseif keyLower == "teamnumber" and teamplay then
-			ent:SetNWInt("npcteam", tonumber(value))
-		elseif kkeyLowerey == "additionalequipment" and value == "Nothing" then
-			return ""
-		elseif keyLower == "additionalequipment" and OC.CustomReplacements[value] ~= nil then
-			return ResolveOCWeapon(value)
-		end
-	end
+    if ent:IsNPC() or ent:GetClass() == "npc_maker" then
+        if keyLower == "npchealth" then
+            ent:SetHealth(tonumber(value))
+        elseif keyLower == "npcname" then
+            ent:SetNWString("npcname", value)
+        elseif keyLower == "teamnumber" and teamplay then
+            ent:SetNWInt("npcteam", tonumber(value))
+        elseif kkeyLowerey == "additionalequipment" and value == "Nothing" then
+            return ""
+        elseif keyLower == "additionalequipment" and OC.CustomReplacements[value] ~= nil then
+            return ResolveOCWeapon(value)
+        end
+    end
 
-	if ent:GetClass() == "game_score" and keyLower == "points" then
-		ent.pointAmount = tonumber(value)
-	end
+    if ent:GetClass() == "game_score" and keyLower == "points" then
+        ent.pointAmount = tonumber(value)
+    end
 
-	if ent:GetClass() == "info_player_deathmatch" and keyLower == "startdisabled" then
-		ent.spawnEnabled = (value == "0")
-	elseif ent:GetClass() == "info_player_deathmatch" and keyLower == "onplayerspawn" then
-		ent:StoreOutput(key, value)
-	end
+    if ent:GetClass() == "info_player_deathmatch" and keyLower == "startdisabled" then
+        ent.spawnEnabled = (value == "0")
+    elseif ent:GetClass() == "info_player_deathmatch" and keyLower == "onplayerspawn" then
+        ent.spawnOutputs = ent.spawnOutputs or {}
+        ent.spawnOutputs[#ent.spawnOutputs + 1] = {key = key, value = value}
+    end
 
-	if ent:GetClass() == "func_precipitation" and keyLower == "startoff" and value == "1" then
-		rainOn = false
-		SetRainEnabled(rainOn)
-	end
+    if ent:GetClass() == "func_precipitation" and keyLower == "startoff" and value == "1" then
+        rainOn = false
+        SetRainEnabled(rainOn)
+    end
 end
 
 function GM:InitPostEntity()
-	postEntCalled = true
+    postEntCalled = true
 
-	for _, ent in pairs(weaponEntsToReplace) do
-		if IsValid(ent) then
-			ReplaceEnt(ent, ResolveOCWeapon(ent:GetClass()))
-		end
-	end
+    for _, ent in pairs(weaponEntsToReplace) do
+        if IsValid(ent) then
+            ReplaceEnt(ent, ResolveOCWeapon(ent:GetClass()))
+        end
+    end
 
-	local config = mapConfig[game.GetMap()]
+    local config = mapConfig[game.GetMap()]
 
-	if config.convars ~= nil then
-		for k, v in pairs(config.convars) do 
-			if k == "mp_flashlight" then 
-				allowFlashlight = (tonumber(v) == 1)
-			else
-				RunConsoleCommand(k, v)
-			end
-		end
-	end
+    if config.convars ~= nil then
+        for k, v in pairs(config.convars) do 
+            if k == "mp_flashlight" then 
+                allowFlashlight = (tonumber(v) == 1)
+            else
+                RunConsoleCommand(k, v)
+            end
+        end
+    end
 
-	if config.add ~= nil then
-		for n, t in pairs(config.add) do
-			if OC.CustomReplacements[n] ~= nil then
-				n = ResolveOCWeapon(n)
-			elseif OC.NPCReplacements[n] ~= nil then
-				n = OC.NPCReplacements[n]
-			end
+    if config.add ~= nil then
+        for n, t in pairs(config.add) do
+            if OC.CustomReplacements[n] ~= nil then
+                n = ResolveOCWeapon(n)
+            elseif OC.NPCReplacements[n] ~= nil then
+                n = OC.NPCReplacements[n]
+            end
 
-			if n ~= "info_node" then
-				local ent = ents.Create(n)
-				if IsValid(ent) then
-					for k, v in pairs(t) do
-						local testV = ReplaceKeyValues(ent, k, v)
-						if testV ~= nil then v = testV end
-						MsgN(n .. ", " .. k .. " = " .. v)
-						ent:SetKeyValue(k, v)
-					end
+            if n ~= "info_node" then
+                local ent = ents.Create(n)
+                if IsValid(ent) then
+                    for k, v in pairs(t) do
+                        local testV = ReplaceKeyValues(ent, k, v)
+                        if testV ~= nil then v = testV end
+                        MsgN(n .. ", " .. k .. " = " .. v)
+                        ent:SetKeyValue(k, v)
+                    end
 
-					ent:Spawn()
-				end
-			end
-		end
-	end
+                    ent:Spawn()
+                end
+            end
+        end
+    end
 
-	if config.remove ~= nil then
-		ApplyToFoundScript(config.remove, function(e, t) e:Remove() end)
-	end
+    if config.remove ~= nil then
+        ApplyToFoundScript(config.remove, function(e, t) e:Remove() end)
+    end
 
-	if config.modify ~= nil then
-		ApplyToFoundScript(config.modify, function(e, t)
-			for k, v in pairs(t) do
-				e:SetKeyValue(k, v)
-			end
-		end)
-	end
+    if config.modify ~= nil then
+        ApplyToFoundScript(config.modify, function(e, t)
+            for k, v in pairs(t) do
+                e:SetKeyValue(k, v)
+            end
+        end)
+    end
 end
 
 function GM:Initialize()
-	resource.AddFile("resource/zrnic.ttf")
+    resource.AddFile("resource/zrnic.ttf")
 
-	if mapConfig[game.GetMap()] == nil then
-		mapConfig[game.GetMap()] = LoadMapConfig(game.GetMap())
-	end
+    if mapConfig[game.GetMap()] == nil then
+        mapConfig[game.GetMap()] = LoadMapConfig(game.GetMap())
+    end
 
-	if numlives ~= nil and numlives > 0 then
-		OC.Lives.setLivesEnabled(true)
-	end
+    if numlives ~= nil and numlives > 0 then
+        OC.Lives.setLivesEnabled(true)
+    end
 end
 
 function GM:PlayerInitialSpawn(ply)
-	if #team.GetPlayers(TEAM_RED) > #team.GetPlayers(TEAM_BLUE) then
-		ply:SetTeam(TEAM_BLUE)
-	else
-		ply:SetTeam(TEAM_RED)
-	end
+    if #team.GetPlayers(TEAM_RED) > #team.GetPlayers(TEAM_BLUE) then
+        ply:SetTeam(TEAM_BLUE)
+    else
+        ply:SetTeam(TEAM_RED)
+    end
 
-	OC.Lives.initPlayer(ply)
-	OC.Points.initPlayer(ply)
+    OC.Lives.initPlayer(ply)
+    OC.Points.initPlayer(ply)
 
-	ply:AllowFlashlight(allowFlashlight)
+    ply:AllowFlashlight(allowFlashlight)
 
-	SetRainEnabled(rainOn, ply)
+    SetRainEnabled(rainOn, ply)
 end
 
 function GM:PlayerSpawn(ply)
-	if ply:Team() == TEAM_SPECTATOR then
-		ply:StripWeapons()
-		ply:Spectate(OBS_MODE_ROAMING)
-		return
-	end
-	
-	if mapConfig[game.GetMap()] ~= nil then
-		config = mapConfig[game.GetMap()]
-		for k, v in pairs(config.spawnItems) do
-			amount = tonumber(v)
+    if ply:Team() == TEAM_SPECTATOR then
+        ply:StripWeapons()
+        ply:Spectate(OBS_MODE_ROAMING)
+        return
+    end
+    
+    if mapConfig[game.GetMap()] ~= nil then
+        config = mapConfig[game.GetMap()]
+        for k, v in pairs(config.spawnItems) do
+            amount = tonumber(v)
 
-			for i = 1, amount do
-				ply:Give(ResolveOCWeapon(k))
-			end
-		end
-	end
+            for i = 1, amount do
+                ply:Give(ResolveOCWeapon(k))
+            end
+        end
+    end
 
-	ply:Give("weapon_crowbar")
-	ply:Give("weapon_healer")
-	ply:Give("weapon_pistol")
+    ply:Give("weapon_crowbar")
+    ply:Give("weapon_healer")
+    ply:Give("weapon_pistol")
 
-	ply:SetModel("models/player/group01/male_01.mdl")
-	ply:SetupHands(ply)
-	player_manager.OnPlayerSpawn(ply)
-	player_manager.RunClass(ply, "Spawn")
+    ply:SetModel("models/player/group01/male_01.mdl")
+    ply:SetupHands(ply)
+    player_manager.OnPlayerSpawn(ply)
+    player_manager.RunClass(ply, "Spawn")
 end
 
 function GM:PlayerDeath(ply, attacker, damage)
-	OC.Lives.playerDead(ply)
+    OC.Lives.playerDead(ply)
 
-	if OC.Lives.allPlayersDead() then
-		OC.Lives.handleAllDead()
-	end
+    if OC.Lives.allPlayersDead() then
+        OC.Lives.handleAllDead()
+    end
 end
 
 function GM:OnEntityCreated(ent)
-	-- force the game not to have stalkers be neutral
-	if ent:GetClass() == "npc_stalker" then
-		ent:AddRelationship("player D_HT 99")
-	end
+    -- force the game not to have stalkers be neutral
+    if ent:GetClass() == "npc_stalker" then
+        ent:AddRelationship("player D_HT 99")
+    end
 
-	if OC.CustomReplacements[ent:GetClass()] ~= nil then
-		if postEntCalled then
-			ReplaceEnt(ent, ResolveOCWeapon(ent:GetClass()))
-		else
-			table.insert(weaponEntsToReplace, ent)
-		end
-	end
+    if OC.CustomReplacements[ent:GetClass()] ~= nil then
+        if postEntCalled then
+            ReplaceEnt(ent, ResolveOCWeapon(ent:GetClass()))
+        else
+            table.insert(weaponEntsToReplace, ent)
+        end
+    end
 
-	if OC.NPCReplacements[ent:GetClass()] ~= nil then
-		ReplaceEnt(ent, OC.NPCReplacements[ent:GetClass()])
-	end
+    if OC.NPCReplacements[ent:GetClass()] ~= nil then
+        ReplaceEnt(ent, OC.NPCReplacements[ent:GetClass()])
+    end
 
-	if ent:GetClass() == "info_player_deathmatch" and ent.spawnEnabled == nil then
-		ent.spawnEnabled = true
-	end
+    if ent:GetClass() == "info_player_deathmatch" and ent.spawnEnabled == nil then
+        ent.spawnEnabled = true
+    end
 end
 
 function GM:AcceptInput(ent, input, activator, caller, value)
-	local inputLower = string.lower(input)
+    local inputLower = string.lower(input)
 
-	if inputLower == "Use" then
-		ent.lastUseActivator = activator
-	end
+    if inputLower == "Use" then
+        ent.lastUseActivator = activator
+    end
 
-	if inputLower == "applyscore" then
-		local kvs = ent:GetKeyValues()
-		local points = ent.pointAmount
-		if points ~= nil then
-			if ent:HasSpawnFlags(2) then
-				for _, v in pairs(team.GetPlayers(activator:Team())) do
-					OC.Points.sendChange(v, points)
-				end
-			else
-				OC.Points.sendChange(activator, points)
-			end
-		end
-	end
+    if inputLower == "applyscore" then
+        local kvs = ent:GetKeyValues()
+        local points = ent.pointAmount
+        if points ~= nil then
+            if ent:HasSpawnFlags(2) then
+                for _, v in pairs(team.GetPlayers(activator:Team())) do
+                    OC.Points.sendChange(v, points)
+                end
+            else
+                OC.Points.sendChange(activator, points)
+            end
+        end
+    end
 
-	-- patch game_score for points not being frags
-	if inputLower == "applyscore" and not OC.Points.areFrags() then
-		local kvs = ent:GetKeyValues()
-		local points = ent.pointAmount
+    -- patch game_score for points not being frags
+    if inputLower == "applyscore" and not OC.Points.areFrags() then
+        local kvs = ent:GetKeyValues()
+        local points = ent.pointAmount
 
-		-- flag 2 = team points
-		if ent:HasSpawnFlag(2) then
-			for _, v in pairs(team.GetPlayers(activator:Team())) do
-				OC.Points.givePoints(v, points)
-			end
-		else
-			OC.Points.givePoints(activator, points)
-		end
+        -- flag 2 = team points
+        if ent:HasSpawnFlag(2) then
+            for _, v in pairs(team.GetPlayers(activator:Team())) do
+                OC.Points.givePoints(v, points)
+            end
+        else
+            OC.Points.givePoints(activator, points)
+        end
 
-		return true
-	end
+        return true
+    end
 
-	if ent:GetClass() == "info_player_deathmatch" and inputLower == "enable" then
-		ent.spawnEnabled = true
-	elseif ent:GetClass() == "info_player_deathmatch" and inputLower == "disable" then
-		ent.spawnEnabled = false
-	end
+    if ent:GetClass() == "info_player_deathmatch" and inputLower == "enable" then
+        ent.spawnEnabled = true
+    elseif ent:GetClass() == "info_player_deathmatch" and inputLower == "disable" then
+        ent.spawnEnabled = false
+    end
 
-	if ent:GetClass() == "func_precipitation" then
-		if inputLower == "enable" then 
-			rainOn = true
-		elseif inputLower == "disable" then
-			rainOn = false
-		elseif inputLower == "toggle" then
-			rainOn = not rainOn
-		end
-		SetRainEnabled(rainOn)
-	end
+    if ent:GetClass() == "func_precipitation" then
+        if inputLower == "enable" then 
+            rainOn = true
+        elseif inputLower == "disable" then
+            rainOn = false
+        elseif inputLower == "toggle" then
+            rainOn = not rainOn
+        end
+        SetRainEnabled(rainOn)
+    end
 
-	return false
+    return false
 end
 
 function GM:FindUseEntity(ply, defaultEnt)
-	if defaultEnt.useRedirectEnt ~= nil then
-		return defaultEnt.useRedirectEnt
-	end
+    if defaultEnt.useRedirectEnt ~= nil then
+        return defaultEnt.useRedirectEnt
+    end
 
-	return defaultEnt
+    return defaultEnt
 end
 
 function GM:PlayerUse(ply, ent)
-	if ent:IsNPC() and ent.NPCUse ~= nil then
-		ent.NPCUse(ent, ply, ply, USE_ON, nil)
-	end
+    if ent:IsNPC() and ent.NPCUse ~= nil then
+        ent.NPCUse(ent, ply, ply, USE_ON, nil)
+    end
 
-	net.Start("play_use_sound")
-	net.Send(ply)
-	return true
+    net.Start("play_use_sound")
+    net.Send(ply)
+    return true
 end
 
-function GM:IsSpawnpointSuitable(ply, spawnpoint, makeSuitable)
-	if spawnpoint.spawnEnabled ~= nil then
-		if spawnpoint.spawnEnabled then 
-			spawnpoint:TriggerOutput("OnPlayerSpawn", ply, nil)
-		end
-		return spawnpoint.spawnEnabled
-	end
+local VALID_SPAWNERS = {
+    info_player_deathmatch		    = true,
+    info_player_start			    = true,
+    info_player_combine 		    = true,
+    info_player_rebel 			    = true,
+    info_player_counterterrorist    = true,
+    info_player_terrorist 			= true
+}
 
-	if spawnpoint.TriggerOutput then
-		spawnpoint:TriggerOutput("OnPlayerSpawn", ply, nil)
-	end
-	
-	return true
+local SPAWN_BOX_MINS = Vector(-16, -16, 0)
+local SPAWN_BOX_MAXS = Vector(16, 16, 64)
+
+local function blockingEntitiesAt(spawnpoint)
+    local pos = spawnpoint:GetPos()
+    local blockers = {}
+
+    for _, ent in ipairs(ents.FindInBox(pos + SPAWN_BOX_MINS, pos + SPAWN_BOX_MAXS)) do
+        if ent:IsPlayer() and ent:Alive() then
+            blockers[#blockers + 1] = ent
+        end
+    end
+
+    return blockers
+end
+
+-- Pure query unless makeSuitable is set, in which case players standing on an
+-- enabled spawnpoint are killed to clear it (the sandbox convention, used for
+-- the last candidate so a spawn is always found).
+function GM:IsSpawnpointSuitable(ply, spawnpoint, makeSuitable)
+    if not spawnpoint or not spawnpoint:IsValid()   then return false end
+    if not VALID_SPAWNERS[spawnpoint:GetClass()]    then return false end
+    if not spawnpoint.spawnEnabled                  then return false end
+
+    local blockers = blockingEntitiesAt(spawnpoint)
+
+    if makeSuitable then
+        for _, blocker in ipairs(blockers) do
+            blocker:Kill()
+        end
+        return true
+    end
+
+    return #blockers == 0
+end
+
+-- The OnPlayerSpawn output fires once, for the spawnpoint actually chosen,
+-- rather than inside the IsSpawnpointSuitable query.
+function GM:PlayerSelectSpawn(ply, transition)
+    local spawnpoint = self.BaseClass.PlayerSelectSpawn(self, ply, transition)
+
+    if IsValid(spawnpoint) and spawnpoint.spawnEnabled then
+        FireSpawnOutputs(spawnpoint, ply)
+    end
+
+    return spawnpoint
 end
 
 function GM:EntityTakeDamage(target, dmginfo)
-	if target:IsPlayer() then
-		net.Start("player_damaged_ui")
-		net.Send(target)
-	elseif target:IsNPC() and dmginfo:GetAttacker():IsPlayer() then
-		local prevHealth = target:Health() + dmginfo:GetDamage()
-		local currentHealth = target:Health()
+    if target:IsPlayer() then
+        net.Start("player_damaged_ui")
+        net.Send(target)
+    elseif target:IsNPC() and dmginfo:GetAttacker():IsPlayer() then
+        local prevHealth = target:Health() + dmginfo:GetDamage()
+        local currentHealth = target:Health()
 
-		if math.floor(prevHealth / 50) > math.floor(currentHealth / 50) then
-			OC.Points.givePoints(dmginfo:GetAttacker(), 1)
-		end
-	end
+        if math.floor(prevHealth / 50) > math.floor(currentHealth / 50) then
+            OC.Points.givePoints(dmginfo:GetAttacker(), 1)
+        end
+    end
 end
 
 function GM:OnNPCKilled(npc, attacker, inflictor)
-	if attacker:IsPlayer() then
-		OC.Points.givePoints(attacker, math.random(2, 3))
-	end
+    if attacker:IsPlayer() then
+        OC.Points.givePoints(attacker, math.random(2, 3))
+    end
 end
 
 util.AddNetworkString("player_damaged_ui")
@@ -340,30 +403,30 @@ util.AddNetworkString("send_points")
 util.AddNetworkString("npc_disposition_request")
 util.AddNetworkString("npc_disposition_response")
 net.Receive("npc_disposition_request", function(len, ply)
-	local entIndex = net.ReadInt(16)
-	local ent = ents.GetByIndex(entIndex)
-	if not ent:IsNPC() then return end
+    local entIndex = net.ReadInt(16)
+    local ent = ents.GetByIndex(entIndex)
+    if not ent:IsNPC() then return end
 
-	net.Start("npc_disposition_response")
-	net.WriteInt(entIndex, 16)
-	net.WriteInt(ent:Disposition(ply), 4)
-	net.Send(ply)
+    net.Start("npc_disposition_response")
+    net.WriteInt(entIndex, 16)
+    net.WriteInt(ent:Disposition(ply), 4)
+    net.Send(ply)
 end)
 
 net.Receive("send_points", function(len, ply)
-	local pointAmount = net.ReadInt(32)
-	local toPlayer = Player(net.ReadInt(32))
-	if OC.Points.getPoints(ply) < pointAmount then return end
-	if not IsValid(toPlayer) then return end
-	OC.Points.removePoints(ply, pointAmount)
-	OC.Points.givePoints(toPlayer, pointAmount)
+    local pointAmount = net.ReadInt(32)
+    local toPlayer = Player(net.ReadInt(32))
+    if OC.Points.getPoints(ply) < pointAmount then return end
+    if not IsValid(toPlayer) then return end
+    OC.Points.removePoints(ply, pointAmount)
+    OC.Points.givePoints(toPlayer, pointAmount)
 end)
 
 local friendlyNPCs = {"npc_alyx","npc_barney","npc_citizen","npc_eli","npc_fisherman","npc_gman","npc_kleiner","npc_monk"}
 hook.Add("ScaleNPCDamage", "prevent_invincible_npc_damage", function(npc, hitgroup, dmginfo)
-	if npc:IsNPC() and table.HasValue(friendlyNPCs, npc:GetClass()) then
-		dmginfo:ScaleDamage(0)
-	else
-		dmginfo:ScaleDamage(1)
-	end
+    if npc:IsNPC() and table.HasValue(friendlyNPCs, npc:GetClass()) then
+        dmginfo:ScaleDamage(0)
+    else
+        dmginfo:ScaleDamage(1)
+    end
 end)
