@@ -10,7 +10,10 @@ local MAP_NAME = "^[%w_%-]+$"
 local SKILL_CONVAR = "^sk_[%w_]+$"
 
 local function refuse(name, why)
-    MsgN("[OC] point_servercommand: refusing '" .. name .. "': " .. why)
+    local message = "[OC] point_servercommand: refusing '" .. name .. "': " .. why
+
+    MsgN(message)
+    PrintMessage(HUD_PRINTTALK, message)
 end
 
 local function changeLevel(name, args)
