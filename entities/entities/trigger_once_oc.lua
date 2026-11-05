@@ -1,7 +1,9 @@
 AddCSLuaFile()
 
 ENT.Type = "brush"
-ENT.Base = "base_brush"
+-- base_brush is only a thin stub over base_entity and is not registered under
+-- every base gamemode, so derive from base_entity directly.
+ENT.Base = "base_entity"
 ENT.IsMultiple = false
 ENT.touchAmount = 0
 
@@ -94,6 +96,11 @@ local function checkFilter(self, ent)
 		return false
 	end
 	
+	return true
+end
+
+-- what base_brush did: let anything through to Touch, where checkFilter decides
+function ENT:PassesTriggerFilters(ent)
 	return true
 end
 
