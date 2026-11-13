@@ -327,7 +327,7 @@ if CLIENT then
 		return tris
 	end
 
-	function surface.DrawArc(arc) //Draw a premade arc.
+	function surface.DrawArc(arc) --Draw a premade arc.
 		for k,v in ipairs(arc) do
 			surface.DrawPoly(v)
 		end
