@@ -1,31 +1,59 @@
--- Runs one test file for test_harness.lua, which reads this process's stdout.
--- Each result goes out as "<nonce> PASS|FAIL <name>". The nonce is read and its file deleted
--- before test code loads, and everything test code could use to read it back (debug, ffi,
--- jit.util, C modules, bytecode) is removed, so a test cannot forge a result line.
-local root, interpreter, testPath, nonceFile = ...
+-- Runs one test suite for test_harness.lua. Suites get the environment shipped code gets in
+-- Garry's Mod: no ffi, no C modules, no precompiled chunks and no debug library.
+local root, interpreter, testPath, tokenFile = ...
 
-local nonceHandle = assert(io.open(nonceFile, "rb"))
-local nonce = nonceHandle:read("*a")
-nonceHandle:close()
-os.remove(nonceFile)
+local tokenHandle = assert(io.open(tokenFile, "rb"))
+local runToken = tokenHandle:read("*a")
+tokenHandle:close()
+os.remove(tokenFile)
 arg = nil
 
 local EXIT_LOAD_FAILED = 1
 
-local error, pcall, xpcall, tostring = error, pcall, xpcall, tostring
+-- Runs on Lua 5.1 as well as LuaJIT, so it uses neither xpcall arguments nor load modes.
+local BYTECODE_SIGNATURE = "\27"
+
+local assert, error, pcall, xpcall, tostring, type = assert, error, pcall, xpcall, tostring, type
 local format = string.format
+local concat = table.concat
 local traceback = debug.traceback
-local rawLoad, rawLoadFile = load, loadfile
+local rawLoadString = loadstring
+local open = io.open
 local exit = os.exit
 local stdout, stderr = io.stdout, io.stderr
 local write, flush = stdout.write, stdout.flush
 
-local function textOnlyLoad(chunk, name, _, env)
-	return rawLoad(chunk, name, "t", env)
+local function textOnlyLoadString(source, name)
+	if source:sub(1, 1) == BYTECODE_SIGNATURE then
+		return nil, "precompiled chunks are not allowed in tests"
+	end
+
+	return rawLoadString(source, name)
 end
 
-local function textOnlyLoadFile(path, _, env)
-	return rawLoadFile(path, "t", env)
+local function textOnlyLoad(chunk, name)
+	if type(chunk) == "string" then
+		return textOnlyLoadString(chunk, name)
+	end
+
+	local pieces = {}
+	for piece in chunk do
+		if piece == "" then break end
+		pieces[#pieces + 1] = piece
+	end
+
+	return textOnlyLoadString(concat(pieces), name)
+end
+
+local function textOnlyLoadFile(path)
+	local handle, err = open(path, "rb")
+	if handle == nil then
+		return nil, "cannot open " .. err
+	end
+
+	local source = handle:read("*a")
+	handle:close()
+	return textOnlyLoadString(source, "@" .. path)
 end
 
 local function searchProjectFile(name)
@@ -41,9 +69,7 @@ end
 debug = nil
 load = textOnlyLoad
 loadfile = textOnlyLoadFile
-loadstring = function(source, name)
-	return textOnlyLoad(source, name)
-end
+loadstring = textOnlyLoadString
 dofile = function(path)
 	return assert(textOnlyLoadFile(path))()
 end
@@ -59,8 +85,8 @@ package.loaders = {
 }
 
 local function report(status, name)
-	-- The leading newline keeps a test's unterminated output from swallowing the nonce.
-	write(stdout, "\n", nonce, " ", status, " ", name, "\n")
+	-- Starts on a fresh line so a test's unfinished output cannot run into the result.
+	write(stdout, "\n", runToken, " ", status, " ", name, "\n")
 	flush(stdout)
 end
 
@@ -110,7 +136,7 @@ if chunk == nil then
 	failLoad(loadError)
 end
 
-local loaded, registerTrace = xpcall(chunk, withTrace, T)
+local loaded, registerTrace = xpcall(function() return chunk(T) end, withTrace)
 if loaded == false then
 	failLoad(registerTrace)
 end

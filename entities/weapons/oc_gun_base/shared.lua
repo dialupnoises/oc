@@ -638,81 +638,83 @@ if CLIENT then
 		   
 			local v = self.VElements[name]
 			if (not v) then self.vRenderOrder = nil break end
-			if (v.hide) then continue end
+			repeat
+				if (v.hide) then break end
 			   
-			local model = v.modelEnt
-			local sprite = v.spriteMaterial
+				local model = v.modelEnt
+				local sprite = v.spriteMaterial
 			   
-			if (not v.bone) then continue end
+				if (not v.bone) then break end
 			   
-			local pos, ang = self:GetBoneOrientation( self.VElements, v, vm )
+				local pos, ang = self:GetBoneOrientation( self.VElements, v, vm )
 			   
-			if (not pos) then continue end
+				if (not pos) then break end
 			   
-			if (v.type == "Model" and IsValid(model)) then
+				if (v.type == "Model" and IsValid(model)) then
  
-				model:SetPos(pos + ang:Forward() * v.pos.x + ang:Right() * v.pos.y + ang:Up() * v.pos.z )
-				ang:RotateAroundAxis(ang:Up(), v.angle.y)
-				ang:RotateAroundAxis(ang:Right(), v.angle.p)
-				ang:RotateAroundAxis(ang:Forward(), v.angle.r)
+					model:SetPos(pos + ang:Forward() * v.pos.x + ang:Right() * v.pos.y + ang:Up() * v.pos.z )
+					ang:RotateAroundAxis(ang:Up(), v.angle.y)
+					ang:RotateAroundAxis(ang:Right(), v.angle.p)
+					ang:RotateAroundAxis(ang:Forward(), v.angle.r)
  
-				model:SetAngles(ang)
-				--model:SetModelScale(v.size)
-				local matrix = Matrix()
-				matrix:Scale(v.size)
-				model:EnableMatrix( "RenderMultiply", matrix )
+					model:SetAngles(ang)
+					--model:SetModelScale(v.size)
+					local matrix = Matrix()
+					matrix:Scale(v.size)
+					model:EnableMatrix( "RenderMultiply", matrix )
 				   
-				if (v.material == "") then
-					model:SetMaterial("")
-				elseif (model:GetMaterial() ~= v.material) then
-					model:SetMaterial( v.material )
-				end
+					if (v.material == "") then
+						model:SetMaterial("")
+					elseif (model:GetMaterial() ~= v.material) then
+						model:SetMaterial( v.material )
+					end
 				   
-				if (v.skin and v.skin ~= model:GetSkin()) then
-					model:SetSkin(v.skin)
-				end
+					if (v.skin and v.skin ~= model:GetSkin()) then
+						model:SetSkin(v.skin)
+					end
 				   
-				if (v.bodygroup) then
-					for k, v in pairs( v.bodygroup ) do
-						if (model:GetBodygroup(k) ~= v) then
-							model:SetBodygroup(k, v)
+					if (v.bodygroup) then
+						for k, v in pairs( v.bodygroup ) do
+							if (model:GetBodygroup(k) ~= v) then
+								model:SetBodygroup(k, v)
+							end
 						end
 					end
-				end
 				   
-				if (v.surpresslightning) then
-					render.SuppressEngineLighting(true)
-				end
+					if (v.surpresslightning) then
+						render.SuppressEngineLighting(true)
+					end
 				   
-				render.SetColorModulation(v.color.r/255, v.color.g/255, v.color.b/255)
-				render.SetBlend(v.color.a/255)
-				model:DrawModel()
-				render.SetBlend(1)
-				render.SetColorModulation(1, 1, 1)
+					render.SetColorModulation(v.color.r/255, v.color.g/255, v.color.b/255)
+					render.SetBlend(v.color.a/255)
+					model:DrawModel()
+					render.SetBlend(1)
+					render.SetColorModulation(1, 1, 1)
 				   
-				if (v.surpresslightning) then
-					render.SuppressEngineLighting(false)
-				end
+					if (v.surpresslightning) then
+						render.SuppressEngineLighting(false)
+					end
 				   
-			elseif (v.type == "Sprite" and sprite) then
+				elseif (v.type == "Sprite" and sprite) then
 				   
-				local drawpos = pos + ang:Forward() * v.pos.x + ang:Right() * v.pos.y + ang:Up() * v.pos.z
-				render.SetMaterial(sprite)
-				render.DrawSprite(drawpos, v.size.x, v.size.y, v.color)
+					local drawpos = pos + ang:Forward() * v.pos.x + ang:Right() * v.pos.y + ang:Up() * v.pos.z
+					render.SetMaterial(sprite)
+					render.DrawSprite(drawpos, v.size.x, v.size.y, v.color)
 				   
-			elseif (v.type == "Quad" and v.draw_func) then
+				elseif (v.type == "Quad" and v.draw_func) then
 				   
-				local drawpos = pos + ang:Forward() * v.pos.x + ang:Right() * v.pos.y + ang:Up() * v.pos.z
-				ang:RotateAroundAxis(ang:Up(), v.angle.y)
-				ang:RotateAroundAxis(ang:Right(), v.angle.p)
-				ang:RotateAroundAxis(ang:Forward(), v.angle.r)
+					local drawpos = pos + ang:Forward() * v.pos.x + ang:Right() * v.pos.y + ang:Up() * v.pos.z
+					ang:RotateAroundAxis(ang:Up(), v.angle.y)
+					ang:RotateAroundAxis(ang:Right(), v.angle.p)
+					ang:RotateAroundAxis(ang:Forward(), v.angle.r)
 				   
-				cam.Start3D2D(drawpos, ang, v.size)
-					v.draw_func( self )
-				cam.End3D2D()
+					cam.Start3D2D(drawpos, ang, v.size)
+						v.draw_func( self )
+					cam.End3D2D()
  
-			end
+				end
 			   
+			until true
 		end
 		   
 	end
@@ -751,85 +753,87 @@ if CLIENT then
 		   
 			local v = self.WElements[name]
 			if (not v) then self.wRenderOrder = nil break end
-			if (v.hide) then continue end
+			repeat
+				if (v.hide) then break end
 			   
-			local pos, ang
+				local pos, ang
 			   
-			if (v.bone) then
-				pos, ang = self:GetBoneOrientation( self.WElements, v, bone_ent )
-			else
-				pos, ang = self:GetBoneOrientation( self.WElements, v, bone_ent, "ValveBiped.Bip01_R_Hand" )
-			end
-			   
-			if (not pos) then continue end
-			   
-			local model = v.modelEnt
-			local sprite = v.spriteMaterial
-			   
-			if (v.type == "Model" and IsValid(model)) then
- 
-				model:SetPos(pos + ang:Forward() * v.pos.x + ang:Right() * v.pos.y + ang:Up() * v.pos.z )
-				ang:RotateAroundAxis(ang:Up(), v.angle.y)
-				ang:RotateAroundAxis(ang:Right(), v.angle.p)
-				ang:RotateAroundAxis(ang:Forward(), v.angle.r)
- 
-				model:SetAngles(ang)
-				--model:SetModelScale(v.size)
-				local matrix = Matrix()
-				matrix:Scale(v.size)
-				model:EnableMatrix( "RenderMultiply", matrix )
-				   
-				if (v.material == "") then
-					model:SetMaterial("")
-				elseif (model:GetMaterial() ~= v.material) then
-					model:SetMaterial( v.material )
+				if (v.bone) then
+					pos, ang = self:GetBoneOrientation( self.WElements, v, bone_ent )
+				else
+					pos, ang = self:GetBoneOrientation( self.WElements, v, bone_ent, "ValveBiped.Bip01_R_Hand" )
 				end
+			   
+				if (not pos) then break end
+			   
+				local model = v.modelEnt
+				local sprite = v.spriteMaterial
+			   
+				if (v.type == "Model" and IsValid(model)) then
+ 
+					model:SetPos(pos + ang:Forward() * v.pos.x + ang:Right() * v.pos.y + ang:Up() * v.pos.z )
+					ang:RotateAroundAxis(ang:Up(), v.angle.y)
+					ang:RotateAroundAxis(ang:Right(), v.angle.p)
+					ang:RotateAroundAxis(ang:Forward(), v.angle.r)
+ 
+					model:SetAngles(ang)
+					--model:SetModelScale(v.size)
+					local matrix = Matrix()
+					matrix:Scale(v.size)
+					model:EnableMatrix( "RenderMultiply", matrix )
 				   
-				if (v.skin and v.skin ~= model:GetSkin()) then
-					model:SetSkin(v.skin)
-				end
+					if (v.material == "") then
+						model:SetMaterial("")
+					elseif (model:GetMaterial() ~= v.material) then
+						model:SetMaterial( v.material )
+					end
 				   
-				if (v.bodygroup) then
-					for k, v in pairs( v.bodygroup ) do
-						if (model:GetBodygroup(k) ~= v) then
-							model:SetBodygroup(k, v)
+					if (v.skin and v.skin ~= model:GetSkin()) then
+						model:SetSkin(v.skin)
+					end
+				   
+					if (v.bodygroup) then
+						for k, v in pairs( v.bodygroup ) do
+							if (model:GetBodygroup(k) ~= v) then
+								model:SetBodygroup(k, v)
+							end
 						end
 					end
-				end
 				   
-				if (v.surpresslightning) then
-					render.SuppressEngineLighting(true)
-				end
+					if (v.surpresslightning) then
+						render.SuppressEngineLighting(true)
+					end
 				   
-				render.SetColorModulation(v.color.r/255, v.color.g/255, v.color.b/255)
-				render.SetBlend(v.color.a/255)
-				model:DrawModel()
-				render.SetBlend(1)
-				render.SetColorModulation(1, 1, 1)
+					render.SetColorModulation(v.color.r/255, v.color.g/255, v.color.b/255)
+					render.SetBlend(v.color.a/255)
+					model:DrawModel()
+					render.SetBlend(1)
+					render.SetColorModulation(1, 1, 1)
 				   
-				if (v.surpresslightning) then
-					render.SuppressEngineLighting(false)
-				end
+					if (v.surpresslightning) then
+						render.SuppressEngineLighting(false)
+					end
 				   
-			elseif (v.type == "Sprite" and sprite) then
+				elseif (v.type == "Sprite" and sprite) then
 				   
-				local drawpos = pos + ang:Forward() * v.pos.x + ang:Right() * v.pos.y + ang:Up() * v.pos.z
-				render.SetMaterial(sprite)
-				render.DrawSprite(drawpos, v.size.x, v.size.y, v.color)
+					local drawpos = pos + ang:Forward() * v.pos.x + ang:Right() * v.pos.y + ang:Up() * v.pos.z
+					render.SetMaterial(sprite)
+					render.DrawSprite(drawpos, v.size.x, v.size.y, v.color)
 				   
-			elseif (v.type == "Quad" and v.draw_func) then
+				elseif (v.type == "Quad" and v.draw_func) then
 				   
-				local drawpos = pos + ang:Forward() * v.pos.x + ang:Right() * v.pos.y + ang:Up() * v.pos.z
-				ang:RotateAroundAxis(ang:Up(), v.angle.y)
-				ang:RotateAroundAxis(ang:Right(), v.angle.p)
-				ang:RotateAroundAxis(ang:Forward(), v.angle.r)
+					local drawpos = pos + ang:Forward() * v.pos.x + ang:Right() * v.pos.y + ang:Up() * v.pos.z
+					ang:RotateAroundAxis(ang:Up(), v.angle.y)
+					ang:RotateAroundAxis(ang:Right(), v.angle.p)
+					ang:RotateAroundAxis(ang:Forward(), v.angle.r)
 				   
-				cam.Start3D2D(drawpos, ang, v.size)
-					v.draw_func( self )
-				cam.End3D2D()
+					cam.Start3D2D(drawpos, ang, v.size)
+						v.draw_func( self )
+					cam.End3D2D()
  
-			end
+				end
 			   
+			until true
 		end
 		   
 	end
@@ -949,32 +953,34 @@ if CLIENT then
 			end
 			   
 			for k, v in pairs( loopthrough ) do
-				local bone = vm:LookupBone(k)
-				if (not bone) then continue end
+				repeat
+					local bone = vm:LookupBone(k)
+					if (not bone) then break end
 				   
-				local s = Vector(v.scale.x,v.scale.y,v.scale.z)
-				local p = Vector(v.pos.x,v.pos.y,v.pos.z)
-				local ms = Vector(1,1,1)
-				if (not hasGarryFixedBoneScalingYet) then
-					local cur = vm:GetBoneParent(bone)
-					while(cur >= 0) do
-						local pscale = loopthrough[vm:GetBoneName(cur)].scale
-						ms = ms * pscale
-						cur = vm:GetBoneParent(cur)
+					local s = Vector(v.scale.x,v.scale.y,v.scale.z)
+					local p = Vector(v.pos.x,v.pos.y,v.pos.z)
+					local ms = Vector(1,1,1)
+					if (not hasGarryFixedBoneScalingYet) then
+						local cur = vm:GetBoneParent(bone)
+						while(cur >= 0) do
+							local pscale = loopthrough[vm:GetBoneName(cur)].scale
+							ms = ms * pscale
+							cur = vm:GetBoneParent(cur)
+						end
 					end
-				end
 				   
-				s = s * ms
+					s = s * ms
 				   
-				if vm:GetManipulateBoneScale(bone) ~= s then
-					vm:ManipulateBoneScale( bone, s )
-				end
-				if vm:GetManipulateBoneAngles(bone) ~= v.angle then
-					vm:ManipulateBoneAngles( bone, v.angle )
-				end
-				if vm:GetManipulateBonePosition(bone) ~= p then
-					vm:ManipulateBonePosition( bone, p )
-				end
+					if vm:GetManipulateBoneScale(bone) ~= s then
+						vm:ManipulateBoneScale( bone, s )
+					end
+					if vm:GetManipulateBoneAngles(bone) ~= v.angle then
+						vm:ManipulateBoneAngles( bone, v.angle )
+					end
+					if vm:GetManipulateBonePosition(bone) ~= p then
+						vm:ManipulateBonePosition( bone, p )
+					end
+				until true
 			end
 		else
 			self:ResetBonePositions(vm)

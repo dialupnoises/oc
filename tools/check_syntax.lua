@@ -1,12 +1,17 @@
 -- Parses every .lua file as plain Lua 5.1/LuaJIT and reports the ones that do not compile.
 -- GMod-only syntax (// and /* */ comments, !=, &&, ||, !) counts as an error.
--- Usage: luajit tools/check_syntax.lua [path ...]
+-- Usage: lua5.1 tools/check_syntax.lua (or luajit) [path ...]
 -- With no paths it checks gamemode/, entities/ and tests/ from the repository root,
 -- skipping the fixtures that are broken on purpose.
 
 local EXIT_PASSED = 0
 local EXIT_FAILED = 1
 local RULE_WIDTH = 60
+
+if _VERSION ~= "Lua 5.1" then
+	io.stderr:write(arg[0], " needs Lua 5.1 or LuaJIT, the Lua that Garry's Mod runs; this is ", _VERSION, "\n")
+	os.exit(EXIT_FAILED)
+end
 
 local DEFAULT_PATHS = {
 	"gamemode",

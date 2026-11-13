@@ -90,3 +90,34 @@ T.Test("Raises passes only when the function errors", function()
 	T.Raises(function() error("expected") end)
 	T.Equal(pcall(T.Raises, function() end), false)
 end)
+
+T.Test("counts the tests a suite is missing as failed", function()
+	local run = runHarness("short")
+
+	T.Equal(run.footer, "1 of 5 tests passed", run.output)
+	T.True(contains(run.output, "short_test.lua > 2 of 3 expected tests missing"), run.output)
+	T.True(contains(run.output, "absent_test.lua > 2 of 2 expected tests missing"), run.output)
+	T.Equal(run.exitCode, EXIT_FAILED, run.output)
+end)
+
+T.Test("accepts a suite with more tests than it must have", function()
+	local run = runHarness("enough")
+
+	T.Equal(run.footer, "2 of 2 tests passed", run.output)
+	T.Equal(run.exitCode, EXIT_PASSED, run.output)
+end)
+
+T.Test("lists every suite it ran with its own count", function()
+	local run = runHarness("mixed")
+
+	T.True(contains(run.output, "Suites run: 2"), run.output)
+	T.True(contains(run.output, "  fail_test.lua: 1 of 2 passed"), run.output)
+	T.True(contains(run.output, "  pass_test.lua: 1 of 1 passed"), run.output)
+end)
+
+T.Test("lists a missing suite with its expected count", function()
+	local run = runHarness("short")
+
+	T.True(contains(run.output, "  absent_test.lua: 0 of 2 passed"), run.output)
+	T.True(contains(run.output, "  short_test.lua: 1 of 3 passed"), run.output)
+end)

@@ -8,9 +8,9 @@ if ( CLIENT ) then
 
 	function ENT:BeingLookedAtByLocalPlayer()
 
-		if ( LocalPlayer():GetEyeTrace().Entity != self ) then return false end
-		if ( LocalPlayer():GetViewEntity() == LocalPlayer() && LocalPlayer():GetShootPos():Distance( self:GetPos() ) > 256 ) then return false end
-		if ( LocalPlayer():GetViewEntity() != LocalPlayer() && LocalPlayer():GetViewEntity():GetPos():Distance( self:GetPos() ) > 256 ) then return false end
+		if ( LocalPlayer():GetEyeTrace().Entity ~= self ) then return false end
+		if ( LocalPlayer():GetViewEntity() == LocalPlayer() and LocalPlayer():GetShootPos():Distance( self:GetPos() ) > 256 ) then return false end
+		if ( LocalPlayer():GetViewEntity() ~= LocalPlayer() and LocalPlayer():GetViewEntity():GetPos():Distance( self:GetPos() ) > 256 ) then return false end
 
 		return true
 
@@ -20,7 +20,7 @@ end
 
 function ENT:Think()
 
-	if ( CLIENT && self:BeingLookedAtByLocalPlayer() && self:GetOverlayText() != "" ) then
+	if ( CLIENT and self:BeingLookedAtByLocalPlayer() and self:GetOverlayText() ~= "" ) then
 
 		AddWorldTip( self:EntIndex(), self:GetOverlayText(), 0.5, self:GetPos(), self.Entity )
 

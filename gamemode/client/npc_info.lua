@@ -25,7 +25,7 @@ function paintInfo()
 		net.SendToServer()
 		requestPending = true
 		return
-	elseif OC.DispositionCache[npc:EntIndex()] == D_LI || OC.DispositionCache[npc:EntIndex()] == D_NU then
+	elseif OC.DispositionCache[npc:EntIndex()] == D_LI or OC.DispositionCache[npc:EntIndex()] == D_NU then
 		relationship = "Friend"
 		surface.SetTextColor(OC.GreenColor)
 	end 
