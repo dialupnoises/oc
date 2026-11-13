@@ -1,0 +1,3 @@
+return {
+	armor = 50,
+}

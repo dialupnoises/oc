@@ -65,7 +65,7 @@ T.Test("exits zero when every test passes", function()
 end)
 
 T.Test("counts every test in a file that does not compile as failed", function()
-	local run = runHarness("syntax")
+	local run = runHarness("broken/syntax")
 
 	T.Equal(run.footer, "0 of 2 tests passed", run.output)
 	T.True(contains(run.output, "broken_test.lua:"), run.output)
