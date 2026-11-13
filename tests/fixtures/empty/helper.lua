@@ -1,0 +1,1 @@
+-- Not a test file: the harness must find no tests in this folder.
